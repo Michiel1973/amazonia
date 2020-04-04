@@ -10,12 +10,26 @@ minetest.register_craftitem("petz:ducky_egg", {
     groups = {flammable = 2, food = 2, food_egg = 1},
 })
 
+hunger_ng.add_hunger_data('petz:ducky_egg', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:chicken_egg", {
     description = S("Chicken Egg"),
     inventory_image = "petz_chicken_egg.png",
     wield_image = "petz_chicken_egg.png",
     on_use = minetest.item_eat(2),
     groups = {flammable = 2, food = 2, food_egg = 1},
+})
+
+hunger_ng.add_hunger_data('petz:chicken_egg', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craftitem("petz:penguin_egg", {
@@ -26,11 +40,25 @@ minetest.register_craftitem("petz:penguin_egg", {
     groups = {flammable = 2, food = 2, food_egg = 1},
 })
 
+hunger_ng.add_hunger_data('petz:penguin_egg', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:fried_egg", {
 	description = S("Fried Egg"),
 	inventory_image = "petz_fried_egg.png",
 	on_use = minetest.item_eat(4),
 	groups = {flammable = 2, food = 2, food_egg_fried = 1},
+})
+
+hunger_ng.add_hunger_data('petz:fried_egg', {
+	satiates = 3,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -45,6 +73,13 @@ minetest.register_craftitem("petz:fried_egg_bacon", {
 	inventory_image = "petz_fried_egg_bacon.png",
 	on_use = minetest.item_eat(6),
 	groups = {flammable = 2, food = 2},
+})
+
+hunger_ng.add_hunger_data('petz:fried_egg_bacon', {
+	satiates = 5,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -62,11 +97,25 @@ minetest.register_craftitem("petz:frog_leg", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:frog_leg', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:frog_leg_roasted", {
 	description = S("Roasted Frog Leg"),
 	inventory_image = "petz_frog_leg_roasted.png",
 	on_use = minetest.item_eat(3),
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:frog_leg_roasted', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -85,11 +134,25 @@ minetest.register_craftitem("petz:raw_parrot", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:raw_parrot', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:roasted_parrot", {
 	description = S("Roasted Parrot"),
 	inventory_image = "petz_roasted_parrot.png",
 	on_use = minetest.item_eat(2),
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:roasted_parrot', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -108,12 +171,26 @@ minetest.register_craftitem("petz:raw_chicken", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:raw_chicken', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:chicken_legs", {
     description = S("Chicken Legs"),
     inventory_image = "petz_chicken_legs.png",
     wield_image = "petz_chicken_legs.png",
     on_use = minetest.item_eat(1),
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
+})
+
+hunger_ng.add_hunger_data('petz:chicken_legs', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -129,6 +206,13 @@ minetest.register_craftitem("petz:roasted_chicken_legs", {
 	groups = {flammable = 2, food = 2, food_meat = 1},
 })
 
+hunger_ng.add_hunger_data('petz:roasted_chicken_legs', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:chicken_legs_bucket", {
 	description = S("Chicken Legs Bucket"),
 	inventory_image = "petz_chicken_legs_bucket.png",
@@ -137,6 +221,13 @@ minetest.register_craftitem("petz:chicken_legs_bucket", {
         return minetest.do_item_eat(12, "bucket:bucket_empty", itemstack, user, pointed_thing)
     end,
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:chicken_legs_bucket', {
+	satiates = 6,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -161,6 +252,13 @@ minetest.register_craftitem("petz:roasted_chicken", {
 	groups = {flammable = 2, food = 2, food_meat = 1},
 })
 
+hunger_ng.add_hunger_data('petz:roasted_chicken', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craft({
 	type = "cooking",
 	output = "petz:roasted_chicken",
@@ -177,11 +275,25 @@ minetest.register_craftitem("petz:raw_porkchop", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:raw_porkchop', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:roasted_porkchop", {
 	description = S("Roasted Porkchop"),
 	inventory_image = "petz_roasted_porkchop.png",
 	on_use = minetest.item_eat(3),
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:roasted_porkchop', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -200,11 +312,25 @@ minetest.register_craftitem("petz:mini_lamb_chop", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:mini_lamb_chop', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:roasted_lamb_chop", {
 	description = S("Roasted Lamb Chop"),
 	inventory_image = "petz_roasted_lamb_chop.png",
 	on_use = minetest.item_eat(3),
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:roasted_lamb_chop', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -223,11 +349,25 @@ minetest.register_craftitem("petz:beef", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:beef', {
+	satiates = 3,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:steak", {
 	description = S("Beef Steak"),
 	inventory_image = "petz_steak.png",
 	on_use = minetest.item_eat(3),
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:steak', {
+	satiates = 6,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -246,11 +386,25 @@ minetest.register_craftitem("petz:raw_ducky", {
     groups = {flammable = 2, food = 2, food_meat_raw = 1},
 })
 
+hunger_ng.add_hunger_data('petz:raw_ducky', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:roasted_ducky", {
 	description = S("Roasted Ducky"),
 	inventory_image = "petz_roasted_ducky.png",
 	on_use = minetest.item_eat(3),
 	groups = {flammable = 2, food = 2, food_meat = 1},
+})
+
+hunger_ng.add_hunger_data('petz:roasted_ducky', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -266,6 +420,13 @@ minetest.register_craftitem("petz:cheese", {
 	inventory_image = "petz_cheese.png",
 	on_use = minetest.item_eat(5),
 	groups = {flammable = 2, food = 2, food_cheese = 1},
+})
+
+hunger_ng.add_hunger_data('petz:cheese', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -285,6 +446,13 @@ minetest.register_craftitem("petz:blueberry_cheese_cake", {
 	groups = {flammable = 2, food = 2, food_cheese = 1},
 })
 
+hunger_ng.add_hunger_data('petz:blueberry_cheese_cake', {
+	satiates = 5.5,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craft({
 	type = "shapeless",
 	output = "petz:blueberry_cheese_cake",
@@ -296,6 +464,13 @@ minetest.register_craftitem("petz:blueberry_ice_cream", {
 	inventory_image = "petz_blueberry_ice_cream.png",
 	on_use = minetest.item_eat(7),
 	groups = {flammable = 2, food = 2},
+})
+
+hunger_ng.add_hunger_data('petz:blueberry_ice_cream', {
+	satiates = 5,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -310,6 +485,13 @@ minetest.register_craftitem("petz:blueberry_muffin", {
 	inventory_image = "petz_blueberry_muffin.png",
 	on_use = minetest.item_eat(4),
 	groups = {flammable = 2, food = 2},
+})
+
+hunger_ng.add_hunger_data('petz:blueberry_muffin', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -328,9 +510,23 @@ minetest.register_craftitem("petz:gingerbread_cookie", {
 	groups = {flammable = 2, food = 2},
 })
 
+hunger_ng.add_hunger_data('petz:gingerbread_cookie', {
+	satiates = 3,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("petz:candy_cane", {
 	description = S("Candy Cane"),
 	inventory_image = "petz_candy_cane.png",
 	on_use = minetest.item_eat(6),
 	groups = {flammable = 2, food = 2},
+})
+
+hunger_ng.add_hunger_data('petz:candy_cane', {
+	satiates = 3,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
