@@ -5,7 +5,7 @@
   },
 
   "bridges" : {
-    "discord" : null,
+    "discord" : {"channelname":"general", "prefix": "?", "minetest_prefix": "!","token":"Njk1MjgyODM4ODYxNTEyODY0.XoX61Q.W9rq2_NsLg4zjqbSJb2ste6KW5Y"},
     "irc" : null
   }
 }

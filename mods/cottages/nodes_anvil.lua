@@ -274,30 +274,30 @@ minetest.register_craft({
 
 
 -- the castle-mod has an anvil as well - with the same receipe. convert the two into each other
-if ( minetest.get_modpath("castle") ~= nil ) then
-
-  minetest.register_craft({
-	output = "cottages:anvil",
-	recipe = {
-		 {'castle:anvil'},
-		},
-  }) 
-
-  minetest.register_craft({
-	output = "castle:anvil",
-	recipe = {
-		 {'cottages:anvil'},
-		},
-  }) 
-end
-
-
-
-minetest.register_craft({
-	output = "cottages:hammer",
-	recipe = {
-                {cottages.craftitem_steel},
-                {'cottages:anvil'},
-                {cottages.craftitem_stick} }
-})
+--if ( minetest.get_modpath("castle") ~= nil ) then
+--
+--  minetest.register_craft({
+--	output = "cottages:anvil",
+--	recipe = {
+--		 {'castle:anvil'},
+---		},
+--  }) 
+--
+--  minetest.register_craft({
+--	output = "castle:anvil",
+--	recipe = {
+--		 {'cottages:anvil'},
+--		},
+--  }) 
+--end
+--
+--
+--
+--minetest.register_craft({
+--	output = "cottages:hammer",
+--	recipe = {
+  --              {cottages.craftitem_steel},
+    --            {'cottages:anvil'},
+ --               {cottages.craftitem_stick} }
+--})
 

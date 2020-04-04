@@ -89,7 +89,7 @@ dofile(minetest.get_modpath("cottages").."/nodes_feldweg.lua");
 dofile(minetest.get_modpath("cottages").."/nodes_pitchfork.lua");
 dofile(minetest.get_modpath("cottages").."/nodes_straw.lua");
 dofile(minetest.get_modpath("cottages").."/nodes_hay.lua");
-dofile(minetest.get_modpath("cottages").."/nodes_anvil.lua");
+--dofile(minetest.get_modpath("cottages").."/nodes_anvil.lua");
 dofile(minetest.get_modpath("cottages").."/nodes_doorlike.lua");
 dofile(minetest.get_modpath("cottages").."/nodes_fences.lua");
 dofile(minetest.get_modpath("cottages").."/nodes_roof.lua");

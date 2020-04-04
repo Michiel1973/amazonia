@@ -77,6 +77,53 @@ minetest.register_ore({
 	},
 })
 
+        minetest.register_ore({
+                ore_type       = "scatter",
+                ore            = "default:stone_with_iron",
+        wherein         = {
+                "default:stone",
+                "aotearoa:greywacke",
+                "aotearoa:gneiss",
+         },
+                clust_scarcity = 9 * 9 * 9,
+                clust_num_ores = 12,
+                clust_size     = 3,
+                y_max          = 31000,
+                y_min          = 1025,
+        })
+
+        minetest.register_ore({
+                ore_type       = "scatter",
+                ore            = "default:stone_with_iron",
+        wherein         = {
+                "default:stone",
+                "aotearoa:greywacke",
+                "aotearoa:gneiss",
+         },
+
+                clust_scarcity = 7 * 7 * 7,
+                clust_num_ores = 5,
+                clust_size     = 3,
+                y_max          = 0,
+                y_min          = -31000,
+        })
+
+        minetest.register_ore({
+                ore_type       = "scatter",
+                ore            = "default:stone_with_iron",
+        wherein         = {
+                "default:stone",
+                "aotearoa:greywacke",
+                "aotearoa:gneiss",
+         },
+                clust_scarcity = 24 * 24 * 24,
+                clust_num_ores = 27,
+                clust_size     = 6,
+                y_max          = -64,
+                y_min          = -31000,
+        })
+
+
 
 
 -- schist into deep stone, greywacke

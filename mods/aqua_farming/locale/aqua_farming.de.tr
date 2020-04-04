@@ -1,0 +1,40 @@
+# textdomain: aqua_farming
+
+
+### alga.lua ###
+
+Green Alga=Grüne Alge
+
+### init.lua ###
+
+Water Soil=Wassergartenerde
+
+### lib.lua ###
+
+Seeds=Samen
+Wild=Wilde
+
+### sea_anemone.lua ###
+
+(raw)=(roh)
+Sea Anemone=Seeanemone
+
+### sea_cucumber.lua ###
+
+Sea Cucumber=Seegurke
+
+### sea_grass.lua ###
+
+Sea Grass=Meergras
+Sea Salt=Meersalz
+dry=getrocknet
+
+### sea_strawberry.lua ###
+### sea_strawberry_recipes.lua ###
+
+Sea Strawberry=Meeres Erdbeeren
+
+### sea_strawberry_recipes.lua ###
+
+Cake=Kuchen
+Piece=Stück

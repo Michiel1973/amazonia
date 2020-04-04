@@ -30,7 +30,7 @@ hunger_ng_use_hunger_bar (Use the hunger bar) bool true
 # slowly be restored to maximum health. When the value
 # is set to higher than maximum hunger the functionality
 # is deisabled.
-hunger_ng_heal_above (Heal when hunger his above this value) float 16
+hunger_ng_heal_above (Heal when hunger his above this value) float 10
 
 # When healing the player because the hunger level is
 # over the healing limit health will be restored using
@@ -123,12 +123,12 @@ hunger_ng_cost_movement (Moving around) float 0.008
 # Heal a player that can heal (above healing limit and
 # not awash) every N seconds. Fractions are allowed.
 # 0.1 seconds is the minimum value.
-hunger_ng_timer_heal (Automatic healing) float 2
+hunger_ng_timer_heal (Automatic healing) float 1
 
 # Make a player starve when the hunger value is below
 #the starvation limit every N seconds. Fractions are
 # allowed and 0.1 seconds is the minimum value
-hunger_ng_timer_starve (Starvation) float 5
+hunger_ng_timer_starve (Starvation) float 10
 
 # Set the basal metabolism to be active every N
 # seconds. Fractions are allowed and 0.1 seconds is
