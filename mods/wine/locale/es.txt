@@ -1,0 +1,11 @@
+# last update: 2020/Mar/21
+
+Glass of Wine = Copa de vino
+Bottle of Wine = Botella de vino
+Beer = Cerveza
+Honey-Mead = Bebida de miel
+Apple Cider = Sidra de manzana
+Fermenting Barrel = Barril de fermentación
+Fermenting Barrel (FULL) = Barril de fermentación (Lleno)
+Fermenting Barrel (@1% Done) = Barril de fermentación (@1% completado)
+[MOD] Wine loaded = 

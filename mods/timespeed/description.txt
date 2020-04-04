@@ -1,0 +1,5 @@
+Configurable different speeds for daytime and nighttime.
+
+This mod allows the configuration of two tome speeds. One time speed for a defined night time and one time speed for a defined daytime. The mod stores the original time speed and restores it when the server is shut down normally.
+
+See https://gitlab.com/4w/timespeed for details.

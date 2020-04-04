@@ -1,0 +1,29 @@
+# Time index for beginning of day time
+#
+# 0 is midnight, 12000 is mid-day, and 24000 is
+# midnight again. Set This to whatever value you want
+# to define where the nighttime setting will be
+# applied. This value has to bne lower than the
+# value for night time
+timespeed_daytime_start (Time when day time starts) int 4300
+
+# Time index for beginning of night time
+#
+# 0 is midnight, 12000 is mid-day, and 24000 is
+# midnight again. Set This to whatever value you want
+# to define where the nighttime setting will be
+# applied. This value has to bne higher than the
+# value for day time
+timespeed_nighttime_start (Time when night time starts) int 19359
+
+# Dayspeed
+#
+# By default the speed in Minetest is set to 72 wich
+# results in a 20 minutes long day.
+timespeed_daytime_speed (Time speed for daytime) int 72
+
+# Dayspeed
+#
+# By default the speed in Minetest is set to 72 wich
+# results in a 20 minutes long night.
+timespeed_nighttime_speed (Time speed for nighttime) int 360
