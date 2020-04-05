@@ -32,12 +32,12 @@ if mobs.mod and mobs.mod == "redo" then
 			run_start = 1,
 			run_end = 60,
 		},
-		drops = {
-			{name = mobs_mc.items.black_dye,
-			chance = 1,
-			min = 1,
-			max = 3,},
-		},
+		-- drops = {
+			-- {name = mobs_squid.items.black_dye,
+			-- chance = 1,
+			-- min = 1,
+			-- max = 3,},
+		-- },
 		visual_size = {x=1.75, y=1.75},
 		makes_footstep_sound = false,
 		stepheight = 0.1,
@@ -45,14 +45,13 @@ if mobs.mod and mobs.mod == "redo" then
 		fly_in = "default:water_source",
 		jump = false,
 		fall_speed = 0.5,
-		view_range = 16,
+		view_range = 6,
 		water_damage = 0,
 		lava_damage = 4,
 		light_damage = 0,
 		runaway = true,
 		fear_height = 4,
 		blood_texture = "mobs_mc_squid_blood.png",
-		end
 	})
 
 -- Spawn near the water surface
