@@ -40,7 +40,7 @@ if mobs.mod and mobs.mod == "redo" then
 -- large
 	if ENABLE_SHARK_LARGE then
 		mobs:register_mob("mobs_sharks:shark_lg", {
-			type = "monster",
+			type = "animal"
 			attack_type = "dogfight",
 			damage = 10,
 			reach = 3,
@@ -58,7 +58,7 @@ if mobs.mod and mobs.mod == "redo" then
 			fly_in = "default:water_source",
 			fall_speed = 0,
 			rotate = 270,
-			view_range = 10,
+			view_range = 6,
 			water_damage = 0,
 			lava_damage = 10,
 			light_damage = 0,
@@ -88,7 +88,7 @@ if mobs.mod and mobs.mod == "redo" then
 -- medium
 	if ENABLE_SHARK_MEDIUM then
 		mobs:register_mob("mobs_sharks:shark_md", {
-			type = "monster",
+			type = "animal"
 			attack_type = "dogfight",
 			damage = 8,
 			reach = 2,
@@ -107,7 +107,7 @@ if mobs.mod and mobs.mod == "redo" then
 			fly_in = "default:water_source",
 			fall_speed = -1,
 			rotate = 270,
-			view_range = 10,
+			view_range = 6,
 			water_damage = 0,
 			lava_damage = 10,
 			light_damage = 0,
@@ -121,7 +121,7 @@ if mobs.mod and mobs.mod == "redo" then
 -- small
 	if ENABLE_SHARK_SMALL then
 		mobs:register_mob("mobs_sharks:shark_sm", {
-			type = "monster",
+			type = "animal"
 			attack_type = "dogfight",
 			damage = 6,
 			reach = 1,
@@ -140,7 +140,7 @@ if mobs.mod and mobs.mod == "redo" then
 			fly_in = "default:water_source",
 			fall_speed = -1,
 			rotate = 270,
-			view_range = 10,
+			view_range = 5,
 			water_damage = 0,
 			lava_damage = 10,
 			light_damage = 0,
