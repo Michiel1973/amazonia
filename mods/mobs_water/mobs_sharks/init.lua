@@ -40,7 +40,7 @@ if mobs.mod and mobs.mod == "redo" then
 -- large
 	if ENABLE_SHARK_LARGE then
 		mobs:register_mob("mobs_sharks:shark_lg", {
-			type = "animal"
+			type = "animal",
 			attack_type = "dogfight",
 			damage = 10,
 			reach = 3,
@@ -81,14 +81,14 @@ if mobs.mod and mobs.mod == "redo" then
 			end
 		})
 		--name, nodes, neighbours, minlight, maxlight, interval, chance, active_object_count, min_height, max_height
-		mobs:spawn_specific("mobs_sharks:shark_lg", l_spawn_in, l_spawn_near, -1, 20, 30, l_spawn_chance, 1, -31000, 0)
+		mobs:spawn_specific("mobs_sharks:shark_lg", l_spawn_in, l_spawn_near, -1, 20, 30, l_spawn_chance, 1, -31000, -50)
 		mobs:register_egg("mobs_sharks:shark_lg", "Shark (large)", l_egg_texture, 0)
 	end
 
 -- medium
 	if ENABLE_SHARK_MEDIUM then
 		mobs:register_mob("mobs_sharks:shark_md", {
-			type = "animal"
+			type = "animal",
 			attack_type = "dogfight",
 			damage = 8,
 			reach = 2,
@@ -114,14 +114,14 @@ if mobs.mod and mobs.mod == "redo" then
 			animation = l_anims
 		})
 		--name, nodes, neighbours, minlight, maxlight, interval, chance, active_object_count, min_height, max_height
-		mobs:spawn_specific("mobs_sharks:shark_md", l_spawn_in, l_spawn_near, -1, 20, 30, l_spawn_chance, 1, -31000, 0)
+		mobs:spawn_specific("mobs_sharks:shark_md", l_spawn_in, l_spawn_near, -1, 20, 30, l_spawn_chance, 1, -31000, -20)
 		mobs:register_egg("mobs_sharks:shark_md", "Shark (medium)", l_egg_texture, 0)
 	end
 
 -- small
 	if ENABLE_SHARK_SMALL then
 		mobs:register_mob("mobs_sharks:shark_sm", {
-			type = "animal"
+			type = "animal",
 			attack_type = "dogfight",
 			damage = 6,
 			reach = 1,
@@ -147,7 +147,7 @@ if mobs.mod and mobs.mod == "redo" then
 			animation = l_anims
 		})
 		--name, nodes, neighbours, minlight, maxlight, interval, chance, active_object_count, min_height, max_height
-		mobs:spawn_specific("mobs_sharks:shark_sm", l_spawn_in, l_spawn_near, -1, 20, 30, l_spawn_chance, 1, -31000, 0)
+		mobs:spawn_specific("mobs_sharks:shark_sm", l_spawn_in, l_spawn_near, -1, 20, 30, l_spawn_chance, 1, -31000, -5)
 		mobs:register_egg("mobs_sharks:shark_sm", "Shark (small)", l_egg_texture, 0)
 	end
 
