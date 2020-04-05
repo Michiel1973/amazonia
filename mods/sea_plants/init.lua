@@ -39,7 +39,7 @@ local sea_plants_sand_kelp_green_max = tonumber(minetest.settings:get("sea_plant
 local sea_plants_sand_kelp_green_min = tonumber(minetest.settings:get("sea_plants_sand_kelp_green_min"))
 
 if not sea_plants_sand_kelp_green_max then
-   sea_plants_sand_kelp_green_max = -14
+   sea_plants_sand_kelp_green_max = -5
    minetest.settings:set("sea_plants_sand_kelp_green_max",
    sea_plants_sand_kelp_green_max)
 end
@@ -57,7 +57,7 @@ local sea_plants_dirt_kelp_green_max = tonumber(minetest.settings:get("sea_plant
 local sea_plants_sand_kelp_green_min = tonumber(minetest.settings:get("sea_plants_dirt_kelp_green_min"))
 
 if not sea_plants_dirt_kelp_green_max then
-   sea_plants_dirt_kelp_green_max = -14
+   sea_plants_dirt_kelp_green_max = -7
    minetest.settings:set("sea_plants_dirt_kelp_green_max",
    sea_plants_dirt_kelp_green_max)
 end
@@ -75,7 +75,7 @@ local sea_plants_sand_kelp_brown_max = tonumber(minetest.settings:get("sea_plant
 local sea_plants_sand_kelp_brown_min = tonumber(minetest.settings:get("sea_plants_sand_kelp_brown_min"))
 
 if not sea_plants_sand_kelp_brown_max then
-   sea_plants_sand_kelp_brown_max = -14
+   sea_plants_sand_kelp_brown_max = -9
    minetest.settings:set("sea_plants_sand_kelp_brown_max",
    sea_plants_sand_kelp_brown_max)
 end
@@ -93,7 +93,7 @@ local sea_plants_dirt_kelp_brown_max = tonumber(minetest.settings:get("sea_plant
 local sea_plants_sand_kelp_brown_min = tonumber(minetest.settings:get("sea_plants_dirt_kelp_brown_min"))
 
 if not sea_plants_dirt_kelp_brown_max then
-   sea_plants_dirt_kelp_brown_max = -14
+   sea_plants_dirt_kelp_brown_max = -12
    minetest.settings:set("sea_plants_dirt_kelp_brown_max",
    sea_plants_dirt_kelp_brown_max)
 end
@@ -111,7 +111,7 @@ local sea_plants_sand_sea_grass_green_max = tonumber(minetest.settings:get("sea_
 local sea_plants_sand_sea_grass_green_min = tonumber(minetest.settings:get("sea_plants_sand_sea_grass_green_min"))
 
 if not sea_plants_sand_sea_grass_green_max then
-   sea_plants_sand_sea_grass_green_max = -14
+   sea_plants_sand_sea_grass_green_max = -8
    minetest.settings:set("sea_plants_sand_sea_grass_green_max",
    sea_plants_sand_sea_grass_green_max)
 end
@@ -129,7 +129,7 @@ local sea_plants_dirt_sea_grass_green_max = tonumber(minetest.settings:get("sea_
 local sea_plants_sand_sea_grass_green_min = tonumber(minetest.settings:get("sea_plants_dirt_sea_grass_green_min"))
 
 if not sea_plants_dirt_sea_grass_green_max then
-   sea_plants_dirt_sea_grass_green_max = -14
+   sea_plants_dirt_sea_grass_green_max = -6
    minetest.settings:set("sea_plants_dirt_sea_grass_green_max",
    sea_plants_dirt_sea_grass_green_max)
 end
@@ -147,7 +147,7 @@ local sea_plants_sand_sea_grass_red_max = tonumber(minetest.settings:get("sea_pl
 local sea_plants_sand_sea_grass_red_min = tonumber(minetest.settings:get("sea_plants_sand_sea_grass_red_min"))
 
 if not sea_plants_sand_sea_grass_red_max then
-   sea_plants_sand_sea_grass_red_max = -14
+   sea_plants_sand_sea_grass_red_max = -5
    minetest.settings:set("sea_plants_sand_sea_grass_red_max",
    sea_plants_sand_sea_grass_red_max)
 end
@@ -165,7 +165,7 @@ local sea_plants_dirt_sea_grass_red_max = tonumber(minetest.settings:get("sea_pl
 local sea_plants_sand_sea_grass_red_min = tonumber(minetest.settings:get("sea_plants_dirt_sea_grass_red_min"))
 
 if not sea_plants_dirt_sea_grass_red_max then
-   sea_plants_dirt_sea_grass_red_max = -14
+   sea_plants_dirt_sea_grass_red_max = -8
    minetest.settings:set("sea_plants_dirt_sea_grass_red_max",
    sea_plants_dirt_sea_grass_red_max)
 end
@@ -187,13 +187,13 @@ local sea_plants_dirt_kelp_green_interval = tonumber(minetest.settings:get("sea_
 local sea_plants_dirt_kelp_green_chance = tonumber(minetest.settings:get("sea_plants_dirt_kelp_green_chance"))
 
 if not sea_plants_dirt_kelp_green_interval then
-   sea_plants_dirt_kelp_green_interval = 12
+   sea_plants_dirt_kelp_green_interval = 120
    minetest.settings:set("sea_plants_dirt_kelp_green_interval",
    sea_plants_dirt_kelp_green_interval)
 end
 
 if not sea_plants_dirt_kelp_green_chance then
-   sea_plants_dirt_kelp_green_chance = 12
+   sea_plants_dirt_kelp_green_chance = 60
    minetest.settings:set("sea_plants_dirt_kelp_green_chance",
    sea_plants_dirt_kelp_green_chance)
 end
@@ -205,13 +205,13 @@ local sea_plants_sand_kelp_green_interval = tonumber(minetest.settings:get("sea_
 local sea_plants_sand_kelp_green_chance = tonumber(minetest.settings:get("sea_plants_sand_kelp_green_chance"))
 
 if not sea_plants_sand_kelp_green_interval then
-   sea_plants_sand_kelp_green_interval = 12
+   sea_plants_sand_kelp_green_interval = 115
    minetest.settings:set("sea_plants_sand_kelp_green_interval",
    sea_plants_sand_kelp_green_interval)
 end
 
 if not sea_plants_sand_kelp_green_chance then
-   sea_plants_sand_kelp_green_chance = 12
+   sea_plants_sand_kelp_green_chance = 70
    minetest.settings:set("sea_plants_sand_kelp_green_chance",
    sea_plants_sand_kelp_green_chance)
 end
@@ -223,13 +223,13 @@ local sea_plants_kelp_green_interval = tonumber(minetest.settings:get("sea_plant
 local sea_plants_kelp_green_chance = tonumber(minetest.settings:get("sea_plants_kelp_green_chance"))
 
 if not sea_plants_kelp_green_interval then
-   sea_plants_kelp_green_interval = 6
+   sea_plants_kelp_green_interval = 150
    minetest.settings:set("sea_plants_kelp_green_interval",
    sea_plants_kelp_green_interval)
 end
 
 if not sea_plants_kelp_green_chance then
-   sea_plants_kelp_green_chance = 3
+   sea_plants_kelp_green_chance = 120
    minetest.settings:set("sea_plants_kelp_green_chance",
    sea_plants_kelp_green_chance)
 end
@@ -241,13 +241,13 @@ local sea_plants_dirt_kelp_brown_interval = tonumber(minetest.settings:get("sea_
 local sea_plants_dirt_kelp_brown_chance = tonumber(minetest.settings:get("sea_plants_dirt_kelp_brown_chance"))
 
 if not sea_plants_dirt_kelp_brown_interval then
-   sea_plants_dirt_kelp_brown_interval = 12
+   sea_plants_dirt_kelp_brown_interval = 125
    minetest.settings:set("sea_plants_dirt_kelp_brown_interval",
    sea_plants_dirt_kelp_brown_interval)
 end
 
 if not sea_plants_dirt_kelp_brown_chance then
-   sea_plants_dirt_kelp_brown_chance = 12
+   sea_plants_dirt_kelp_brown_chance = 120
    minetest.settings:set("sea_plants_dirt_kelp_brown_chance",
    sea_plants_dirt_kelp_brown_chance)
 end
@@ -259,13 +259,13 @@ local sea_plants_sand_kelp_brown_interval = tonumber(minetest.settings:get("sea_
 local sea_plants_sand_kelp_brown_chance = tonumber(minetest.settings:get("sea_plants_sand_kelp_brown_chance"))
 
 if not sea_plants_sand_kelp_brown_interval then
-   sea_plants_sand_kelp_brown_interval = 12
+   sea_plants_sand_kelp_brown_interval = 145
    minetest.settings:set("sea_plants_sand_kelp_brown_interval",
    sea_plants_sand_kelp_brown_interval)
 end
 
 if not sea_plants_sand_kelp_brown_chance then
-   sea_plants_sand_kelp_brown_chance = 12
+   sea_plants_sand_kelp_brown_chance = 90
    minetest.settings:set("sea_plants_sand_kelp_brown_chance",
    sea_plants_sand_kelp_brown_chance)
 end
@@ -277,13 +277,13 @@ local sea_plants_kelp_brown_interval = tonumber(minetest.settings:get("sea_plant
 local sea_plants_kelp_brown_chance = tonumber(minetest.settings:get("sea_plants_kelp_brown_chance"))
 
 if not sea_plants_kelp_brown_interval then
-   sea_plants_kelp_brown_interval = 6
+   sea_plants_kelp_brown_interval = 130
    minetest.settings:set("sea_plants_kelp_brown_interval",
    sea_plants_kelp_brown_interval)
 end
 
 if not sea_plants_kelp_brown_chance then
-   sea_plants_kelp_brown_chance = 3
+   sea_plants_kelp_brown_chance = 90
    minetest.settings:set("sea_plants_kelp_brown_chance",
    sea_plants_kelp_brown_chance)
 end
@@ -295,13 +295,13 @@ local sea_plants_dirt_sea_grass_green_interval = tonumber(minetest.settings:get(
 local sea_plants_dirt_sea_grass_green_chance = tonumber(minetest.settings:get("sea_plants_dirt_sea_grass_green_chance"))
 
 if not sea_plants_dirt_sea_grass_green_interval then
-   sea_plants_dirt_sea_grass_green_interval = 12
+   sea_plants_dirt_sea_grass_green_interval = 145
    minetest.settings:set("sea_plants_dirt_sea_grass_green_interval",
    sea_plants_dirt_sea_grass_green_interval)
 end
 
 if not sea_plants_dirt_sea_grass_green_chance then
-   sea_plants_dirt_sea_grass_green_chance = 12
+   sea_plants_dirt_sea_grass_green_chance = 90
    minetest.settings:set("sea_plants_dirt_sea_grass_green_chance",
    sea_plants_dirt_sea_grass_green_chance)
 end
@@ -313,13 +313,13 @@ local sea_plants_sand_sea_grass_green_interval = tonumber(minetest.settings:get(
 local sea_plants_sand_sea_grass_green_chance = tonumber(minetest.settings:get("sea_plants_sand_sea_grass_green_chance"))
 
 if not sea_plants_sand_sea_grass_green_interval then
-   sea_plants_sand_sea_grass_green_interval = 12
+   sea_plants_sand_sea_grass_green_interval = 135
    minetest.settings:set("sea_plants_sand_sea_grass_green_interval",
    sea_plants_sand_sea_grass_green_interval)
 end
 
 if not sea_plants_sand_sea_grass_green_chance then
-   sea_plants_sand_sea_grass_green_chance = 12
+   sea_plants_sand_sea_grass_green_chance = 60
    minetest.settings:set("sea_plants_sand_sea_grass_green_chance",
    sea_plants_sand_sea_grass_green_chance)
 end
@@ -331,13 +331,13 @@ local sea_plants_dirt_sea_grass_red_interval = tonumber(minetest.settings:get("s
 local sea_plants_dirt_sea_grass_red_chance = tonumber(minetest.settings:get("sea_plants_dirt_sea_grass_red_chance"))
 
 if not sea_plants_dirt_sea_grass_red_interval then
-   sea_plants_dirt_sea_grass_red_interval = 12
+   sea_plants_dirt_sea_grass_red_interval = 127
    minetest.settings:set("sea_plants_dirt_sea_grass_red_interval",
    sea_plants_dirt_sea_grass_red_interval)
 end
 
 if not sea_plants_dirt_sea_grass_red_chance then
-   sea_plants_dirt_sea_grass_red_chance = 12
+   sea_plants_dirt_sea_grass_red_chance = 50
    minetest.settings:set("sea_plants_dirt_sea_grass_red_chance",
    sea_plants_dirt_sea_grass_red_chance)
 end
@@ -349,13 +349,13 @@ local sea_plants_sand_sea_grass_red_interval = tonumber(minetest.settings:get("s
 local sea_plants_sand_sea_grass_red_chance = tonumber(minetest.settings:get("sea_plants_sand_sea_grass_red_chance"))
 
 if not sea_plants_sand_sea_grass_red_interval then
-   sea_plants_sand_sea_grass_red_interval = 12
+   sea_plants_sand_sea_grass_red_interval = 140
    minetest.settings:set("sea_plants_sand_sea_grass_red_interval",
    sea_plants_sand_sea_grass_red_interval)
 end
 
 if not sea_plants_sand_sea_grass_red_chance then
-   sea_plants_sand_sea_grass_red_chance = 12
+   sea_plants_sand_sea_grass_red_chance = 40
    minetest.settings:set("sea_plants_sand_sea_grass_red_chance",
    sea_plants_sand_sea_grass_red_chance)
 end
