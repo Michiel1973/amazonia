@@ -10,7 +10,7 @@ petz.breed = function(self, clicker, wielded_item, wielded_item_name)
 		mokapi.make_sound("object", self.object, "petz_"..self.type.."_moaning", petz.settings.max_hear_distance)
 	else
 		if self.is_rut then
-			minetest.chat_send_player(clicker:get_player_name(), S("This animal is already rut."))
+			minetest.chat_send_player(clicker:get_player_name(), S("This animal is already in heat."))
 		else
 			minetest.chat_send_player(clicker:get_player_name(), S("This animal is already pregnant."))
 		end
