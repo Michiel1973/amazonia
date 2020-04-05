@@ -45,7 +45,7 @@ if mobs.mod and mobs.mod == "redo" then
 		fly_in = "default:water_source",
 		jump = false,
 		fall_speed = 0.5,
-		view_range = 6,
+		view_range = 5,
 		water_damage = 0,
 		lava_damage = 4,
 		light_damage = 0,
