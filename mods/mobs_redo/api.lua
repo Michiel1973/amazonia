@@ -6,7 +6,7 @@ local use_cmi = minetest.global_exists("cmi")
 
 mobs = {
 	mod = "redo",
-	version = "20200326",
+	version = "20200406",
 	intllib = S,
 	invis = minetest.global_exists("invisibility") and invisibility or {}
 }
@@ -253,6 +253,8 @@ end
 function mob_class:get_velocity()
 
 	local v = self.object:get_velocity()
+
+	if not v then return 0 end
 
 	return (v.x * v.x + v.z * v.z) ^ 0.5
 end
@@ -3115,7 +3117,10 @@ function mob_class:on_step(dtime)
 	end
 
 	local pos = self.object:get_pos()
-	local yaw = 0
+	local yaw = self.object:get_yaw()
+
+	-- early warning check, if no yaw then no entity, skip rest of function
+	if not yaw then return end
 
 	-- get node at foot level every quarter second
 	self.node_timer = (self.node_timer or 0) + dtime
@@ -3163,8 +3168,6 @@ function mob_class:on_step(dtime)
 	-- smooth rotation by ThomasMonroe314
 
 	if self.delay and self.delay > 0 then
-
-		local yaw = self.object:get_yaw() or 0
 
 		if self.delay == 1 then
 			yaw = self.target_yaw
