@@ -13,7 +13,7 @@ local SCALE = 200
 local NOISEH = -0.6
 local NOISEL = -1.2
 
-local GREINT = 23
+local GREINT = 45
 local GRECHA = 13
 
 local ONGEN = true

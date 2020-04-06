@@ -33,7 +33,7 @@ if mobs.mod and mobs.mod == "redo" then
 	mobs:spawn_specific("mobs_jellyfish:jellyfish",
 		{"default:water_source"},
 		{"default:water_flowing","default:water_source"},
-		5, 20, 30, 10000, 1, -31000, 0)
+		5, 20, 30, 10000, 1, -31000, -3)
 	mobs:register_egg("mobs_jellyfish:jellyfish", "Jellyfish", "jellyfish_inv.png", 0)
 
 end

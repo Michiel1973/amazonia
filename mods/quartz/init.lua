@@ -136,7 +136,7 @@ local dirs2 = {12, 9, 18, 7, 12}
 -- Replace all instances of the horizontal quartz pillar with the
 minetest.register_abm({
 	nodenames = {"quartz:pillar_horizontal"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local fdir = node.param2 or 0
