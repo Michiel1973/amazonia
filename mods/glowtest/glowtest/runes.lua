@@ -70,7 +70,7 @@ minetest.register_node("glowtest:rune_2_cursed_off", {
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_1","glowtest:rune_2"},
-	interval = 1.0,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local objs = minetest.env:get_objects_inside_radius(pos, 3)
@@ -82,7 +82,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_1_cursed","glowtest:rune_2_cursed"},
-	interval = 1.0,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local objs = minetest.env:get_objects_inside_radius(pos, 3)
@@ -94,7 +94,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_1_cursed"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() > 0.2 and minetest.env:get_timeofday() < 0.8
@@ -106,7 +106,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_1_cursed_off"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() < 0.2 or minetest.env:get_timeofday() > 0.8
@@ -118,7 +118,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_2_cursed"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() > 0.2 and minetest.env:get_timeofday() < 0.8
@@ -130,7 +130,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_2_cursed_off"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() < 0.2 or minetest.env:get_timeofday() > 0.8
@@ -142,7 +142,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_1_off"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() > 0.2 and minetest.env:get_timeofday() < 0.8
@@ -154,7 +154,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_1"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() < 0.2 or minetest.env:get_timeofday() > 0.8
@@ -166,7 +166,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_2_off"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() > 0.2 and minetest.env:get_timeofday() < 0.8
@@ -178,7 +178,7 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"glowtest:rune_2"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.env:get_timeofday() < 0.2 or minetest.env:get_timeofday() > 0.8

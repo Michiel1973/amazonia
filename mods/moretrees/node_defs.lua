@@ -299,7 +299,7 @@ for i in ipairs(moretrees.treelist) do
 
 	minetest.register_abm({
 		nodenames = { "moretrees:"..treename.."_trunk_sideways" },
-		interval = 1,
+		interval = 3,
 		chance = 1,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			local fdir = node.param2 or 0
@@ -476,7 +476,7 @@ minetest.register_node("moretrees:rubber_tree_trunk_empty", {
 
 minetest.register_abm({
 	nodenames = { "moretrees:rubber_tree_trunk_empty_sideways" },
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local fdir = node.param2 or 0

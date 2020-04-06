@@ -502,7 +502,7 @@ end
 if not minetest.settings:get_bool("only_peaceful_mobs") then
 	minetest.register_abm({
 		nodenames = {"tsm_pyramids:spawner_mummy"},
-		interval = 2.0,
+		interval = 5,
 		chance = 20,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			tsm_pyramids.attempt_mummy_spawn(pos, true)

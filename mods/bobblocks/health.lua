@@ -66,7 +66,7 @@ minetest.register_node("bobblocks:health_on", {
 
 minetest.register_abm(
 	{nodenames = {"bobblocks:health_on"},
-    interval = 1.0,
+    interval = 2,
     chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
     local objs = minetest.get_objects_inside_radius(pos, 1)
