@@ -45,6 +45,7 @@ minetest.register_entity("petz:"..pet_name, {
 	follow = petz.settings.pony_follow,
 	drops = {
 		{name = "petz:bone", chance = 6, min = 1, max = 1,},
+		{name = "petz:leather", chance = 2, min = 1, max = 1,},
 	},
 	rotate = petz.settings.rotate,
 	physical = true,
