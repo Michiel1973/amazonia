@@ -56,6 +56,7 @@ for i=1, 2 do
 		drops = {
 			{name = "petz:elephant_tusk", chance = 1, min = 2, max = 2,},
 			{name = "petz:bone", chance = 3, min = 1, max = 2,},
+			{name = "petz:leather", chance = 2, min = 1, max = 1,},
 		},
 		replace_rate = 10,
 		replace_offset = 0,
