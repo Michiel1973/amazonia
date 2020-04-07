@@ -74,6 +74,7 @@ minetest.register_entity("petz:"..pet_name,{
 	drops = {
 		{name = "petz:wolf_fur", chance = 5, min = 1, max = 1,},
 		{name = "petz:wolf_jaw", chance = 5, min = 1, max = 1,},
+		{name = "petz:leather", chance = 2, min = 1, max = 1,},
 	},
 
 	--punch_start = 83, stand4_end = 95,
