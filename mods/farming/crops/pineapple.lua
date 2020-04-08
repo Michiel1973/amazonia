@@ -36,6 +36,14 @@ minetest.register_craftitem("farming:pineapple_ring", {
 	on_use = minetest.item_eat(1),
 })
 
+
+hunger_ng.add_hunger_data('farming:pineapple_ring', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craft( {
 	output = "farming:pineapple_ring 5",
 	type = "shapeless",
@@ -49,6 +57,13 @@ minetest.register_craftitem("farming:pineapple_juice", {
 	inventory_image = "farming_pineapple_juice.png",
 	on_use = minetest.item_eat(4, "vessels:drinking_glass"),
 	groups = {vessel = 1},
+})
+
+hunger_ng.add_hunger_data('farming:pineapple_juice', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({

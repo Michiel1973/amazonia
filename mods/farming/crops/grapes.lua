@@ -75,6 +75,14 @@ minetest.register_craftitem("farming:grapes", {
 	end,
 })
 
+
+hunger_ng.add_hunger_data('farming:grapes', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 -- grapes can be used for violet dye
 minetest.register_craft({
 	output = "dye:violet",

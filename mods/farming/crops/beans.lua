@@ -80,6 +80,14 @@ minetest.register_craftitem("farming:beans", {
 	end,
 })
 
+
+hunger_ng.add_hunger_data('farming:beans', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 -- beans can be used for green dye
 minetest.register_craft({
 	output = "dye:green",

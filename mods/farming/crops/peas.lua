@@ -20,6 +20,14 @@ minetest.register_craftitem("farming:peas", {
 	on_use = minetest.item_eat(1)
 })
 
+
+hunger_ng.add_hunger_data('farming:peas', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:peas",
@@ -33,6 +41,14 @@ minetest.register_craftitem("farming:pea_soup", {
 	groups = {flammable = 2},
 	on_use = minetest.item_eat(4, "farming:bowl"),
 })
+
+hunger_ng.add_hunger_data('farming:peas', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 
 minetest.register_craft({
 	type = "shapeless",

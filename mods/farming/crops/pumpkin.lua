@@ -16,6 +16,14 @@ minetest.register_craftitem("farming:pumpkin_slice", {
 	on_use = minetest.item_eat(2),
 })
 
+
+hunger_ng.add_hunger_data('farming:pumpkin_slice', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craft({
 	output = "farming:pumpkin",
 	recipe = {
@@ -118,6 +126,14 @@ minetest.register_craftitem("farming:pumpkin_bread", {
 	inventory_image = "farming_pumpkin_bread.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_bread = 1, flammable = 2},
+})
+
+
+hunger_ng.add_hunger_data('farming:pumpkin_bread', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craftitem("farming:pumpkin_dough", {

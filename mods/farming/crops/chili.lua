@@ -19,6 +19,14 @@ minetest.register_craftitem("farming:chili_bowl", {
 	on_use = minetest.item_eat(8, "farming:bowl"),
 })
 
+
+hunger_ng.add_hunger_data('farming:chili_bowl', {
+	satiates = 6,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:chili_bowl",
