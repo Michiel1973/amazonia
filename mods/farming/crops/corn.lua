@@ -25,14 +25,6 @@ minetest.register_craftitem("farming:corn_cob", {
 	on_use = minetest.item_eat(5),
 })
 
-
-hunger_ng.add_hunger_data('farming:corn_cob', {
-	satiates = 3,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 minetest.register_craft({
 	type = "cooking",
 	cooktime = 10,

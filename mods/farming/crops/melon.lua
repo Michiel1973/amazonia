@@ -12,15 +12,6 @@ minetest.register_craftitem("farming:melon_slice", {
 	on_use = minetest.item_eat(2),
 })
 
-
-hunger_ng.add_hunger_data('farming:melon_slice', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
-
 minetest.register_craft({
 	output = "farming:melon_8",
 	recipe = {

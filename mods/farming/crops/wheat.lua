@@ -97,14 +97,6 @@ minetest.register_craftitem("farming:bread", {
 	groups = {food_bread = 1, flammable = 2},
 })
 
-
-hunger_ng.add_hunger_data('farming:bread', {
-	satiates = 3,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 minetest.register_craft({
 	type = "cooking",
 	cooktime = 15,
@@ -118,13 +110,6 @@ minetest.register_craftitem("farming:bread_slice", {
 	inventory_image = "farming_bread_slice.png",
 	on_use = minetest.item_eat(1),
 	groups = {food_bread_slice = 1, flammable = 2},
-})
-
-hunger_ng.add_hunger_data('farming:bread_slice', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({
@@ -142,13 +127,6 @@ minetest.register_craftitem("farming:toast", {
 	groups = {food_toast = 1, flammable = 2},
 })
 
-hunger_ng.add_hunger_data('farming:toast', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 minetest.register_craft({
 	type = "cooking",
 	cooktime = 3,
@@ -162,13 +140,6 @@ minetest.register_craftitem("farming:toast_sandwich", {
 	inventory_image = "farming_toast_sandwich.png",
 	on_use = minetest.item_eat(4),
 	groups = {flammable = 2},
-})
-
-hunger_ng.add_hunger_data('farming:toast_sandwich', {
-	satiates = 4,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({

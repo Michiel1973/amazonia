@@ -94,26 +94,11 @@ minetest.register_craft( {
 	}
 })
 
-
-hunger_ng.add_hunger_data('farming:cookie', {
-	satiates = 3,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- bar of dark chocolate (thanks to Ice Pandora for her deviantart.com chocolate tutorial)
 minetest.register_craftitem("farming:chocolate_dark", {
 	description = S("Bar of Dark Chocolate"),
 	inventory_image = "farming_chocolate_dark.png",
 	on_use = minetest.item_eat(3),
-})
-
-hunger_ng.add_hunger_data('farming:chocolate_dark', {
-	satiates = 4,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft( {

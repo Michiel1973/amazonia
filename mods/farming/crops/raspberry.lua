@@ -13,27 +13,12 @@ minetest.register_craftitem("farming:raspberries", {
 	on_use = minetest.item_eat(1),
 })
 
-hunger_ng.add_hunger_data('farming:raspberries', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- raspberry smoothie
 minetest.register_craftitem("farming:smoothie_raspberry", {
 	description = S("Raspberry Smoothie"),
 	inventory_image = "farming_raspberry_smoothie.png",
 	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
 	groups = {vessel = 1},
-})
-
-
-hunger_ng.add_hunger_data('farming:smoothie_raspberry', {
-	satiates = 3,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({
