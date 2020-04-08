@@ -72,6 +72,14 @@ minetest.register_craftitem("farming:rice_bread", {
 	groups = {food_rice_bread = 1, flammable = 2},
 })
 
+
+hunger_ng.add_hunger_data('farming:rice_bread', {
+	satiates = 3,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 minetest.register_craftitem("farming:rice_flour", {
 	description = "Rice Flour",
 	inventory_image = "farming_rice_flour.png",
@@ -120,6 +128,14 @@ minetest.register_craftitem("farming:bread_multigrain", {
 	inventory_image = "farming_bread_multigrain.png",
 	on_use = minetest.item_eat(7),
 	groups = {food_bread = 1, flammable = 2},
+})
+
+
+hunger_ng.add_hunger_data('farming:bread_multigrain', {
+	satiates = 4,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({

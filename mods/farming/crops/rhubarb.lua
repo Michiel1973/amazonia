@@ -12,11 +12,26 @@ minetest.register_craftitem("farming:rhubarb", {
 	on_use = minetest.item_eat(1),
 })
 
+
+hunger_ng.add_hunger_data('farming:rhubarb', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 -- rhubarb pie
 minetest.register_craftitem("farming:rhubarb_pie", {
 	description = S("Rhubarb Pie"),
 	inventory_image = "farming_rhubarb_pie.png",
 	on_use = minetest.item_eat(6),
+})
+
+hunger_ng.add_hunger_data('farming:rhubarb_pie', {
+	satiates = 5,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({

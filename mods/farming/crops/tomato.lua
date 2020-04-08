@@ -17,6 +17,14 @@ minetest.register_craftitem("farming:tomato", {
 	on_use = minetest.item_eat(4),
 })
 
+
+hunger_ng.add_hunger_data('farming:tomato', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 -- tomato definition
 local crop_def = {
 	drawtype = "plantlike",

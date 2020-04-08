@@ -1,4 +1,5 @@
 default
+hunger_ng
 stairs?
 intllib?
 lucky_block?

@@ -17,12 +17,27 @@ minetest.register_craftitem("farming:carrot", {
 	on_use = minetest.item_eat(4),
 })
 
+
+hunger_ng.add_hunger_data('farming:carrot', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 -- carrot juice
 minetest.register_craftitem("farming:carrot_juice", {
 	description = S("Carrot Juice"),
 	inventory_image = "farming_carrot_juice.png",
 	on_use = minetest.item_eat(4, "vessels:drinking_glass"),
 	groups = {vessel = 1},
+})
+
+hunger_ng.add_hunger_data('farming:carrot_juice', {
+	satiates = 2,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -41,6 +56,13 @@ minetest.register_craftitem("farming:carrot_gold", {
 	description = S("Golden Carrot"),
 	inventory_image = "farming_carrot_gold.png",
 	on_use = minetest.item_eat(6),
+})
+
+hunger_ng.add_hunger_data('farming:carrot_gold', {
+	satiates = 8,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({

@@ -13,12 +13,28 @@ minetest.register_craftitem("farming:blueberries", {
 	on_use = minetest.item_eat(1),
 })
 
+
+hunger_ng.add_hunger_data('farming:blueberries', {
+	satiates = 1,
+	heals = 0,
+	returns = '',
+	timeout = 0
+})
+
 -- blueberry muffin (thanks to sosogirl123 @ deviantart.com for muffin image)
 
 minetest.register_craftitem("farming:muffin_blueberry", {
 	description = S("Blueberry Muffin"),
 	inventory_image = "farming_blueberry_muffin.png",
 	on_use = minetest.item_eat(2),
+})
+
+
+hunger_ng.add_hunger_data('farming:muffin_blueberry', {
+	satiates = 3,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
@@ -34,6 +50,13 @@ minetest.register_craftitem("farming:blueberry_pie", {
 	description = S("Blueberry Pie"),
 	inventory_image = "farming_blueberry_pie.png",
 	on_use = minetest.item_eat(6),
+})
+
+hunger_ng.add_hunger_data('farming:blueberry_pie', {
+	satiates = 6,
+	heals = 0,
+	returns = '',
+	timeout = 0
 })
 
 minetest.register_craft({
