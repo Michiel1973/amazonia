@@ -29,15 +29,6 @@ minetest.register_node("farming:coffee_cup", {
 	sounds = default.node_sound_glass_defaults(),
 })
 
-
-hunger_ng.add_hunger_data('farming:coffee_cup', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
-
 minetest.register_alias("farming:coffee_cup_hot", "farming:coffee_cup")
 minetest.register_alias("farming:drinking_cup", "vessels:drinking_glass")
 

@@ -12,27 +12,12 @@ minetest.register_craftitem("farming:beetroot", {
 	on_use = minetest.item_eat(1),
 })
 
-
-hunger_ng.add_hunger_data('farming:beetroot', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- beetroot soup
 minetest.register_craftitem("farming:beetroot_soup", {
 	description = S("Beetroot Soup"),
 	inventory_image = "farming_beetroot_soup.png",
 	groups = {flammable = 2},
 	on_use = minetest.item_eat(6, "farming:bowl"),
-})
-
-hunger_ng.add_hunger_data('farming:beetroot_soup', {
-	satiates = 3,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({

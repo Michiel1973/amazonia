@@ -27,8 +27,6 @@ mobs.intllib = S
 --dofile(path .. "/npc.lua") -- TenPlus1
 dofile(path .. "/trader.lua")
 --dofile(path .. "/igor.lua")
-dofile(path .. "/waiter.lua")
-
 
 dofile(path .. "/lucky_block.lua")
 

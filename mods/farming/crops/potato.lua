@@ -26,26 +26,11 @@ minetest.register_craftitem("farming:potato", {
 	end,
 })
 
-
-hunger_ng.add_hunger_data('farming:potato', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- baked potato
 minetest.register_craftitem("farming:baked_potato", {
 	description = S("Baked Potato"),
 	inventory_image = "farming_baked_potato.png",
 	on_use = minetest.item_eat(6),
-})
-
-hunger_ng.add_hunger_data('farming:baked_potato', {
-	satiates = 3,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({
@@ -60,13 +45,6 @@ minetest.register_craftitem("farming:potato_salad", {
 	description = S("Cucumber and Potato Salad"),
 	inventory_image = "farming_potato_salad.png",
 	on_use = minetest.item_eat(10, "farming:bowl"),
-})
-
-hunger_ng.add_hunger_data('farming:potato_salad', {
-	satiates = 4,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({

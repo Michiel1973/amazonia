@@ -17,14 +17,6 @@ minetest.register_craftitem("farming:cucumber", {
 	on_use = minetest.item_eat(4),
 })
 
-
-hunger_ng.add_hunger_data('farming:cucumber', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- cucumber definition
 local crop_def = {
 	drawtype = "plantlike",

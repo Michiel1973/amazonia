@@ -18,14 +18,6 @@ minetest.register_craftitem("farming:onion", {
 	on_use = minetest.item_eat(1),
 })
 
-
-hunger_ng.add_hunger_data('farming:onion', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- crop definition
 local crop_def = {
 	drawtype = "plantlike",
