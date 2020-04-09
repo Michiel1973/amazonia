@@ -21,10 +21,10 @@ if minetest.get_modpath("hunger_ng") ~= nil then
 		satiates = 2.0,
 	})
 	hunger_ng.add_hunger_data('petz:roasted_chicken_legs', {
-		satiates = 5.0,
+		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('petz:chicken_legs_bucket', {
-		satiates = 12.0,
+		satiates = 8.0,
 	})
 	hunger_ng.add_hunger_data('petz:roasted_chicken', {
 		satiates = 3.0,
@@ -36,27 +36,27 @@ if minetest.get_modpath("hunger_ng") ~= nil then
 		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('petz:steak', {
-		satiates = 3.0,
+		satiates = 4.0,
 	})
 	hunger_ng.add_hunger_data('petz:roasted_ducky', {
 		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('petz:cheese', {
-		satiates = 5.0,
+		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('petz:blueberry_cheese_cake', {
-		satiates = 6.0,
+		satiates = 5.0,
 	})
 	hunger_ng.add_hunger_data('petz:blueberry_ice_cream', {
-		satiates = 7.0,
+		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('petz:blueberry_muffin', {
-		satiates = 4.0,
+		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('petz:gingerbread_cookie', {
-		satiates = 8.0,
+		satiates = 2.0,
 	})
 	hunger_ng.add_hunger_data('petz:candy_cane', {
-		satiates = 6.0,
+		satiates = 1.0,
 	})
 end
