@@ -9,8 +9,8 @@ add('moretrees:fir_nuts',    { satiates = 1 })
 add('moretrees:spruce_nuts', { satiates = 1 })
 
 -- Mixed base items
-add('moretrees:acorn_muffin_batter', { satiates = 2, heals = -3 })
-add('moretrees:date_nut_batter',     { satiates = 2, heals = -3 })
+add('moretrees:acorn_muffin_batter', { satiates = 2})
+add('moretrees:date_nut_batter',     { satiates = 2})
 
 -- Processed food
 add('moretrees:acorn_muffin',   { satiates = 2 })
