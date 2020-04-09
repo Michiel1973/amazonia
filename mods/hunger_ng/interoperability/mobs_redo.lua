@@ -5,5 +5,5 @@ local add = hunger_ng.functions.add_hunger_data
 -- The `mobs_redo` mod registers it’s stuff under the `mobs` prefix.
 
 add('mobs:meat',                { satiates = 4 })
-add('mobs:meat_raw',            { satiates = 2, heals = -1 })
+add('mobs:meat_raw',            { satiates = 2, heals = -2 })
 
