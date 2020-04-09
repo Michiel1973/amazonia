@@ -24,6 +24,7 @@ minetest.register_entity("petz:"..pet_name,{
 	follow = petz.settings.parrot_follow,
 	drops = {
 		{name = "petz:raw_parrot", chance = 3, min = 1, max = 1,},
+		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1,},	
 	},
 	--automatic_face_movement_dir = 0.0,
 	rotate = petz.settings.rotate,

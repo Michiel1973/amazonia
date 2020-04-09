@@ -27,6 +27,7 @@ minetest.register_entity("petz:"..pet_name,{
 	type_of_egg = "item",
 	follow = petz.settings.penguin_follow,
 	drops = {
+	{name = "mobs:meat_raw", chance = 1, min = 1, max = 2,},	
 	},
 	--automatic_face_movement_dir = 0.0,
 	rotate = petz.settings.rotate,

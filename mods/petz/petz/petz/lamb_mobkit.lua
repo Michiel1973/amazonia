@@ -32,7 +32,7 @@ minetest.register_entity("petz:"..pet_name,{
 	mutation = 1,
 	follow = petz.settings.lamb_follow,
 	drops = {
-		{name = "petz:mini_lamb_chop", chance = 1, min = 1, max = 1,},
+		{name = "petz:mini_lamb_chop", chance = 1, min = 1, max = 2,},
 		{name = "petz:bone", chance = 5, min = 1, max = 1,},
 	},
 	replace_rate = 10,

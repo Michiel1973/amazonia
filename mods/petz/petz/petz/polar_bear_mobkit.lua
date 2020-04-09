@@ -25,6 +25,7 @@ minetest.register_entity("petz:"..pet_name,{
 	capture_item = "lasso",
 	drops = {
 		{name = "petz:bone", chance = 5, min = 1, max = 1,},
+		{name = "mobs:meat_raw", chance = 1, min = 3, max = 5,},	
 	},
 	rotate = petz.settings.rotate,
 	physical = true,

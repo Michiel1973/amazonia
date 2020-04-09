@@ -42,6 +42,7 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 10,
 	lung_capacity = 10, -- seconds
 	max_hp = 10,
+	{name = "mobs:meat_raw", chance = 1, min = 1, max = 2,},	
 	makes_footstep_sound = true,
 	attack={range=0.5, damage_groups={fleshy=3}},
 	animation = {

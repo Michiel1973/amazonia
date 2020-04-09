@@ -24,7 +24,7 @@ minetest.register_entity("petz:"..pet_name,{
 	follow = petz.settings.piggy_follow,
 	poop = true,
 	drops = {
-		{name = "petz:raw_porkchop", chance = 2, min = 1, max = 1,},
+		{name = "petz:raw_porkchop", chance = 2, min = 1, max = 3,},
 		{name = "petz:bone", chance = 5, min = 1, max = 1,},
 	},
 	rotate = petz.settings.rotate,
