@@ -161,10 +161,13 @@ function mobkit.get_nodes_in_area(pos1,pos2,full)
 				y=y+sy
 				
 				local pos = {x=x,y=y,z=z}
-				if full==true then
-					result[pos] = minetest.registered_nodes[minetest.get_node(pos).name]
-				else
-					result[minetest.registered_nodes[minetest.get_node(pos).name]] = true
+				local node = mobkit.nodeatpos(pos)
+				if node	then
+					if full==true then
+						result[pos] = node
+					else
+						result[node] = true
+					end
 				end
 			
 				cnt=cnt+1
@@ -1293,8 +1296,13 @@ end
 function mobkit.hq_warn(self,prty,tgtobj)
 	local timer=0
 	local tgttime = 0
+	local init = true
 	local func = function(self)
 		if not mobkit.is_alive(tgtobj) then return true end
+		if init then
+			mobkit.animate(self,'stand')
+			init = false
+		end
 		local pos = mobkit.get_stand_pos(self)
 		local opos = tgtobj:get_pos()
 		local dist = vector.distance(pos,opos)

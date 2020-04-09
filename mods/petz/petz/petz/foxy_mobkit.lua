@@ -31,6 +31,9 @@ minetest.register_entity("petz:"..pet_name,{
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
 	mesh = mesh,
+	drops = {
+	{name = "mobs:meat_raw", chance = 1, min = 1, max = 2,},	
+	}
 	textures = textures,
 	visual_size = {x=petz.settings.visual_size.x*scale_model, y=petz.settings.visual_size.y*scale_model},
 	static_save = true,

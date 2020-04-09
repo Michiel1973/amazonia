@@ -24,7 +24,7 @@ minetest.register_entity("petz:"..pet_name,{
 	capture_item = "lasso",
 	follow = petz.settings.calf_follow,
 	drops = {
-		{name = "petz:beef", chance = 1, min = 1, max = 1,},
+		{name = "petz:beef", chance = 1, min = 1, max = 3,},
 		{name = "petz:leather", chance = 2, min = 1, max = 1,},
 		{name = "petz:bone", chance = 4, min = 1, max = 1,},
 	},
