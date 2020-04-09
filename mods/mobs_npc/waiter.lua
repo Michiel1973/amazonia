@@ -97,7 +97,7 @@ mobs:register_mob("mobs_npc:waiter", {
 	end,
 })
 
---This code comes almost exclusively from the trader and inventory of mobf, by Sapier.
+--This code comes almost exclusively from the waiter and inventory of mobf, by Sapier.
 --The copyright notice below is from mobf:
 -------------------------------------------------------------------------------
 -- Mob Framework Mod by Sapier
@@ -121,51 +121,51 @@ mobs:register_mob("mobs_npc:waiter", {
 -------------------------------------------------------------------------------
 
 -- This code has been heavily modified by isaiah658.
--- Trades are saved in entity metadata so they always stay the same after
+-- sales are saved in entity metadata so they always stay the same after
 -- initially being chosen.  Also the formspec uses item image buttons instead of
 -- inventory slots.
 
 function mobs.add_goods(self, entity, race)
 
-	local trade_index = 1
-	local trades_already_added = {}
-	local trader_pool_size = 10
+	local sale_index = 1
+	local sales_already_added = {}
+	local waiter_pool_size = 10
 	local item_pool_size = #race.items -- get number of items on list
 
-	self.trades = {}
+	self.sales = {}
 
-	if item_pool_size < trader_pool_size then
-		trader_pool_size = item_pool_size
+	if item_pool_size < waiter_pool_size then
+		waiter_pool_size = item_pool_size
 	end
 
-	for i = 1, trader_pool_size do
+	for i = 1, waiter_pool_size do
 
-		-- If there are more trades than the amount being added, they are
+		-- If there are more sales than the amount being added, they are
 		-- randomly selected.  If they are equal, there is no reason to randomly
 		-- select them
-		local random_trade = nil
+		local random_sale = nil
 
-		if item_pool_size == trader_pool_size then
-			random_trade = i
+		if item_pool_size == waiter_pool_size then
+			random_sale = i
 		else
-			while random_trade == nil do
+			while random_sale == nil do
 
 				local num = math.random(item_pool_size)
 
-				if trades_already_added[num] == nil then
-					trades_already_added[num] = true
-					random_trade = num
+				if sales_already_added[num] == nil then
+					sales_already_added[num] = true
+					random_sale = num
 				end
 			end
 		end
 
-		if math.random(0, 100) > race.items[random_trade][3] then
+		if math.random(0, 100) > race.items[random_sale][3] then
 
-			self.trades[trade_index] = {
-				race.items[random_trade][1],
-				race.items[random_trade][2]}
+			self.sales[sale_index] = {
+				race.items[random_sale][1],
+				race.items[random_sale][2]}
 
-			trade_index = trade_index + 1
+			sale_index = sale_index + 1
 		end
 	end
 end
@@ -189,23 +189,23 @@ function mobs_waiter(self, clicker, entity, race)
 		})
 	end
 
-	if self.trades == nil then
+	if self.sales == nil then
 		mobs.add_goods(self, entity, race)
 	end
 
 	local player = clicker:get_player_name()
 
 	minetest.chat_send_player(player,
-		S("[NPC] <Waiter @1> Hello, @2, here is the menu.",
+		S("[NPC] <Waiter @1> Hi @2, have a look at the menu.",
 		self.game_name, player))
 
-	-- Make formspec trade list
-	local formspec_trade_list = ""
+	-- Make formspec sale list
+	local formspec_sale_list = ""
 	local x, y
 
 	for i = 1, 10 do
 
-		if self.trades[i] and self.trades[i] ~= "" then
+		if self.sales[i] and self.sales[i] ~= "" then
 
 			if i < 6 then
 				x = 0.5
@@ -215,11 +215,11 @@ function mobs_waiter(self, clicker, entity, race)
 				y = i - 5.5
 			end
 
-			formspec_trade_list = formspec_trade_list
+			formspec_sale_list = formspec_sale_list
 			.. "item_image_button[".. x ..",".. y ..";1,1;"
-				.. self.trades[i][2] .. ";prices#".. i .."#".. self.id ..";]"
+				.. self.sales[i][2] .. ";prices#".. i .."#".. self.id ..";]"
 			.. "item_image_button[".. x + 2 ..",".. y ..";1,1;"
-				.. self.trades[i][1] .. ";goods#".. i .."#".. self.id ..";]"
+				.. self.sales[i][1] .. ";goods#".. i .."#".. self.id ..";]"
 			.. "image[".. x + 1 ..",".. y ..";1,1;gui_arrow_blank.png]"
 		end
 	end
@@ -228,7 +228,7 @@ function mobs_waiter(self, clicker, entity, race)
 		.. default.gui_bg_img
 		.. default.gui_slots
 		.. "label[0.5,-0.1;" .. S("Waiter @1's menu:", self.game_name) .. "]"
-		.. formspec_trade_list
+		.. formspec_sale_list
 		.. "list[current_player;main;0,6;8,4;]"
 	)
 end
@@ -240,13 +240,13 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 
 	if fields then
 
-		local trade = ""
+		local sale = ""
 
 		for k, v in pairs(fields) do
-			trade = tostring(k)
+			sale = tostring(k)
 		end
 
-		local id = trade:split("#")[3]
+		local id = sale:split("#")[3]
 		local self = nil
 
 		if id ~= nil then
@@ -262,12 +262,12 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 
 		if self ~= nil then
 
-			local trade_number = tonumber(trade:split("#")[2])
+			local sale_number = tonumber(sale:split("#")[2])
 
-			if trade_number ~= nil and self.trades[trade_number] ~= nil then
+			if sale_number ~= nil and self.sales[sale_number] ~= nil then
 
-				local price = self.trades[trade_number][2]
-				local goods = self.trades[trade_number][1]
+				local price = self.sales[sale_number][2]
+				local goods = self.sales[sale_number][1]
 				local inv = player:get_inventory()
 
 				if inv:contains_item("main", price) then
