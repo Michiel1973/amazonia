@@ -3,7 +3,7 @@ local S = mobs.intllib
 
 -- define table containing names for use and shop items for sale
 
-mobs.human = {
+mobs.waiter = {
 
 	names = {
 		"Maurice", "Louis", "Charles", "Chance", "Julien", "Marcel", "Rene",
@@ -14,7 +14,7 @@ mobs.human = {
 		--{item for sale, price, chance of appearing in waiter's inventory}
 		{"farming:carrot_juice 1", "currency:minegeld 1", 10},
 		{"farming:coffee_cup 1", "currency:minegeld 2", 5},
-		{"farming:carrot_gold 1", "currency:minegeld_10 2", 12},
+		{"farming:carrot_gold 1", "currency:minegeld_10 5", 12},
 		{"farming:melon_slice 1", "currency:minegeld 2", 17},
 		{"farming:pea_soup 1", "currency:minegeld_5 1", 17},
 		{"farming:pineapple_ring 1", "currency:minegeld 1", 50},
@@ -85,7 +85,7 @@ mobs:register_mob("mobs_npc:waiter", {
 		punch_end = 219,
 	},
 	on_rightclick = function(self, clicker)
-		mobs_waiter(self, clicker, entity, mobs.human)
+		mobs_waiter(self, clicker, entity, mobs.waiter)
 	end,
 	on_spawn = function(self)
 		self.nametag = S("Waiter")
@@ -125,7 +125,7 @@ mobs:register_mob("mobs_npc:waiter", {
 -- initially being chosen.  Also the formspec uses item image buttons instead of
 -- inventory slots.
 
-function mobs.add_goods(self, entity, race)
+function mobs.add_foods(self, entity, race)
 
 	local sale_index = 1
 	local sales_already_added = {}
@@ -190,7 +190,7 @@ function mobs_waiter(self, clicker, entity, race)
 	end
 
 	if self.sales == nil then
-		mobs.add_goods(self, entity, race)
+		mobs.add_foods(self, entity, race)
 	end
 
 	local player = clicker:get_player_name()
