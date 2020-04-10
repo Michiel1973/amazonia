@@ -25,7 +25,7 @@ minetest.register_tool("scuba:air_tank", {
 minetest.register_craft({
     output = "scuba:air_tank 1",
     recipe = {
-        {"default:bronze_ingot", "default:gold_ingot", "default:bronze_ingot"},
+        {"default:copper_ingot", "default:gold_ingot", "default:copper_ingot"},
         {"default:steel_ingot", "", "default:steel_ingot"},
         {"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"}
     }
