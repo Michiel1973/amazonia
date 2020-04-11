@@ -1,0 +1,30 @@
+# textdomain: goblins
+
+
+# ./init.lua
+Coal Goblin=
+Cobble Goblin=
+Copper Goblin=
+Diamond Goblin=
+Digger Goblin=
+Goblin Egg (coal)=
+Goblin Egg (cobble)=
+Goblin Egg (copper)=
+Goblin Egg (diamond)=
+Goblin Egg (digger)=
+Goblin Egg (gold)=
+Goblin Egg (iron)=
+Goblin King=
+Goblin King Egg=
+Gold Goblin=
+Iron Goblin=
+
+# ./traps.lua
+Coal Trap=
+Copper Gore=
+Diamond Gore=
+Flowing Molten Gold=
+Gold Gore=
+Iron Gore=
+Messy Gobblestone=
+Molten Gold=
