@@ -489,7 +489,7 @@ mobs:register_mob("goblins:goblin_copper", {
 	},
 	drops = {
 		{name = "default:copper_lump",
-		chance = 3, min = 1, max = 4},
+		chance = 4, min = 1, max = 4},
 		{name = "default:apple",
 		chance = 2, min = 1, max = 2},
 		{name = "default:pick_copper",
@@ -565,7 +565,7 @@ mobs:register_mob("goblins:goblin_gold", {
 		{name = "default:apple",
 		chance = 2, min = 1, max = 2},
 		{name = "default:gold_ingot",
-		chance = 5, min = 1, max = 1},
+		chance = 10, min = 1, max = 1},
 	},
 
 	do_custom = function(self)
@@ -633,7 +633,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 	},
 	drops = {
 		{name = "default:pick_diamond",
-		chance = 5, min = 1, max = 1},
+		chance = 15, min = 1, max = 1},
 		{name = "default:apple",
 		chance = 2, min = 1, max = 3},
 		{name = "default:diamond",
@@ -706,11 +706,11 @@ mobs:register_mob("goblins:goblin_king", {
 	},
 	drops = {
 		{name = "default:pick_mese",
-		chance = 5, min = 1, max = 1},
+		chance = 20, min = 1, max = 1},
 		{name = "default:apple",
 		chance = 2, min = 1, max = 3},
 		{name = "default:mese_crystal",
-		chance = 4, min = 1, max = 2},
+		chance = 5, min = 1, max = 2},
 	},
 
 	do_custom = function(self)
@@ -775,7 +775,7 @@ mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"defau
 mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 4, 60, 2000, 2, -2000, -150)
 mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 4, 60, 2000, 2, -2000, -200)
 mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 4, 60, 3000, 1, -2000, -200)
-mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 4, 60, 3000, 1, -2000, -200)
+mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 4, 60, 3000, 1, -2000, -500)
 
 
 minetest.log("action", "[MOD] Goblins loaded")
