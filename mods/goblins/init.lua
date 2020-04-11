@@ -113,7 +113,7 @@ local goblin_base = {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin",
@@ -171,8 +171,8 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	damage = 2,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 5,
-	hp_max = 15,
+	hp_min = 20,
+	hp_max = 40,
 	armor = 100,
 	passive = false,
 	attack_type = "dogfight",
@@ -187,7 +187,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin cobble",
@@ -244,8 +244,8 @@ mobs:register_mob("goblins:goblin_digger", {
 	damage = 2,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 5,
-	hp_max = 15,
+	hp_min = 20,
+	hp_max = 40,
 	armor = 100,
 	passive = false,
 	attack_type = "dogfight",
@@ -260,7 +260,7 @@ mobs:register_mob("goblins:goblin_digger", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin digger",
@@ -319,8 +319,8 @@ mobs:register_mob("goblins:goblin_coal", {
 	damage = 2,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 5,
-	hp_max = 15,
+	hp_min = 20,
+	hp_max = 40,
 	armor = 100,
 	passive = false,
 	attack_type = "dogfight",
@@ -335,7 +335,7 @@ mobs:register_mob("goblins:goblin_coal", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin coal",
@@ -391,8 +391,8 @@ mobs:register_mob("goblins:goblin_iron", {
 	damage = 3,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 10,
-	hp_max = 20,
+	hp_min = 30,
+	hp_max = 60,
 	armor = 150,
 	passive = false,
 	attack_type = "dogfight",
@@ -407,7 +407,7 @@ mobs:register_mob("goblins:goblin_iron", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin iron",
@@ -463,8 +463,8 @@ mobs:register_mob("goblins:goblin_copper", {
 	damage = 3,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 10,
-	hp_max = 20,
+	hp_min = 30,
+	hp_max = 60,
 	armor = 150,
 	passive = false,
 	attack_type = "dogfight",
@@ -479,7 +479,7 @@ mobs:register_mob("goblins:goblin_copper", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin copper",
@@ -535,8 +535,8 @@ mobs:register_mob("goblins:goblin_gold", {
 	damage = 4,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 10,
-	hp_max = 30,
+	hp_min = 40,
+	hp_max = 80,
 	armor = 200,
 	passive = false,
 	attack_type = "dogfight",
@@ -551,7 +551,7 @@ mobs:register_mob("goblins:goblin_gold", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin gold",
@@ -607,8 +607,8 @@ mobs:register_mob("goblins:goblin_diamond", {
 	damage = 4,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 20,
-	hp_max = 30,
+	hp_min = 40,
+	hp_max = 80,
 	armor = 200,
 	passive = false,
 	attack_type = "dogfight",
@@ -623,7 +623,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin diamond",
@@ -680,8 +680,8 @@ mobs:register_mob("goblins:goblin_king", {
 	damage = 5,
 	attacks_monsters = false,
 	attacks_animals = false,
-	hp_min = 30,
-	hp_max = 40,
+	hp_min = 50,
+	hp_max = 100,
 	armor = 250,
 	passive = false,
 	attack_type = "dogfight",
@@ -697,7 +697,7 @@ mobs:register_mob("goblins:goblin_king", {
 	jump = true,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 0,
 	view_range = 8,
 	owner = "",
 	--nametag = "goblin king",
@@ -768,14 +768,14 @@ max_height)
 -- mobs:spawn_specific("goblins:goblin_diamond", {"default:stone_with_diamond", "default:mossycobble" }, "air", 0, 50, 1,2, 3, -30000, -80)
 -- mobs:spawn_specific("goblins:goblin_king", {"default:mossycobble",},"air", 0, 50, 1, 10, 3, -30000, -100)
 
-mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 4, 60, 1000, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 4, 60, 1000, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 4, 60, 2000, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 4, 60, 2000, 2, -2000, -150)
-mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 4, 60, 2000, 2, -2000, -150)
-mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 4, 60, 2000, 2, -2000, -200)
-mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 4, 60, 3000, 1, -2000, -200)
-mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 4, 60, 3000, 1, -2000, -500)
+mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 6, 60, 1000, 3, -2000, -100)
+mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 6, 60, 1000, 3, -2000, -100)
+mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 6, 60, 2000, 3, -2000, -100)
+mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 6, 60, 2000, 2, -2000, -150)
+mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 6, 60, 2000, 2, -2000, -150)
+mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 6, 60, 2000, 2, -2000, -200)
+mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 6, 60, 3000, 1, -2000, -200)
+mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 6, 60, 3000, 1, -2000, -500)
 
 
 minetest.log("action", "[MOD] Goblins loaded")
