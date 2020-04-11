@@ -29,12 +29,7 @@ minetest.register_node("ethereal:banana", {
 	end,
 })
 
-hunger_ng.add_hunger_data('ethereal:banana', {
-    satiates = 1,
-    heals = 0,
-    returns = '',
-    timeout = 0
-})
+
 
 -- Banana Dough
 minetest.register_craftitem("ethereal:banana_dough", {
@@ -53,20 +48,6 @@ minetest.register_craft({
 	cooktime = 14,
 	output = "ethereal:banana_bread",
 	recipe = "ethereal:banana_dough"
-})
-
-hunger_ng.add_hunger_data('ethereal:banana_dough', {
-    satiates = 1.5,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 0
-})
-
-hunger_ng.add_hunger_data('ethereal:banana_bread"', {
-    satiates = 3,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 0
 })
 
 -- Orange (Heals 2 hearts when eaten)
@@ -97,13 +78,6 @@ minetest.register_node("ethereal:orange", {
 	end,
 })
 
-hunger_ng.add_hunger_data('ethereal:orange', {
-    satiates = 1,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 0
-})
-
 -- Pine Nuts (Heals 1/2 heart when eaten)
 minetest.register_craftitem("ethereal:pine_nuts", {
 	description = S("Pine Nuts"),
@@ -111,13 +85,6 @@ minetest.register_craftitem("ethereal:pine_nuts", {
 	wield_image = "pine_nuts.png",
 	groups = {food_pine_nuts = 1, flammable = 2},
 	on_use = minetest.item_eat(1),
-})
-
-hunger_ng.add_hunger_data('ethereal:pine_nuts', {
-    satiates = 0.5,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 0
 })
 
 -- Banana Loaf (Heals 3 hearts when eaten)
@@ -160,13 +127,6 @@ minetest.register_craftitem("ethereal:coconut_slice", {
 	on_use = minetest.item_eat(1),
 })
 
-hunger_ng.add_hunger_data('ethereal:coconut_slice', {
-    satiates = 1,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 4
-})
-
 -- Golden Apple (Found on Healing Tree, heals all 10 hearts)
 minetest.register_node("ethereal:golden_apple", {
 	description = S("Golden Apple"),
@@ -201,13 +161,6 @@ minetest.register_node("ethereal:golden_apple", {
 	end,
 })
 
-hunger_ng.add_hunger_data('ethereal:golden_apple', {
-    satiates = 10,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 4
-})
-
 -- Hearty Stew (Heals 5 hearts - thanks to ZonerDarkRevention for his DokuCraft DeviantArt bowl texture)
 minetest.register_craftitem("ethereal:hearty_stew", {
 	description = S("Hearty Stew"),
@@ -216,13 +169,6 @@ minetest.register_craftitem("ethereal:hearty_stew", {
 	on_use = minetest.item_eat(10, "ethereal:bowl"),
 })
 
-
-hunger_ng.add_hunger_data('ethereal:hearty_stew', {
-    satiates = 5,
-    heals = 0,
-    returns = 'mymod:myitem',
-    timeout = 4
-})
 
 minetest.register_craft({
 	output = "ethereal:hearty_stew",
