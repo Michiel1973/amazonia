@@ -606,6 +606,6 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	-- place plants around the lake (they grow better with the water...)
 	lakes.lake_shore(shore_nodes);
 
-	local t3 = minetest.get_us_time();
-	print("Time elapsed: "..tostring( t3-t1 ));
+	--local t3 = minetest.get_us_time();
+	--print("Time elapsed: "..tostring( t3-t1 ));
 end)
