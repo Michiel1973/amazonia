@@ -14,3 +14,5 @@ April 10 - MINOR - scaffolding mod added
 April 10 - MINOR - scuba recipe updated
 April 11 - MINOR - add lakes above sea leavel (in new areas)
 April 11 - MAJOR - Rise of the Goblin king
+April 12 - MINOR - food rebalancing, adding many foods missing satiation values
+April 12 - MINOR - small adjustments in recipes
