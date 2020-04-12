@@ -13,6 +13,7 @@ if mobs.mod and mobs.mod == "redo" then
 		hp_min = 10,
 		hp_max = 10,
 		armor = 100,
+		runaway_from = {"player","mobs_sharks:shark_lg","mobs_sharks:shark_md","mobs_sharks:shark_sm"},
 		-- FIXME: If the squid is near the floor, it turns black
 		collisionbox = {-0.4, 0.1, -0.4, 0.4, 0.9, 0.4},
 		visual = "mesh",
