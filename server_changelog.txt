@@ -1,18 +1,19 @@
 SERVER CHANGELOG
 
-April 04 - MAJOR - initial commit to github
-April 05 - MAJOR - the Life Aquatic
-April 07 - MINOR - Trader mobs added
-April 07 - MINOR - more leather drops from Petz
-April 08 - MINOR - Hot air balloons!
-April 08 - MINOR - increase price for crafting elevators
-April 08 - MINOR - update lots of food values for hunger_ng compatibility
-April 09 - MINOR - Waiter mob added
-April 09 - MINOR - restrict tamed petz
-April 09 - MINOR - most petz now drop meat
-April 10 - MINOR - scaffolding mod added
-April 10 - MINOR - scuba recipe updated
-April 11 - MINOR - add lakes above sea leavel (in new areas)
-April 11 - MAJOR - Rise of the Goblin king
+April 12 - MINOR - incremental mod updates from master 
+April 12 - MINOR - small adjustments in crafting recipes
 April 12 - MINOR - food rebalancing, adding many foods missing satiation values
-April 12 - MINOR - small adjustments in recipes
+April 11 - MAJOR - Rise of the Goblin king
+April 11 - MINOR - add lakes above sea leavel (in new areas)
+April 10 - MINOR - scuba recipe updated
+April 10 - MINOR - scaffolding mod added
+April 09 - MINOR - most petz now drop meat
+April 09 - MINOR - restrict tamed petz
+April 09 - MINOR - Waiter mob added
+April 08 - MINOR - update lots of food values for hunger_ng compatibility
+April 08 - MINOR - increase price for crafting elevators
+April 08 - MINOR - Hot air balloons!
+April 07 - MINOR - more leather drops from Petz
+April 07 - MINOR - Trader mobs added
+April 05 - MAJOR - the Life Aquatic
+April 04 - MAJOR - initial commit to github
