@@ -111,9 +111,12 @@ local goblin_base = {
 	walk_velocity = 2,
 	run_velocity = 3,
 	jump = true,
+	jump_height = 2,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 1,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin",
@@ -174,6 +177,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	hp_min = 20,
 	hp_max = 30,
 	armor = 150,
+	suffocation = true,
 	passive = false,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
@@ -185,9 +189,13 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	walk_velocity = 2,
 	run_velocity = 3,
 	jump = true,
+	jump_height = 2,
+	fear_height = 3,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 1,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin cobble",
@@ -199,7 +207,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 		{name = "default:mossycobble",
 		chance = 1, min = 1, max = 3},
 		{name = "default:apple",
-		chance = 3, min = 1, max = 2},
+		chance = 3, min = 1, max = 3},
 		{name = "default:torch",
 		chance = 3, min = 1, max = 3},
 	},
@@ -222,6 +230,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
@@ -248,6 +257,7 @@ mobs:register_mob("goblins:goblin_digger", {
 	hp_max = 30,
 	armor = 150,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -258,21 +268,24 @@ mobs:register_mob("goblins:goblin_digger", {
 	walk_velocity = 2,
 	run_velocity = 3,
 	jump = true,
+	jump_height = 2,
+	fear_height = 3,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 1,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin digger",
 	textures = {
 		{"goblins_goblin_digger.png"},
 	},
-	jump_height = 5,
 	drops = {
 		{name = "default:mossycobble",
 		chance = 1, min = 1, max = 3},
 		{name = "default:apple",
-		chance = 3, min = 1, max = 2},
+		chance = 3, min = 1, max = 3},
 		{name = "default:torch",
 		chance = 3, min = 1, max = 3},
 	},
@@ -298,6 +311,7 @@ mobs:register_mob("goblins:goblin_digger", {
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
@@ -323,6 +337,7 @@ mobs:register_mob("goblins:goblin_coal", {
 	hp_max = 30,
 	armor = 150,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -333,9 +348,13 @@ mobs:register_mob("goblins:goblin_coal", {
 	walk_velocity = 2,
 	run_velocity = 3,
 	jump = true,
+	jump_height = 2,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	fear_height = 3,
+	light_damage = 1,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin coal",
@@ -345,7 +364,7 @@ mobs:register_mob("goblins:goblin_coal", {
 	},
 	drops = {
 		{name = "default:coal_lump",
-		chance = 3, min = 1, max = 4},
+		chance = 3, min = 1, max = 5},
 		{name = "default:apple",
 		chance = 2, min = 1, max = 2},
 		{name = "default:torch",
@@ -364,6 +383,7 @@ mobs:register_mob("goblins:goblin_coal", {
 		10, --replace_rate
 		{	"default:stone",
 			"default:stone_with_coal",
+			"aotearoa:conglomerate",
 			"group:sand",
 			"group:soil",
 			"aotearoa:gneiss",
@@ -377,7 +397,7 @@ mobs:register_mob("goblins:goblin_coal", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		3, --replace_rate_secondary
+		6, --replace_rate_secondary
 		"goblins:stone_with_coal_trap" --replace_with_secondary
 		)
 	end,
@@ -395,6 +415,7 @@ mobs:register_mob("goblins:goblin_iron", {
 	hp_max = 50,
 	armor = 200,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -404,10 +425,14 @@ mobs:register_mob("goblins:goblin_iron", {
 	sounds = goblin_sounds,
 	walk_velocity = 2,
 	run_velocity = 3,
+	fear_height = 3,
 	jump = true,
+	jump_height = 2,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 1,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin iron",
@@ -419,9 +444,11 @@ mobs:register_mob("goblins:goblin_iron", {
 		{name = "default:iron_lump",
 		chance = 3, min = 1, max = 4},
 		{name = "default:apple",
-		chance = 2, min = 1, max = 2},
+		chance = 2, min = 1, max = 3},
 		{name = "default:pick_steel",
 		chance = 5, min = 1, max = 1},
+		{name = "default:torch",
+		chance = 2, min = 1, max = 3},
 	},
 
 	do_custom = function(self)
@@ -440,6 +467,7 @@ mobs:register_mob("goblins:goblin_iron", {
 			"group:sand",
 			"group:soil",
 			"aotearoa:gneiss",
+			"aotearoa:conglomerate",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
 			"aotearoa:granite",
@@ -450,7 +478,7 @@ mobs:register_mob("goblins:goblin_iron", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		3, --replace_rate_secondary
+		6, --replace_rate_secondary
 		"goblins:stone_with_iron_trap" --replace_with_secondary
 		)
 	end,
@@ -467,6 +495,7 @@ mobs:register_mob("goblins:goblin_copper", {
 	hp_max = 50,
 	armor = 200,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -476,10 +505,14 @@ mobs:register_mob("goblins:goblin_copper", {
 	sounds = goblin_sounds,
 	walk_velocity = 2,
 	run_velocity = 3,
+	fear_height = 3,
 	jump = true,
+	jump_height = 2,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 1,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin copper",
@@ -489,11 +522,13 @@ mobs:register_mob("goblins:goblin_copper", {
 	},
 	drops = {
 		{name = "default:copper_lump",
-		chance = 4, min = 1, max = 4},
+		chance = 3, min = 1, max = 4},
 		{name = "default:apple",
-		chance = 2, min = 1, max = 2},
+		chance = 2, min = 1, max = 4},
 		{name = "default:pick_copper",
 		chance = 5, min = 1, max = 1},
+		{name = "default:torch",
+		chance = 2, min = 1, max = 3},
 	},
 
 	do_custom = function(self)
@@ -514,6 +549,7 @@ mobs:register_mob("goblins:goblin_copper", {
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
@@ -522,7 +558,7 @@ mobs:register_mob("goblins:goblin_copper", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		3, --replace_rate_secondary
+		6, --replace_rate_secondary
 		"goblins:stone_with_copper_trap" --replace_with_secondary
 		)
 	end,
@@ -539,6 +575,7 @@ mobs:register_mob("goblins:goblin_gold", {
 	hp_max = 60,
 	armor = 250,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -548,10 +585,14 @@ mobs:register_mob("goblins:goblin_gold", {
 	sounds = goblin_sounds,
 	walk_velocity = 2,
 	run_velocity = 3,
+	fear_height = 3,
 	jump = true,
+	jump_height = 2,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 2,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin gold",
@@ -561,11 +602,13 @@ mobs:register_mob("goblins:goblin_gold", {
 	},
 	drops = {
 		{name = "default:gold_lump",
-		chance = 3, min = 1, max = 4},
+		chance = 4, min = 1, max = 4},
 		{name = "default:apple",
-		chance = 2, min = 1, max = 2},
+		chance = 2, min = 1, max = 3},
 		{name = "default:gold_ingot",
-		chance = 10, min = 1, max = 1},
+		chance = 5, min = 1, max = 1},
+		{name = "default:torch",
+		chance = 2, min = 1, max = 3},
 	},
 
 	do_custom = function(self)
@@ -588,13 +631,14 @@ mobs:register_mob("goblins:goblin_gold", {
 			"aotearoa:greywacke",
 			"aotearoa:granite",
 			"aotearoa:andesite",
+			"aotearoa:conglomerate",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		3, --replace_rate_secondary
+		6, --replace_rate_secondary
 		"goblins:stone_with_gold_trap" --replace_with_secondary
 		)
 	end,
@@ -611,6 +655,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 	hp_max = 60,
 	armor = 250,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -620,10 +665,14 @@ mobs:register_mob("goblins:goblin_diamond", {
 	sounds = goblin_sounds,
 	walk_velocity = 2,
 	run_velocity = 3,
+	fear_height = 3,
 	jump = true,
+	jump_height = 2,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 2,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin diamond",
@@ -633,11 +682,13 @@ mobs:register_mob("goblins:goblin_diamond", {
 	},
 	drops = {
 		{name = "default:pick_diamond",
-		chance = 15, min = 1, max = 1},
+		chance = 10, min = 1, max = 1},
 		{name = "default:apple",
 		chance = 2, min = 1, max = 3},
 		{name = "default:diamond",
-		chance = 5, min = 1, max = 1},
+		chance = 6, min = 1, max = 1},
+		{name = "default:torch",
+		chance = 2, min = 1, max = 3},
 	},
 
 	do_custom = function(self)
@@ -660,13 +711,14 @@ mobs:register_mob("goblins:goblin_diamond", {
 			"aotearoa:greywacke",
 			"aotearoa:granite",
 			"aotearoa:andesite",
+			"aotearoa:conglomerate",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		3, --replace_rate_secondary
+		6, --replace_rate_secondary
 		"goblins:stone_with_diamond_trap" --replace_with_secondary
 		)
 	end,
@@ -684,6 +736,7 @@ mobs:register_mob("goblins:goblin_king", {
 	hp_max = 100,
 	armor = 300,
 	passive = false,
+	suffocation = true,
 	attack_type = "dogfight",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
@@ -695,9 +748,13 @@ mobs:register_mob("goblins:goblin_king", {
 	walk_velocity = 2,
 	run_velocity = 3,
 	jump = true,
+	jump_height = 2,
+	fear_height = 3,
 	water_damage = 0,
 	lava_damage = 2,
-	light_damage = 0,
+	light_damage = 2,
+	light_damage_min = 9,
+	light_damage_min = 15,
 	view_range = 8,
 	owner = "",
 	--nametag = "goblin king",
@@ -706,11 +763,13 @@ mobs:register_mob("goblins:goblin_king", {
 	},
 	drops = {
 		{name = "default:pick_mese",
-		chance = 20, min = 1, max = 1},
+		chance = 10, min = 1, max = 1},
 		{name = "default:apple",
-		chance = 2, min = 1, max = 3},
+		chance = 2, min = 2, max = 4},
 		{name = "default:mese_crystal",
 		chance = 5, min = 1, max = 2},
+		{name = "default:torch",
+		chance = 2, min = 1, max = 3},
 	},
 
 	do_custom = function(self)
@@ -732,6 +791,7 @@ mobs:register_mob("goblins:goblin_king", {
 			"aotearoa:schist",
 			"aotearoa:greywacke",
 			"aotearoa:granite",
+			"aotearoa:conglomerate",
 			"aotearoa:andesite",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
@@ -739,7 +799,7 @@ mobs:register_mob("goblins:goblin_king", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"default:mossycobble", --replace_with
-		3, --replace_rate_secondary
+		6, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
 		)
 	end,
@@ -768,14 +828,14 @@ max_height)
 -- mobs:spawn_specific("goblins:goblin_diamond", {"default:stone_with_diamond", "default:mossycobble" }, "air", 0, 50, 1,2, 3, -30000, -80)
 -- mobs:spawn_specific("goblins:goblin_king", {"default:mossycobble",},"air", 0, 50, 1, 10, 3, -30000, -100)
 
-mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 1000, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 1000, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 5, 60, 2000, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 5, 60, 2000, 2, -2000, -150)
-mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 5, 60, 2000, 2, -2000, -150)
-mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 5, 60, 2000, 2, -2000, -200)
-mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 5, 60, 3000, 2, -2000, -200)
-mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 5, 60, 3000, 1, -2000, -500)
+mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 3500, 3, -2000, -100)
+mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 3500, 3, -2000, -100)
+mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 5, 60, 3500, 3, -2000, -100)
+mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 5, 60, 3500, 2, -2000, -150)
+mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 5, 60, 3500, 2, -2000, -150)
+mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 5, 60, 5000, 2, -2000, -200)
+mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 5, 60, 5000, 2, -2000, -200)
+mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 5, 60, 5000, 1, -2000, -500)
 
 
 minetest.log("action", "[MOD] Goblins loaded")
