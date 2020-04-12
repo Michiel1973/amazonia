@@ -6,7 +6,7 @@ local use_cmi = minetest.global_exists("cmi")
 
 mobs = {
 	mod = "redo",
-	version = "20200406",
+	version = "20200411",
 	intllib = S,
 	invis = minetest.global_exists("invisibility") and invisibility or {}
 }
@@ -1006,6 +1006,9 @@ function mob_class:do_jump()
 
 	local pos = self.object:get_pos()
 	local yaw = self.object:get_yaw()
+
+	-- sanity check
+	if not yaw then return false end
 
 	-- what is mob standing on?
 	pos.y = pos.y + self.collisionbox[2] - 0.2
@@ -2535,6 +2538,9 @@ function mob_class:falling(pos)
 	-- floating in water (or falling)
 	local v = self.object:get_velocity()
 
+	-- sanity check
+	if not v then return end
+
 	if v.y > 0 then
 
 		-- apply gravity when moving up
@@ -2777,6 +2783,10 @@ function mob_class:on_punch(hitter, tflp, tool_capabilities, dir)
 	and tflp >= punch_interval then
 
 		local v = self.object:get_velocity()
+
+		-- sanity check
+		if not v then return end
+
 		local kb = damage or 1
 		local up = 2
 
@@ -3843,6 +3853,8 @@ function mobs:register_egg(mob, desc, background, addegg, no_creative)
 				local mob = minetest.add_entity(pos, mob, data)
 				local ent = mob:get_luaentity()
 
+				if not ent then return end -- sanity check
+
 				-- set owner if not a monster
 				if ent.type ~= "monster" then
 					ent.owner = placer:get_player_name()
@@ -3887,6 +3899,8 @@ function mobs:register_egg(mob, desc, background, addegg, no_creative)
 
 				local mob = minetest.add_entity(pos, mob)
 				local ent = mob:get_luaentity()
+
+				if not ent then return end -- sanity check
 
 				-- don't set owner if monster or sneak pressed
 				if ent.type ~= "monster"
