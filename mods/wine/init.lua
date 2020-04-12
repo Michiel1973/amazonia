@@ -123,13 +123,6 @@ minetest.register_node("wine:glass_wine", {
 	on_use = minetest.item_eat(2),
 })
 
-hunger_ng.add_hunger_data('wine:glass_wine', {
-	satiates = 1.5,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- bottle of wine
 minetest.register_node("wine:bottle_wine", {
 	description = S("Bottle of Wine"),
@@ -186,14 +179,6 @@ minetest.register_node("wine:glass_rum", {
 	sounds = wine.snd_g,
 	on_use = minetest.item_eat(2),
 })
-
-hunger_ng.add_hunger_data('wine:glass_rum', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 
 -- bottle of rum
 minetest.register_node("wine:bottle_rum", {
@@ -253,13 +238,6 @@ minetest.register_node("wine:glass_wheat_beer", {
 	on_use = minetest.item_eat(2),
 })
 
-hunger_ng.add_hunger_data('"wine:glass_wheat_beer', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 -- glass of beer (thanks to RiverKpocc @ deviantart.com for image)
 minetest.register_node("wine:glass_beer", {
 	description = S("Beer"),
@@ -284,12 +262,6 @@ minetest.register_node("wine:glass_beer", {
 	on_use = minetest.item_eat(2),
 })
 
-hunger_ng.add_hunger_data('wine:glass_beer', {
-	satiates = 1.5,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
 
 -- glass of honey mead
 minetest.register_node("wine:glass_mead", {
@@ -315,14 +287,6 @@ minetest.register_node("wine:glass_mead", {
 	on_use = minetest.item_eat(4),
 })
 
-hunger_ng.add_hunger_data('wine:glass_mead', {
-	satiates = 2.5,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
-
 -- glass of apple cider
 minetest.register_node("wine:glass_cider", {
 	description = S("Apple Cider"),
@@ -345,13 +309,6 @@ minetest.register_node("wine:glass_cider", {
 	},
 	sounds = wine.snd_g,
 	on_use = minetest.item_eat(2),
-})
-
-hunger_ng.add_hunger_data('wine:glass_cider', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 -- glass of tequila
@@ -377,14 +334,6 @@ minetest.register_node("wine:glass_tequila", {
 	sounds = wine.snd_g,
 	on_use = minetest.item_eat(2),
 })
-
-hunger_ng.add_hunger_data('wine:glass_tequila', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 
 -- bottle of tequila
 minetest.register_node("wine:bottle_tequila", {
@@ -443,13 +392,6 @@ minetest.register_node("wine:glass_sake", {
 	on_use = minetest.item_eat(2),
 })
 
-hunger_ng.add_hunger_data('wine:glass_sake', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
 
 -- glass of bourbon
 minetest.register_node("wine:glass_bourbon", {
@@ -473,13 +415,6 @@ minetest.register_node("wine:glass_bourbon", {
 	},
 	sounds = wine.snd_g,
 	on_use = minetest.item_eat(2),
-})
-
-hunger_ng.add_hunger_data('wine:glass_bourbon', {
-	satiates = 1.5,
-	heals = 0,
-	returns = '',
-	timeout = 0
 })
 
 -- bottle of bourbon
@@ -539,12 +474,6 @@ minetest.register_node("wine:glass_vodka", {
 	on_use = minetest.item_eat(2),
 })
 
-hunger_ng.add_hunger_data('wine:glass_vodka', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
 
 -- bottle of vodka
 minetest.register_node("wine:bottle_vodka", {

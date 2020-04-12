@@ -772,12 +772,6 @@ minetest.register_craftitem("bees:bottle_honey", {
 	groups = {vessel = 1},
 })
 
-hunger_ng.add_hunger_data('bees:bottle_honey', {
-	satiates = 4,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
 
 minetest.register_craftitem("bees:wax", {
 	description = S("Bees wax"),
@@ -792,12 +786,6 @@ minetest.register_craftitem("bees:honey_comb", {
 	stack_max = 8,
 })
 
-hunger_ng.add_hunger_data('bees:honey_comb', {
-	satiates = 2.5,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
 
 minetest.register_craftitem("bees:queen", {
 	description = S("Queen Bee"),

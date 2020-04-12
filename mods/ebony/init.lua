@@ -223,15 +223,6 @@ minetest.register_node("ebony:persimmon", {
 	end,
 })
 
-
-hunger_ng.add_hunger_data('ebony:persimmon', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
-
 --
 -- Craftitems
 --
