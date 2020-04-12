@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+April 12 - MINOR - bugfixes and behavior changes for water mobs
 April 12 - MINOR - incremental mod updates from master 
 April 12 - MINOR - small adjustments in crafting recipes
 April 12 - MINOR - food rebalancing, adding many foods missing satiation values
