@@ -6,7 +6,7 @@ local use_cmi = minetest.global_exists("cmi")
 
 mobs = {
 	mod = "redo",
-	version = "20200411",
+	version = "20200412",
 	intllib = S,
 	invis = minetest.global_exists("invisibility") and invisibility or {}
 }
@@ -463,9 +463,9 @@ local ray_line_of_sight = function(self, pos1, pos2)
 
 	while thing do
 
-		if thing.type == "object"
-		and thing.ref ~= self.object
-		and not thing.ref:is_player() then return false end
+--		if thing.type == "object"
+--		and thing.ref ~= self.object
+--		and not thing.ref:is_player() then return false end
 
 		if thing.type == "node" then
 
@@ -482,7 +482,7 @@ local ray_line_of_sight = function(self, pos1, pos2)
 end
 
 -- detect if using minetest 5.0 by searching for permafrost node
-local is_50 = nil -- minetest.registered_nodes["default:permafrost"]
+local is_50 = minetest.registered_nodes["default:permafrost"]
 
 function mob_class:line_of_sight(pos1, pos2, stepsize)
 
