@@ -9,7 +9,7 @@ if mobs.mod and mobs.mod == "redo" then
 
 	mobs:register_mob("mobs_squid:squid", {
 		type = "animal",
-		passive = true,
+		specific_attack = {"mobs_jellyfish:jellyfish"},
 		hp_min = 10,
 		hp_max = 10,
 		armor = 100,
@@ -60,6 +60,6 @@ if mobs.mod and mobs.mod == "redo" then
 	mobs:spawn_specific("mobs_squid:squid",
 		{"default:water_source"},
 		{"default:water_flowing","default:water_source"},
-		5, 20, 30, 10000, 1, -31000, -10)
+		5, 20, 30, 10000, 3, -31000, -5)
 		
 end
