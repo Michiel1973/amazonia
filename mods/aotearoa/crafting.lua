@@ -273,7 +273,7 @@ minetest.register_craft({
 
 hunger_ng.add_hunger_data('aotearoa:cooked_bracken_root', {
     satiates = 2,
-    heals = 0,
+    heals = 1,
     returns = '',
     timeout = 0
 })
@@ -294,7 +294,7 @@ minetest.register_craft({
 
 hunger_ng.add_hunger_data('aotearoa:cooked_raupo_root', {
     satiates = 2,
-    heals = 0,
+    heals = 1,
     returns = '',
     timeout = 0
 })
@@ -317,7 +317,7 @@ minetest.register_craft({
 
 hunger_ng.add_hunger_data('aotearoa:pungapunga', {
 		satiates = 3,
-		heals = 0,
+		heals = 1,
 		returns = '',
 		timeout = 0
 })
@@ -342,7 +342,7 @@ minetest.register_craftitem("aotearoa:seed_cake", {
 
 	hunger_ng.add_hunger_data('aotearoa:seed_cake', {
 		satiates = 4,
-		heals = 0,
+		heals = 2,
 		returns = '',
 		timeout = 0
 	})
@@ -422,7 +422,7 @@ minetest.register_craft({
 })
 
 hunger_ng.add_hunger_data('aotearoa:cooked_fiddlehead', {
-	satiates = 1,
+	satiates = 2,
 	heals = 0,
 	returns = '',
 	timeout = 0
@@ -437,8 +437,8 @@ minetest.register_craftitem("aotearoa:cooked_mamaku_pith", {
 })
 
 hunger_ng.add_hunger_data('aotearoa:cooked_mamaku_pith', {
-	satiates = 1,
-	heals = 0,
+	satiates = 2,
+	heals = 1,
 	returns = '',
 	timeout = 0
 })
@@ -464,8 +464,8 @@ minetest.register_craft({
 })
 
 hunger_ng.add_hunger_data('aotearoa:cooked_cabbage_tree_root', {
-	satiates = 1,
-	heals = 0,
+	satiates = 2,
+	heals = 1,
 	returns = '',
 	timeout = 0
 })
@@ -484,8 +484,8 @@ minetest.register_craft({
 })
 
 hunger_ng.add_hunger_data('aotearoa:cooked_cabbage_tree_shoots', {
-	satiates = 1,
-	heals = 0,
+	satiates = 2,
+	heals = 1,
 	returns = '',
 	timeout = 0
 })
@@ -504,8 +504,8 @@ minetest.register_craft({
 })
 
 hunger_ng.add_hunger_data('aotearoa:cooked_nikau_shoots', {
-	satiates = 1,
-	heals = 0,
+	satiates = 2,
+	heals = 1,
 	returns = '',
 	timeout = 0
 })

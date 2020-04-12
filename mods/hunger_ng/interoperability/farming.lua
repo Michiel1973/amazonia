@@ -51,3 +51,5 @@ add('farming:toast',            { satiates = 1 })
 add('farming:toast_sandwich',   { satiates = 2.5 })
 add('farming:tomato',           { satiates = 1 })
 add('farming:turkish_delight',  { satiates = 2 })
+add('farming:coffee_cup',       { satiates = 0, heals = 2 })
+
