@@ -8,4 +8,3 @@ mcl_sounds?
 mcl_loot?
 doc?
 unified_inventory?
-hunger_ng

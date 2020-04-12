@@ -140,15 +140,6 @@ minetest.register_node("moreplants:medflower", {
 })
 
 
-hunger_ng.add_hunger_data('moreplants:medflower', {
-	satiates = 1,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
-
-
-
 minetest.register_node("moreplants:weed", {
 	description = "Weed",
 	drawtype = "plantlike",
