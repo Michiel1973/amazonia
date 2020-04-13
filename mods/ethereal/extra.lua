@@ -336,7 +336,7 @@ minetest.register_tool("ethereal:light_staff", {
 			minetest.swap_node(pos, {name = "ethereal:glostone"})
 
 			if not ethereal.check_creative(user:get_player_name()) then
-				itemstack:add_wear(65535 / 149) -- 150 uses
+				itemstack:add_wear(65535 / 199) -- 199 uses
 			end
 
 			return itemstack
