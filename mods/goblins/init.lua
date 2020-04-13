@@ -20,6 +20,29 @@ local goblin_sounds = {
 	distance = 6,
 }
 
+local goblin_replacenodes = {
+	"technic:granite",
+	"technic:marble",
+	"default:stone",
+	"default:gravel",
+	"default:desert_stone",
+	"group:sand",
+	"group:soil",
+	"aotearoa:gneiss",
+	"aotearoa:schist",
+	"aotearoa:greywacke",
+	"aotearoa:conglomerate",
+	"aotearoa:granite",
+	"aotearoa:andesite",
+	"aotearoa:mud",
+	"aotearoa:grey_sandstone",
+	"aotearoa:pale_sandstone",
+	"aotearoa:basalt",
+	"default:torch",
+}
+	
+	
+	
 local debugging_goblins = false
 
 -- local routine for do_custom so that api doesn't need changed
@@ -110,13 +133,13 @@ local goblin_base = {
 	sounds = goblin_sounds,
 	walk_velocity = 2,
 	run_velocity = 3,
-	pathfinding = 2,
+	--pathfinding = 2,
 	jump = true,
 	jump_height = 2,
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 1,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -180,13 +203,25 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	armor = 150,
 	suffocation = true,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	attack_type = "dogfight",
 	blood_amount = 2,
 	blood_texture = "goblins_blood.png",
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -198,7 +233,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 1,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -235,6 +270,8 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 			"aotearoa:schist",
 			"aotearoa:greywacke",
 			"aotearoa:conglomerate",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
@@ -243,7 +280,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"default:mossycobble", --replace_with
-		9, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
 		)
 	end,
@@ -261,7 +298,7 @@ mobs:register_mob("goblins:goblin_digger", {
 	hp_max = 30,
 	armor = 150,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	suffocation = true,
 	attack_type = "dogfight",
 	blood_amount = 2,
@@ -269,6 +306,18 @@ mobs:register_mob("goblins:goblin_digger", {
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -280,7 +329,7 @@ mobs:register_mob("goblins:goblin_digger", {
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 1,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -316,6 +365,8 @@ mobs:register_mob("goblins:goblin_digger", {
 			"group:sand",
 			"group:soil",
 			"aotearoa:gneiss",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
 			"aotearoa:conglomerate",
@@ -344,7 +395,7 @@ mobs:register_mob("goblins:goblin_coal", {
 	hp_max = 30,
 	armor = 150,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	suffocation = true,
 	attack_type = "dogfight",
 	blood_amount = 2,
@@ -352,6 +403,18 @@ mobs:register_mob("goblins:goblin_coal", {
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -363,7 +426,7 @@ mobs:register_mob("goblins:goblin_coal", {
 	lava_damage = 2,
 	fear_height = 3,
 	light_damage = 1,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -398,6 +461,8 @@ mobs:register_mob("goblins:goblin_coal", {
 			"group:soil",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:greywacke",
 			"aotearoa:granite",
 			"aotearoa:andesite",
@@ -407,7 +472,7 @@ mobs:register_mob("goblins:goblin_coal", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		6, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:stone_with_coal_trap" --replace_with_secondary
 		)
 	end,
@@ -425,7 +490,7 @@ mobs:register_mob("goblins:goblin_iron", {
 	hp_max = 50,
 	armor = 200,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	suffocation = true,
 	attack_type = "dogfight",
 	blood_amount = 2,
@@ -433,6 +498,18 @@ mobs:register_mob("goblins:goblin_iron", {
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -444,7 +521,7 @@ mobs:register_mob("goblins:goblin_iron", {
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 1,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -482,6 +559,8 @@ mobs:register_mob("goblins:goblin_iron", {
 			"aotearoa:gneiss",
 			"aotearoa:conglomerate",
 			"aotearoa:schist",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:greywacke",
 			"aotearoa:granite",
 			"aotearoa:andesite",
@@ -491,7 +570,7 @@ mobs:register_mob("goblins:goblin_iron", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		8, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:stone_with_iron_trap" --replace_with_secondary
 		)
 	end,
@@ -508,7 +587,7 @@ mobs:register_mob("goblins:goblin_copper", {
 	hp_max = 50,
 	armor = 200,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	suffocation = true,
 	attack_type = "dogfight",
 	blood_amount = 2,
@@ -516,6 +595,18 @@ mobs:register_mob("goblins:goblin_copper", {
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -527,7 +618,7 @@ mobs:register_mob("goblins:goblin_copper", {
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 1,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -564,6 +655,8 @@ mobs:register_mob("goblins:goblin_copper", {
 			"group:soil",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:greywacke",
 			"aotearoa:conglomerate",
 			"aotearoa:granite",
@@ -574,7 +667,7 @@ mobs:register_mob("goblins:goblin_copper", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		8, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:stone_with_copper_trap" --replace_with_secondary
 		)
 	end,
@@ -591,7 +684,7 @@ mobs:register_mob("goblins:goblin_gold", {
 	hp_max = 60,
 	armor = 250,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	suffocation = true,
 	attack_type = "dogfight",
 	blood_amount = 2,
@@ -599,6 +692,18 @@ mobs:register_mob("goblins:goblin_gold", {
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -610,7 +715,7 @@ mobs:register_mob("goblins:goblin_gold", {
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 2,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -648,6 +753,8 @@ mobs:register_mob("goblins:goblin_gold", {
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:conglomerate",
@@ -657,7 +764,7 @@ mobs:register_mob("goblins:goblin_gold", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		8, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:stone_with_gold_trap" --replace_with_secondary
 		)
 	end,
@@ -674,7 +781,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 	hp_max = 60,
 	armor = 250,
 	passive = false,
-	pathfinding = 2,
+	--pathfinding = 2,
 	suffocation = true,
 	attack_type = "dogfight",
 	blood_amount = 2,
@@ -682,6 +789,18 @@ mobs:register_mob("goblins:goblin_diamond", {
 	collisionbox = {-0.35,-1,-0.35, 0.35,-.1,0.35},
 	visual = "mesh",
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -693,7 +812,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 2,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 6,
 	owner = "",
@@ -731,6 +850,8 @@ mobs:register_mob("goblins:goblin_diamond", {
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:conglomerate",
@@ -740,7 +861,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		8, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:stone_with_diamond_trap" --replace_with_secondary
 		)
 	end,
@@ -757,7 +878,7 @@ mobs:register_mob("goblins:goblin_king", {
 	hp_min = 60,
 	hp_max = 100,
 	armor = 300,
-	pathfinding = 2,
+	--pathfinding = 2,
 	passive = false,
 	suffocation = true,
 	attack_type = "dogfight",
@@ -767,6 +888,18 @@ mobs:register_mob("goblins:goblin_king", {
 	visual = "mesh",
 	visual_size = {x = 1.20, y = 1.20},
 	mesh = "goblins_goblin.b3d",
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
 	drawtype = "front",
 	makes_footstep_sound = true,
 	sounds = goblin_sounds,
@@ -778,7 +911,7 @@ mobs:register_mob("goblins:goblin_king", {
 	water_damage = 2,
 	lava_damage = 2,
 	light_damage = 2,
-	light_damage_min = 9,
+	light_damage_min = 8,
 	light_damage_min = 15,
 	view_range = 8,
 	owner = "",
@@ -815,6 +948,8 @@ mobs:register_mob("goblins:goblin_king", {
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
+			"technic:granite",
+			"technic:marble",
 			"aotearoa:granite",
 			"aotearoa:conglomerate",
 			"aotearoa:andesite",
@@ -824,7 +959,7 @@ mobs:register_mob("goblins:goblin_king", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"default:mossycobble", --replace_with
-		8, --replace_rate_secondary
+		10, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
 		)
 	end,
@@ -844,14 +979,6 @@ active_object_count,
 min_height, 
 max_height)
 ]]
--- mobs:spawn_specific("goblins:goblin_cobble", {"group:stone"}, "air", 0, 50, 1, 10, 3, -30000 , 0)
--- mobs:spawn_specific("goblins:goblin_digger", {"group:stone"},  "air", 0, 50, 1, 10, 3, -30000 , 0)
--- mobs:spawn_specific("goblins:goblin_coal", {"default:stone_with_coal", "default:mossycobble"}, "air",0, 50, 1, 2, 3, -30000, 0)
--- mobs:spawn_specific("goblins:goblin_iron", {"default:stone_with_iron", "default:mossycobble"}, "air", 0, 50, 1, 2, 3, -30000, -20)
--- mobs:spawn_specific("goblins:goblin_copper", {"default:stone_with_copper", "default:mossycobble"}, "air", 0, 50, 1, 2, 3, -30000, -20)
--- mobs:spawn_specific("goblins:goblin_gold", {"default:stone_with_gold", "default:mossycobble"}, "air",0, 50, 1, 2, 3, -30000, -40)
--- mobs:spawn_specific("goblins:goblin_diamond", {"default:stone_with_diamond", "default:mossycobble" }, "air", 0, 50, 1,2, 3, -30000, -80)
--- mobs:spawn_specific("goblins:goblin_king", {"default:mossycobble",},"air", 0, 50, 1, 10, 3, -30000, -100)
 
 mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 2500, 3, -2000, -100)
 mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 2500, 3, -2000, -100)
