@@ -21,11 +21,11 @@ local goblin_sounds = {
 }
 
 local goblin_replacenodes = {
-	"glooptest:ruby",
-	"glooptest:sapphire",
-	"glooptest:emerald",
-	"glooptest:topaz",
-	"glooptest:amethyst",
+	"glooptest:mineral_ruby",
+	"glooptest:mineral_sapphire",
+	"glooptest:mineral_emerald",
+	"glooptest:mineral_topaz",
+	"glooptest:mineral_amethyst",
 	"default:stone",
 	"default:gravel",
 	"default:desert_stone",
@@ -268,11 +268,11 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 		1, --search_offset_below
 		12, --replace_rate
 		{
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -371,11 +371,11 @@ mobs:register_mob("goblins:goblin_digger", {
 		1.5, --search_offset_below
 		10, --replace_rate
 		{	
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -473,11 +473,11 @@ mobs:register_mob("goblins:goblin_coal", {
 		1, --search_offset_below
 		12, --replace_rate
 		{
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -579,11 +579,11 @@ mobs:register_mob("goblins:goblin_iron", {
 		12, --replace_rate
 		{	
 			"default:stone_with_iron",
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -685,11 +685,11 @@ mobs:register_mob("goblins:goblin_copper", {
 		12, --replace_rate
 		{	
 			"default:stone_with_copper",
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -790,11 +790,11 @@ mobs:register_mob("goblins:goblin_gold", {
 		12, --replace_rate
 		{	
 			"default:stone_with_gold",
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -895,11 +895,11 @@ mobs:register_mob("goblins:goblin_diamond", {
 		12, --replace_rate
 		{
 			"default:stone_with_diamond",
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
@@ -1001,11 +1001,11 @@ mobs:register_mob("goblins:goblin_king", {
 		15, --replace_rate
 		{
 			"default:stone_with_diamond",
-			"glooptest:ruby",
-			"glooptest:sapphire",
-			"glooptest:emerald",
-			"glooptest:topaz",
-			"glooptest:amethyst",
+			"glooptest:mineral_ruby",
+			"glooptest:mineral_sapphire",
+			"glooptest:mineral_emerald",
+			"glooptest:mineral_topaz",
+			"glooptest:mineral_amethyst",
 			"default:stone",
 			"default:gravel",
 			"default:desert_stone",
