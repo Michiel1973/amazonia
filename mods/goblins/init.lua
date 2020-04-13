@@ -21,13 +21,14 @@ local goblin_sounds = {
 }
 
 local goblin_replacenodes = {
-	"technic:granite",
-	"technic:marble",
+	"glooptest:ruby",
+	"glooptest:sapphire",
+	"glooptest:emerald",
+	"glooptest:topaz",
+	"glooptest:amethyst",
 	"default:stone",
 	"default:gravel",
 	"default:desert_stone",
-	"group:sand",
-	"group:soil",
 	"aotearoa:gneiss",
 	"aotearoa:schist",
 	"aotearoa:greywacke",
@@ -38,6 +39,10 @@ local goblin_replacenodes = {
 	"aotearoa:grey_sandstone",
 	"aotearoa:pale_sandstone",
 	"aotearoa:basalt",
+	"technic:granite",
+	"technic:marble",
+	"group:sand",
+	"group:soil",
 	"default:torch",
 }
 	
@@ -262,23 +267,31 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 		2, --search_offset_above
 		1, --search_offset_below
 		12, --replace_rate
-		{	"default:stone",
+		{
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
 			"default:desert_stone",
-			"group:sand",
-			"group:soil",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
 			"aotearoa:conglomerate",
-			"technic:granite",
-			"technic:marble",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"default:mossycobble", --replace_with
 		15, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
@@ -357,16 +370,16 @@ mobs:register_mob("goblins:goblin_digger", {
 		1, --search_offset_above
 		1.5, --search_offset_below
 		10, --replace_rate
-		{	"group:soil",
-			"group:sand",
-			"default:gravel",
+		{	
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
 			"default:stone",
+			"default:gravel",
 			"default:desert_stone",
-			"group:sand",
-			"group:soil",
 			"aotearoa:gneiss",
-			"technic:granite",
-			"technic:marble",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
 			"aotearoa:conglomerate",
@@ -376,7 +389,12 @@ mobs:register_mob("goblins:goblin_digger", {
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"air", --replace_with
 		nil, --replace_rate_secondary
 		nil --replace_with_secondary
@@ -454,23 +472,31 @@ mobs:register_mob("goblins:goblin_coal", {
 		2, --search_offset_above
 		1, --search_offset_below
 		12, --replace_rate
-		{	"default:stone",
-			"default:stone_with_coal",
-			"aotearoa:conglomerate",
-			"group:sand",
-			"group:soil",
+		{
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
+			"default:desert_stone",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
-			"technic:granite",
-			"technic:marble",
 			"aotearoa:greywacke",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"air", --replace_with
 		15, --replace_rate_secondary
 		"goblins:stone_with_coal_trap" --replace_with_secondary
@@ -551,24 +577,33 @@ mobs:register_mob("goblins:goblin_iron", {
 		2, --search_offset_above
 		1, --search_offset_below
 		12, --replace_rate
-		{	"default:stone",
-			"default:desert_stone",
+		{	
 			"default:stone_with_iron",
-			"group:sand",
-			"group:soil",
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
+			"default:desert_stone",
 			"aotearoa:gneiss",
-			"aotearoa:conglomerate",
 			"aotearoa:schist",
-			"technic:granite",
-			"technic:marble",
 			"aotearoa:greywacke",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+
+		}, --replace_what
 		"air", --replace_with
 		15, --replace_rate_secondary
 		"goblins:stone_with_iron_trap" --replace_with_secondary
@@ -648,15 +683,18 @@ mobs:register_mob("goblins:goblin_copper", {
 		2, --search_offset_above
 		1, --search_offset_below
 		12, --replace_rate
-		{	"default:stone",
-			"default:desert_stone",
+		{	
 			"default:stone_with_copper",
-			"group:sand",
-			"group:soil",
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
+			"default:desert_stone",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
-			"technic:granite",
-			"technic:marble",
 			"aotearoa:greywacke",
 			"aotearoa:conglomerate",
 			"aotearoa:granite",
@@ -665,7 +703,12 @@ mobs:register_mob("goblins:goblin_copper", {
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"air", --replace_with
 		15, --replace_rate_secondary
 		"goblins:stone_with_copper_trap" --replace_with_secondary
@@ -745,24 +788,32 @@ mobs:register_mob("goblins:goblin_gold", {
 		2, --search_offset_above
 		1, --search_offset_below
 		12, --replace_rate
-		{	"default:stone",
-			"default:desert_stone",
+		{	
 			"default:stone_with_gold",
-			"group:sand",
-			"group:soil",
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
+			"default:desert_stone",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
-			"technic:granite",
-			"technic:marble",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
-			"aotearoa:conglomerate",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"air", --replace_with
 		15, --replace_rate_secondary
 		"goblins:stone_with_gold_trap" --replace_with_secondary
@@ -842,24 +893,32 @@ mobs:register_mob("goblins:goblin_diamond", {
 		2, --search_offset_above
 		1, --search_offset_below
 		12, --replace_rate
-		{	"default:stone",
-			"default:desert_stone",
+		{
 			"default:stone_with_diamond",
-			"group:sand",
-			"group:soil",
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
+			"default:desert_stone",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
-			"technic:granite",
-			"technic:marble",
+			"aotearoa:conglomerate",
 			"aotearoa:granite",
 			"aotearoa:andesite",
-			"aotearoa:conglomerate",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"air", --replace_with
 		15, --replace_rate_secondary
 		"goblins:stone_with_diamond_trap" --replace_with_secondary
@@ -940,24 +999,32 @@ mobs:register_mob("goblins:goblin_king", {
 		2, --search_offset_above
 		1, --search_offset_below
 		15, --replace_rate
-		{	"default:stone",
-			"default:desert_stone",
+		{
 			"default:stone_with_diamond",
-			"group:sand",
-			"group:soil",
+			"glooptest:ruby",
+			"glooptest:sapphire",
+			"glooptest:emerald",
+			"glooptest:topaz",
+			"glooptest:amethyst",
+			"default:stone",
+			"default:gravel",
+			"default:desert_stone",
 			"aotearoa:gneiss",
 			"aotearoa:schist",
 			"aotearoa:greywacke",
-			"technic:granite",
-			"technic:marble",
-			"aotearoa:granite",
 			"aotearoa:conglomerate",
+			"aotearoa:granite",
 			"aotearoa:andesite",
 			"aotearoa:mud",
 			"aotearoa:grey_sandstone",
 			"aotearoa:pale_sandstone",
 			"aotearoa:basalt",
-			"default:torch"}, --replace_what
+			"technic:granite",
+			"technic:marble",
+			"group:sand",
+			"group:soil",
+			"default:torch",
+		}, --replace_what
 		"default:mossycobble", --replace_with
 		20, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
