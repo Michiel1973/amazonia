@@ -1,6 +1,6 @@
 SERVER CHANGELOG
 
-April 13 - MAJOR - sprint capability added to players (press E to sprint)
+April 13 - MAJOR - sprint capability added to players (press E while moving to sprint)
 Arpil 13 - MINOR - balance changes to make goblin less life-threatening
 April 12 - MINOR - bugfixes and behavior changes for water mobs
 April 12 - MINOR - incremental mod updates from master 
