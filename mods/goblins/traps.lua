@@ -24,7 +24,7 @@ minetest.register_node("goblins:stone_with_coal_trap", {
 		if puncher:is_player() then
 				if math.random(0,100) < 10 then -- chance player will get hurt mining this
 					if puncher:get_hp() > 0 then
-						puncher:set_hp(puncher:get_hp()-1)
+						puncher:set_hp(puncher:get_hp()-0.5)
 						minetest.sound_play("goblins_goblin_pick", {pos = pos, gain = 0.5, max_hear_distance = 10})
 					 end
 				end
@@ -44,7 +44,7 @@ minetest.register_node("goblins:stone_with_iron_trap", {
 		if puncher:is_player() then
 				if math.random(0,100) < 25 then -- chance player will get hurt mining this
 					if puncher:get_hp() > 0 then
-						puncher:set_hp(puncher:get_hp()-1)
+						puncher:set_hp(puncher:get_hp()-0.5)
 						minetest.sound_play("goblins_goblin_pick", {pos = pos, gain = 0.5, max_hear_distance = 10})
 					 end
 				end
@@ -63,7 +63,7 @@ minetest.register_node("goblins:stone_with_copper_trap", {
 		if puncher:is_player() then
 				if math.random(0,100) < 50 then -- chance player will get hurt mining this
 					if puncher:get_hp() > 0 then
-						puncher:set_hp(puncher:get_hp()-1)
+						puncher:set_hp(puncher:get_hp()-0.5)
 						minetest.sound_play("goblins_goblin_pick", {pos = pos, gain = 0.5, max_hear_distance = 10})
 					 end
 				end
@@ -230,7 +230,7 @@ minetest.register_abm({
 			if object:is_player() then
 				minetest.set_node(pos, {name="fire:basic_flame"})
 				if object:get_hp() > 0 then
-					object:set_hp(object:get_hp()-2)
+					object:set_hp(object:get_hp()-1)
 					minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.5, max_hear_distance = 10})
 					minetest.after(6, function() --this hell ends after a few seconds
 						minetest.set_node(pos, {name = "air"})
@@ -245,8 +245,8 @@ minetest.register_abm({
 -- pit of iron razors?
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_iron_trap"},
-	interval = 2,
-	chance = 2, --this may be a dud
+	interval = 1,
+	chance = 4, --this may be a dud
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do
 			if object:is_player() then
@@ -285,7 +285,7 @@ minetest.register_abm({
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
 			if object:is_player() then
 				if object:get_hp() > 0 then
-					object:set_hp(object:get_hp()-1)
+					object:set_hp(object:get_hp()-0.5)
 					-- sprite
 					lightning_effects(pos, 3)
 					minetest.sound_play("goblins_goblin_pick", {pos = pos, gain = 0.5, max_hear_distance = 10})
@@ -303,7 +303,7 @@ minetest.register_abm({
 			if object:is_player() then
 				minetest.set_node(pos, {name="goblins:molten_gold_source"})
 				if object:get_hp() > 0 then
-					object:set_hp(object:get_hp()-2)
+					object:set_hp(object:get_hp()-1)
 					minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.5, max_hear_distance = 10})
 					minetest.after(6, function() --this hell ends after a few seconds
 						minetest.set_node(pos, {name = "air"})
@@ -321,13 +321,13 @@ if (not singleplayer and setting ~= true) or (singleplayer and setting == false)
 	minetest.register_abm({
 		nodenames = {"goblins:stone_with_diamond_trap"},
 		interval = 1,
-		chance = 1,
+		chance = 2,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
 				if object:is_player() then
 					minetest.set_node(pos, {name="default:lava_source"})
 					if object:get_hp() > 0 then
-						object:set_hp(object:get_hp()-2)
+						object:set_hp(object:get_hp()-1)
 						minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.5, max_hear_distance = 10})
 						minetest.after(6, function() --this hell ends after a few seconds
 							minetest.set_node(pos, {name = "air"})

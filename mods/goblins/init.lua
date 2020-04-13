@@ -980,14 +980,14 @@ min_height,
 max_height)
 ]]
 
-mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 2500, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 2500, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 5, 60, 2500, 3, -2000, -100)
-mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 5, 60, 2500, 2, -2000, -150)
-mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 5, 60, 2500, 2, -2000, -150)
-mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 5, 60, 3500, 2, -2000, -200)
-mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 5, 60, 3500, 2, -2000, -200)
-mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 5, 60, 4000, 1, -2000, -500)
+mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 2500, 3, -2000, -500)
+mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 2500, 3, -2000, -500)
+mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 5, 60, 2500, 3, -2000, -500)
+mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 5, 60, 2500, 2, -2000, -750)
+mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 5, 60, 2500, 2, -2000, -750)
+mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 5, 60, 3500, 2, -2000, -750)
+mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 5, 60, 3500, 2, -2000, -750)
+mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 5, 60, 4000, 1, -2000, -1000)
 
 
 minetest.log("action", "[MOD] Goblins loaded")
