@@ -138,9 +138,9 @@ local goblin_base = {
 	jump_height = 2,
 	water_damage = 2,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin",
@@ -232,9 +232,9 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 	fear_height = 3,
 	water_damage = 2,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin cobble",
@@ -261,7 +261,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		7, --replace_rate
+		12, --replace_rate
 		{	"default:stone",
 			"default:desert_stone",
 			"group:sand",
@@ -280,7 +280,7 @@ mobs:register_mob("goblins:goblin_cobble", goblin_def({
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"default:mossycobble", --replace_with
-		10, --replace_rate_secondary
+		15, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
 		)
 	end,
@@ -328,9 +328,9 @@ mobs:register_mob("goblins:goblin_digger", {
 	fear_height = 3,
 	water_damage = 2,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin digger",
@@ -356,7 +356,7 @@ mobs:register_mob("goblins:goblin_digger", {
 		1, --search_offset
 		1, --search_offset_above
 		1.5, --search_offset_below
-		5, --replace_rate
+		10, --replace_rate
 		{	"group:soil",
 			"group:sand",
 			"default:gravel",
@@ -425,9 +425,9 @@ mobs:register_mob("goblins:goblin_coal", {
 	water_damage = 2,
 	lava_damage = 2,
 	fear_height = 3,
-	light_damage = 1,
+	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin coal",
@@ -453,7 +453,7 @@ mobs:register_mob("goblins:goblin_coal", {
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		7, --replace_rate
+		12, --replace_rate
 		{	"default:stone",
 			"default:stone_with_coal",
 			"aotearoa:conglomerate",
@@ -472,7 +472,7 @@ mobs:register_mob("goblins:goblin_coal", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		10, --replace_rate_secondary
+		15, --replace_rate_secondary
 		"goblins:stone_with_coal_trap" --replace_with_secondary
 		)
 	end,
@@ -520,9 +520,9 @@ mobs:register_mob("goblins:goblin_iron", {
 	jump_height = 2,
 	water_damage = 2,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin iron",
@@ -550,7 +550,7 @@ mobs:register_mob("goblins:goblin_iron", {
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		7, --replace_rate
+		12, --replace_rate
 		{	"default:stone",
 			"default:desert_stone",
 			"default:stone_with_iron",
@@ -570,7 +570,7 @@ mobs:register_mob("goblins:goblin_iron", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		10, --replace_rate_secondary
+		15, --replace_rate_secondary
 		"goblins:stone_with_iron_trap" --replace_with_secondary
 		)
 	end,
@@ -617,9 +617,9 @@ mobs:register_mob("goblins:goblin_copper", {
 	jump_height = 2,
 	water_damage = 2,
 	lava_damage = 2,
-	light_damage = 1,
+	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin copper",
@@ -647,7 +647,7 @@ mobs:register_mob("goblins:goblin_copper", {
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		6, --replace_rate
+		12, --replace_rate
 		{	"default:stone",
 			"default:desert_stone",
 			"default:stone_with_copper",
@@ -667,7 +667,7 @@ mobs:register_mob("goblins:goblin_copper", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		10, --replace_rate_secondary
+		15, --replace_rate_secondary
 		"goblins:stone_with_copper_trap" --replace_with_secondary
 		)
 	end,
@@ -716,7 +716,7 @@ mobs:register_mob("goblins:goblin_gold", {
 	lava_damage = 2,
 	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin gold",
@@ -744,7 +744,7 @@ mobs:register_mob("goblins:goblin_gold", {
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		7, --replace_rate
+		12, --replace_rate
 		{	"default:stone",
 			"default:desert_stone",
 			"default:stone_with_gold",
@@ -764,7 +764,7 @@ mobs:register_mob("goblins:goblin_gold", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		10, --replace_rate_secondary
+		15, --replace_rate_secondary
 		"goblins:stone_with_gold_trap" --replace_with_secondary
 		)
 	end,
@@ -813,7 +813,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 	lava_damage = 2,
 	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 6,
 	owner = "",
 	--nametag = "goblin diamond",
@@ -841,7 +841,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		7, --replace_rate
+		12, --replace_rate
 		{	"default:stone",
 			"default:desert_stone",
 			"default:stone_with_diamond",
@@ -861,7 +861,7 @@ mobs:register_mob("goblins:goblin_diamond", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"air", --replace_with
-		10, --replace_rate_secondary
+		15, --replace_rate_secondary
 		"goblins:stone_with_diamond_trap" --replace_with_secondary
 		)
 	end,
@@ -912,7 +912,7 @@ mobs:register_mob("goblins:goblin_king", {
 	lava_damage = 2,
 	light_damage = 2,
 	light_damage_min = 8,
-	light_damage_min = 15,
+	light_damage_max = 15,
 	view_range = 8,
 	owner = "",
 	--nametag = "goblin king",
@@ -939,7 +939,7 @@ mobs:register_mob("goblins:goblin_king", {
 		1, --search_offset
 		2, --search_offset_above
 		1, --search_offset_below
-		7, --replace_rate
+		15, --replace_rate
 		{	"default:stone",
 			"default:desert_stone",
 			"default:stone_with_diamond",
@@ -959,7 +959,7 @@ mobs:register_mob("goblins:goblin_king", {
 			"aotearoa:basalt",
 			"default:torch"}, --replace_what
 		"default:mossycobble", --replace_with
-		10, --replace_rate_secondary
+		20, --replace_rate_secondary
 		"goblins:mossycobble_trap" --replace_with_secondary
 		)
 	end,
@@ -980,14 +980,14 @@ min_height,
 max_height)
 ]]
 
-mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 2500, 3, -2000, -500)
-mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 2500, 3, -2000, -500)
-mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 5, 60, 2500, 3, -2000, -500)
-mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 5, 60, 2500, 2, -2000, -750)
-mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 5, 60, 2500, 2, -2000, -750)
-mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 5, 60, 3500, 2, -2000, -750)
-mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 5, 60, 3500, 2, -2000, -750)
-mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 5, 60, 4000, 1, -2000, -1000)
+mobs:spawn_specific("goblins:goblin_cobble", 	{"group:stone"}, 										"air",0, 5, 60, 5000, 2, -2000, -500)
+mobs:spawn_specific("goblins:goblin_digger", 	{"group:stone"},  										"air",0, 5, 60, 5000, 2, -2000, -500)
+mobs:spawn_specific("goblins:goblin_coal",		{"default:stone_with_coal", 	"default:mossycobble"},	"air",0, 5, 60, 5000, 2, -2000, -500)
+mobs:spawn_specific("goblins:goblin_iron", 		{"default:stone_with_iron", 	"default:mossycobble"},	"air",0, 5, 60, 5000, 1, -2000, -750)
+mobs:spawn_specific("goblins:goblin_copper", 	{"default:stone_with_copper", 	"default:mossycobble"}, "air",0, 5, 60, 5000, 1, -2000, -750)
+mobs:spawn_specific("goblins:goblin_gold", 		{"default:stone_with_gold", 	"default:mossycobble"}, "air",0, 5, 60, 6000, 1, -2000, -750)
+mobs:spawn_specific("goblins:goblin_diamond", 	{"default:stone_with_diamond",	"default:mossycobble"},	"air",0, 5, 60, 7000, 1, -2000, -750)
+mobs:spawn_specific("goblins:goblin_king", 		{"default:stone_with_mese",		"default:mossycobble"},	"air",0, 5, 60, 7000, 1, -2000, -1000)
 
 
 minetest.log("action", "[MOD] Goblins loaded")
