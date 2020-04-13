@@ -329,7 +329,9 @@ minetest.register_tool("ethereal:light_staff", {
 		local node = minetest.get_node(pos).name
 
 		if node == "default:stone"
-		or node == "default:desert_stone" then
+		or node == "default:desert_stone" 
+		or node == "default:mossycobble"
+		then
 
 			minetest.swap_node(pos, {name = "ethereal:glostone"})
 
