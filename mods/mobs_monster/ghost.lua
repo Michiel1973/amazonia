@@ -1,7 +1,7 @@
 
 -- Ghost by BlockMen
 
-mobs:register_mob("ghost:ghost", {
+mobs:register_mob("mobs_monster:ghost", {
 	type = "monster",
 	passive = false,
 	damage = 2,
@@ -40,6 +40,6 @@ mobs:register_mob("ghost:ghost", {
 	},
 })
 
-mobs:register_spawn("ghost:ghost", {"default:dirt_with_grass","default:desert_sand"}, 5, 0, 7000, 1, 31000)
+mobs:register_spawn("mobs_monster:ghost", {"default:dirt_with_grass","default:desert_sand"}, 5, 0, 7000, 1, 31000)
 
-mobs:register_egg("ghost:ghost", "Ghost", "default_cloud.png", 1)
+mobs:register_egg("mobs_monster:ghost", "Ghost", "default_cloud.png", 1)

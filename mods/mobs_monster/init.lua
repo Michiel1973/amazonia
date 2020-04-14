@@ -16,27 +16,34 @@ else
 end
 mobs.intllib = S
 
+-- TOPOLOGY
+-- caverealms  -1500  to -10033
+-- CR DM       -8000  to -9999
+-- DF level 1  -10033 to -12032
+-- DF level 2  -12032 to -14032
+-- DF level 3  -14032 to -15072
+-- Sunless Sea -15072 to -16000
+-- Oil Sea     -16000 to -17000
+-- Lava Sea    -17000 to -18000
+-- Underworld  -18000 to -19073
+-- Primordial  -19073 to -22032
+-- Nether      -25000 to -30000
+
+
 -- Monsters
 
-dofile(path .. "/dirt_monster.lua")              -- PilzAdam
+dofile(path .. "/dirt_monster.lua")              -- DFlvl1??
 dofile(path .. "/dungeon_master.lua")            -- caverealms -8000 to -9999
 dofile(path .. "/oerkki.lua")                    -- nether -25000 to -30000
-dofile(path .. "/sand_monster.lua")              -- 
-dofile(path .. "/stone_monster.lua")             -- 
-dofile(path .. "/tree_monster.lua")              -- primordial -19073 to -22032
+dofile(path .. "/sand_monster.lua")              -- DFlvl??
+dofile(path .. "/stone_monster.lua")             -- DFlvl??
+dofile(path .. "/tree_monster.lua")              -- primordial -19073 to -22032 - OK
 dofile(path .. "/lava_flan.lua")                 -- lava sea -17000 to -18000
-dofile(path .. "/mese_monster.lua")
+-- dofile(path .. "/mese_monster.lua")			 -- not using (silly)
 dofile(path .. "/spider.lua")                    -- 
-dofile(path .. "/zombie.lua")                    -- underworld -18000 to -19073
-
--- dmobs use
--- stone golem
--- nyan cat
---flying pig
--- ogre + orc need work no damage, too large?
--- skeleton need work
-
-
+dofile(path .. "/zombie.lua")                    -- underworld -18000 to -19073??
+-- dofile(path .. "/ghost.lua") 				 -- not using (texture issue)
+dofile(path .. "/slime.lua")                     -- magma and L1-L3?
 
 
 dofile(path .. "/lucky_block.lua")

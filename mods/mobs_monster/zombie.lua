@@ -1,7 +1,7 @@
 
 -- Zombie by BlockMen
 
-mobs:register_mob("zombie:zombie", {
+mobs:register_mob("mobs_monster:zombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -29,7 +29,7 @@ mobs:register_mob("zombie:zombie", {
 	floats = 0,
 	view_range = 10,
 	drops = {
-		{name = "zombie:rotten_flesh",
+		{name = "mobs_monster:rotten_flesh",
 		chance = 2, min = 3, max = 5,},
 	},
 	water_damage = 0,
@@ -46,7 +46,7 @@ mobs:register_mob("zombie:zombie", {
 
 --name, nodes, neighbours, minlight, maxlight, interval, chance, active_object_count, min_height, max_height
 mobs:spawn({
-	name = "zombie:zombie",
+	name = "mobs_monster:zombie",
 	nodes = {"default:dirt_with_grass"},
 	min_light = 0,
 	max_light = 7,
@@ -56,9 +56,9 @@ mobs:spawn({
 	day_toggle = false,
 })
 
-mobs:register_egg("zombie:zombie", "Zombie", "zombie_head.png", 0)
+mobs:register_egg("mobs_monster:zombie", "Zombie", "zombie_head.png", 0)
 
-minetest.register_craftitem("zombie:rotten_flesh", {
+minetest.register_craftitem("mobs_monster:rotten_flesh", {
 	description = "Rotten Flesh",
 	inventory_image = "mobs_rotten_flesh.png",
 	on_use = minetest.item_eat(-5),
