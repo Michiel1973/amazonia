@@ -57,19 +57,8 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = "ethereal:gray_dirt"
 end
 
-mobs:spawn({
-	name = "mobs_monster:dirt_monster",
-	nodes = {spawn_on},
-	min_light = 0,
-	max_light = 7,
-	chance = 6000,
-	active_object_count = 2,
-	min_height = 0,
-	day_toggle = false,
-})
+
 
 
 mobs:register_egg("mobs_monster:dirt_monster", S("Dirt Monster"), "default_dirt.png", 1)
-
-
 mobs:alias_mob("mobs:dirt_monster", "mobs_monster:dirt_monster") -- compatibility

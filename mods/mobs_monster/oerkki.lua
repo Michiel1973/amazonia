@@ -60,16 +60,5 @@ mobs:register_mob("mobs_monster:oerkki", {
 })
 
 
-mobs:spawn({
-	name = "mobs_monster:oerkki",
-	nodes = {"default:stone"},
-	max_light = 7,
-	chance = 7000,
-	max_height = -10,
-})
-
-
 mobs:register_egg("mobs_monster:oerkki", S("Oerkki"), "default_obsidian.png", 1)
-
-
 mobs:alias_mob("mobs:oerkki", "mobs_monster:oerkki") -- compatiblity

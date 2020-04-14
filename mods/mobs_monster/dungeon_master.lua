@@ -62,19 +62,10 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 })
 
 
-mobs:spawn({
-	name = "mobs_monster:dungeon_master",
-	nodes = {"default:stone"},
-	max_light = 5,
-	chance = 9000,
-	active_object_count = 1,
-	max_height = -70,
-})
+
 
 
 mobs:register_egg("mobs_monster:dungeon_master", S("Dungeon Master"), "fire_basic_flame.png", 1, true)
-
-
 mobs:alias_mob("mobs:dungeon_master", "mobs_monster:dungeon_master") -- compatibility
 
 

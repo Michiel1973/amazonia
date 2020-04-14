@@ -159,38 +159,7 @@ mobs:register_mob("mobs_monster:spider", {
 	end
 })
 
-
--- above ground spawn
-mobs:spawn({
-	name = "mobs_monster:spider",
-	nodes = {
-		"default:dirt_with_rainforest_litter", "default:snowblock",
-		"default:snow", "ethereal:crystal_dirt", "ethereal:cold_dirt"
-	},
-	min_light = 0,
-	max_light = 8,
-	chance = 7000,
-	active_object_count = 1,
-	min_height = 25,
-	max_height = 31000,
-})
-
--- below ground spawn
-mobs:spawn({
-	name = "mobs_monster:spider",
-	nodes = {"default:stone_with_mese", "default:mese", "default:stone"},
-	min_light = 0,
-	max_light = 7,
-	chance = 7000,
-	active_object_count = 1,
-	min_height = -31000,
-	max_height = -40,
-})
-
-
 mobs:register_egg("mobs_monster:spider", S("Spider"), "mobs_cobweb.png", 1)
-
-
 mobs:alias_mob("mobs_monster:spider2", "mobs_monster:spider") -- compatibility
 mobs:alias_mob("mobs:spider", "mobs_monster:spider")
 

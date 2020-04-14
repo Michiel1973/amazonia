@@ -7,7 +7,7 @@ local modpath = minetest.get_modpath(minetest.get_current_modname())
 dofile(modpath.."/config.lua")
 
 dofile(modpath.."/shared.lua")
-dofile(modpath.."/surface_tunnels.lua")
+--dofile(modpath.."/surface_tunnels.lua") --disabled as caves start deeper
 dofile(modpath.."/level1.lua")
 dofile(modpath.."/level2.lua")
 dofile(modpath.."/level3.lua")

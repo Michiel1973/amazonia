@@ -44,7 +44,7 @@ dofile(path .. "/spider.lua")                    --
 dofile(path .. "/zombie.lua")                    -- underworld -18000 to -19073??
 -- dofile(path .. "/ghost.lua") 				 -- not using (texture issue)
 dofile(path .. "/slime.lua")                     -- magma and L1-L3?
-
+dofile(path .. "/zzzspawn.lua")
 
 dofile(path .. "/lucky_block.lua")
 

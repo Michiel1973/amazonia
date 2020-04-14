@@ -56,14 +56,14 @@ mobs:register_mob("mobs_monster:mese_monster", {
 })
 
 
-mobs:spawn({
-	name = "mobs_monster:mese_monster",
-	nodes = {"default:stone"},
-	max_light = 7,
-	chance = 5000,
-	active_object_count = 1,
-	max_height = -20,
-})
+-- mobs:spawn({
+	-- name = "mobs_monster:mese_monster",
+	-- nodes = {"default:stone"},
+	-- max_light = 7,
+	-- chance = 5000,
+	-- active_object_count = 1,
+	-- max_height = -20,
+-- })
 
 
 mobs:register_egg("mobs_monster:mese_monster", S("Mese Monster"), "default_mese_block.png", 1)
@@ -101,11 +101,11 @@ mobs:register_arrow("mobs_monster:mese_arrow", {
 })
 
 -- 9x mese crystal fragments = 1x mese crystal
-minetest.register_craft({
-	output = "default:mese_crystal",
-	recipe = {
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-	}
-})
+-- minetest.register_craft({
+	-- output = "default:mese_crystal",
+	-- recipe = {
+		-- {"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
+		-- {"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
+		-- {"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
+	-- }
+-- })

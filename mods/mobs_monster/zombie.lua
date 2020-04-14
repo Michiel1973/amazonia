@@ -44,17 +44,7 @@ mobs:register_mob("mobs_monster:zombie", {
 	},
 })
 
---name, nodes, neighbours, minlight, maxlight, interval, chance, active_object_count, min_height, max_height
-mobs:spawn({
-	name = "mobs_monster:zombie",
-	nodes = {"default:dirt_with_grass"},
-	min_light = 0,
-	max_light = 7,
-	chance = 9000,
-	active_object_count = 2,
-	min_height = 0,
-	day_toggle = false,
-})
+
 
 mobs:register_egg("mobs_monster:zombie", "Zombie", "zombie_head.png", 0)
 

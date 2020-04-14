@@ -121,9 +121,6 @@ mobs:register_mob("mobs_monster:slime_tiny", slime_tiny)
 local smin = -100
 local smax = -10
 
--- mobs:spawn_specific("mobs_monster:slime_tiny", mobs_monster.spawn.solid, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 12000, 4, smin, smax)
--- mobs:spawn_specific("mobs_monster:slime_small", mobs_monster.spawn.solid, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 8500, 4, smin, smax)
--- mobs:spawn_specific("mobs_monster:slime_big", mobs_monster.spawn.solid, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 10000, 4, smin, smax)
 
 -- Magma cube
 local magma_cube_big = {
@@ -178,7 +175,7 @@ local magma_cube_big = {
 	attack_type = "dogfight",
 	passive = false,
 	jump = true,
-	jump_height = 8,
+	jump_height = 6,
 	walk_chance = 0,
 	jump_chance = 100,
 	fear_height = 100000,
@@ -244,14 +241,6 @@ mobs:register_mob("mobs_monster:magma_cube_tiny", magma_cube_tiny)
 local mmin = -100
 local mmax = -10
 
--- mobs:spawn_specific("mobs_monster:magma_cube_tiny", mobs_monster.spawn.nether, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 15000, 4, mmin, mmax)
--- mobs:spawn_specific("mobs_monster:magma_cube_small", mobs_monster.spawn.nether, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 15500, 4, mmin, mmax)
--- mobs:spawn_specific("mobs_monster:magma_cube_big", mobs_monster.spawn.nether, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 16000, 4, mmin, mmax)
-
--- mobs:spawn_specific("mobs_monster:magma_cube_tiny", mobs_monster.spawn.nether_fortress, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 11000, 4, mmin, mmax)
--- mobs:spawn_specific("mobs_monster:magma_cube_small", mobs_monster.spawn.nether_fortress, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 11100, 4, mmin, mmax)
--- mobs:spawn_specific("mobs_monster:magma_cube_big", mobs_monster.spawn.nether_fortress, {"air"}, 0, minetest.LIGHT_MAX+1, 30, 11200, 4, mmin, mmax)
-
 
 -- Compability
 mobs:alias_mob("mobs_monster:greensmall", "mobs_monster:slime_tiny")
@@ -265,7 +254,3 @@ mobs:alias_mob("mobs_monster:lavabig", "mobs_monster:magma_cube_big")
 mobs:register_egg("mobs_monster:magma_cube_big", "Magma Cube", "mobs_spawn_icon_magmacube.png")
 mobs:register_egg("mobs_monster:slime_big", "Slime", "mobs_spawn_icon_slime.png")
 
-
-if minetest.settings:get_bool("log_mods") then
-	minetest.log("action", "MC Slimes loaded")
-end
