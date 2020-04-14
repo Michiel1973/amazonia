@@ -22,7 +22,8 @@ mobs:spawn_specific ("mobs_monster:magma_cube_big", "default:dirt_with_grass", "
 mobs:spawn_specific ("mobs_monster:sand_monster", "default:dirt_with_grass", "air", 0, 10, 30, 10, 10, -100, 100)
 mobs:spawn_specific ("mobs_monster:oerkki", "default:dirt_with_grass", "air", 0, 10, 30, 10, 10, -100, 100)
 mobs:spawn_specific ("mobs_monster:lava_flan", "default:dirt_with_grass", "air", 0, 10, 30, 10, 10, -100, 100)
-mobs:spawn_specific ("mobs_monster:dungeon_master", "default:dirt_with_grass", "air", 0, 10, 30, 10, 10, -100, 100)
+-- CR DM       -8000  to -9999
+mobs:spawn_specific ("mobs_monster:dungeon_master", "caverealms:hot_cobble", "air", 0, 15, 60, 9000, 2, -8100, -9950)
 mobs:spawn_specific ("mobs_monster:dirt_monster", "default:dirt_with_grass", "air", 0, 10, 30, 10, 10, -100, 100)
 
 
