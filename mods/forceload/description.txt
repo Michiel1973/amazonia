@@ -1,1 +1,0 @@
-Keeps areas of the map loaded even when players are not online.
