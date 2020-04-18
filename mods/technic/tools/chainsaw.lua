@@ -2,7 +2,7 @@
 
 local chainsaw_max_charge      = 30000 -- Maximum charge of the saw
 -- Gives 2500 nodes on a single charge (about 50 complete normal trees)
-local chainsaw_charge_per_node = 12
+local chainsaw_charge_per_node = 10
 -- Cut down tree leaves.  Leaf decay may cause slowness on large trees
 -- if this is disabled.
 local chainsaw_leaves = true
