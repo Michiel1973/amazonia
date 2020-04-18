@@ -164,6 +164,7 @@ local nodes = {
 	{"moretrees:oak_trunk", true},
 	{"moretrees:palm_trunk", true},
 	{"moretrees:date_palm_trunk", true},
+	{"moretrees:date_palm_leaves", true},
 	{"moretrees:pine_trunk", true},
 	{"moretrees:sequoia_trunk", true},
 	{"moretrees:spruce_trunk", true},
