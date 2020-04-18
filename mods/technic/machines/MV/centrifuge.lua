@@ -9,8 +9,8 @@ minetest.register_craft({
 
 technic.register_centrifuge({
 	tier = "MV",
-	demand = { 8000, 7000, 6000 },
-	speed = 2,
+	demand = { 6000, 5000, 4000 },
+	speed = 3,
 	upgrade = 1,
 	tube = 1,
 })
