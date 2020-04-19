@@ -301,8 +301,8 @@ minetest.register_node("church_candles:honey_bottled", {
 --particle ABM adapted from Bees Mod by bas080
   minetest.register_abm({ --particles
     nodenames = {"church_candles:hive", "church_candles:hive_empty"},
-    interval  = 10,
-    chance    = 4,
+    interval  = 160,
+    chance    = 80,
     action = function(pos)
     if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
       minetest.add_particle({
@@ -337,8 +337,8 @@ if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 
 minetest.register_abm({
 	nodenames = { "air" },
 	neighbors = {"church_candles:hive_wild"},
-	interval = 60,
-	chance = 10,
+	interval = 120,
+	chance = 50,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
 			if minetest.find_node_near(pos, 4, "church_candles:busybees") == nil then
@@ -351,8 +351,8 @@ if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 
 
 minetest.register_abm({
 	nodenames = {"church_candles:busybees"},
-	interval = 100,
-	chance = 3,
+	interval = 200,
+	chance = 30,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.remove_node(pos)
 	end,
@@ -361,8 +361,8 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = "default:apple",
 	neighbors = "default:leaves",
-	interval = 12,
-	chance = 601,
+	interval = 120,
+	chance = 6000,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local abv = minetest.env:get_node({x=pos.x,y=pos.y+1,z=pos.z})
 		if not abv or abv.name ~= "default:leaves" then
