@@ -11,6 +11,20 @@
 -- Primordial  -19073 to -22032
 -- Nether      -25000 to -30000
 
+-- proposed topology
+-- caverealms  -1500  to -5000
+-- CR DM       -3000  to -4999
+-- DF level 1  -5000  to -7000
+-- DF level 2  -7000  to -9000
+-- DF level 3  -9000  to -11000
+-- Sunless Sea -11000 to -13000
+-- Oil Sea     -13000 to -15000
+-- Lava Sea    -15000 to -17000
+-- Underworld  -17000 to -19000
+-- Primordial  -19000 to -21000
+-- Nether      -21000 to -23000
+
+
 --mobs:spawn_specific (name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height, day_toggle, on_spawn)
 --mobs:spawn_specific ("mobs_monster:zombie", "default:dirt_with_grass", "air", 0, 15, 10, 30, 10, -100, 100)
 --mobs:spawn_specific ("mobs_monster:tree_monster", "default:dirt_with_grass", "air", 0, 10, 30, 10, 10, -100, 100)
