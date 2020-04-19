@@ -458,7 +458,7 @@ minetest.register_node("default:dirt_with_grass_footsteps", {
 })
 
 minetest.register_node("default:dirt_with_dry_grass", {
-	description = S("Dirt with Savanna Grass"),
+	description = S("Dirt with Dry Grass"),
 	tiles = {"default_dry_grass.png",
 		"default_dirt.png",
 		{name = "default_dirt.png^default_dry_grass_side.png",
@@ -513,14 +513,14 @@ minetest.register_node("default:dirt_with_coniferous_litter", {
 })
 
 minetest.register_node("default:dry_dirt", {
-	description = S("Savanna Dirt"),
+	description = S("Dry Dirt"),
 	tiles = {"default_dry_dirt.png"},
 	groups = {crumbly = 3, soil = 1},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("default:dry_dirt_with_dry_grass", {
-	description = S("Savanna Dirt with Savanna Grass"),
+	description = S("Dry Dirt with Dry Grass"),
 	tiles = {"default_dry_grass.png", "default_dry_dirt.png",
 		{name = "default_dry_dirt.png^default_dry_grass_side.png",
 			tileable_vertical = false}},
@@ -621,7 +621,7 @@ minetest.register_node("default:snow", {
 	collision_box = {
 		type = "fixed",
 		fixed = {
-			{-0.5, -0.5, -0.5, 0.5, -6 / 16, 0.5},
+			{-0.5, -0.5, -0.5, 0.5, -7 / 16, 0.5},
 		},
 	},
 	groups = {crumbly = 3, falling_node = 1, snowy = 1},
@@ -1497,7 +1497,7 @@ end
 
 
 minetest.register_node("default:dry_grass_1", {
-	description = S("Savanna Grass"),
+	description = S("Dry Grass"),
 	drawtype = "plantlike",
 	waving = 1,
 	tiles = {"default_dry_grass_1.png"},
@@ -1526,7 +1526,7 @@ minetest.register_node("default:dry_grass_1", {
 
 for i = 2, 5 do
 	minetest.register_node("default:dry_grass_" .. i, {
-		description = S("Savanna Grass"),
+		description = S("Dry Grass"),
 		drawtype = "plantlike",
 		waving = 1,
 		tiles = {"default_dry_grass_" .. i .. ".png"},
@@ -2209,6 +2209,7 @@ minetest.register_node("default:water_source", {
 	pointable = false,
 	diggable = false,
 	buildable_to = true,
+	sunlight_propagates = true,
 	is_ground_content = false,
 	drop = "",
 	drowning = 1,
@@ -2252,6 +2253,7 @@ minetest.register_node("default:water_flowing", {
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
 	walkable = false,
+	sunlight_propagates = true,
 	pointable = false,
 	diggable = false,
 	buildable_to = true,
@@ -2816,10 +2818,7 @@ minetest.register_node("default:brick", {
 	description = S("Brick Block"),
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {
-		"default_brick.png^[transformFX",
-		"default_brick.png",
-	},
+	tiles = {"default_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 3},
 	sounds = default.node_sound_stone_defaults(),

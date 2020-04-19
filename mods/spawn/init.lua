@@ -135,7 +135,6 @@ local function on_spawn(player)
 	if success then
 		player:set_pos(spawn_pos)
 	end
-	return success
 end
 
 minetest.register_on_newplayer(function(player)
@@ -154,5 +153,7 @@ minetest.register_on_respawnplayer(function(player)
 		return
 	end
 
-	return on_spawn(player)
+	on_spawn(player)
+
+	return true
 end)
