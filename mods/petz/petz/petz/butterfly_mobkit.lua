@@ -1,7 +1,7 @@
 local S = ...
 
 local pet_name = "butterfly"
-local scale_model = 1.0
+local scale_model = 0.8
 local mesh = 'petz_butterfly.b3d'
 local textures= {"petz_butterfly.png","petz_butterfly2.png", "petz_butterfly3.png", "petz_butterfly4.png", "petz_butterfly5.png", "petz_butterfly6.png"}
 local p1 = {x= -0.1875, y = -0.5, z = -0.0625}
