@@ -357,7 +357,7 @@ minetest.register_tool("hangglider:hangglider", {
 
 			-- if minetest 5.x use this:
 			-- minetest.add_entity(player:get_pos(), "hangglider:glider"):set_attach(player, "", {x=0,y=10,z=0}, {x=0,y=0,z=0})
-			itemstack:set_wear(itemstack:get_wear() + 2040)
+			itemstack:set_wear(itemstack:get_wear() + 8160)
 			return itemstack
 		elseif hangglider.use[pname] then --Unequip
 			if HUD_Overlay then player:hud_change(hangglider.id[pname], "text", "default_wood.png^[colorize:#0000:255") end
