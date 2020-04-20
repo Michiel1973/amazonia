@@ -1,7 +1,11 @@
 SERVER CHANGELOG
 
+April 20 - MAJOR - database backend migrated to postgresql from sqlite
+April 19 - MINOR - tuning and updating of several mods and small fixes
+April 19 - MINOR - improved chainsaw mod to recognise more trees as valid targets
+April 16 - MINOR - new mods added: bridger, church, hoppers
 April 13 - MAJOR - sprint capability added to players (press E while moving to sprint)
-Arpil 13 - MINOR - balance changes to make goblin less life-threatening
+Arpil 13 - MINOR - balance changes to make goblins less life-threatening
 April 12 - MINOR - bugfixes and behavior changes for water mobs
 April 12 - MINOR - incremental mod updates from master 
 April 12 - MINOR - small adjustments in crafting recipes
