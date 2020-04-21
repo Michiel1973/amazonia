@@ -80,6 +80,10 @@ minetest.register_node("travelnet:travelnet", {
 
           minetest.chat_send_player( placer:get_player_name(), S('Not enough vertical space to place the travelnet box!'))
           return;
+		end
+		if pos.y < -5000 then
+			minetest.chat_send_player( placer:get_player_name(), S('You are too deep to use travelnet boxes!'))
+         return;
        end
        return minetest.item_place(itemstack, placer, pointed_thing);
     end,
