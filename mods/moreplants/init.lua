@@ -938,11 +938,7 @@ end
 local frequency = 200
 
 minetest.register_on_generated(function(minp, maxp)
-	if maxp.y > 0 then
-		return
-	end
-	-- Do nothing if the area is above 30
-	if minp.y > -10033 then
+	if maxp.y > 0 or minp.y < -3000 then
 		return
 	end
 	local stone = minetest.find_nodes_in_area_under_air(minp, maxp,

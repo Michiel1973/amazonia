@@ -8,11 +8,11 @@ minetest.register_tool("scuba:air_tank", {
 	local breath = user:get_breath()
 	if recover <= 0 then recover = 1 end
 	if breath >= 11 and wear > 1 then
-	    minetest.sound_play("underwater_filling_tank",{to_player = user, gain = 1.0})
+	    --minetest.sound_play("underwater_filling_tank",{to_player = user, gain = 1.0})
 	    itemstack:set_wear(recover)
 	else 
 	    if wear <= 65000 and breath < 11 then
-	        minetest.sound_play("underwater_breath",{to_player = user, gain = 1.0})
+	        --minetest.sound_play("underwater_breath",{to_player = user, gain = 1.0})
 	        user:set_breath(10)
 	        itemstack:add_wear(damage)
    	    end

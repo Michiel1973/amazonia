@@ -9,7 +9,7 @@ local HB_NAME = 'charge'
 -- update interval (charge, inventory and hudbar)
 local HB_DELTA = 1
 -- jetpack charge. default 150000 = 10 min (250 EU/s)
-local CHARGE_MAX = 150000
+local CHARGE_MAX = 75000
 
 -- recipes
 minetest.register_craftitem("jetpack:battery", {
@@ -143,6 +143,10 @@ minetest.register_globalstep(function(dtime)
         if players[name].charge == 0 then return end
 
         player = minetest.get_player_by_name(name)
+		if not player then
+		return
+		end
+		
         pos = player:getpos()
         velocity = player:get_player_velocity()
         node = minetest.get_node({x=pos.x,y=pos.y-1,z=pos.z})
