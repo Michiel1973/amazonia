@@ -1,0 +1,5 @@
+BUGFIXES
+
+APRIL 21
+- fixed jetpack game crash on player exit
+- muted bees and scuba mods sound effects as they were broadcast to the entire server
