@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+April 21 - MINOR - tuning of DB parameters to improve performance, minor bug fixes
 April 20 - MAJOR - database backend migrated to postgresql from sqlite
 April 19 - MINOR - tuning and updating of several mods and small fixes
 April 19 - MINOR - improved chainsaw mod to recognise more trees as valid targets
