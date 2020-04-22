@@ -134,8 +134,8 @@ end
 minetest.register_abm({
 	label = "Caverealms grow sapling",
 	nodenames = {"ethereal:mushroom_sapling", "caverealms:mushroom_sapling"},
-	interval = 10,
-	chance = 50,
+	interval = 60,
+	chance = 5000,
 	catch_up = false,
 	action = function(pos, node)
 		local light_level = minetest.get_node_light(pos)
@@ -173,8 +173,8 @@ minetest.register_abm({
 		"caverealms:stone_with_algae",
 	},
 	neighbors = {"air"},
-	interval = 16,
-	chance = 50,
+	interval = 60,
+	chance = 1000,
 	catch_up = false,
 	action = function(pos, node)
 		local num = minetest.find_nodes_in_area_under_air(
