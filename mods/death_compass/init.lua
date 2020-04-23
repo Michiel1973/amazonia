@@ -5,9 +5,9 @@ local S = minetest.get_translator("death_compass")
  
  -- how many seconds does the death compass work for? 0 for indefinite
 local duration = tonumber(minetest.settings:get("death_compass_duration")) or 0
-local automatic = minetest.settings:get_bool("death_compass_automatic", false)
+local automatic = minetest.settings:get_bool("death_compass_automatic", true)
 
-local range_to_inactivate = 5
+local range_to_inactivate = 3
 
 local hud_position = {
 	x= tonumber(minetest.settings:get("death_compass_hud_x")) or 0.5,
