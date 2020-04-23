@@ -1,6 +1,6 @@
 SERVER CHANGELOG
 
-April 23 - MINOR - add death compass mod
+April 23 - MINOR - new mods added: death cannon, death compass
 April 22 - MINOR - add hidden doors mod
 April 21 - MINOR - tuning of DB parameters to improve performance, minor bug fixes
 April 20 - MAJOR - database backend migrated to postgresql from sqlite
