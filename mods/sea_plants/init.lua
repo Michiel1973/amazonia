@@ -855,7 +855,7 @@ end
 minetest.register_abm({
 nodenames = {"sea_plants:seaplantssandkelpbrown"},
 interval = 6000,
-chance = 600
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
