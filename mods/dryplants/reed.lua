@@ -92,7 +92,7 @@ if AUTO_ROOF_CORNER == true then
 
 		minetest.register_abm({
 			nodenames = {roof},
-			interval = 1,
+			interval = 3,
 			chance = 1,
 			action = function(pos)
 
@@ -250,7 +250,7 @@ if REED_WILL_DRY == true then
 
 		minetest.register_abm({
 			nodenames = {WeT},
-			interval = REED_DRYING_TIME, --1200, -- 20 minutes: a minetest-day/night-cycle
+			interval = 1200, -- 20 minutes: a minetest-day/night-cycle
 			chance = 1,
 			action = function(pos)
 				local direction = minetest.get_node(pos).param2

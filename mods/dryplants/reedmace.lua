@@ -275,8 +275,8 @@ minetest.register_node("dryplants:reedmace_sapling", {
 -- abm
 minetest.register_abm({
 	nodenames = "dryplants:reedmace_sapling",
-	interval = REEDMACE_GROWING_TIME,
-	chance = 100/REEDMACE_GROWING_CHANCE,
+	interval = 2000,
+	chance = 200,
 	action = function(pos, node, _, _)
 		if string.find(minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z	 }).name, "default:water")
 		or string.find(minetest.get_node({x = pos.x,	 y = pos.y, z = pos.z + 1}).name, "default:water")

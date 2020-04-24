@@ -280,7 +280,7 @@ end)
 minetest.register_abm({
 	nodenames = {"group:growing"},
 	interval = 300,
-	chance = 1,
+	chance = 3,
 	catch_up = false,
 	action = function(pos, node)
 		farming.handle_growth(pos, node)

@@ -25,7 +25,7 @@ minetest.register_node("illumination:light_full", lightPoint)
 
 minetest.register_abm({ --This should clean up nodes that don't get deleted for some reason
 	nodenames={"illumination:light_faint","illumination:light_dim","illumination:light_mid","illumination:light_full"},
-	interval=1,
+	interval=2,
 	chance=1,
 	action = function(pos)
 		local canExist = false

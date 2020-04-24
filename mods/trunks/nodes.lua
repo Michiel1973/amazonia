@@ -213,7 +213,7 @@ if Auto_Roof_Corner == true then
 
 	minetest.register_abm({
 		nodenames = {roof},
-		interval = 1,
+		interval = 3,
 		chance = 1,
 		action = function(pos)
 

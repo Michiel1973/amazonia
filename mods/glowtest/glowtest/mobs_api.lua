@@ -677,7 +677,7 @@ function glowtest:register_spawn(name, nodes, max_light, min_light, chance, acti
 	minetest.register_abm({
 		nodenames = nodes,
 		--neighbors = {"air"},
-		interval = 30,
+		interval = 3000,
 		chance = chance,
 		action = function(pos, node, _, active_object_count_wider)
 			if active_object_count_wider > active_object_count then

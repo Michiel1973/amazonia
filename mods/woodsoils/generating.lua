@@ -126,8 +126,8 @@ minetest.register_abm({
 		"woodsoils:grass_with_leaves_1",
 		"woodsoils:grass_with_leaves_2"
 	},
-	interval = 50,
-	chance = 20,
+	interval = 100,
+	chance = 90,
 	action = function(pos, node)
 		pos.y = pos.y-1
 		local name = minetest.get_node(pos).name

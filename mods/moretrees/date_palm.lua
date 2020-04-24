@@ -109,8 +109,8 @@ end
 --  hanging dates)
 minetest.register_abm({
 	nodenames = { "moretrees:date_palm_fruit_trunk" },
-	interval = 2,
-	chance = 1,
+	interval = 2300,
+	chance = 100,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local type
 		if math.random(100) <= moretrees.dates_female_percent then

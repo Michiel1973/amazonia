@@ -377,7 +377,7 @@ if minetest.setting_getbool("gloopblocks_mossy_conversion") ~= false then
 			minetest.register_abm({
 				nodenames = { mossyobjects[i][1] },
 				neighbors = {"default:water_source", "default:water_flowing"},
-				interval = 120,
+				interval = 1200,
 				chance = 50,
 				action = function(pos, node)
 					if minetest.find_node_near(pos, 2, "air") then

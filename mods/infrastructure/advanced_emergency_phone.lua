@@ -88,7 +88,7 @@
 
 		minetest.register_abm({
 			nodenames = {"streets:emergencyphone"},
-			interval = 2,
+			interval = 5,
 			chance = 1,
 			action = function(pos, node)
 				local node = minetest.get_node(pos)

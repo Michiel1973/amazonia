@@ -236,7 +236,7 @@ end
 
 minetest.register_abm({
 	nodenames = {"clams:sandalgaeused"},
-	interval = 40,
+	interval = 400,
 	chance = 70,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local y = {x = pos.x, y = pos.y + 1, z = pos.z }
@@ -252,7 +252,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"clams:dirtalgaeused"},
-	interval = 40,
+	interval = 400,
 	chance = 80,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local y = {x = pos.x, y = pos.y + 1, z = pos.z }
@@ -268,7 +268,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"clams:sandalgae"},
-	interval = 40,
+	interval = 400,
 	chance = 80,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local y = {x = pos.x, y = pos.y + 1, z = pos.z }
@@ -286,7 +286,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"clams:dirtalgae"},
-	interval = 40,
+	interval = 400,
 	chance = 80,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local y = {x = pos.x, y = pos.y + 1, z = pos.z }

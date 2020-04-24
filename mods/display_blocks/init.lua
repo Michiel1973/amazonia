@@ -38,7 +38,7 @@ function disp(base, name, light, rec, rp)
 
 	minetest.register_abm({
 		nodenames = {"display_blocks:"..base.."_base"},
-		interval = 2.0,
+		interval = 5.0,
 		chance = 1.0,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			pos.y = pos.y + 1
@@ -118,7 +118,7 @@ minetest.register_node( "display_blocks:universia_crystal", {
 
 minetest.register_abm({
 	nodenames = {"display_blocks:universia_base"},
-	interval = 1.0,
+	interval = 4.0,
 	chance = 1.0,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		pos.y = pos.y + 1

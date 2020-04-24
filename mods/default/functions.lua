@@ -494,8 +494,8 @@ minetest.register_abm({
 		"group:grass",
 		"default:snow",
 	},
-	interval = 6,
-	chance = 50,
+	interval = 60,
+	chance = 500,
 	catch_up = false,
 	action = function(pos, node)
 		-- Check for darkness: night, shadow or under a light-blocking node
@@ -532,8 +532,8 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "Grass covered",
 	nodenames = {"group:spreading_dirt_type", "default:dry_dirt_with_dry_grass"},
-	interval = 8,
-	chance = 50,
+	interval = 80,
+	chance = 500,
 	catch_up = false,
 	action = function(pos, node)
 		local above = {x = pos.x, y = pos.y + 1, z = pos.z}
@@ -570,8 +570,8 @@ minetest.register_abm({
 		"stairs:stair_inner_cobble", "stairs:stair_outer_cobble",
 		"walls:cobble"},
 	neighbors = {"group:water"},
-	interval = 16,
-	chance = 200,
+	interval = 160,
+	chance = 2000,
 	catch_up = false,
 	action = function(pos, node)
 		node.name = moss_correspondences[node.name]

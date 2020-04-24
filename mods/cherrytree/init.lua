@@ -243,8 +243,8 @@ end
 minetest.register_abm({
     nodenames = {"cherrytree:blossom_leaves"},
     neighbors = {},
-    interval = 600.0, -- Run every 10 minuts
-    chance = 50, -- Select every 1 in 50 nodes
+    interval = 6000.0, -- Run every 10 minuts
+    chance = 500, -- Select every 1 in 50 nodes
     action = function(pos, node, active_object_count, active_object_count_wider)		
 		if node.param2 == 1 then -- ignore manually placed leaves
 			return
