@@ -650,8 +650,8 @@ minetest.register_node("bees:hive_artificial", {
 
 minetest.register_abm({
 	nodenames = {"bees:hive_artificial", "bees:hive_wild", "bees:hive_industrial"},
-	interval = 10,
-	chance = 4,
+	interval = 1000,
+	chance = 400,
 
 	action = function(pos, node)
 
@@ -694,8 +694,8 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = {"group:leaves"},
 	neighbors = {"air"},
-	interval = 800,--1600,
-	chance = 10,--20,
+	interval = 1600,--1600,
+	chance = 200,--20,
 
 	action = function(pos, node)
 
@@ -720,8 +720,8 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = {"bees:hive_wild", "bees:hive_artificial", "bees:hive_industrial"},
 	neighbors = {"group:flowers", "group:leaves"},
-	interval = 30,
-	chance = 4,
+	interval = 3000,
+	chance = 400,
 
 	action = function(pos, node, _, _)
 
@@ -741,8 +741,8 @@ minetest.register_abm({
 -- remove bees
 minetest.register_abm({
 	nodenames = {"bees:bees"},
-	interval = 30,
-	chance = 5,
+	interval = 3000,
+	chance = 50,
 
 	action = function(pos, node, _, _)
 		minetest.remove_node(pos)

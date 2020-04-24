@@ -53,7 +53,7 @@ minetest.register_abm({
 		"group:soil",
 		"group:water",
 	},
-	interval = 180,
+	interval = 360,
 	chance = 250,
 	catch_up = false,
 	action = function(pos, node)

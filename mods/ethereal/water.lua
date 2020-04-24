@@ -77,7 +77,7 @@ minetest.register_abm({
 		"default:furnace_active", "default:torch", "default:torch_wall",
 		"default:torch_ceiling"
 	},
-	interval = 5,
+	interval = 10,
 	chance = 4,
 	catch_up = false,
 	action = function(pos, node)
@@ -143,7 +143,7 @@ minetest.register_abm({
 	nodenames = {"default:torch", "default:torch_wall", "default:torch_ceiling",
 	"real_torch:torch", "real_torch:torch_wall", "real_torch:torch_ceiling"},
 	neighbors = {"group:water"},
-	interval = 5,
+	interval = 10,
 	chance = 1,
 	catch_up = false,
 	action = function(pos, node)

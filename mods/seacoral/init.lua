@@ -458,8 +458,8 @@ end
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoraldirtcyan"},
-interval = 90,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -494,8 +494,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoralsandcyan"},
-interval = 100,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -510,8 +510,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoraldirtmagenta"},
-interval = 110,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -526,8 +526,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoralsandmagenta"},
-interval = 120,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -542,8 +542,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoraldirtaqua"},
-interval = 130,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -558,8 +558,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoralsandaqua"},
-interval = 140,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -574,8 +574,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoraldirtlime"},
-interval = 150,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -590,8 +590,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoralsandlime"},
-interval = 160,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -606,8 +606,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoraldirtskyblue"},
-interval = 170,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -622,8 +622,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoralsandskyblue"},
-interval = 180,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -638,8 +638,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoraldirtredviolet"},
-interval = 190,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -654,8 +654,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"seacoral:seacoralsandredviolet"},
-interval = 200,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if (active_object_count_wider + active_object_count_wider) > 10 then
@@ -670,8 +670,8 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 
 minetest.register_abm({
 nodenames = {"group:seacoral"},
-interval = 210,
-chance = 100,
+interval = 6000,
+chance = 600,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 	local yyp = {x = pos.x, y = pos.y + 2, z = pos.z}

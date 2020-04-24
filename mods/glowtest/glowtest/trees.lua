@@ -832,8 +832,8 @@ end
 
 minetest.register_abm({
     nodenames = {"glowtest:sgreensapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_sgreentree(pos)
     end,
@@ -841,8 +841,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:mgreensapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_mgreentree(pos)
     end,
@@ -850,8 +850,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lgreensapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lgreentree(pos)
     end,
@@ -861,8 +861,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:sbluesapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_sbluetree(pos)
     end,
@@ -870,8 +870,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:mbluesapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_mbluetree(pos)
     end,
@@ -879,8 +879,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lbluesapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lbluetree(pos)
     end,
@@ -890,8 +890,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:spinksapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_spinktree(pos)
     end,
@@ -899,8 +899,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:mpinksapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_mpinktree(pos)
     end,
@@ -908,8 +908,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lpinksapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lpinktree(pos)
     end,
@@ -919,8 +919,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:syellowsapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_syellowtree(pos)
     end,
@@ -928,8 +928,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:myellowsapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_myellowtree(pos)
     end,
@@ -937,8 +937,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lyellowsapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lyellowtree(pos)
     end,
@@ -948,8 +948,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:swhitesapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_swhitetree(pos)
     end,
@@ -957,8 +957,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:mwhitesapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_mwhitetree(pos)
     end,
@@ -966,8 +966,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lwhitesapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lwhitetree(pos)
     end,
@@ -977,8 +977,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:sredsapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_sredtree(pos)
     end,
@@ -986,8 +986,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:mredsapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_mredtree(pos)
     end,
@@ -995,8 +995,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lredsapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lredtree(pos)
     end,
@@ -1006,8 +1006,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:sblacksapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_sblacktree(pos)
     end,
@@ -1015,8 +1015,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:mblacksapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_mblacktree(pos)
     end,
@@ -1024,8 +1024,8 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"glowtest:lblacksapling"},
-    interval = GREINT,
-    chance = GRECHA,
+    interval = 2000,
+    chance = 120,
     action = function(pos, node, active_object_count, active_object_count_wider)
 		glowtest_lblacktree(pos)
     end,

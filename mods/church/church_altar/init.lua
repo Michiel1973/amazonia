@@ -232,7 +232,7 @@ minetest.register_node("church_altar:altar_middle_marble", {
 -- suck in items [code by jordan4ibanez / from the Hopper mod]
 minetest.register_abm({
 	nodenames = {"church_altar:altar_middle_stone", "church_altar:altar_middle_marble"},
-	interval = 1.0,
+	interval = 4.0,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local meta = minetest.get_meta(pos)
