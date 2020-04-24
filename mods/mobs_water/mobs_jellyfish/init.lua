@@ -38,10 +38,11 @@ mobs:spawn({
 	nodes = {"default:water_source"},
 	neighbors = {"default:water_flowing","default:water_source"},
 	min_light = 5,
-	interval = 30,
-	chance = 5000,
-	active_object_count = 3,
+	interval = 60,
+	chance = 2000,
+	active_object_count = 2,
 	max_height = -5,
+	min_height = -100,
 })
 
 mobs:register_egg("mobs_jellyfish:jellyfish", "Jellyfish", "jellyfish_inv.png", 0)
