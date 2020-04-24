@@ -208,9 +208,9 @@ function boat.on_step(self, dtime)
 			if y >= 5 then
 				y = 5
 			elseif y < 0 then
-				new_acce = {x = 0, y = 20, z = 0}
+				new_acce = {x = 0, y = 10, z = 0}
 			else
-				new_acce = {x = 0, y = 5, z = 0}
+				new_acce = {x = 0, y = 2.5, z = 0}
 			end
 			new_velo = get_velocity(self.v, self.object:get_yaw(), y)
 			self.object:set_pos(self.object:get_pos())
