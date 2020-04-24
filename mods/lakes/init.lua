@@ -16,7 +16,7 @@ lakes.min_volume = 18
 -- (depends on mapgen how many chances there are)
 -- if set to 100: generate as many lakes as possible
 -- if set to 0: generate no lakes
-lakes.lake_chance = 100
+lakes.lake_chance = 60
 
 -- plant these plants around lakes
 lakes.plants_around_lakes = {
@@ -39,7 +39,7 @@ lakes.around_lake_decorations = {
 	default.grow_blueberry_bush,
 	default.grow_acacia_bush,
 	default.grow_pine_bush,
-	default.grow_large_catus,
+	default.grow_large_cactus,
 	}
 
 
