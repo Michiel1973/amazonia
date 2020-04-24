@@ -102,6 +102,12 @@ It clears the mob HQ and LQ behaviours and then remove it from the world.
 # Commands
 
 ## clear_mobs modname
-It clears all the mobkit non-tamed mobs in the closest range.
+It clears all the mobkit non-tamed mobs in the closest range of the player.
 
-Modname is the mod ogf the mobs to clear.
+Modname is the mod of the mobs to clear.
+
+# Server
+## function mokapi.cron_clear(cron_time, modname)
+It creates a cron task to clearing all the 'modname' non-tamed mobs in the closest range of all the server's players (or game) from time to time.
+
+If cron_time <= 0 then the cron task does not run.
