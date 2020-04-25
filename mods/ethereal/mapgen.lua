@@ -127,13 +127,13 @@ add_biome("bamboo", nil, "ethereal:bamboo_dirt", 1, "default:dirt", 3,
 	--nil, nil, nil, nil, nil, -192, 2, 45, 75, ethereal.bamboo)
 
 add_biome("sakura", nil, "ethereal:bamboo_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 25, 45, 75, 3,4,ethereal.sakura)
+	nil, nil, nil, nil, nil, 3, 35, 45, 75, 3,4,ethereal.sakura)
 
 add_biome("sakura_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 45, 75, 3,4,ethereal.sakura)
 
 add_biome("mesa", nil, "default:dirt_with_dry_grass", 1, "bakedclay:orange", 15,
-	nil, nil, nil, nil, nil, 1, 71, 25, 28, 3,4,ethereal.mesa)
+	nil, nil, nil, nil, nil, 1, 81, 25, 28, 3,4,ethereal.mesa)
 
 add_biome("mesa_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 25, 28, 3,4,ethereal.mesa)
@@ -143,20 +143,20 @@ add_biome("alpine", nil, "default:dirt_with_snow", 1, "default:dirt", 2,
 
 if minetest.registered_nodes["default:dirt_with_coniferous_litter"] then
 add_biome("snowy", nil, "default:dirt_with_coniferous_litter", 1, "default:dirt",
-	2, nil, nil, nil, nil, nil, 4, 40, 10, 40, 3,4,ethereal.snowy)
+	2, nil, nil, nil, nil, nil, 4, 30, 10, 40, 3,4,ethereal.snowy)
 else
 add_biome("snowy", nil, "ethereal:cold_dirt", 1, "default:dirt", 2,
-	nil, nil, nil, nil, nil, 4, 40, 10, 40, 3,4,ethereal.snowy)
+	nil, nil, nil, nil, nil, 4, 30, 10, 40, 3,4,ethereal.snowy)
 end
 
 add_biome("frost", nil, "ethereal:crystal_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 1, 71, 10, 40, 3,4,ethereal.frost)
+	nil, nil, nil, nil, nil, 1, 91, 10, 40, 3,4,ethereal.frost)
 
 add_biome("frost_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 10, 40, 3,4,ethereal.frost)
 
 add_biome("grassy", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 91, 13, 40, 3,4,ethereal.grassy)
+	nil, nil, nil, nil, nil, 3, 61, 13, 40, 3,4,ethereal.grassy)
 
 add_biome("grassy_ocean", nil, "defaut:sand", 2, "default:gravel", 1,
 	nil, nil, nil, nil, nil, -31000, 3, 13, 40, 3,4,ethereal.grassy)
@@ -165,7 +165,7 @@ add_biome("caves", nil, "default:desert_stone", 3, "air", 8,
 	nil, nil, nil, nil, nil, 4, 41, 15, 25, 3,4,ethereal.caves)
 
 add_biome("grayness", nil, "ethereal:gray_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 2, 41, 15, 30, 3,4,ethereal.grayness)
+	nil, nil, nil, nil, nil, 2, 61, 15, 30, 3,4,ethereal.grayness)
 
 if minetest.registered_nodes["default:silver_sand"] then
 	add_biome("grayness_ocean", nil, "default:silver_sand", 2, "default:sand", 2,
@@ -176,36 +176,36 @@ else
 end
 
 add_biome("grassytwo", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 1, 91, 15, 40, 3,4,ethereal.grassytwo)
+	nil, nil, nil, nil, nil, 30, 91, 15, 40, 3,4,ethereal.grassytwo)
 
 add_biome("grassytwo_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 15, 40, 3,4,ethereal.grassytwo)
 
 add_biome("prairie", nil, "ethereal:prairie_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 26, 20, 40, 3,4,ethereal.prairie)
+	nil, nil, nil, nil, nil, 3, 36, 20, 40, 3,4,ethereal.prairie)
 
 add_biome("prairie_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 20, 40, 3,4,ethereal.prairie)
 
 add_biome("jumble", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 1, 71, 25, 50, 3,4,ethereal.jumble)
+	nil, nil, nil, nil, nil, 5, 71, 25, 50, 3,4,ethereal.jumble)
 
 add_biome("jumble_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 25, 50, 3,4,ethereal.jumble)
 
 if minetest.registered_nodes["default:dirt_with_rainforest_litter"] then
 	add_biome("junglee", nil, "default:dirt_with_rainforest_litter", 1, "default:dirt", 3,
-		nil, nil, nil, nil, nil, 1, 71, 30, 60, 3,4,ethereal.junglee)
+		nil, nil, nil, nil, nil, 5, 71, 30, 60, 3,4,ethereal.junglee)
 else
 	add_biome("junglee", nil, "ethereal:jungle_dirt", 1, "default:dirt", 3,
-		nil, nil, nil, nil, nil, 1, 71, 30, 60, 3,4,ethereal.junglee)
+		nil, nil, nil, nil, nil, 5, 71, 30, 60, 3,4,ethereal.junglee)
 end
 
 add_biome("junglee_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 30, 60, 3,4,ethereal.junglee)
 
 add_biome("grove", nil, "ethereal:grove_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 23, 45, 35, 3,4,ethereal.grove)
+	nil, nil, nil, nil, nil, 3, 33, 45, 35, 3,4,ethereal.grove)
 
 add_biome("grove_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 45, 35, 3,4,ethereal.grove)
@@ -226,28 +226,28 @@ add_biome("quicksand", nil, "ethereal:quicksand2", 3, "default:gravel", 1,
 	nil, nil, nil, nil, nil, 1, 1, 50, 38, 3,4,ethereal.quicksand)
 
 add_biome("plains", nil, "ethereal:dry_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 25, 65, 25, 3,4,ethereal.plains)
+	nil, nil, nil, nil, nil, 3, 35, 65, 25, 3,4,ethereal.plains)
 
 add_biome("plains_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 55, 25, 3,4,ethereal.plains)
 
 add_biome("savannah", nil, "default:dirt_with_dry_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 50, 55, 25, 3,4,ethereal.savannah)
+	nil, nil, nil, nil, nil, 3, 60, 55, 25, 3,4,ethereal.savannah)
 
 add_biome("savannah_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 55, 25, 3,4,ethereal.savannah)
 
 add_biome("fiery", nil, "ethereal:fiery_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 5, 20, 75, 10, 3,4,ethereal.fiery)
+	nil, nil, nil, nil, nil, 5, 40, 75, 10, 3,4,ethereal.fiery)
 
 add_biome("fiery_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 4, 75, 10, 3,4,ethereal.fiery)
 
 add_biome("sandclay", nil, "default:sand", 3, "default:clay", 2,
-	nil, nil, nil, nil, nil, 1, 11, 65, 2, 3,4,ethereal.sandclay)
+	nil, nil, nil, nil, nil, 1, 21, 65, 2, 3,4,ethereal.sandclay)
 
 add_biome("swamp", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 1, 7, 80, 90, 3,4,ethereal.swamp)
+	nil, nil, nil, nil, nil, 1, 15, 80, 90, 3,4,ethereal.swamp)
 
 add_biome("swamp_ocean", nil, "default:sand", 2, "default:clay", 2,
 	nil, nil, nil, nil, nil, -192, 1, 80, 90, 3,4,ethereal.swamp)

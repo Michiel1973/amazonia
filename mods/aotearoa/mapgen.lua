@@ -22,7 +22,7 @@ dofile(aotearoa.path .. "/ores.lua")
 
 --basement
 local basement_max = -400
-local basement_min = -15000
+local basement_min = -9000
 
 --ocean
 local ocean_max = -21
@@ -39,10 +39,10 @@ local dune_min = beach_max -2
 local coastf_max = 14
 local coastf_min = dune_max -2
 --lowland forest etc
-local lowf_max = 80
+local lowf_max = 70
 local lowf_min = coastf_max -2
 --highland forest etc
-local highf_max = 120
+local highf_max = 110
 local highf_min = lowf_max -2
 --alpine
 local alp_max = 140
@@ -234,7 +234,7 @@ minetest.register_biome({
 	--depth_water_top = ,
 	--node_water = "",
 	--node_river_water = "default:river_water_source",
-	y_min = -31000,
+	y_min = -15000,
 	y_max = basement_min + 6000,
 	heat_point = 50,
 	humidity_point = 50,
@@ -254,7 +254,7 @@ minetest.register_biome({
 	--depth_water_top = ,
 	--node_water = "",
 	--node_river_water = "default:river_water_source",
-	y_min = -31000,
+	y_min = -15000,
 	y_max = basement_min + 3000,
 	heat_point = 60,
 	humidity_point = 60,
@@ -273,7 +273,7 @@ minetest.register_biome({
 	--depth_water_top = ,
 	--node_water = "",
 	--node_river_water = "default:river_water_source",
-	y_min = -31000,
+	y_min = -15000,
 	y_max = basement_min + 1500,
 	heat_point = 70,
 	humidity_point = 30,

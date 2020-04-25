@@ -18,8 +18,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 10,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -10000,
+	y_max           = 4600,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -40,7 +40,7 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
+	y_min           = -10000,
 	y_max           = -150,
 	noise_threshold = 0.0,
 	noise_params    = {
@@ -64,8 +64,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8000,
+	y_max           = 3200,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -89,7 +89,7 @@ minetest.register_ore({
                 clust_num_ores = 12,
                 clust_size     = 3,
                 y_max          = 31000,
-                y_min          = 1025,
+                y_min          = 100,
         })
 
         minetest.register_ore({
@@ -102,9 +102,9 @@ minetest.register_ore({
          },
 
                 clust_scarcity = 7 * 7 * 7,
-                clust_num_ores = 5,
+                clust_num_ores = 8,
                 clust_size     = 3,
-                y_max          = 0,
+                y_max          = 100,
                 y_min          = -31000,
         })
 
@@ -119,7 +119,7 @@ minetest.register_ore({
                 clust_scarcity = 24 * 24 * 24,
                 clust_num_ores = 27,
                 clust_size     = 6,
-                y_max          = -64,
+                y_max          = -9800,
                 y_min          = -31000,
         })
 
@@ -137,8 +137,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -9750,
+	y_max           = 3900,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -162,8 +162,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8900,
+	y_max           = 4650,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -186,8 +186,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8200,
+	y_max           = 3600,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -208,8 +208,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -9550,
+	y_max           = 4300,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -232,8 +232,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -9730,
+	y_max           = 5300,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -255,8 +255,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 25,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -9200,
+	y_max           = 4600,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -278,8 +278,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 20,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8700,
+	y_max           = 3700,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -300,8 +300,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 15,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -9700,
+	y_max           = 4940,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -323,8 +323,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 25,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8800,
+	y_max           = 3680,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -346,8 +346,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 25,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8900,
+	y_max           = 3700,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -368,8 +368,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 25,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8800,
+	y_max           = 4600,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -393,8 +393,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 18,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -7900,
+	y_max           = 4500,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0,
@@ -417,8 +417,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 4,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8600,
+	y_max           = 3900,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -440,8 +440,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 2,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -7900,
+	y_max           = 4300,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -463,8 +463,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 3,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8600,
+	y_max           = 4700,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -499,8 +499,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 5,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8900,
+	y_max           = 3700,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -523,8 +523,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 2,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8400,
+	y_max           = 4200,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -551,8 +551,8 @@ minetest.register_ore({
 	clust_scarcity = 9 * 9 * 9,
 	clust_num_ores = 5,
 	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = deep_scatter,
+	y_min          = -8900,
+	y_max          = 3200,
 })
 
 
@@ -573,8 +573,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 5,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8900,
+	y_max           = 4900,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -597,8 +597,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 2,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8750,
+	y_max           = 3900,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -624,8 +624,8 @@ minetest.register_ore({
 	clust_scarcity = 9 * 9 * 9,
 	clust_num_ores = 5,
 	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = deep_scatter,
+	y_min          = -7900,
+	y_max          = 4300,
 })
 
 
@@ -642,8 +642,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 5,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8300,
+	y_max           = 4500,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -665,8 +665,8 @@ minetest.register_ore({
 	clust_scarcity = 9 * 9 * 9,
 	clust_num_ores = 5,
 	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = deep_scatter,
+	y_min          = -8530,
+	y_max          = 4600,
 })
 
 -------------------
@@ -679,8 +679,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 5,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8900,
+	y_max           = 4700,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -701,8 +701,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 2,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8900,
+	y_max           = 4100,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -726,8 +726,8 @@ minetest.register_ore({
 	clust_scarcity = 9 * 9 * 9,
 	clust_num_ores = 5,
 	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = deep_scatter,
+	y_min          = -8200,
+	y_max          = 3760,
 })
 
 --------------------
@@ -744,8 +744,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 4,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -5400,
+	y_max           = 1800,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -772,8 +772,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 3,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -8300,
+	y_max           = 4500,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -796,8 +796,8 @@ minetest.register_ore({
 	clust_scarcity = 9 * 9 * 9,
 	clust_num_ores = 5,
 	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = deep_scatter,
+	y_min          = -7600,
+	y_max          = -2450,
 })
 
 
@@ -814,8 +814,8 @@ minetest.register_ore({
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_min          = -31000,
-		y_max          = deep_scatter *1.5,
+		y_min          = -8950,
+		y_max          = 2950,
 	})
 
 
@@ -836,8 +836,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 3,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -2100,
+	y_max           = 1500,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -860,8 +860,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 5,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -2000,
+	y_max           = 1000,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
@@ -887,8 +887,8 @@ minetest.register_ore({
 	 },
 	clust_scarcity  = 16 * 16 * 16,
 	clust_size      = 4,
-	y_min           = -31000,
-	y_max           = 31000,
+	y_min           = -6800,
+	y_max           = 2500,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
