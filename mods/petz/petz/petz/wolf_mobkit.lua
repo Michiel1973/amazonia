@@ -51,13 +51,13 @@ minetest.register_entity("petz:"..pet_name,{
 	-- api props
 	springiness= 0,
 	buoyancy = 0.5, -- portion of hitbox submerged
-	max_speed = 2.3,
+	max_speed = 2.4,
 	jump_height = 2.0,
 	view_range = 10,
 	lung_capacity = 10, -- seconds
 	max_hp = 20,
 
-	attack={range=3, damage_groups={fleshy=7}},
+	attack={range=4, damage_groups={fleshy=9}},
 	animation = {
 		walk={range={x=1, y=12}, speed=25, loop=true},
 		run={range={x=13, y=25}, speed=25, loop=true},
