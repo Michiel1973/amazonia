@@ -37,9 +37,9 @@ minetest.register_entity("petz:"..pet_name,{
 	-- api props
 	springiness= 0,
 	buoyancy = 0.5, -- portion of hitbox submerged
-	max_speed = 2,
+	max_speed = 1.8,
 	jump_height = 5,
-	view_range = 10,
+	view_range = 5,
 	lung_capacity = 10, -- seconds
 	max_hp = 10,
 	{name = "mobs:meat_raw", chance = 1, min = 1, max = 2,},	

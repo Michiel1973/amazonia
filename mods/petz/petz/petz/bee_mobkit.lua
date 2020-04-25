@@ -61,9 +61,9 @@ for i=1, 2 do
 		-- api props
 		springiness= 0,
 		buoyancy = 0.5, -- portion of hitbox submerged
-		max_speed = 2,
+		max_speed = 1.3,
 		jump_height = 2.0,
-		view_range = 10,
+		view_range = 5,
 		lung_capacity = 10, -- seconds
 		max_hp = 2,
 
