@@ -1,4 +1,2 @@
 default
-glooptest
-titanium
-gloopblocks
+
