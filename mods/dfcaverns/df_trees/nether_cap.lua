@@ -170,7 +170,7 @@ minetest.register_abm{
 	label = "water freezing",
 	nodenames = {"default:water_source", "default:river_water_source",},
 	neighbors = {"group:freezes_water"},
-	interval = 1,
+	interval = 3,
 	chance = 5,
 	catch_up = true,
 	action = function(pos)
@@ -182,7 +182,7 @@ minetest.register_abm{
 	label = "flowing water freezing",
 	nodenames = {"default:water_flowing",  "default:river_water_flowing"},
 	neighbors = {"group:freezes_water"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	catch_up = true,
 	action = function(pos)

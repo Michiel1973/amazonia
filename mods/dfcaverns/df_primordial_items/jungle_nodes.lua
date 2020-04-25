@@ -257,8 +257,8 @@ minetest.register_abm{
 	label = "df_primordial_items:jungle_grass_spread",
 	nodenames = {"default:dirt"},
 	neighbors = {"df_mapitems:dirt_with_jungle_grass"},
-	interval = 60,
-	chance = 50,
+	interval = 120,
+	chance = 80,
 	catch_up = true,
 	action = function(pos)
 		local above_def = minetest.registered_nodes[minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name]

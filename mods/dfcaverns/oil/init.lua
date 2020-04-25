@@ -125,7 +125,7 @@ if minetest.get_modpath("dynamic_liquid") then
 		label = "oil:oil floats",
 		nodenames = {"oil:oil_source"},
 		neighbors = {"default:water_source"},
-		interval = 1.0,
+		interval = 2,
 		chance = 1,
 		catch_up = true,
 		action = function(pos, node)
@@ -170,7 +170,7 @@ if minetest.get_modpath("dynamic_liquid") then
 		label = "oil:oil settles",
 		nodenames = {"oil:oil_source"},
 		neighbors = {"default:water_flowing"},
-		interval = 1.0,
+		interval = 2,
 		chance = 1,
 		catch_up = true,
 		action = function(pos, node)

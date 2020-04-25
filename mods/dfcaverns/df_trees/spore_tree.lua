@@ -280,7 +280,7 @@ end
 minetest.register_abm{
 	label = "spore tree raining spores",
 	nodenames = {"df_trees:spore_tree_fruiting_body"},
-	interval = 1,
+	interval = 8,
 	chance = 30,
 	catch_up = false,
 	action = function(pos)

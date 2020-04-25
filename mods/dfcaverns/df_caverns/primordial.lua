@@ -394,8 +394,8 @@ minetest.register_abm({
 	label = "Primordial plant growth",
 	nodenames = {"df_primordial_items:dirt_with_jungle_grass"},
 	neighbors = {"air"},
-	interval = 60.0,
-	chance = 50,
+	interval = 120,
+	chance = 100,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.find_node_near(pos, 2, {"group:primordial_jungle_plant"}) == nil then
 			local pos_above = {x=pos.x, y=pos.y+1, z=pos.z}
@@ -411,8 +411,8 @@ minetest.register_abm({
 	label = "Primordial fungus growth",
 	nodenames = {"df_primordial_items:dirt_with_mycelium"},
 	neighbors = {"air"},
-	interval = 60.0,
-	chance = 50,
+	interval = 121,
+	chance = 100,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		if minetest.find_node_near(pos, 3, {"group:primordial_fungal_plant"}) == nil then
 			local pos_above = {x=pos.x, y=pos.y+1, z=pos.z}

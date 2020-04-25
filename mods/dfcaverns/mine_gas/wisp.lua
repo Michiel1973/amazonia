@@ -47,7 +47,7 @@ minetest.register_abm({
     label = "mine_gas:gas wisp movement",
     nodenames = {"mine_gas:gas_wisp"},
     neighbors = {"mine_gas:gas"},
-    interval = 1.0,
+    interval = 2,
     chance = 10,
     catch_up = true,
     action = function(pos, node)

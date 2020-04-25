@@ -272,8 +272,8 @@ minetest.register_abm{
 	label = "torchspine germinating",
 	nodenames = {"df_trees:torchspine_ember"},
 	neighbors = {"group:flammable", "group:coal"},
-	interval = 30,
-	chance = 10,
+	interval = 60,
+	chance = 20,
 	catch_up = true,
 	action = function(pos)
 		local below_name = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
@@ -285,8 +285,8 @@ minetest.register_abm{
 minetest.register_abm{
 	label = "torchspine lighting",
 	nodenames = {"df_trees:torchspine_1"},
-	interval = 30,
-	chance = 10,
+	interval = 60,
+	chance = 20,
 	catch_up = true,
 	action = function(pos)
 		local above_def = minetest.registered_nodes[minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name]
@@ -299,8 +299,8 @@ local torchspine_list = {"df_trees:torchspine_1","df_trees:torchspine_2","df_tre
 minetest.register_abm{
 	label = "torchspine growing",
 	nodenames = {"df_trees:torchspine_1_lit"},
-	interval = 37,
-	chance = 10,
+	interval = 80,
+	chance = 20,
 	catch_up = true,
 	action = function(pos)
 		local height = 0

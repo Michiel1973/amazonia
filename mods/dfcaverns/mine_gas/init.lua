@@ -82,7 +82,7 @@ minetest.register_abm({
     label = "mine_gas:gas movement",
     nodenames = {"mine_gas:gas"},
     neighbors = {"group:liquid", "air"},
-    interval = 1.0,
+    interval = 2,
     chance = 1,
     catch_up = true,
     action = function(pos, node)
@@ -124,7 +124,7 @@ minetest.register_abm({
 	label = "mine_gas:gas snuffing torches",
 	nodenames = {"group:torch"},
 	neighbors = {"mine_gas:gas"},
-	interval = 1.0,
+	interval = 2,
 	chance = 1,
 	catch_up = true,
 	action = function(pos, node)
@@ -148,7 +148,7 @@ if minetest.get_modpath("tnt") then
 		label = "mine_gas:gas ignition",
 		nodenames = {"group:torch", "group:igniter"},
 		neighbors = {"mine_gas:gas"},
-		interval = 1.0,
+		interval = 2,
 		chance = 1,
 		catch_up = true,
 		action = function(pos, node)
@@ -190,7 +190,7 @@ minetest.register_abm({
 	label = "mine_gas:gas seep",
 	nodenames = {"mine_gas:gas_seep"},
 	neighbors = {"air"},
-	interval = 1.0,
+	interval = 3,
 	chance = 1,
 	catch_up = true,
 	action = function(pos, node)

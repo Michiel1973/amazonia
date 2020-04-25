@@ -121,7 +121,7 @@ minetest.register_abm{
 	label = "df_primordial_items:dirt_with_mycelium_spread",
 	nodenames = {"default:dirt"},
 	neighbors = {"df_mapitems:dirt_with_mycelium"},
-	interval = 60,
+	interval = 122,
 	chance = 50,
 	catch_up = true,
 	action = function(pos)

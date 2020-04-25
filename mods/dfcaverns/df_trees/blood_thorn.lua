@@ -226,8 +226,8 @@ minetest.register_abm({
 	label = "Grow Blood Thorn",
 	nodenames = {"df_trees:blood_thorn"},
 	catch_up = true,
-	interval = df_trees.config.blood_thorn_growth_interval,
-	chance = df_trees.config.blood_thorn_growth_chance,
+	interval = 70,
+	chance = 30,
 	action = function(pos, node)
 		df_trees.grow_blood_thorn(pos, node)
 	end

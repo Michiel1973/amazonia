@@ -229,7 +229,7 @@ if df_farming.config.light_kills_fungus then
 		label = "df_farming:kill_light_sensitive_fungus",
 		nodenames = {"group:light_sensitive_fungus"},
 		catch_up = true,
-		interval = 30,
+		interval = 53,
 		chance = 5,
 		action = function(pos, node)
 			kill_if_sunlit(pos, node)

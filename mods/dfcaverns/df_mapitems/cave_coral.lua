@@ -59,7 +59,7 @@ minetest.register_abm{
 	label = "df_mapitems:shifting_coral",
 	nodenames = {"group:dfcaverns_cave_coral"},
 	neighbors = {"default:water_source"},
-	interval = 2,
+	interval = 9,
 	chance = 10,
 	action = function(pos)
 		local node = minetest.get_node(pos)
