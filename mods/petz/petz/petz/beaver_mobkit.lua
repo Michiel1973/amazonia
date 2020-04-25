@@ -47,7 +47,7 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 10,
 	max_hp = 15,
 
-	attack={range=0.5, damage_groups={fleshy=7}},
+	attack={range=1, damage_groups={fleshy=7}},
 	animation = {
 		walk={range={x=1, y=12}, speed=25, loop=true},
 		run={range={x=13, y=25}, speed=25, loop=true},
