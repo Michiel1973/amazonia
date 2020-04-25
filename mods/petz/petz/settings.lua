@@ -77,6 +77,8 @@ petz.settings.max_tamed_by_owner = tonumber(settings:get("max_tamed_by_owner", "
 petz.settings.lycanthropy = settings:get_bool("lycanthropy", true)
 petz.settings.lycanthropy_infection_chance_by_wolf = tonumber(settings:get("lycanthropy_infection_chance_by_wolf", "200"))
 petz.settings.lycanthropy_infection_chance_by_werewolf = tonumber(settings:get("lycanthropy_infection_chance_by_werewolf", "10"))
+--Server Cron Tasks
+petz.settings.clear_mobs_time = tonumber(settings:get("clear_mobs_time", "0"))
 --Mobs Specific
 for i = 1, #petz.petz_list do --load the settings
 	local petz_type = petz.petz_list[i]
@@ -111,5 +113,3 @@ else -- is 'cubic'
     petz.settings.visual_size = {x=1.0, y=1.0}
     petz.settings.rotate = 180
 end
-
-

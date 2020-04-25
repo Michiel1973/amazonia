@@ -178,7 +178,7 @@ function boat.on_step(self, dtime)
 	end
 	-- We need to preserve velocity sign to properly apply drag force
 	-- while moving backward
-	local drag = dtime * math.sign(self.v) * (0.01 + 0.0796 * self.v * self.v)
+	local drag = dtime * math.sign(self.v) * (0.02 + 0.0796 * self.v * self.v)
 	-- If drag is larger than velocity, then stop horizontal movement
 	if math.abs(self.v) <= math.abs(drag) then
 		self.v = 0

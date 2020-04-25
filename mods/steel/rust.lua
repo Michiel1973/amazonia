@@ -2,7 +2,7 @@ local function moss(input, output)
 	minetest.register_abm({
 		nodenames = {input},
 		neighbors = {"group:water"},
-		interval = 50,
+		interval = 500,
 		chance = 20,
 		action = function(pos)
 			if not minetest.find_node_near(pos, 3, output) then

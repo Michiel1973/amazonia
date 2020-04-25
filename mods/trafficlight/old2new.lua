@@ -10,7 +10,7 @@ minetest.register_node(":streets:trafficlight_bottom", {
 })
 minetest.register_abm({
 	nodenames = {"streets:trafficlight_bottom"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node)
 		minetest.log("action", "Converting trafficlight at position " .. minetest.pos_to_string(pos))

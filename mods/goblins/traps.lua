@@ -208,7 +208,7 @@ minetest.register_node("goblins:molten_gold_flowing", {
 --[[ too bad we can't keep track of what physics are set too by other mods...]]
 minetest.register_abm({
 	nodenames = {"goblins:mossycobble_trap"},
-	interval = 1,
+	interval = 2,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 0.95)) do -- IDKWTF this is but it works
@@ -223,7 +223,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_coal_trap"},
-	interval = 1,
+	interval = 2,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
@@ -245,7 +245,7 @@ minetest.register_abm({
 -- pit of iron razors?
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_iron_trap"},
-	interval = 1,
+	interval = 2,
 	chance = 4, --this may be a dud
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do
@@ -279,7 +279,7 @@ end
 --[[ based on dwarves cactus]]
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_copper_trap"},
-	interval = 1,
+	interval = 2,
 	chance = 2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
@@ -296,7 +296,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_gold_trap"},
-	interval = 1,
+	interval = 2,
 	chance = 2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do
@@ -320,7 +320,7 @@ if (not singleplayer and setting ~= true) or (singleplayer and setting == false)
 	-- wimpier trap for non-tnt settings
 	minetest.register_abm({
 		nodenames = {"goblins:stone_with_diamond_trap"},
-		interval = 1,
+		interval = 2,
 		chance = 2,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
@@ -340,7 +340,7 @@ else
 	-- 5... 4... 3... 2... 1...
 	minetest.register_abm({
 		nodenames = {"goblins:stone_with_diamond_trap"},
-		interval = 1,
+		interval = 2,
 		chance = 1,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do

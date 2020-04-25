@@ -4,16 +4,16 @@ death_compass = {}
 local S = minetest.get_translator("death_compass")
  
  -- how many seconds does the death compass work for? 0 for indefinite
-local duration = tonumber(minetest.settings:get("death_compass_duration")) or 0
-local automatic = minetest.settings:get_bool("death_compass_automatic", false)
+local duration = 0
+local automatic = true
 
-local range_to_inactivate = 5
+local range_to_inactivate = 2
 
 local hud_position = {
-	x= tonumber(minetest.settings:get("death_compass_hud_x")) or 0.5,
-	y= tonumber(minetest.settings:get("death_compass_hud_y")) or 0.9,
+	x= 0,
+	y= -2,
 }
-local hud_color = tonumber("0x" .. (minetest.settings:get("death_compass_hud_color") or "FFFF00")) or 0xFFFF00
+local hud_color = 0xFFFF00
 
 -- If round is true the return string will only have the two largest-scale values
 local function clock_string(seconds, round)
@@ -239,7 +239,7 @@ end)
 for i = 0, 15 do
 	local image = "death_compass_16_"..i..".png"
 	minetest.register_craftitem("death_compass:dir"..i, {
-		description = S("Death Compass"),
+		description = S("Corpse Compass"),
 		inventory_image = image,
 		wield_image = image,
 		stack_max = 1,
@@ -254,7 +254,7 @@ if not automatic then
 	end
 
 	minetest.register_craftitem("death_compass:inactive", {
-		description = S("Death Compass"),
+		description = S("Corpse Compass"),
 		_doc_items_longdesc = documentation,
 		_doc_items_usagehelp = durationdesc,
 		inventory_image = "death_compass_inactive.png",

@@ -32,7 +32,7 @@ minetest.register_entity("petz:"..pet_name, {
 	},
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.1,	--EVIL!
+	stepheight = 1.1,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
@@ -50,7 +50,7 @@ minetest.register_entity("petz:"..pet_name, {
 	lung_capacity = 10, -- seconds
 	max_hp = 30,
 
-	attack={range=0.5, damage_groups={fleshy=9}},
+	attack={range=3, damage_groups={fleshy=9}},
 	animation = {
 		walk= {range={x=1, y=21}, speed=30, loop=true},
 		stand= {range={x=23, y=34}, speed=5, loop=true},

@@ -109,7 +109,7 @@ end
 
 minetest.register_abm({
 	nodenames = tlist_s,
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local newnode = string.sub(node.name, 1, -3) -- strip the "_s" from the name
@@ -120,7 +120,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = tlist_t,
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local newnode = string.sub(node.name, 1, -3) -- strip the "_t" from the name

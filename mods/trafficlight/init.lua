@@ -1319,7 +1319,7 @@ minetest.register_entity(":streets:pedcountdown",{
 minetest.register_abm({
 	label = "Update pedestrian countdown time display",
 	nodenames = {"streets:pedlight_top_flashingdontwalk"},
-	interval = 1,
+	interval = 3,
 	chance = 1,
 	catch_up = false,
 	action = function(pos,node)

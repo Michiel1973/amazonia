@@ -94,10 +94,11 @@ if ENABLE_SHARK_LARGE then
 		name = "mobs_sharks:shark_lg",
 		nodes = l_spawn_in,
 		neighbors = l_spawn_near,
-		interval = 30,
-		chance = l_spawn_chance,
+		interval = 60,
+		chance = 100,
 		max_height = -30,
-		active_object_count = 2,
+		min_height = -100,
+		active_object_count = 1,
 	})
 
 	mobs:register_egg("mobs_sharks:shark_lg", "Shark (large)", l_egg_texture, 0)
@@ -143,10 +144,10 @@ if ENABLE_SHARK_MEDIUM then
 		name = "mobs_sharks:shark_md",
 		nodes = l_spawn_in,
 		neighbors = l_spawn_near,
-		interval = 30,
-		chance = l_spawn_chance,
+		interval = 60,
+		chance = 100,
 		max_height = -20,
-		active_object_count = 2,
+		active_object_count = 1,
 	})
 
 	mobs:register_egg("mobs_sharks:shark_md", "Shark (medium)", l_egg_texture, 0)
@@ -192,10 +193,11 @@ if ENABLE_SHARK_SMALL then
 		name = "mobs_sharks:shark_sm",
 		nodes = l_spawn_in,
 		neighbors = l_spawn_near,
-		interval = 30,
-		chance = l_spawn_chance,
+		interval = 60,
+		chance = 500,
 		max_height = -10,
-		active_object_count = 2,
+		min_height = -100,
+		active_object_count = 1,
 	})
 
 	mobs:register_egg("mobs_sharks:shark_sm", "Shark (small)", l_egg_texture, 0)

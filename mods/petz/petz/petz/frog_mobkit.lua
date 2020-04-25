@@ -41,10 +41,10 @@ minetest.register_entity("petz:"..pet_name,{
 	buoyancy = 1.1, -- portion of hitbox submerged
 	max_speed = 1.0,
 	jump_height = 3.0,
-	view_range = 10,
+	view_range = 4,
 	max_hp = 15,
 
-	attack={range=0.5, damage_groups={fleshy=7}},
+	attack={range=3, damage_groups={fleshy=7}},
 	animation = {
 		walk={range={x=26, y=38}, speed=25, loop=true},
 		run={range={x=26, y=38}, speed=30, loop=true},

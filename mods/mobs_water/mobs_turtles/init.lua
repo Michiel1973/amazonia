@@ -138,10 +138,11 @@ mobs:spawn({
 		 "seawrecks:woodship", "seawrecks:uboot"
 	},
 	min_light = 5,
-	interval = 30,
-	chance = l_spawn_chance,
+	interval = 60,
+	chance = 1000,
 	max_height = -5,
-	active_object_count = 2,
+	min_height = -100,
+	active_object_count = 1,
 })
 
 mobs:register_egg("mobs_turtles:seaturtle", "Sea Turtle", "default_water.png", 1)

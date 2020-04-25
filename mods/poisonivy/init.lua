@@ -4,10 +4,10 @@
 -- support for i18n
 local S = minetest.get_translator("poisonivy")
 
-local SPAWN_DELAY = 1000
-local SPAWN_CHANCE = 200
-local GROW_DELAY = 500
-local GROW_CHANCE = 30
+local SPAWN_DELAY = 10000
+local SPAWN_CHANCE = 2000
+local GROW_DELAY = 5000
+local GROW_CHANCE = 300
 local poisonivy_seed_diff = 339
 local walls_list = {
 	"default:dirt",

@@ -47,15 +47,15 @@ function toolranks.create_description(name, uses, level)
 end
 
 function toolranks.get_level(uses)
-  if uses <= 200 then
+  if uses <= 1000 then
     return 1
-  elseif uses < 400 then
-    return 2
-  elseif uses < 1000 then
-    return 3
   elseif uses < 2000 then
+    return 2
+  elseif uses < 4000 then
+    return 3
+  elseif uses < 8000 then
     return 4
-  elseif uses < 3200 then
+  elseif uses < 10000 then
     return 5
   else
     return 6
@@ -146,6 +146,11 @@ add_tool("default:sword_steel")
 add_tool("default:sword_bronze")
 add_tool("default:sword_mese")
 add_tool("default:sword_diamond")
+-- add_tool("glooptest:sword_alatro")
+-- add_tool("glooptest:sword_arol")
+-- add_tool("gloopblocks:sword_evil")
+-- add_tool("gloopblocks:sword_cement")
+-- add_tool("titanium:sword")
 
 -- Pickaxe
 add_tool("default:pick_wood")
@@ -154,6 +159,11 @@ add_tool("default:pick_steel")
 add_tool("default:pick_bronze")
 add_tool("default:pick_mese")
 add_tool("default:pick_diamond")
+-- add_tool("glooptest:pick_alatro")
+-- add_tool("glooptest:pick_arol")
+-- add_tool("titanium:pick")
+-- add_tool("gloopblocks:pick_evil")
+-- add_tool("gloopblocks:pick_cement")
 
 -- Axe
 add_tool("default:axe_wood")
@@ -162,6 +172,11 @@ add_tool("default:axe_steel")
 add_tool("default:axe_bronze")
 add_tool("default:axe_mese")
 add_tool("default:axe_diamond")
+-- add_tool("glooptest:axe_alatro")
+-- add_tool("glooptest:axe_arol")
+-- add_tool("gloopblocks:axe_evil")
+-- add_tool("gloopblocks:axe_cement")
+-- add_tool("titanium:axe")
 
 -- Shovel
 add_tool("default:shovel_wood")
