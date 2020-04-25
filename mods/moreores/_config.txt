@@ -14,7 +14,7 @@ moreores.mithril_chunk_size = 11
 -- Amount of ore per chunk (higher = bigger ore deposits)
 moreores.tin_ore_per_chunk = 4
 moreores.silver_ore_per_chunk = 5
-moreores.mithril_ore_per_chunk = 2
+moreores.mithril_ore_per_chunk = 5
 
 -- Minimal depths of ore generation (Y coordinate, 0 being sea level by default)
 moreores.tin_min_depth = -10000
@@ -24,4 +24,4 @@ moreores.mithril_min_depth = -31000
 -- Maximal depths of ore generation (Y coordinate, 0 being sea level by default)
 moreores.tin_max_depth = 8
 moreores.silver_max_depth =100
-moreores.mithril_max_depth = -1024
+moreores.mithril_max_depth = -9000
