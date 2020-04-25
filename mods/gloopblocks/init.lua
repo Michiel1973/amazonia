@@ -135,6 +135,7 @@ minetest.register_node("gloopblocks:scaffolding", {
 	drawtype = "allfaces",
 	paramtype = "light",
 	sunlight_propagates = true,
+	climbable = true,
 	tiles = {"gloopblocks_scaffold.png"},
 	groups = {choppy=3, oddly_breakable_by_hand=3},
 	sounds = default.node_sound_wood_defaults(),
