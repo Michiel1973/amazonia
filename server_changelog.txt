@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+April 24 - MINOR - tuning pass, optimizing ABMs, reducing lag
 April 23 - MINOR - new mods added: cannon, death compass
 April 22 - MINOR - add hidden doors mod
 April 21 - MINOR - tuning of DB parameters to improve performance, minor bug fixes
