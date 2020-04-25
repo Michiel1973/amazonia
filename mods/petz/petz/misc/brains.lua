@@ -63,7 +63,7 @@ function petz.herbivore_brain(self)
 		if prty < 20 then
 			if self.isinliquid then
 				if not self.can_fly then
-					mobkit.hq_swimto(self, 20)
+					mobkit.hq_liquid_recovery(self, 20)
 				else
 					mobkit.hq_liquid_recovery_flying(self, 20)
 				end
@@ -222,7 +222,7 @@ function petz.predator_brain(self)
 		local prty = mobkit.get_queue_priority(self)
 
 		if prty < 40 and self.isinliquid then
-			mobkit.hq_swimto(self, 40)
+			mobkit.hq_liquid_recovery(self, 40)
 			return
 		end
 
@@ -522,7 +522,7 @@ function petz.semiaquatic_brain(self)
 
 		if prty < 100 then
 			--if petz.isinliquid(self) then
-				--mobkit.hq_swimto(self, 100)
+				--mobkit.hq_liquid_recovery(self, 100)
 			--end
 		end
 
@@ -601,7 +601,7 @@ function petz.monster_brain(self)
 		local prty = mobkit.get_queue_priority(self)
 
 		if prty < 40 and self.isinliquid then
-			mobkit.hq_swimto(self, 40)
+			mobkit.hq_liquid_recovery(self, 40)
 			return
 		end
 
