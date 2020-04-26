@@ -152,6 +152,7 @@ glooptest.ore_module.register_ore("glooptest", "alatro", "Alatro", {
 					choppy={times={[3]=0.80}, uses=40, maxlevel=0}
 				},
 				damage_groups = {fleshy=5},
+				groups = {sword = 1},
 			},
 			axe = {
 				full_punch_interval = 1.0,
@@ -161,6 +162,7 @@ glooptest.ore_module.register_ore("glooptest", "alatro", "Alatro", {
 					fleshy = {times={[2]=0.65, [3]=0.40}, uses=40, maxlevel=1}
 				},
 				damage_groups = {fleshy=3},
+				groups = {axe = 1},
 			},
 			pick = {
 				full_punch_interval = 1.0,
@@ -169,6 +171,7 @@ glooptest.ore_module.register_ore("glooptest", "alatro", "Alatro", {
 					cracky = {times={[2]=0.65, [3]=0.40}, uses=40, maxlevel=1}
 				},
 				damage_groups = {fleshy=3},
+				groups = {pickaxe = 1},
 			},
 			shovel = {
 				full_punch_interval = 1.0,
@@ -177,6 +180,7 @@ glooptest.ore_module.register_ore("glooptest", "alatro", "Alatro", {
 					crumbly = {times={[2]=0.60, [3]=0.35}, uses=40, maxlevel=1}
 				},
 				damage_groups = {fleshy=3},
+				groups = {shovel = 1},
 			},
 		}
 	}
