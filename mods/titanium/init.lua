@@ -8,7 +8,7 @@
 
 local enable_walking_light = minetest.setting_getbool("titanium_walking_light")
 if enable_walking_light ~= false then
-	enable_walking_light = true
+	enable_walking_light = false
 end
 
 minetest.register_node( "titanium:titanium_in_ground", {
