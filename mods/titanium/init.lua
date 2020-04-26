@@ -8,7 +8,7 @@
 
 local enable_walking_light = minetest.setting_getbool("titanium_walking_light")
 if enable_walking_light ~= false then
-	enable_walking_light = true
+	enable_walking_light = false
 end
 
 minetest.register_node( "titanium:titanium_in_ground", {
@@ -401,8 +401,8 @@ if enable_walking_light then
 		output = 'titanium:sam_titanium',
 		recipe = {
 			{'titanium:titanium_plate', 'default:torch', 'titanium:titanium_plate'},
-			{'titanium:glass', 'default:mese_crystal', 'titanium:glass'},
-			{'', '', ''},
+			{'titanium:glass', 'default:mese', 'titanium:glass'},
+			{'titanium:titanium_plate', 'default:mese', 'titanium:titanium_plate'},
 		}
 	})
 	--------------------------------------------------------

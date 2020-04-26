@@ -158,7 +158,7 @@ minetest.register_globalstep(function(dtime)
                     if velocity.y <= 15 then
                         if not players[name].sndHandle then
                             players[name].sndHandle = minetest.sound_play("jetpack_loop", {
-                                max_hear_distance = 16,
+                                max_hear_distance = 5,
                                 gain = 20.0,
                                 object = player,
                                 loop = true
