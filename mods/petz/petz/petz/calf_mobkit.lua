@@ -37,7 +37,7 @@ minetest.register_entity("petz:"..pet_name,{
     poop = true,
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.1,	--EVIL!
+	stepheight = 0.6,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
@@ -56,11 +56,11 @@ minetest.register_entity("petz:"..pet_name,{
 	buoyancy = 0.5, -- portion of hitbox submerged
 	max_speed = 1.7,
 	jump_height = 1.5,
-	view_range = 6,
+	view_range = 4,
 	lung_capacity = 10, -- seconds
 	max_hp = 15,
 	makes_footstep_sound = true,
-
+	armor_groups = {fleshy=2},
 	attack={range=3, damage_groups={fleshy=3}},
 	animation = {
 		walk={range={x=1, y=12}, speed=25, loop=true},

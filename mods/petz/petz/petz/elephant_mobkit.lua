@@ -67,7 +67,7 @@ for i=1, 2 do
 		},
 		rotate = petz.settings.rotate,
 		physical = true,
-		stepheight = 0.1,	--EVIL!
+		stepheight = 1.1,	--EVIL!
 		collide_with_objects = true,
 		collisionbox = collisionbox,
 		collisionbox_baby = collisionbox_baby,
@@ -82,14 +82,14 @@ for i=1, 2 do
 		-- api props
 		springiness= 0,
 		buoyancy = 0.5, -- portion of hitbox submerged
-		max_speed = 2,
-		jump_height = 1.5,
-		view_range = 8,
+		max_speed = 2.3,
+		jump_height = 1.1,
+		view_range = 7,
 		lung_capacity = 10, -- seconds
 		max_hp = 40,
 		makes_footstep_sound = true,
-
-		attack={range=3, damage_groups={fleshy=5}},
+		armor_groups = {fleshy=10},
+		attack={range=3, damage_groups={fleshy=8}},
 		animation = {
 			walk={range={x=1, y=12}, speed=20, loop=true},
 			run={range={x=13, y=25}, speed=20, loop=true},
