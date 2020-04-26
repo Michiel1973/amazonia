@@ -40,7 +40,7 @@ if enabled then
 		if name == "singleplayer" or name == admin or whitelist[name] then
 			return
 		end
-		minetest.log("error", "non-whitelisted login attempt with name"..name.."and IP"..ip)
+		minetest.log("error", "non-whitelisted login attempt with login "..name.." and IP "..ip)
 		return deny_message
 	end)
 end
