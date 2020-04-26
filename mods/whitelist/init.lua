@@ -10,7 +10,7 @@ local whitelist = {}
 
 -- Enabled by default
 local enabled = minetest.settings:get_bool("whitelist.enable") ~= false
-local deny_message = minetest.settings:get("whitelist.message") or "This server is whitelisted and you are not on the whitelist."
+local deny_message = minetest.settings:get("whitelist.message") or "Invite-only server, sorry! You are not on the whitelist. Your login name and IP have been logged."
 
 local function load_whitelist()
 	local file, err = io.open(world_path.."/whitelist.txt", "r")
@@ -38,6 +38,7 @@ if enabled then
 	minetest.register_on_prejoinplayer(function(name, ip)
 		load_whitelist()
 		if name == "singleplayer" or name == admin or whitelist[name] then
+		minetest.log("info", "accepted login from "..name.." using IP "..ip)
 			return
 		end
 		minetest.log("error", "non-whitelisted login attempt with login "..name.." and IP "..ip)
