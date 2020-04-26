@@ -401,8 +401,8 @@ if enable_walking_light then
 		output = 'titanium:sam_titanium',
 		recipe = {
 			{'titanium:titanium_plate', 'default:torch', 'titanium:titanium_plate'},
-			{'titanium:glass', 'default:mese_crystal', 'titanium:glass'},
-			{'', '', ''},
+			{'titanium:glass', 'default:mese', 'titanium:glass'},
+			{'titanium:titanium_plate', 'default:mese', 'titanium:titanium_plate'},
 		}
 	})
 	--------------------------------------------------------
