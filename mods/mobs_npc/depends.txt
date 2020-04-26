@@ -2,9 +2,3 @@ default
 mobs
 intllib?
 lucky_block?
-currency?
-farming?
-wine?
-moreores?
-glooptest?
-technic?
