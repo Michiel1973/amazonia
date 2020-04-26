@@ -38,7 +38,7 @@ if enabled then
 	minetest.register_on_prejoinplayer(function(name, ip)
 		load_whitelist()
 		if name == "singleplayer" or name == admin or whitelist[name] then
-		minetest.log("info", "accepted login from "..name.." using IP "..ip)
+		minetest.log("warning", "accepted login from "..name.." using IP "..ip)
 			return
 		end
 		minetest.log("error", "non-whitelisted login attempt with login "..name.." and IP "..ip)
