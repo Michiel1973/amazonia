@@ -121,7 +121,7 @@ mobs:register_mob("mobs_npc:banker", {
 -- initially being chosen.  Also the formspec uses item image buttons instead of
 -- inventory slots.
 
-function mobs.add_foods(self, entity, race)
+function mobs.add_materials(self, entity, race)
 
 	local exchange_index = 1
 	local exchanges_already_added = {}
@@ -186,7 +186,7 @@ function mobs_banker(self, clicker, entity, race)
 	end
 
 	if self.exchanges == nil then
-		mobs.add_foods(self, entity, race)
+		mobs.add_materials(self, entity, race)
 	end
 
 	local player = clicker:get_player_name()
