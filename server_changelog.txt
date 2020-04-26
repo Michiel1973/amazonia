@@ -1,8 +1,11 @@
 SERVER CHANGELOG
 
+April 26 - MINOR - new mod added: laptop
+April 26 - MINOR - new mod added: banker NPC
+April 25 - MINOR - tuning pass 2, petz mod toned down, titanium mod 'google glass' disabled
 April 24 - MINOR - tuning pass, optimizing ABMs, reducing lag
 April 23 - MINOR - new mods added: cannon, death compass
-April 22 - MINOR - add hidden doors mod
+April 22 - MINOR - new mod added hidden doors
 April 21 - MINOR - tuning of DB parameters to improve performance, minor bug fixes
 April 20 - MAJOR - database backend migrated to postgresql from sqlite
 April 19 - MINOR - tuning and updating of several mods and small fixes
