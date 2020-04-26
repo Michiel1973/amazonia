@@ -26,7 +26,7 @@ minetest.register_entity("petz:"..pet_name,{
 	follow = petz.settings.foxy_follow,
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.1,	--EVIL!
+	stepheight = 1.1,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
@@ -41,12 +41,12 @@ minetest.register_entity("petz:"..pet_name,{
 	-- api props
 	springiness= 0,
 	buoyancy = 0.5, -- portion of hitbox submerged
-	max_speed = 2.3,
-	jump_height = 2.0,
-	view_range = 9,
+	max_speed = 2.5,
+	jump_height = 2.1,
+	view_range = 6,
 	lung_capacity = 10, -- seconds
 	max_hp = 20,
-
+	armor_groups = {fleshy=3},
 	attack={range=3, damage_groups={fleshy=7}},
 	animation = {
 		walk={range={x=1, y=12}, speed=25, loop=true},
