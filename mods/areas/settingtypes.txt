@@ -5,7 +5,7 @@
 
 # Allow players with a privilege create their own areas using /protect
 # within the specified size and amount limits.
-areas.self_protection (Self protection) bool false
+areas.self_protection (Self protection) bool true
 
 # Self protection: Privilege required to protect an area
 areas.self_protection_privilege (Self protection: Required privs) string interact
