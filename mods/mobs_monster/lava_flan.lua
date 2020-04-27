@@ -29,13 +29,15 @@ mobs:register_mob("mobs_monster:lava_flan", {
 	},
 	walk_velocity = 0.5,
 	run_velocity = 2,
+	-- fly = true,
+	-- fly_in = {"default:lava_source", "default:lava_flowing"},
 	jump = true,
-	view_range = 10,
+	view_range = 12,
 	floats = 1,
 	drops = {
 		{name = "mobs:lava_orb", chance = 15, min = 1, max = 1},
 	},
-	water_damage = 8,
+	water_damage = 4,
 	lava_damage = 0,
 	light_damage = 0,
 	immune_to = {

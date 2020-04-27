@@ -46,10 +46,6 @@ nether.PORTAL_BOOK_LOOT_WEIGHTING =   0.1 -- Likelyhood of finding the Book of P
 nether.NETHER_REALM_ENABLED       =  true -- Setting to false disables the Nether and Nether portal
 
 
--- Override default settings with values from the .conf file, if any are present.
-nether.FASTTRAVEL_FACTOR          = tonumber(minetest.settings:get("nether_fasttravel_factor") or nether.FASTTRAVEL_FACTOR)
-nether.PORTAL_BOOK_LOOT_WEIGHTING = tonumber(minetest.settings:get("nether_portalBook_loot_weighting") or nether.PORTAL_BOOK_LOOT_WEIGHTING)
-nether.NETHER_REALM_ENABLED       = minetest.settings:get_bool("nether_realm_enabled", nether.NETHER_REALM_ENABLED) or nether.NETHER_REALM_ENABLED
 
 
 -- Load files
