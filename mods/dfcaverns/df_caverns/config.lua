@@ -1,5 +1,21 @@
 local CONFIG_FILE_PREFIX = "dfcaverns_"
 
+-- caverealms start -1500
+-- deep caves       -6000
+-- DM realm         -8000 to -9999
+-- caverealms end   -10033
+-- DF level1 start  -10033
+-- DF level2 start  -12032
+-- DF level3 start  -14032
+-- sunless sea      -15072
+-- oil sea          -16000
+-- lava sea         -17000
+-- underworld       -18000
+-- primordial start -19073
+-- primordial end   -21032
+-- nether           -25000
+-- basement floor   -31000
+
 df_caverns.config = {}
 
 local print_settingtypes = false
@@ -51,4 +67,4 @@ setting("int", "underworld_glowing_pit_mapblocks", 8, "Average pit spacing measu
 
 setting("bool", "enable_primordial", true, "Enable primordial cavern")
 setting("int", "primordial_max", -19073, "Upper limit to primordial caverns")
-setting("int", "primordial_min", -20032, "Lower limit to primordial caverns")
+setting("int", "primordial_min", -21032, "Lower limit to primordial caverns")

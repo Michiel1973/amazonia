@@ -107,8 +107,8 @@ glooptest.ore_module.register_ore("glooptest", "alatro", "Alatro", {
 			chunks_per_mapblock = 9*9*9,
 			chunk_size = 2,
 			max_blocks_per_chunk = 6,
-			miny = 0,
-			maxy = 256
+			miny = -10000,
+			maxy = 2560
 		},
 	},
 	lump = {
@@ -202,8 +202,8 @@ glooptest.ore_module.register_ore("glooptest", "talinite", "Talinite", {
 			chunks_per_mapblock = 12*12*12,
 			chunk_size = 2,
 			max_blocks_per_chunk = 4,
-			miny = -31000,
-			maxy = -250
+			miny = -10000,
+			maxy = 2250
 		}
 	},
 	lump = {
@@ -242,8 +242,8 @@ glooptest.ore_module.register_ore("glooptest", "akalin", "Akalin", {
 			chunks_per_mapblock = 7*7*7,
 			chunk_size = 3,
 			max_blocks_per_chunk = 9,
-			miny = 0,
-			maxy = 256
+			miny = -10000,
+			maxy = 2560
 		}
 	},
 	lump = {
@@ -281,8 +281,8 @@ glooptest.ore_module.register_ore("glooptest", "arol", "Arol", {
 			chunks_per_mapblock = 10*10*10,
 			chunk_size = 2,
 			max_blocks_per_chunk = 2,
-			miny = -31000,
-			maxy = -20
+			miny = -10000,
+			maxy = 2020
 		}
 	},
 	lump = {
@@ -364,8 +364,8 @@ glooptest.ore_module.register_ore("glooptest", "desert_iron", "Desert Iron", {
 			chunks_per_mapblock = 7*7*7,
 			chunk_size = 2,
 			max_blocks_per_chunk = 3,
-			miny = 0,
-			maxy = 10
+			miny = -20,
+			maxy = 20
 		},
 	},
 })
@@ -385,7 +385,7 @@ glooptest.ore_module.register_ore("glooptest", "desert_coal", "Desert Coal", {
 			chunks_per_mapblock = 6*6*6,
 			chunk_size = 3,
 			max_blocks_per_chunk = 8,
-			miny = 0,
+			miny = -30,
 			maxy = 30
 		},
 	},
@@ -600,7 +600,7 @@ glooptest.ore_module.register_ore("glooptest", "amethyst", "Amethyst", {
 			chunks_per_mapblock = 15*15*15,
 			chunk_size = 3,
 			max_blocks_per_chunk = 3,
-			miny = -31000,
+			miny = -10000,
 			maxy = -128
 		},
 	},
