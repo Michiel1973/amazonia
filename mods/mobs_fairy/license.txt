@@ -1,0 +1,17 @@
+﻿--------------------------
+--------------------------
+--     Mobs_fairy       --
+--------------------------
+--------------------------
+--  
+-- Models and textures by D00Med and toby109tt(aka tobyplowy) License of media (models, textures ) (CC BY-SA 3.0)
+Created by toby109tt(aka tobyplowy) (CC BY-SA 3.0):
+  bucket_*.png
+
+fairy.ogg - CC BY-SA 3.0 Mike Koenig
+
+  
+-- License of Api  WTFPL Simple Mobs by PilzAdam > Mob Redo by Ten1plus > Redo+ Mahmutelmas06
+-- Sounds from bigsoundbank and WTFPL ( confirmed by email )
+-- Code is a modified version of
+mobs_bat from Defense subgame, License of defense mod GPL
