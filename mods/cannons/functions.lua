@@ -51,7 +51,7 @@ function cannons.inventory_modified(pos)
 		meta:set_string("infotext","Cannon has no munition and no gunpowder"..addition)
 	
 	elseif not muni then
-		meta:set_string("infotext","Cannon has no muni"..addition)
+		meta:set_string("infotext","Cannon has no munition"..addition)
 	
 	elseif not gunpowder then
 		meta:set_string("infotext","Cannon has no gunpowder"..addition)
