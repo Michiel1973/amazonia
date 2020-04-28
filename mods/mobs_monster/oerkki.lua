@@ -11,8 +11,8 @@ mobs:register_mob("mobs_monster:oerkki", {
 	pathfinding = true,
 	reach = 2,
 	damage = 4,
-	hp_min = 8,
-	hp_max = 34,
+	hp_min = 30,
+	hp_max = 60,
 	armor = 100,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.9, 0.4},
 	visual = "mesh",
@@ -35,7 +35,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 	},
 	water_damage = 2,
 	lava_damage = 4,
-	light_damage = 1,
+	light_damage = 0,
 	fear_height = 4,
 	animation = {
 		stand_start = 0,
@@ -55,6 +55,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 	replace_offset = -1,
 	immune_to = {
 		{"default:sword_wood", 0}, -- no damage
+		{"default:sword_diamond", 0}, -- no damage
 		{"default:gold_lump", -10}, -- heals by 10 points
 	},
 })
