@@ -27,11 +27,11 @@ mobs:spawn_specific ("mobs_monster:slime_big", "df_mapitems:dirt_with_cave_moss"
 
 -- Lava Sea -18000 to -19073
 
-mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 300, 1, -19000, -18000)
+mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 300, 1, -18000, -17000)
 
 -- Underworld -18000 to -19073
 
-mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", {"air"}, 0, 7, 30, 500, 2, -19073, 18000)
+mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", "air", 0, 7, 30, 500, 2, -19073, -17500)
 
 
 
