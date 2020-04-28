@@ -1,5 +1,7 @@
 default
 mobs
+nether
+caverealms
 intllib?
 lucky_block?
 toolranks?
