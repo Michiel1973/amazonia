@@ -18,10 +18,10 @@ mobs:spawn_specific ("mobs_monster:lava_flan", {"default:lava_source", "default:
 mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 300, 1, -8000, -6000)
 
 -- caverealms dungeon master layer
-mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "default:stone"}, "air", 0, 13, 60, 9000, 1, -8100, -9950)
+mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "default:stone"}, "air", 0, 13, 60, 400, 1, -9950, -8100)
 
 -- Nether
-mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 1000, 2, -30900, -25100)
+mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 500, 2, -30900, -25100)
 
 
 
