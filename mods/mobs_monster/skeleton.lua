@@ -5,7 +5,7 @@
 
 -- intllib
 local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+-- local S, NS = dofile(MP.."/intllib.lua")
 
 --###################
 --################### SKELETON
@@ -51,8 +51,8 @@ local skeleton = {
 		-- chance = 1,
 		-- min = 0,
 		-- max = 2,},
-	},
-	},
+		--},
+		--},
 	animation = {
 		stand_start = 0,
 		stand_end = 40,
@@ -90,5 +90,5 @@ local skeleton = {
 mobs:alias_mob("mobs:skeleton", "mobs_monster:skeleton")
 
 -- spawn eggs
-mobs:register_egg("mobs_monster:skeleton", S("Skeleton"), "spawn_icon_skeleton.png", 0)
+mobs:register_egg("mobs_monster:skeleton", ("Skeleton"), "spawn_icon_skeleton.png", 0)
 
