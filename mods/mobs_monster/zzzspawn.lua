@@ -14,15 +14,25 @@
 --mobs:spawn_specific (name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height, day_toggle, on_spawn)
 
 
---caverealms monsters
+--caverealms monsters -1500  to -10033
 mobs:spawn_specific ("mobs_monster:lava_flan", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 100, 2, -8000, -6000)
-mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 300, 1, -8000, -6000)
 
--- caverealms dungeon master layer
+mobs:spawn_specific ("mobs_monster:stone_monster", "default:stone", "air", 0, 10, 30, 800, 2, -8000, 6000)
+
+-- caverealms dungeon master layer -8000  to -9999
 mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "default:stone"}, "air", 0, 13, 60, 400, 2, -9950, -8100)
 
--- DF level 1
-mobs:spawn_specific ("mobs_monster:slime_big", "df_mapitems:dirt_with_cave_moss", "air", 0, 10, 30, 100, 2, -12032, -10033)
+-- DF level 1 - 10033 to -12032
+mobs:spawn_specific ("mobs_monster:slime_big", "df_mapitems:dirt_with_cave_moss", "air", 0, 10, 60, 100, 2, -12032, -10033)
+
+-- Lava Sea -18000 to -19073
+
+mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 300, 1, -19000, -18000)
+
+-- Underworld -18000 to -19073
+
+mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", {"air"}, 0, 7, 30, 500, 2, -19073, 18000)
+
 
 
 -- Nether
