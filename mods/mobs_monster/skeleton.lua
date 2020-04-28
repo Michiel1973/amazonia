@@ -86,6 +86,8 @@ local skeleton = {
 	blood_amount = 0,
 }
 
+mobs:register_mob("mobs_monster:skeleton", skeleton)
+
 -- compatibility
 mobs:alias_mob("mobs:skeleton", "mobs_monster:skeleton")
 
