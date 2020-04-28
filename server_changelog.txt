@@ -2,19 +2,20 @@ SERVER CHANGELOG
 
 April 28 - MINOR - new mod added: hazmat suit
 April 27 - MINOR - mod removed: bridger (until recipes can be added)
+April 26 - MAJOR - The Deep Realms are now available - venture below 10k to find extreme riches... and dangers
 April 26 - MINOR - new mod added: laptop
 April 26 - MINOR - new mod added: banker NPC
 April 25 - MINOR - tuning pass 2, petz mod toned down, titanium mod 'google glass' disabled
 April 24 - MINOR - tuning pass, optimizing ABMs, reducing lag
 April 23 - MINOR - new mods added: cannon, death compass
-April 22 - MINOR - new mod added hidden doors
+April 22 - MINOR - new mod added: hidden doors
 April 21 - MINOR - tuning of DB parameters to improve performance, minor bug fixes
 April 20 - MAJOR - database backend migrated to postgresql from sqlite
 April 19 - MINOR - tuning and updating of several mods and small fixes
 April 19 - MINOR - improved chainsaw mod to recognise more trees as valid targets
-April 16 - MINOR - new mods added: bridger, church, hoppers
+April 16 - MINOR - new mods added: church, hoppers
 April 13 - MAJOR - sprint capability added to players (press E while moving to sprint)
-Arpil 13 - MINOR - balance changes to make goblins less life-threatening
+April 13 - MINOR - balance changes to make goblins less life-threatening
 April 12 - MINOR - bugfixes and behavior changes for water mobs
 April 12 - MINOR - incremental mod updates from master 
 April 12 - MINOR - small adjustments in crafting recipes
@@ -24,7 +25,7 @@ April 11 - MINOR - add lakes above sea leavel (in new areas)
 April 10 - MINOR - scuba recipe updated
 April 10 - MINOR - new mod added: scaffolding
 April 09 - MINOR - most petz now drop meat
-April 09 - MINOR - restrict tamed petz
+April 09 - MINOR - restrict # of tamed petz
 April 09 - MINOR - new mod added: Waiter NPC
 April 08 - MINOR - update lots of food values for hunger_ng compatibility
 April 08 - MINOR - increase price for crafting elevators
