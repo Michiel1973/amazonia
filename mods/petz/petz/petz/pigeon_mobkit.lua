@@ -49,7 +49,7 @@ minetest.register_entity("petz:"..pet_name,{
 	drops = {
 	{name = "mobs:meat_raw", chance = 1, min = 1, max = 1,},
 		},
-	armor_groups = {fleshy=1},
+	--armor_groups = {fleshy=1},
 	attack={range=3, damage_groups={fleshy=2}},
 	animation = {
 		walk={range={x=1, y=12}, speed=25, loop=true},

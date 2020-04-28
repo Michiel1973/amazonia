@@ -88,7 +88,7 @@ for i=1, 2 do
 		lung_capacity = 10, -- seconds
 		max_hp = 40,
 		makes_footstep_sound = true,
-		armor_groups = {fleshy=10},
+		--armor_groups = {fleshy=10},
 		attack={range=3, damage_groups={fleshy=8}},
 		animation = {
 			walk={range={x=1, y=12}, speed=20, loop=true},
