@@ -30,8 +30,8 @@ if mobs.mod and mobs.mod == "redo" then
 		walk_velocity = 2,
 		run_velocity = 3,
 		fall_speed = 0,
-		jump = true,
-		jump_height = 10,
+		--jump = true,
+		--jump_height = 10,
 		fall_damage = false,
 		floats = 1,
 		stand_chance = 0,
@@ -96,7 +96,7 @@ if mobs.mod and mobs.mod == "redo" then
 	
 	--name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height
 	
-	mobs:spawn_specific("mobs_fairy:fairy", {"df_primordial_items:giant_fern_leaves","df_primordial_items:glow_plant_1"}, "air", 0, 15, 30, 500, 5, -21000, -19100)
+	mobs:spawn_specific("mobs_fairy:fairy", {"df_primordial_items:giant_fern_leaves","df_primordial_items:glow_plant_1"}, "air", 0, 15, 30, 10, 5, -21000, -19100)
 	
 	--mobs:register_spawn("mobs_fairy:fairy",	{"default:dirt_with_grass", "default:dirt_with_grass2", "default:dirt_with_grass3"}, 20, 10, 15000, 2, 31000, true)
 	--mobs:register_spawn("mobs_fairy:fairy",	{"hyrule_mapgen:healwater_src"}, 20, 10, 1500, 2, 31000, true)
