@@ -113,7 +113,7 @@ slime_tiny.drops = {
 }
 slime_tiny.walk_velocity = 0.7
 slime_tiny.run_velocity = 0.7
-slime_tiny.jump_height = 3
+slime_tiny.jump_height = 3.1
 slime_tiny.on_die = nil
 
 mobs:register_mob("mobs_monster:slime_tiny", slime_tiny)
@@ -177,7 +177,7 @@ local magma_cube_big = {
 	attack_type = "dogfight",
 	passive = false,
 	jump = true,
-	jump_height = 6,
+	jump_height = 6.1,
 	walk_chance = 0,
 	jump_chance = 100,
 	fear_height = 120,
