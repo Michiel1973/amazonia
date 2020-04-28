@@ -7,7 +7,7 @@ local S = mobs.intllib
 mobs:register_mob("mobs_monster:dungeon_master", {
 	type = "monster",
 	passive = false,
-	damage = 6,
+	damage = 30,
 	attack_type = "dogshoot",
 	dogshoot_switch = 1,
 	dogshoot_count_max = 12, -- shoot for 10 seconds
@@ -16,9 +16,9 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	shoot_interval = 2.2,
 	arrow = "mobs_monster:fireball",
 	shoot_offset = 1,
-	hp_min = 22,
-	hp_max = 45,
-	armor = 60,
+	hp_min = 60,
+	hp_max = 90,
+	armor = 120,
 	collisionbox = {-0.7, -1, -0.7, 0.7, 1.6, 0.7},
 	visual = "mesh",
 	mesh = "mobs_dungeon_master.b3d",
@@ -43,8 +43,8 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 		{name = "default:diamond", chance = 4, min = 0, max = 1},
 		{name = "default:diamondblock", chance = 30, min = 0, max = 1},
 	},
-	water_damage = 1,
-	lava_damage = 1,
+	water_damage = 3,
+	lava_damage = 0,
 	light_damage = 0,
 	fear_height = 3,
 	animation = {
@@ -112,14 +112,14 @@ mobs:register_arrow("mobs_monster:fireball", {
 	hit_player = function(self, player)
 		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 8},
+			damage_groups = {fleshy = 16},
 		}, nil)
 	end,
 
 	hit_mob = function(self, player)
 		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 8},
+			damage_groups = {fleshy = 16},
 		}, nil)
 	end,
 

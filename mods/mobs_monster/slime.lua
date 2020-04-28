@@ -10,7 +10,7 @@ local slime_big = {
 	pathfinding = 1,
 	group_attack = true,
 	hp_min = 16,
-	hp_max = 16,
+	hp_max = 32,
 	collisionbox = {-1.02, -0.01, -1.02, 1.02, 2.03, 1.02},
 	visual_size = {x=12.5, y=12.5},
 	textures = {{"mobs_slime.png"}},
@@ -25,9 +25,9 @@ local slime_big = {
 		attack = "green_slime_attack",
 		distance = 16,
 	},
-	damage = 4,
+	damage = 18,
 	reach = 3,
-	armor = 100,
+	armor = 90,
 	drops = {},
 	-- TODO: Fix animations
 	animation = {
@@ -126,7 +126,7 @@ local smax = -10
 local magma_cube_big = {
 	type = "monster",
 	hp_min = 16,
-	hp_max = 16,
+	hp_max = 32,
 	collisionbox = {-1.02, -0.01, -1.02, 1.02, 2.03, 1.02},
 	visual_size = {x=12.5, y=12.5},
 	textures = {{ "mobs_magmacube.png" }},
@@ -145,7 +145,7 @@ local magma_cube_big = {
 	run_velocity = 4,
 	-- fly = true,
 	-- fly_in = {"default:lava_source", "default:lava_flowing"},
-	damage = 6,
+	damage = 16,
 	reach = 3,
 	armor = 40,
 	drops = {
@@ -197,8 +197,8 @@ local magma_cube_big = {
 mobs:register_mob("mobs_monster:magma_cube_big", magma_cube_big)
 
 local magma_cube_small = table.copy(magma_cube_big)
-magma_cube_small.hp_min = 4
-magma_cube_small.hp_max = 4
+magma_cube_small.hp_min = 8
+magma_cube_small.hp_max = 8
 magma_cube_small.collisionbox = {-0.51, -0.01, -0.51, 0.51, 1.00, 0.51}
 magma_cube_small.visual_size = {x=6.25, y=6.25}
 magma_cube_small.damage = 3
@@ -224,8 +224,8 @@ end
 mobs:register_mob("mobs_monster:magma_cube_small", magma_cube_small)
 
 local magma_cube_tiny = table.copy(magma_cube_big)
-magma_cube_tiny.hp_min = 1
-magma_cube_tiny.hp_max = 1
+magma_cube_tiny.hp_min = 4
+magma_cube_tiny.hp_max = 4
 magma_cube_tiny.collisionbox = {-0.2505, -0.01, -0.2505, 0.2505, 0.50, 0.2505}
 magma_cube_tiny.visual_size = {x=3.125, y=3.125}
 magma_cube_tiny.walk_velocity = 1.02
