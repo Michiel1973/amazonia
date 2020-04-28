@@ -304,8 +304,7 @@ if armor.materials.crystal then
 	armor:register_armor("3d_armor:boots_crystal", {
 		description = S("Crystal Boots"),
 		inventory_image = "3d_armor_inv_boots_crystal.png",
-		groups = {armor_feet=1, armor_heal=12, armor_use=100, physics_speed=5,
-				physics_jump=0.5, armor_fire=1},
+		groups = {armor_feet=1, armor_heal=12, armor_use=100, physics_jump=0.5, armor_fire=5},
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
