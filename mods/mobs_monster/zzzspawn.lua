@@ -21,7 +21,7 @@ mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "def
 mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "default:stone"}, "air", 0, 13, 60, 9000, 1, -8100, -9950)
 
 -- Nether
-mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 1000, 2, -25000, 31000)
+mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 1000, 2, -30900, -25100)
 
 
 
