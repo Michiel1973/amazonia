@@ -1,9 +1,22 @@
 GAME BALANCE CHANGES
 
 April 28
-Mithril armor is now stronger and lighter, allowing faster run speed
-Crystal armor protects against lava, enjoy your lava baths!
+- Mithril armor is now stronger and lighter, allowing faster run speed
+- Crystal armor protects against lava, enjoy your lava baths!
 
 April 21
 - jetpack now holds a maximum charge of 75 kEU (down from 150 kEU), allows ~2000 blocks flight
 - hanggliders now break after 9 uses
+
+April 13
+- balance changes to make goblins less life-threatening
+
+April 12
+- food rebalancing, adding many foods' missing satiation values
+- small adjustments in crafting recipes
+
+April 10
+- scuba recipe updated (use copper instead of bronze)
+
+April 09
+- most petz now drop meat
