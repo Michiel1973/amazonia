@@ -32,21 +32,24 @@ mobs.intllib = S
 -- throwing
 
 dofile(path .. "/zzzthrowing.lua")
+
 -- Monsters
 
-dofile(path .. "/dirt_monster.lua")              -- 
+--dofile(path .. "/dirt_monster.lua")              -- 
 dofile(path .. "/dungeon_master.lua")            -- caverealms -8000 to -9999
 dofile(path .. "/oerkki.lua")                    -- nether -25000 to -30000
-dofile(path .. "/sand_monster.lua")              -- 
-dofile(path .. "/stone_monster.lua")             -- 
-dofile(path .. "/tree_monster.lua")              -- primordial
+--dofile(path .. "/sand_monster.lua")              -- 
+dofile(path .. "/stone_monster.lua")             -- caverealms
+--dofile(path .. "/tree_monster.lua")              -- primordial
 dofile(path .. "/lava_flan.lua")                 -- lava sea?
 -- dofile(path .. "/mese_monster.lua")			 -- not using (silly)
-dofile(path .. "/spider.lua")                    -- 
+--dofile(path .. "/spider.lua")                    -- 
 dofile(path .. "/zombie.lua")                    -- underworld -18000 to -19073??
 -- dofile(path .. "/ghost.lua") 				 -- not using (texture issue)
-dofile(path .. "/slime.lua")                     -- 
+dofile(path .. "/slime.lua")                     -- DF L1 and caverealms
 dofile(path .. "/skeleton.lua")                  -- skeletons for nether
+--  dofile(path .. "/banshee.lua")               -- banshee (WIP)
+
 
 -- put the monsters into the world
 

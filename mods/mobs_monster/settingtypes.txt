@@ -1,0 +1,7 @@
+# ENG: Use the daytime check instead of light damage
+# to despawn banshees? (runs every 15secs)
+#
+# ITA: Usare il controllo del giorno invece del
+# ferimento da luce per fare scomparire le banshee?
+# (eseguito ogni 15sec)
+mobs_banshee_daytime_check	(Banshees' Daytime Check)	bool	false
