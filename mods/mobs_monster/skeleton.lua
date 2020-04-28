@@ -16,7 +16,7 @@ local MP = minetest.get_modpath(minetest.get_current_modname())
 local skeleton = {
 	type = "monster",
 	hp_min = 40,
-	hp_max = 80,
+	hp_max = 60,
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 1.98, 0.3},
 	pathfinding = 1,
 	group_attack = true,
@@ -35,7 +35,7 @@ local skeleton = {
 	},
 	walk_velocity = 1.2,
 	run_velocity = 2.4,
-	damage = 25,
+	damage = 22,
 	glow = 1,
 	reach = 3,
 	-- drops = {
