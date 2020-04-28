@@ -97,7 +97,7 @@ if ENABLE_SHARK_LARGE then
 		interval = 60,
 		chance = 100,
 		max_height = -30,
-		min_height = -100,
+		min_height = -180,
 		active_object_count = 1,
 	})
 
@@ -147,6 +147,7 @@ if ENABLE_SHARK_MEDIUM then
 		interval = 60,
 		chance = 100,
 		max_height = -20,
+		min_height = -150,
 		active_object_count = 1,
 	})
 
