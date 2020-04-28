@@ -36,7 +36,7 @@ if mobs.mod and mobs.mod == "redo" then
 		floats = 1,
 		stand_chance = 0,
 		walk_chance = 100,
-		stepheight = 10,
+		stepheight = 1.1,
 		fear_height = 0,
 		do_custom = function(self, pos)
 		local pos = self.object:getpos()
