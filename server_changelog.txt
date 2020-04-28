@@ -2,6 +2,7 @@ SERVER CHANGELOG
 
 April 28 - MINOR - new mod added: hazmat suit
 April 27 - MINOR - mod removed: bridger (until recipes can be added)
+April 26 - MAJOR - The Deep Realms are now available - venture below 10k to find extreme riches... and dangers
 April 26 - MINOR - new mod added: laptop
 April 26 - MINOR - new mod added: banker NPC
 April 25 - MINOR - tuning pass 2, petz mod toned down, titanium mod 'google glass' disabled
