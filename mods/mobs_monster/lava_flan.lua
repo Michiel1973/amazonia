@@ -12,6 +12,8 @@ mobs:register_mob("mobs_monster:lava_flan", {
 	damage = 3,
 	hp_min = 10,
 	hp_max = 35,
+	fly = true,
+	fly_in = {"default:lava_source", "default:lava_flowing"},
 	armor = 80,
 	collisionbox = {-0.5, -0.5, -0.5, 0.5, 1.5, 0.5},
 	visual = "mesh",
