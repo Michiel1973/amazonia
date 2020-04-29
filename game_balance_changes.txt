@@ -1,5 +1,8 @@
 GAME BALANCE CHANGES
 
+April 29
+- tuning of Deep Realm monsters
+
 April 28
 - Mithril armor is now stronger and lighter, allowing faster run speed
 - Crystal armor protects against lava, enjoy your lava baths!
