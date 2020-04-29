@@ -6,4 +6,4 @@ The main focus is survival (not creative mode), building, and exploration with a
 
 Features a host of mods provided by the awesome Minetest community, licenses and attribution preserved in the various subfolders. Many mods were altered based on what the game intends to accomplish and on player feedback, further tuned to work well together and not cause insane server load.
 
-Requires a pretty beefy computer to run well, the current server is a m5a.2xlarge running as EC2 in Amazon's AWS.
+Requires a pretty beefy computer to run well, the current server is a m5a.2xlarge running on the EC2 platform in Amazon's AWS.
