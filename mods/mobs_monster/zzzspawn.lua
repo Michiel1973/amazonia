@@ -40,7 +40,7 @@ mobs:spawn_specific ("mobs_monster:lava_flan", {"default:lava_source", "default:
 
 -- Underworld -18000 to -19073
 
-mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", "air", 0, 7, 30, 500, 1, -19073, -17500)
+mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", "air", 0, 7, 90, 1000, 1, -19073, -17500)
 
 
 
