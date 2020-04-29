@@ -50,18 +50,18 @@ if mobs.mod and mobs.mod == "redo" then
 			collisionremoval = false,
 			vertical = false,
 			texture = "mobs_fairy_spark.png",
-			glow = 9
+			glow = 7
 		})
 		
-		local objs = minetest.env:get_objects_inside_radius(pos, 1.5) 
-		for _, obj in pairs(objs) do
-			if obj:is_player() == true then
-				local player = obj:get_luaentity()
-				local hp = obj:get_hp()
-				obj:set_hp(hp+10)
-				self.object:remove()
-			end
-		end
+		-- local objs = minetest.env:get_objects_inside_radius(pos, 1.5) 
+		-- for _, obj in pairs(objs) do
+			-- if obj:is_player() == true then
+				-- local player = obj:get_luaentity()
+				-- local hp = obj:get_hp()
+				-- obj:set_hp(hp+10)
+				-- self.object:remove()
+			-- end
+		-- end
 		
 		end,
 		sounds = {
@@ -72,7 +72,7 @@ if mobs.mod and mobs.mod == "redo" then
 		water_damage = 2,
 		lava_damage = 10,
 		light_damage = 0,
-		view_range = 4,
+		view_range = 3,
 		animation = {
 			speed_normal = 40,		speed_run = 60,
 			stand_start = 1,		stand_end = 10,
@@ -96,7 +96,7 @@ if mobs.mod and mobs.mod == "redo" then
 	
 	--name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height
 	
-	mobs:spawn_specific("mobs_fairy:fairy", {"df_primordial_items:giant_fern_leaves","df_primordial_items:glow_plant_1"}, "air", 0, 15, 30, 10, 5, -21000, -19100)
+	mobs:spawn_specific("mobs_fairy:fairy", {"df_primordial_items:giant_fern_leaves","df_primordial_items:glow_plant_1"}, "air", 0, 15, 30, 10, 4, -21000, -19100)
 	
 	--mobs:register_spawn("mobs_fairy:fairy",	{"default:dirt_with_grass", "default:dirt_with_grass2", "default:dirt_with_grass3"}, 20, 10, 15000, 2, 31000, true)
 	--mobs:register_spawn("mobs_fairy:fairy",	{"hyrule_mapgen:healwater_src"}, 20, 10, 1500, 2, 31000, true)
