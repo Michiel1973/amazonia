@@ -6,7 +6,7 @@ mobs:spawn({
 	chance = 7000,
 	active_object_count = 2,
 	max_height = -8100,
-	min_height = -9950
+	min_height = -9950,
 	on_spawn = function(self, pos)
 		self.hp_max = 70
 		self.health = 70
