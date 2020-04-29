@@ -19,7 +19,9 @@
 
 mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 30, 300, 1, -8000, -6000)
 
-mobs:spawn_specific ("mobs_monster:stone_monster", "default:stone", "air", 0, 10, 30, 800, 2, -8000, -6000)
+mobs:spawn_specific ("mobs_monster:stone_monster", {"caverealms:stone_with_moss", "caverealms:stone_with_lichen", "caverealms:stone_with_algae"}, "air", 0, 10, 30, 800, 2, -7500, -6000)
+
+mobs:spawn_specific ("mobs_monster:sand_monster", "default:desert_sand", "air", 0, 10, 30, 800, 1, -8000, -6500)
 
 -- caverealms dungeon master layer -8000  to -9999
 mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "default:stone"}, "air", 0, 13, 60, 400, 2, -9950, -8100)
