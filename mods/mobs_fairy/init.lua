@@ -69,6 +69,7 @@ if mobs.mod and mobs.mod == "redo" then
 		},
 		fly = true,
 		fly_in = "air",
+		keep_flying = true,
 		water_damage = 2,
 		lava_damage = 10,
 		light_damage = 0,
