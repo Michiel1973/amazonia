@@ -21,13 +21,18 @@ mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "def
 
 mobs:spawn_specific ("mobs_monster:stone_monster", {"caverealms:stone_with_moss", "caverealms:stone_with_lichen", "caverealms:stone_with_algae"}, "air", 0, 10, 30, 800, 2, -7500, -6000)
 
-mobs:spawn_specific ("mobs_monster:sand_monster", "default:desert_sand", "air", 0, 10, 30, 800, 1, -8000, -6500)
+mobs:spawn_specific ("mobs_monster:sand_monster", "default:desert_sand", "air", 0, 10, 30, 400, 1, -8000, -6500)
 
 -- caverealms dungeon master layer -8000  to -9999
-mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "default:stone"}, "air", 0, 13, 60, 400, 2, -9950, -8100)
+mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "caverealms:glow_obsidian"}, "air", 0, 13, 60, 400, 2, -9950, -8100)
 
 -- DF level 1 - 10033 to -12032
-mobs:spawn_specific ("mobs_monster:slime_big", "df_mapitems:dirt_with_cave_moss", "air", 0, 10, 60, 100, 2, -12032, -10033)
+-- you get a break here
+
+-- DF level 2  -12032 to -14032
+mobs:spawn_specific ("mobs_monster:slime_big", {"df_mapitems:dirt_with_cave_moss", "df_trees:goblin_cap"}, "air", 0, 10, 60, 100, 2, -14032, -12032)
+
+-- DF level 3  -14032 to -15072
 
 -- Lava Sea -17000 to -18000
 

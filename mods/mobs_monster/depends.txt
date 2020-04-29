@@ -4,6 +4,7 @@ nether
 caverealms
 df_mapitems
 df_underworld_items
+df_trees
 intllib?
 lucky_block?
 toolranks?
