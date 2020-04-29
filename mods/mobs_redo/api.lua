@@ -6,7 +6,7 @@ local use_cmi = minetest.global_exists("cmi")
 
 mobs = {
 	mod = "redo",
-	version = "20200412",
+	version = "20200429",
 	intllib = S,
 	invis = minetest.global_exists("invisibility") and invisibility or {}
 }
@@ -150,12 +150,21 @@ local mob_class_meta = {__index = mob_class}
 -- play sound
 function mob_class:mob_sound(sound)
 
+	local pitch = 1.0
+
+	-- higher pitch for a child
+	if self.child then pitch = pitch * 1.5 end
+
+	-- a little random pitch to be different
+	pitch = pitch + math.random(-10, 10) * 0.005
+
 	if sound then
 		minetest.sound_play(sound, {
 			object = self.object,
 			gain = 1.0,
-			max_hear_distance = self.sounds.distance
-		})
+			max_hear_distance = self.sounds.distance,
+			pitch = pitch
+		}, true)
 	end
 end
 
@@ -215,17 +224,17 @@ end
 -- move mob in facing direction
 function mob_class:set_velocity(v)
 
+	-- halt mob if it has been ordered to stay
+	if self.order == "stand" then
+		self.object:set_velocity({x = 0, y = 0, z = 0})
+		return
+	end
+
 	local c_x, c_y = 0, 0
 
 	-- can mob be pushed, if so calculate direction
 	if self.pushable then
 		c_x, c_y = unpack(self:collision())
-	end
-
-	-- halt mob if it has been ordered to stay
-	if self.order == "stand" then
-		self.object:set_velocity({x = 0, y = 0, z = 0})
-		return
 	end
 
 	local yaw = (self.object:get_yaw() or 0) + self.rotate
@@ -499,9 +508,9 @@ function mobs:line_of_sight(entity, pos1, pos2, stepsize)
 end
 
 
-function mob_class:attempt_flight_correction()
+function mob_class:attempt_flight_correction(override)
 
-	if self:flight_check() then return true end
+	if self:flight_check() and override ~= true then return true end
 
 	-- We are not flying in what we are supposed to.
 	-- See if we can find intended flight medium and return to it
@@ -525,7 +534,7 @@ function mob_class:attempt_flight_correction()
 	local escape_direction = vector.direction(pos, escape_target)
 
 	self.object:set_velocity(
-		vector.multiply(escape_direction, self.run_velocity))
+		vector.multiply(escape_direction, 1)) --self.run_velocity))
 
 	return true
 end
@@ -668,6 +677,12 @@ end
 -- drop items
 function mob_class:item_drop()
 
+	-- no drops if disabled by setting
+	if not mobs_drop_items then return end
+
+	-- no drops for child mobs
+	if self.child then return end
+
 	local pos = self.object:get_pos()
 
 	-- check for drops function
@@ -677,12 +692,6 @@ function mob_class:item_drop()
 	if not self.drops or #self.drops == 0 then
 		return
 	end
-
-	-- no drops if disabled by setting
-	if not mobs_drop_items then return end
-
-	-- no drops for child mobs
-	if self.child then return end
 
 	-- was mob killed by player?
 	local death_by_player = self.cause_of_death and self.cause_of_death.puncher
@@ -742,12 +751,17 @@ function mob_class:check_for_death(cmi_cause)
 		return false
 	end
 
+	local damaged = self.health < self.old_health
+
 	self.old_health = self.health
 
 	-- still got some health? play hurt sound
 	if self.health > 0 then
 
-		self:mob_sound(self.sounds.damage)
+		-- only play hurt sound if damaged
+		if damaged then
+			self:mob_sound(self.sounds.damage)
+		end
 
 		-- make sure health isn't higher than max
 		if self.health > self.hp_max then
@@ -835,6 +849,42 @@ function mob_class:check_for_death(cmi_cause)
 end
 
 
+-- get node but use fallback for nil or unknown
+local node_ok = function(pos, fallback)
+
+	fallback = fallback or mobs.fallback_node
+
+	local node = minetest.get_node_or_nil(pos)
+
+	if node and minetest.registered_nodes[node.name] then
+		return node
+	end
+
+	return minetest.registered_nodes[fallback]
+end
+
+
+-- Returns true is node can deal damage to self
+local is_node_dangerous = function(self, nodename)
+
+	if self.water_damage > 0
+	and minetest.get_item_group(nodename, "water") ~= 0 then
+		return true
+	end
+
+	if self.lava_damage > 0
+	and minetest.get_item_group(nodename, "igniter") ~= 0 then
+		return true
+	end
+
+	if minetest.registered_nodes[nodename].damage_per_second > 0 then
+		return true
+	end
+
+	return false
+end
+
+
 -- is mob facing a cliff
 function mob_class:is_at_cliff()
 
@@ -853,29 +903,26 @@ function mob_class:is_at_cliff()
 	local pos = self.object:get_pos()
 	local ypos = pos.y + self.collisionbox[2] -- just above floor
 
-	if minetest.line_of_sight(
+	local free_fall, blocker = minetest.line_of_sight(
 		{x = pos.x + dir_x, y = ypos, z = pos.z + dir_z},
-		{x = pos.x + dir_x, y = ypos - self.fear_height, z = pos.z + dir_z}, 1) then
+		{x = pos.x + dir_x, y = ypos - self.fear_height, z = pos.z + dir_z})
 
+	-- check for straight drop, drop onto danger or walkable node
+	if free_fall then
 		return true
+	else
+		local bnode = node_ok(blocker)
+
+		if is_node_dangerous(self, bnode.name) then
+			return true
+		else
+			local def = minetest.registered_nodes[bnode.name]
+
+			return (not def and def.walkable)
+		end
 	end
 
 	return false
-end
-
-
--- get node but use fallback for nil or unknown
-local node_ok = function(pos, fallback)
-
-	fallback = fallback or mobs.fallback_node
-
-	local node = minetest.get_node_or_nil(pos)
-
-	if node and minetest.registered_nodes[node.name] then
-		return node
-	end
-
-	return minetest.registered_nodes[fallback]
 end
 
 
@@ -1032,6 +1079,18 @@ function mob_class:do_jump()
 		z = pos.z + dir_z
 	})
 
+	-- what is above and in front?
+	local nodt = node_ok({
+		x = pos.x + dir_x,
+		y = pos.y + 1.5,
+		z = pos.z + dir_z
+	})
+
+	-- is there space to jump up?
+	if minetest.registered_nodes[nodt.name].walkable == true then
+		return false
+	end
+
 	-- thin blocks that do not need to be jumped
 	if nod.name == node_snow then
 		return false
@@ -1043,7 +1102,8 @@ function mob_class:do_jump()
 	or minetest.registered_items[nod.name].walkable then
 
 		if not nod.name:find("fence")
-		and not nod.name:find("gate") then
+		and not nod.name:find("gate")
+		and not nod.name:find("wall") then
 
 			local v = self.object:get_velocity()
 
@@ -1462,6 +1522,10 @@ function mob_class:smart_mobs(s, p, dist, dtime)
 
 		minetest.after(1, function(self)
 
+			if not self.object:get_luaentity() then
+				return
+			end
+
 			if self.object:get_luaentity() then
 
 				if has_lineofsight then
@@ -1512,7 +1576,15 @@ function mob_class:smart_mobs(s, p, dist, dtime)
 		local dropheight = 6
 		if self.fear_height ~= 0 then dropheight = self.fear_height end
 
-		self.path.way = minetest.find_path(s, p1, 16, self.stepheight, dropheight, "Dijkstra")
+		local jumpheight = 0
+		if self.jump and self.jump_height >= 4 then
+			jumpheight = min(math.ceil(self.jump_height / 4), 4)
+		elseif self.stepheight > 0.5 then
+			jumpheight = 1
+		end
+
+		self.path.way = minetest.find_path(s, p1, 16, jumpheight,
+				dropheight, "Dijkstra")
 
 --[[
 		-- show path using particles
@@ -1632,8 +1704,9 @@ function mob_class:smart_mobs(s, p, dist, dtime)
 			-- will try again in 2 second
 			self.path.stuck_timer = stuck_timeout - 2
 
-			-- frustration! cant find the damn path :(
-			--self:mob_sound(self.sounds.random)
+	elseif s.y < p1.y and (not self.fly) then
+			self:do_jump() --add jump to pathfinding
+			self.path.following = true
 		else
 			-- yay i found path
 			self:mob_sound(self.sounds.war_cry)
@@ -1671,6 +1744,7 @@ function mob_class:general_attack()
 
 	-- return if already attacking, passive or docile during day
 	if self.passive
+	or self.state == "runaway"
 	or self.state == "attack"
 	or self:day_docile() then
 		return
@@ -1852,8 +1926,7 @@ end
 function mob_class:follow_flop()
 
 	-- find player to follow
-	if (self.follow ~= ""
-	or self.order == "follow")
+	if (self.follow ~= "" or self.order == "follow")
 	and not self.following
 	and self.state ~= "attack"
 	and self.state ~= "runaway" then
@@ -2059,7 +2132,7 @@ function mob_class:do_states(dtime)
 		if self.water_damage > 0
 		and self.lava_damage > 0 then
 
-			lp = minetest.find_node_near(s, 1, {"group:water", "group:lava"})
+			lp = minetest.find_node_near(s, 1, {"group:water", "group:igniter"})
 
 		elseif self.water_damage > 0 then
 
@@ -2067,16 +2140,13 @@ function mob_class:do_states(dtime)
 
 		elseif self.lava_damage > 0 then
 
-			lp = minetest.find_node_near(s, 1, {"group:lava"})
+			lp = minetest.find_node_near(s, 1, {"group:igniter"})
 		end
 
 		if lp then
 
-			-- if mob in water or lava then look for land
-			if (self.lava_damage
-				and minetest.registered_nodes[self.standing_in].groups.lava)
-			or (self.water_damage
-				and minetest.registered_nodes[self.standing_in].groups.water) then
+			-- if mob in dangerous node then look for land
+			if is_node_dangerous(self, self.standing_in) then
 
 				lp = minetest.find_node_near(s, 5, {"group:soil", "group:stone",
 					"group:sand", node_ice, node_snowblock})
@@ -2121,6 +2191,12 @@ function mob_class:do_states(dtime)
 			yaw = yaw + random(-0.5, 0.5)
 
 			yaw = self:set_yaw(yaw, 8)
+
+			-- for flying/swimming mobs randomly move up and down also
+			if self.fly_in
+			and not self.following then
+				self:attempt_flight_correction(true)
+			end
 		end
 
 		-- stand for great fall in front
@@ -2128,9 +2204,14 @@ function mob_class:do_states(dtime)
 		or self.at_cliff
 		or random(1, 100) <= self.stand_chance then
 
-			self:set_velocity(0)
-			self.state = "stand"
-			self:set_animation("stand", true)
+			-- don't stand if mob flies and keep_flying set
+			if (self.fly and not self.keep_flying)
+			or not self.fly then
+
+				self:set_velocity(0)
+				self.state = "stand"
+				self:set_animation("stand", true)
+			end
 		else
 			self:set_velocity(self.walk_velocity)
 
@@ -2296,7 +2377,7 @@ function mob_class:do_states(dtime)
 						effect(pos, 32, "tnt_smoke.png", nil, nil, node_break_radius, 1, 0)
 					end
 
-					return
+					return true
 				end
 			end
 
@@ -2590,7 +2671,7 @@ function mob_class:falling(pos)
 				effect(pos, 5, "tnt_smoke.png", 1, 2, 2, nil)
 
 				if self:check_for_death({type = "fall"}) then
-					return
+					return true
 				end
 			end
 
@@ -2726,12 +2807,12 @@ function mob_class:on_punch(hitter, tflp, tool_capabilities, dir)
 			minetest.sound_play(weapon_def.sounds[s], {
 				object = self.object,
 				max_hear_distance = 8
-			})
+			}, true)
 		else
 			minetest.sound_play("default_punch", {
 				object = self.object,
 				max_hear_distance = 5
-			})
+			}, true)
 		end
 
 		-- blood_particles
@@ -3172,8 +3253,10 @@ function mob_class:on_step(dtime)
 		self:mob_expire(pos, 0.25)
 	end
 
-	-- check if falling, flying, floating
-	self:falling(pos)
+	-- check if falling, flying, floating and return if player died
+	if self:falling(pos) then
+		return
+	end
 
 	-- smooth rotation by ThomasMonroe314
 
@@ -3273,7 +3356,7 @@ function mob_class:on_step(dtime)
 
 	self:follow_flop()
 
-	self:do_states(dtime)
+	if self:do_states(dtime) then return end
 
 	self:do_jump()
 
@@ -3313,6 +3396,7 @@ minetest.register_entity(name, setmetatable({
 	attack_type = def.attack_type,
 	fly = def.fly,
 	fly_in = def.fly_in,
+	keep_flying = def.keep_flying,
 	owner = def.owner,
 	order = def.order,
 	on_die = def.on_die,
@@ -3654,6 +3738,7 @@ function mobs:register_arrow(name, def)
 		hit_player = def.hit_player,
 		hit_node = def.hit_node,
 		hit_mob = def.hit_mob,
+		hit_object = def.hit_object,
 		drop = def.drop or false, -- drops arrow as registered item when true
 		collisionbox = def.collisionbox or {0, 0, 0, 0, 0, 0},
 		timer = 0,
@@ -3675,7 +3760,8 @@ function mobs:register_arrow(name, def)
 			local pos = self.object:get_pos()
 
 			if self.switch == 0
-			or self.timer > 150 then
+			or self.timer > 150
+			or within_limits(pos, 0) then
 
 				self.object:remove() ; -- print ("removed arrow")
 
@@ -3748,6 +3834,19 @@ function mobs:register_arrow(name, def)
 
 						return
 					end
+
+					if entity
+					and self.hit_object
+					and (not entity._cmi_is_mob)
+					and tostring(player) ~= self.owner_id
+					and entity.name ~= self.object:get_luaentity().name then
+
+						self:hit_object(player)
+
+						self.object:remove();  -- print ("hit object")
+
+						return
+					end
 				end
 			end
 
@@ -3773,7 +3872,7 @@ function mobs:safe_boom(self, pos, radius)
 		pos = pos,
 		gain = 1.0,
 		max_hear_distance = self.sounds and self.sounds.distance or 32
-	})
+	}, true)
 
 	entity_physics(pos, radius)
 
