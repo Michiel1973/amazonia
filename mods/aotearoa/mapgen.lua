@@ -31,7 +31,7 @@ local ocean_min = basement_max - 2
 ------------
 --beaches
 local beach_max = 3
-local beach_min = ocean_max -2
+local beach_min = -23
 --dunes
 local dune_max = 5
 local dune_min = 2
