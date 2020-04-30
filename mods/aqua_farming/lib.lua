@@ -34,20 +34,20 @@ function aqua_farming.register_abm(nodename, newnodename, delay, percent)
     if(minetest.registered_nodes[nodename] ~= nil or minetest.registered_nodes[newnodename] ~= nil) then
 
         if(delay == nil) then
-            delay = 1
+            delay = 180
 
         end -- if(delay
 
         if(percent == nil) then
-            percent = 1
+            percent = 9000
 
         end -- if(percent
 
         minetest.register_abm({
             nodenames = {nodename},
             neighbors = {"default:water_source", "default:river_water_source"},
-            interval = delay, -- Run every 5 seconds
-            chance = percent, -- Select every 1 in 50 nodes
+            interval = 180
+            chance = 900
             action = function(pos, node, active_object_count, active_object_count_wider)
                 local nodepos = pos
                 if(aqua_farming.check_water(nodepos)) then
@@ -134,6 +134,8 @@ function aqua_farming.register_plant(node_def)
     local abm_name, next_abm
     abm_name = modname .. ":" .. nodename .. "_seed"
     next_abm = modname .. ":" .. nodename .. "_1"
+	node_def.delay = 300
+	node_def.chance = 1000
     aqua_farming.register_abm(abm_name, next_abm, node_def.delay, node_def.chance)
 
     for step = 1, node_def.steps - 1  do
@@ -166,6 +168,8 @@ function aqua_farming.register_plant(node_def)
 
         abm_name = modname .. ":" .. nodename .. "_" .. step
         next_abm = modname .. ":" .. nodename .. "_" .. step + 1
+		node_def.delay = 300
+		node_def.chance = 1000
         aqua_farming.register_abm(abm_name, next_abm, node_def.delay, node_def.chance)
 
     end -- for step
