@@ -56,32 +56,32 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("glooptest:upgrade_core", {
-	description = "Upgrade Core",
-	inventory_image = "glooptest_upgrade_core.png",
-})
+-- minetest.register_craftitem("glooptest:upgrade_core", {
+	-- description = "Upgrade Core",
+	-- inventory_image = "glooptest_upgrade_core.png",
+-- })
 
-minetest.register_craft({
-	output = "glooptest:upgrade_core",
-	recipe = {
-		{"glooptest:akalin_ingot", "glooptest:crystal_glass", "glooptest:akalin_ingot"},
-		{"glooptest:crystal_glass", "default:mese_crystal_fragment", "glooptest:crystal_glass"},
-		{"glooptest:akalin_ingot", "glooptest:crystal_glass", "glooptest:akalin_ingot"},
-	},
-})
+-- minetest.register_craft({
+	-- output = "glooptest:upgrade_core",
+	-- recipe = {
+		-- {"glooptest:akalin_ingot", "glooptest:crystal_glass", "glooptest:akalin_ingot"},
+		-- {"glooptest:crystal_glass", "default:mese_crystal_fragment", "glooptest:crystal_glass"},
+		-- {"glooptest:akalin_ingot", "glooptest:crystal_glass", "glooptest:akalin_ingot"},
+	-- },
+-- })
 
-if LOAD_ORE_MODULE == true then
-	minetest.register_craftitem("glooptest:encrusting_upgrade", {
-		description = "Encrusting Upgrade",
-		inventory_image = "glooptest_encrusting_upgrade.png",
-	})
+-- if LOAD_ORE_MODULE == true then
+	-- minetest.register_craftitem("glooptest:encrusting_upgrade", {
+		-- description = "Encrusting Upgrade",
+		-- inventory_image = "glooptest_encrusting_upgrade.png",
+	-- })
 	
-	minetest.register_craft({
-		output = "glooptest:encrusting_upgrade",
-		recipe = {
-			{"group:glooptest_gem", "group:glooptest_gem", "group:glooptest_gem"},
-			{"glooptest:hammer_steel", "glooptest:upgrade_core", "glooptest:handsaw_steel"},
-			{"group:glooptest_gem", "group:glooptest_gem", "group:glooptest_gem"},
-		},
-	})
-end
+	-- minetest.register_craft({
+		-- output = "glooptest:encrusting_upgrade",
+		-- recipe = {
+			-- {"group:glooptest_gem", "group:glooptest_gem", "group:glooptest_gem"},
+			-- {"glooptest:hammer_steel", "glooptest:upgrade_core", "glooptest:handsaw_steel"},
+			-- {"group:glooptest_gem", "group:glooptest_gem", "group:glooptest_gem"},
+		-- },
+	-- })
+-- end
