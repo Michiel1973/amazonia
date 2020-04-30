@@ -6,15 +6,15 @@ local S = minetest.get_translator("flowers_plus")
 
 flowers_plus = {}
 
-local SPAWN_DELAY = 1000
-local SPAWN_CHANCE = 200
+local SPAWN_DELAY = 2000
+local SPAWN_CHANCE = 400
 local flowers_seed_diff = 329
-local lilies_max_count = 320
-local lilies_rarity = 33
-local seaweed_max_count = 320
-local seaweed_rarity = 33
-local sunflowers_max_count = 10
-local sunflowers_rarity = 25
+local lilies_max_count = 50
+local lilies_rarity = 50
+local seaweed_max_count = 50
+local seaweed_rarity = 50
+local sunflowers_max_count = 5
+local sunflowers_rarity = 50
 
 -- register the various rotations of waterlilies
 
