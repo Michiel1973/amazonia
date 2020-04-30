@@ -596,7 +596,7 @@ minetest.register_ore({
 	clust_num_ores = 3,
 	clust_size     = 2,
 	y_min          = sea_level,
-	y_max          = 31000,
+	y_max          = 4096,
 })
 
 minetest.register_ore({
@@ -617,7 +617,7 @@ minetest.register_ore({
 	clust_scarcity = 36 * 36 * 36,
 	clust_num_ores = 3,
 	clust_size     = 2,
-	y_min          = -31000,
+	y_min          = -9000,
 	y_max          = sea_level - 1,
 })
 
