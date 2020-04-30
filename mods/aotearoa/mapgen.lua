@@ -34,22 +34,22 @@ local beach_max = 3
 local beach_min = ocean_max -2
 --dunes
 local dune_max = 5
-local dune_min = beach_max -2
+local dune_min = 2
 --coastal forest etc
 local coastf_max = 14
-local coastf_min = dune_max -2
+local coastf_min = 5
 --lowland forest etc
-local lowf_max = 70
-local lowf_min = coastf_max -2
+local lowf_max = 40
+local lowf_min = 20
 --highland forest etc
 local highf_max = 110
-local highf_min = lowf_max -2
+local highf_min = 70
 --alpine
-local alp_max = 140
-local alp_min = highf_max -2
+local alp_max = 160
+local alp_min = 125
 --high alpine
 local high_alp_max = 31000
-local high_alp_min = alp_max -2
+local high_alp_min = 180
 
 
 ------------
