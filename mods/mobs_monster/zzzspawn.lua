@@ -1,14 +1,14 @@
 -- TOPOLOGY
 -- caverealms  -1500  to -10033
 -- CR DM       -8000  to -9999
--- DF level 1  -10033 to -12032
+-- DF level 1  -10033 to -12032 - break point (no monsters)
 -- DF level 2  -12032 to -14032
 -- DF level 3  -14032 to -15072
--- Sunless Sea -15072 to -16000
+-- Sunless Sea -15072 to -16000 - break point (no monsters)
 -- Oil Sea     -16000 to -17000
 -- Lava Sea    -17000 to -18000
 -- Underworld  -18000 to -19073
--- Primordial  -19073 to -22032
+-- Primordial  -19073 to -22032 - break point (no monsters)
 -- Nether      -25000 to -30000
 
 --mobs:spawn_specific (name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height, day_toggle, on_spawn)
