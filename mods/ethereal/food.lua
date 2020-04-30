@@ -29,8 +29,6 @@ minetest.register_node("ethereal:banana", {
 	end,
 })
 
-
-
 -- Banana Dough
 minetest.register_craftitem("ethereal:banana_dough", {
 	description = S("Banana Dough"),
@@ -168,7 +166,6 @@ minetest.register_craftitem("ethereal:hearty_stew", {
 	wield_image = "hearty_stew.png",
 	on_use = minetest.item_eat(10, "ethereal:bowl"),
 })
-
 
 minetest.register_craft({
 	output = "ethereal:hearty_stew",

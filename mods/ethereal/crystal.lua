@@ -245,9 +245,13 @@ minetest.register_tool("ethereal:shovel_crystal", {
 	wield_image = "crystal_shovel.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
-		groupcaps={
-			crumbly = {times={[1]=1.10, [2]=0.50, [3]=0.30}, uses=30, maxlevel=3},
+		max_drop_level = 1,
+		groupcaps = {
+			crumbly = {
+				times = {[1] = 1.10, [2] = 0.50, [3] = 0.30},
+				uses = 30,
+				maxlevel = 3
+			},
 		},
 		damage_groups = {fleshy = 4},
 	},
