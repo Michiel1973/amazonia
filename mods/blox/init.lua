@@ -563,22 +563,22 @@ minetest.register_craft({
 
 -- Tools
 
-minetest.register_tool("blox:bloodbane", {
-    description = "Blood Bane",
-    inventory_image = "blox_bloodbane.png",
-    tool_capabilities = {
-        full_punch_interval = 0.2,
-        max_drop_level=1,
-        groupcaps={
-            fleshy={times={[1]=0.001, [2]=0.001, [3]=0.001}, uses=0, maxlevel=3},
-            snappy={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3},
-			crumbly={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3},
-            cracky={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3},
-            choppy={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3}
-        },
-		damage_groups = {fleshy=200},
-    }
-})
+-- minetest.register_tool("blox:bloodbane", {
+    -- description = "Blood Bane",
+    -- inventory_image = "blox_bloodbane.png",
+    -- tool_capabilities = {
+        -- full_punch_interval = 0.2,
+        -- max_drop_level=1,
+        -- groupcaps={
+            -- fleshy={times={[1]=0.001, [2]=0.001, [3]=0.001}, uses=0, maxlevel=3},
+            -- snappy={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3},
+			-- crumbly={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3},
+            -- cracky={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3},
+            -- choppy={times={[1]=0.01, [2]=0.01, [3]=0.01}, uses=0, maxlevel=3}
+        -- },
+		-- damage_groups = {fleshy=200},
+    -- }
+-- })
 
 -- Ores
 
@@ -596,7 +596,7 @@ minetest.register_ore({
 	clust_num_ores = 3,
 	clust_size     = 2,
 	y_min          = sea_level,
-	y_max          = 31000,
+	y_max          = 4096,
 })
 
 minetest.register_ore({
@@ -617,7 +617,7 @@ minetest.register_ore({
 	clust_scarcity = 36 * 36 * 36,
 	clust_num_ores = 3,
 	clust_size     = 2,
-	y_min          = -31000,
+	y_min          = -9000,
 	y_max          = sea_level - 1,
 })
 
