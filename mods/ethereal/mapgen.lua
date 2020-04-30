@@ -89,7 +89,7 @@ if ethereal.glacier == 1 then
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
 		y_min = -8,
-		y_max = 31000,
+		y_max = 30,
         vertical_blend = 3,
         horizontal_blend = 4,
 		heat_point = 0,
@@ -139,14 +139,14 @@ add_biome("mesa_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 25, 28, 3,4,ethereal.mesa)
 
 add_biome("alpine", nil, "default:dirt_with_snow", 1, "default:dirt", 2,
-	nil, nil, nil, nil, nil, 40, 190, 10, 40, 3,4,ethereal.alpine)
+	nil, nil, nil, nil, nil, 110, 190, 10, 40, 3,4,ethereal.alpine)
 
 if minetest.registered_nodes["default:dirt_with_coniferous_litter"] then
 add_biome("snowy", nil, "default:dirt_with_coniferous_litter", 1, "default:dirt",
 	2, nil, nil, nil, nil, nil, 4, 30, 10, 40, 3,4,ethereal.snowy)
 else
 add_biome("snowy", nil, "ethereal:cold_dirt", 1, "default:dirt", 2,
-	nil, nil, nil, nil, nil, 4, 30, 10, 40, 3,4,ethereal.snowy)
+	nil, nil, nil, nil, nil, 4, 35, 10, 40, 3,4,ethereal.snowy)
 end
 
 add_biome("frost", nil, "ethereal:crystal_dirt", 1, "default:dirt", 3,
@@ -158,7 +158,7 @@ add_biome("frost_ocean", nil, "default:sand", 1, "default:sand", 2,
 add_biome("grassy", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
 	nil, nil, nil, nil, nil, 3, 61, 13, 40, 3,4,ethereal.grassy)
 
-add_biome("grassy_ocean", nil, "defaut:sand", 2, "default:gravel", 1,
+add_biome("grassy_ocean", nil, "default:sand", 2, "default:gravel", 1,
 	nil, nil, nil, nil, nil, -31000, 3, 13, 40, 3,4,ethereal.grassy)
 
 add_biome("caves", nil, "default:desert_stone", 3, "air", 8,
@@ -176,13 +176,13 @@ else
 end
 
 add_biome("grassytwo", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 30, 91, 15, 40, 3,4,ethereal.grassytwo)
+	nil, nil, nil, nil, nil, 30, 71, 15, 40, 3,4,ethereal.grassytwo)
 
 add_biome("grassytwo_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 15, 40, 3,4,ethereal.grassytwo)
 
 add_biome("prairie", nil, "ethereal:prairie_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 36, 20, 40, 3,4,ethereal.prairie)
+	nil, nil, nil, nil, nil, 10, 46, 20, 40, 3,4,ethereal.prairie)
 
 add_biome("prairie_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 20, 40, 3,4,ethereal.prairie)
@@ -198,7 +198,7 @@ if minetest.registered_nodes["default:dirt_with_rainforest_litter"] then
 		nil, nil, nil, nil, nil, 5, 71, 30, 60, 3,4,ethereal.junglee)
 else
 	add_biome("junglee", nil, "ethereal:jungle_dirt", 1, "default:dirt", 3,
-		nil, nil, nil, nil, nil, 5, 71, 30, 60, 3,4,ethereal.junglee)
+		nil, nil, nil, nil, nil, 5, 51, 30, 60, 3,4,ethereal.junglee)
 end
 
 add_biome("junglee_ocean", nil, "default:sand", 1, "default:sand", 2,
@@ -211,7 +211,7 @@ add_biome("grove_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 45, 35, 3,4,ethereal.grove)
 
 add_biome("mushroom", nil, "ethereal:mushroom_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 50, 45, 55, 3,4,ethereal.mushroom)
+	nil, nil, nil, nil, nil, 25, 50, 45, 55, 3,4,ethereal.mushroom)
 
 add_biome("mushroom_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 45, 55, 3,4,ethereal.mushroom)
@@ -232,13 +232,13 @@ add_biome("plains_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 55, 25, 3,4,ethereal.plains)
 
 add_biome("savannah", nil, "default:dirt_with_dry_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 60, 55, 25, 3,4,ethereal.savannah)
+	nil, nil, nil, nil, nil, 8, 60, 55, 25, 3,4,ethereal.savannah)
 
 add_biome("savannah_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 55, 25, 3,4,ethereal.savannah)
 
 add_biome("fiery", nil, "ethereal:fiery_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 5, 40, 75, 10, 3,4,ethereal.fiery)
+	nil, nil, nil, nil, nil, 5, 50, 75, 10, 3,4,ethereal.fiery)
 
 add_biome("fiery_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 4, 75, 10, 3,4,ethereal.fiery)
@@ -247,7 +247,7 @@ add_biome("sandclay", nil, "default:sand", 3, "default:clay", 2,
 	nil, nil, nil, nil, nil, 1, 21, 65, 2, 3,4,ethereal.sandclay)
 
 add_biome("swamp", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 1, 15, 80, 90, 3,4,ethereal.swamp)
+	nil, nil, nil, nil, nil, 1, 18, 80, 90, 3,4,ethereal.swamp)
 
 add_biome("swamp_ocean", nil, "default:sand", 2, "default:clay", 2,
 	nil, nil, nil, nil, nil, -192, 1, 80, 90, 3,4,ethereal.swamp)
@@ -301,7 +301,7 @@ add_schem({"default:dirt_with_dry_grass"}, 0.0025, {"mesa"}, 1, 100, ethereal.re
 add_schem({"ethereal:grove_dirt"}, 0.005, {"grove"}, 1, 100, ethereal.bananatree, ethereal.grove)
 
 -- healing tree
-add_schem({"default:dirt_with_snow"}, 0.01, {"alpine"}, 120, 140, ethereal.yellowtree, ethereal.alpine)
+add_schem({"default:dirt_with_snow"}, 0.01, {"alpine"}, 90, 190, ethereal.yellowtree, ethereal.alpine)
 
 -- crystal frost tree
 add_schem({"ethereal:crystal_dirt"}, 0.01, {"frost"}, 1, 100, ethereal.frosttrees, ethereal.frost)
