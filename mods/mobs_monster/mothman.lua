@@ -1,0 +1,67 @@
+mobs:register_mob("mobs_monster:mothman", {
+   type = "monster",
+   passive = false,
+   attacks_monsters = false,
+   damage = 30,
+   reach = 3,
+   glow = 5,
+   attack_type = "dogfight",
+   hp_min = 60,
+   hp_max = 85,
+   armor = 80,
+   collisionbox = {-0.3, -0.3, -0.3, 0.3, 0.3, 0.3},
+   visual = "mesh",
+   mesh = "mothman.b3d",
+   textures = {
+      {"mothman.png"},
+   },
+   blood_amount = 60,
+   blood_texture = "blood_effect.png",
+   visual_size = {x=3, y=3},
+   makes_footstep_sound = true,
+   	sounds = {
+		random = "mothman1",
+		attack = "mothman2",
+	},
+   walk_velocity = 3,
+   run_velocity = 5,
+   stand_chance = 30,
+   walk_chance = 70,
+   jump = true,
+   fly = true,
+   do_custom = function(self)
+	local pos = self.object:getpos()
+		minetest.add_particle({
+			pos = {x=pos.x+math.random(-1,1)/10, y=pos.y, z=pos.z+math.random(-1,1)/10},
+			velocity = {x=0, y=-1, z=0},
+			acceleration = {x=math.random(-2,2)/10, y=math.random(-5,-2)/10, z=math.random(-2,2)/10},
+			expirationtime = math.random(5,17)/10,
+			size = math.random(3,5),
+			collisiondetection = false,
+			collisionremoval = false,
+			vertical = false,
+			texture = "mothman_dust.png",
+			glow = 5
+		})
+   end,
+   fall_speed = 0,
+   stepheight = 5,
+   water_damage = 2,
+   lava_damage = 0,
+   light_damage = 0,
+   view_range = 12,
+   animation = {
+      speed_normal = 20,
+      speed_run = 33,
+      walk_start = 1,
+      walk_end = 11,
+      stand_start = 1,
+      stand_end = 11,
+      run_start = 1,
+      run_end = 11,
+      punch_start = 1,
+      punch_end = 11,
+   },
+})
+
+mobs:register_egg("mobs_monster:mothman", "Mothman", "mothman_orb.png", 1)

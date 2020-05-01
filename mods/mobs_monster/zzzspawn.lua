@@ -16,6 +16,7 @@
 
 --caverealms monsters -1500  to -10033
 
+--deep caves (-6000 to -8000)
 
 mobs:spawn_specific ("mobs_monster:magma_cube_big", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 30, 300, 1, -8000, -6000)
 
@@ -32,7 +33,11 @@ mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "c
 -- DF level 2  -12032 to -14032
 mobs:spawn_specific ("mobs_monster:slime_big", {"df_mapitems:dirt_with_cave_moss", "df_trees:goblin_cap"}, "air", 0, 10, 60, 100, 2, -14032, -12032)
 
--- DF level 3  -14032 to -15072
+-- DF level 3  -14032 to 15072
+
+mobs:spawn_specific("mobs_monster:mothman", "df_trees:black_cap", "air", 0, 12, 30, 300, 2, -15072, -14032)
+
+-- Sunless Sea -15072 to -16000 - break point (no monsters)
 
 -- Lava Sea -17000 to -18000
 
@@ -42,7 +47,7 @@ mobs:spawn_specific ("mobs_monster:lava_flan", {"default:lava_source", "default:
 
 mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", "air", 0, 7, 90, 1000, 1, -19073, -17500)
 
-
+-- Primordial  -19073 to -22032 - break point (no monsters)
 
 -- Nether
 mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 500, 2, -30900, -25100)
