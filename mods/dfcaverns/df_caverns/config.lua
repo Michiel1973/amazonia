@@ -12,7 +12,7 @@ local CONFIG_FILE_PREFIX = "dfcaverns_"
 -- lava sea         -17000
 -- underworld       -18000
 -- primordial start -19073
--- primordial end   -21032
+-- primordial end   -21072
 -- nether           -25000
 -- basement floor   -31000
 
@@ -67,4 +67,4 @@ setting("int", "underworld_glowing_pit_mapblocks", 8, "Average pit spacing measu
 
 setting("bool", "enable_primordial", true, "Enable primordial cavern")
 setting("int", "primordial_max", -19073, "Upper limit to primordial caverns")
-setting("int", "primordial_min", -21032, "Lower limit to primordial caverns")
+setting("int", "primordial_min", -21072, "Lower limit to primordial caverns")
