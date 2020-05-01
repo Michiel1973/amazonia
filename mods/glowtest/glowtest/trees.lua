@@ -834,47 +834,47 @@ minetest.register_abm({
     interval = 113,
     chance = 60,
     action = function(pos, node, active_object_count, active_object_count_wider)
-		if node == "glowtest:sgreensapling"
+		if node == "glowtest:sgreensapling" then
 		glowtest_sgreentree(pos)
-		elseif node == "glowtest:mgreensapling"
+		elseif node == "glowtest:mgreensapling" then
 		glowtest_mgreentree(pos)
-		elseif node == "glowtest:lgreensapling"
+		elseif node == "glowtest:lgreensapling" then
 		glowtest_lgreentree(pos)
-		elseif node == "glowtest:sbluesapling"
+		elseif node == "glowtest:sbluesapling" then
 		glowtest_sbluetree(pos)
-		elseif node == "glowtest:mbluesapling"
+		elseif node == "glowtest:mbluesapling" then
 		glowtest_mbluetree(pos)
-		elseif node == "glowtest:lbluesapling"
+		elseif node == "glowtest:lbluesapling" then
 		glowtest_lbluetree(pos)
-		elseif node == "glowtest:spinksapling"
+		elseif node == "glowtest:spinksapling" then
 		glowtest_spinktree(pos)
-		elseif node == "glowtest:mpinksapling"
+		elseif node == "glowtest:mpinksapling" then
 		glowtest_mpinktree(pos)
-		elseif node == "glowtest:lpinksapling"
+		elseif node == "glowtest:lpinksapling" then
 		glowtest_lpinktree(pos)
-		elseif node == "glowtest:syellowsapling"
+		elseif node == "glowtest:syellowsapling" then
 		glowtest_syellowtree(pos)
-		elseif node == "glowtest:myellowsapling"
+		elseif node == "glowtest:myellowsapling" then
 		glowtest_myellowtree(pos)
-		elseif node == "glowtest:lyellowsapling"
+		elseif node == "glowtest:lyellowsapling" then
 		glowtest_lyellowtree(pos)
-		elseif node == "glowtest:swhitesapling"
+		elseif node == "glowtest:swhitesapling" then
 		glowtest_swhitetree(pos)
-		elseif node == "glowtest:mwhitesapling"
+		elseif node == "glowtest:mwhitesapling" then
 		glowtest_mwhitetree(pos)
-		elseif node == "glowtest:lwhitesapling"
+		elseif node == "glowtest:lwhitesapling" then
 		glowtest_lwhitetree(pos)
-		elseif node == "glowtest:sredsapling"
+		elseif node == "glowtest:sredsapling" then
 		glowtest_sredtree(pos)
-		elseif node == "glowtest:mredsapling"
+		elseif node == "glowtest:mredsapling" then
 		glowtest_mredtree(pos)
-		elseif node == "glowtest:lredsapling"
+		elseif node == "glowtest:lredsapling" then
 		glowtest_lredtree(pos)
-		elseif node == "glowtest:sblacksapling"
+		elseif node == "glowtest:sblacksapling" then
 		glowtest_sblacktree(pos)
-		elseif node == "glowtest:mblacksapling"
+		elseif node == "glowtest:mblacksapling" then
 		glowtest_mblacktree(pos)
-		elseif node == "glowtest:lblacksapling"
+		elseif node == "glowtest:lblacksapling" then
 		glowtest_lblacktree(pos)
 		end
     end,
