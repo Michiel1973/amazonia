@@ -230,29 +230,29 @@ minetest.register_node("church_altar:altar_middle_marble", {
 -- Register ABM
 -------------------
 -- suck in items [code by jordan4ibanez / from the Hopper mod]
-minetest.register_abm({
-	nodenames = {"church_altar:altar_middle_stone", "church_altar:altar_middle_marble"},
-	interval = 4.0,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local meta = minetest.get_meta(pos)
-		local inv = meta:get_inventory()
-		local posob
+-- minetest.register_abm({
+	-- nodenames = {"church_altar:altar_middle_stone", "church_altar:altar_middle_marble"},
+	-- interval = 4.0,
+	-- chance = 1,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- local meta = minetest.get_meta(pos)
+		-- local inv = meta:get_inventory()
+		-- local posob
 
-		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do
-			if not object:is_player() and object:get_luaentity() and object:get_luaentity().name == "__builtin:item" then
-				if inv and inv:room_for_item("main", ItemStack(object:get_luaentity().itemstring)) then
-					posob = object:getpos()
-					if math.abs(posob.x-pos.x) <= 1.5 and (posob.y-pos.y <= 0.85 and posob.y-pos.y >= 0.3) then
-						inv:add_item("main", ItemStack(object:get_luaentity().itemstring))
-						object:get_luaentity().itemstring = ""
-						object:remove()
-					end
-				end
-			end
-		end
-	end,
-})
+		-- for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do
+			-- if not object:is_player() and object:get_luaentity() and object:get_luaentity().name == "__builtin:item" then
+				-- if inv and inv:room_for_item("main", ItemStack(object:get_luaentity().itemstring)) then
+					-- posob = object:getpos()
+					-- if math.abs(posob.x-pos.x) <= 1.5 and (posob.y-pos.y <= 0.85 and posob.y-pos.y >= 0.3) then
+						-- inv:add_item("main", ItemStack(object:get_luaentity().itemstring))
+						-- object:get_luaentity().itemstring = ""
+						-- object:remove()
+					-- end
+				-- end
+			-- end
+		-- end
+	-- end,
+-- })
 
 -----------------------------
 -- Register Craft Recipes

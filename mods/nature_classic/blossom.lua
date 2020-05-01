@@ -42,7 +42,7 @@ minetest.register_craft({
 -- Run ABM with higher frequency, but don't enqueue all blocks
 minetest.register_abm({
     nodenames = { nature.blossom_leaves },
-    interval = 5000,
+    interval = 4591,
     chance = nature.leaves_blossom_chance,
 
     action = function(pos, node, active_object_count, active_object_count_wider)
@@ -57,7 +57,7 @@ minetest.register_abm({
 -- Run ABM with higher frequency, but don't enqueue all blocks
 minetest.register_abm({
     nodenames = { nature.blossom_node },
-    interval = 5000,
+    interval = 4597,
     chance = nature.blossom_leaves_chance,
 
     action = function(pos, node, active_object_count, active_object_count_wider)
@@ -72,7 +72,7 @@ minetest.register_abm({
 -- spawn apples with 25% chance, but with 4 times higher frequency
 minetest.register_abm({
     nodenames = { nature.blossom_node },
-    interval = 2000,
+    interval = 2113,
     chance = nature.apple_chance,
 
     action = function(pos, node, active_object_count, active_object_count_wider)

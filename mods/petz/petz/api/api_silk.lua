@@ -46,7 +46,7 @@ minetest.register_node("petz:silkworm_eggs", {
 minetest.register_abm({
     nodenames = {"petz:silkworm_eggs"},
     neighbors = {},
-    interval = 300.0, -- Run every 5 minuts
+    interval = 317, -- Run every 5 minuts
     chance = 3, -- Select every 1 in 5 nodes
     action = function(pos, node, active_object_count, active_object_count_wider)
 		if not minetest.registered_entities["petz:silkworm"] then
@@ -82,7 +82,7 @@ minetest.register_abm({
 minetest.register_abm({
     nodenames = {"petz:cocoon"},
     neighbors = {},
-    interval = 600.0, -- Run every 10 minuts
+    interval = 617, -- Run every 10 minuts
     chance = 3, -- Select every 1 in 5 nodes
     action = function(pos, node, active_object_count, active_object_count_wider)
 		if not minetest.registered_entities["petz:moth"] then

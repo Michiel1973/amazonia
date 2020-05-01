@@ -835,39 +835,39 @@ end
 -- end
 -- })
 
-minetest.register_abm({
-nodenames = {"sea_plants:seaplantsdirtkelpbrown"},
-interval = 5000,
-chance = 500,
-action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-	if (active_object_count_wider + active_object_count_wider) > 10 then
-		return
-			elseif (minetest.get_node(yp).name == "default:water_source")
-	or (minetest.get_node(yp).name == "default:river_water_source") then
-		--pos.y = pos.y - 1
-		minetest.add_node(pos, {name = "sea_plants:kelpbrown"}) else
-		return
-	end
-end
-})
+-- minetest.register_abm({
+-- nodenames = {"sea_plants:seaplantsdirtkelpbrown"},
+-- interval = 5000,
+-- chance = 500,
+-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
+	-- if (active_object_count_wider + active_object_count_wider) > 10 then
+		-- return
+			-- elseif (minetest.get_node(yp).name == "default:water_source")
+	-- or (minetest.get_node(yp).name == "default:river_water_source") then
+		-- --pos.y = pos.y - 1
+		-- minetest.add_node(pos, {name = "sea_plants:kelpbrown"}) else
+		-- return
+	-- end
+-- end
+-- })
 
-minetest.register_abm({
-nodenames = {"sea_plants:seaplantssandkelpbrown"},
-interval = 6000,
-chance = 600,
-action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-	if (active_object_count_wider + active_object_count_wider) > 10 then
-		return
-			elseif (minetest.get_node(yp).name == "default:water_source")
-	or (minetest.get_node(yp).name == "default:river_water_source") then
-		--pos.y = pos.y - 1
-		minetest.add_node(pos, {name = "sea_plants:kelpbrown"}) else
-		return
-	end
-end
-})
+-- minetest.register_abm({
+-- nodenames = {"sea_plants:seaplantssandkelpbrown"},
+-- interval = 6000,
+-- chance = 600,
+-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
+	-- if (active_object_count_wider + active_object_count_wider) > 10 then
+		-- return
+			-- elseif (minetest.get_node(yp).name == "default:water_source")
+	-- or (minetest.get_node(yp).name == "default:river_water_source") then
+		-- --pos.y = pos.y - 1
+		-- minetest.add_node(pos, {name = "sea_plants:kelpbrown"}) else
+		-- return
+	-- end
+-- end
+-- })
 
 -- minetest.register_abm({
 -- nodenames = {"sea_plants:kelpbrown"},
@@ -895,81 +895,81 @@ end
 -- end
 -- })
 
-minetest.register_abm({
-nodenames = {"sea_plants:seaplantsdirtseagrassgreen"},
-interval = 6000,
-chance = 600,
-action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-	if (active_object_count_wider + active_object_count_wider) > 10 then
-		return
-			elseif (minetest.get_node(yp).name == "default:water_source")
-	or (minetest.get_node(yp).name == "default:river_water_source") 
-	then
-		--pos.y = pos.y - 1
-		minetest.add_node(pos, {name = "sea_plants:seagrassgreen"}) 
-		else
-		return
-	end
-end
-})
+-- minetest.register_abm({
+-- nodenames = {"sea_plants:seaplantsdirtseagrassgreen"},
+-- interval = 6000,
+-- chance = 600,
+-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
+	-- if (active_object_count_wider + active_object_count_wider) > 10 then
+		-- return
+			-- elseif (minetest.get_node(yp).name == "default:water_source")
+	-- or (minetest.get_node(yp).name == "default:river_water_source") 
+	-- then
+		-- --pos.y = pos.y - 1
+		-- minetest.add_node(pos, {name = "sea_plants:seagrassgreen"}) 
+		-- else
+		-- return
+	-- end
+-- end
+-- })
 
-minetest.register_abm({
-nodenames = {"sea_plants:seaplantssandseagrassgreen"},
-interval = 6000,
-chance = 600,
-action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-	if (active_object_count_wider + active_object_count_wider) > 10 then
-		return
-			elseif (minetest.get_node(yp).name == "default:water_source")
-	or (minetest.get_node(yp).name == "default:river_water_source") 
-	then
-		--pos.y = pos.y - 1
-		minetest.add_node(pos, {name = "sea_plants:seagrassgreen"}) 
-		else
-		return
-	end
-end
-})
+-- minetest.register_abm({
+-- nodenames = {"sea_plants:seaplantssandseagrassgreen"},
+-- interval = 6000,
+-- chance = 600,
+-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
+	-- if (active_object_count_wider + active_object_count_wider) > 10 then
+		-- return
+			-- elseif (minetest.get_node(yp).name == "default:water_source")
+	-- or (minetest.get_node(yp).name == "default:river_water_source") 
+	-- then
+		-- --pos.y = pos.y - 1
+		-- minetest.add_node(pos, {name = "sea_plants:seagrassgreen"}) 
+		-- else
+		-- return
+	-- end
+-- end
+-- })
 
-minetest.register_abm({
-nodenames = {"sea_plants:seaplantsdirtseagrassred"},
-interval = 6000,
-chance = 600,
-action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-	if (active_object_count_wider + active_object_count_wider) > 10 then
-		return
-			elseif (minetest.get_node(yp).name == "default:water_source")
-	or (minetest.get_node(yp).name == "default:river_water_source") 
-	then
-		--pos.y = pos.y - 1
-		minetest.add_node(pos, {name = "sea_plants:seagrassred"}) 
-		else
-		return
-	end
-end
-})
+-- minetest.register_abm({
+-- nodenames = {"sea_plants:seaplantsdirtseagrassred"},
+-- interval = 6000,
+-- chance = 600,
+-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
+	-- if (active_object_count_wider + active_object_count_wider) > 10 then
+		-- return
+			-- elseif (minetest.get_node(yp).name == "default:water_source")
+	-- or (minetest.get_node(yp).name == "default:river_water_source") 
+	-- then
+		-- --pos.y = pos.y - 1
+		-- minetest.add_node(pos, {name = "sea_plants:seagrassred"}) 
+		-- else
+		-- return
+	-- end
+-- end
+-- })
 
-minetest.register_abm({
-nodenames = {"sea_plants:seaplantssandseagrassred"},
-interval = 6000,
-chance = 600,
-action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-	if (active_object_count_wider + active_object_count_wider) > 10 then
-		return
-			elseif (minetest.get_node(yp).name == "default:water_source")
-	or (minetest.get_node(yp).name == "default:river_water_source") 
-	then
-		pos.y = pos.y -1
-		minetest.add_node(pos, {name = "sea_plants:seagrassred"}) 
-		else
-		return
-	end
-end
-})
+-- minetest.register_abm({
+-- nodenames = {"sea_plants:seaplantssandseagrassred"},
+-- interval = 6000,
+-- chance = 600,
+-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
+	-- if (active_object_count_wider + active_object_count_wider) > 10 then
+		-- return
+			-- elseif (minetest.get_node(yp).name == "default:water_source")
+	-- or (minetest.get_node(yp).name == "default:river_water_source") 
+	-- then
+		-- pos.y = pos.y -1
+		-- minetest.add_node(pos, {name = "sea_plants:seagrassred"}) 
+		-- else
+		-- return
+	-- end
+-- end
+-- })
 
 
 -- ALIASES

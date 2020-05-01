@@ -189,7 +189,7 @@ minetest.register_craft({
 minetest.register_abm({
     nodenames = {"petz:ducky_nest_egg"},
     neighbors = {},
-    interval = 600.0, -- Run every 10 minuts
+    interval = 607, -- Run every 10 minuts
     chance = 5, -- Select every 1 in 3 nodes
     action = function(pos, node, active_object_count, active_object_count_wider)
         local pos_above = {x = pos.x, y = pos.y +1, z= pos.z}
@@ -208,7 +208,7 @@ minetest.register_abm({
 minetest.register_abm({
     nodenames = {"petz:chicken_nest_egg"},
     neighbors = {},
-    interval = 600.0, -- Run every 10 minuts
+    interval = 613, -- Run every 10 minuts
     chance = 5, -- Select every 1 in 3 nodes
     action = function(pos, node, active_object_count, active_object_count_wider)
         local pos_above = {x = pos.x, y = pos.y +1, z= pos.z}

@@ -280,7 +280,7 @@ end)
 -- nodes added to map before timers were incorporated).
 minetest.register_abm({
 	nodenames = {"group:growing"},
-	interval = 300,
+	interval = 307,
 	chance = 1,
 	catch_up = false,
 	action = function(pos, node)

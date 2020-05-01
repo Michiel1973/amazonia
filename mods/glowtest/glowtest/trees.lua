@@ -828,205 +828,246 @@ end
 
 -- SAPLINGS
 
--- Green Sapling
 
 minetest.register_abm({
-    nodenames = {"glowtest:sgreensapling"},
-    interval = 2000,
-    chance = 120,
+    nodenames = {"group:glowsapling"},
+    interval = 113,
+    chance = 60,
     action = function(pos, node, active_object_count, active_object_count_wider)
+		if node == "glowtest:sgreensapling"
 		glowtest_sgreentree(pos)
-    end,
-})
-
-minetest.register_abm({
-    nodenames = {"glowtest:mgreensapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
+		elseif node == "glowtest:mgreensapling"
 		glowtest_mgreentree(pos)
+		elseif node == "glowtest:lgreensapling"
+		glowtest_lgreentree(pos)
+		elseif node == "glowtest:sbluesapling"
+		glowtest_sbluetree(pos)
+		elseif node == "glowtest:mbluesapling"
+		glowtest_mbluetree(pos)
+		elseif node == "glowtest:lbluesapling"
+		glowtest_lbluetree(pos)
+		elseif node == "glowtest:spinksapling"
+		glowtest_spinktree(pos)
+		elseif node == "glowtest:mpinksapling"
+		glowtest_mpinktree(pos)
+		elseif node == "glowtest:lpinksapling"
+		glowtest_lpinktree(pos)
+		elseif node == "glowtest:syellowsapling"
+		glowtest_syellowtree(pos)
+		elseif node == "glowtest:myellowsapling"
+		glowtest_myellowtree(pos)
+		elseif node == "glowtest:lyellowsapling"
+		glowtest_lyellowtree(pos)
+		elseif node == "glowtest:swhitesapling"
+		glowtest_swhitetree(pos)
+		elseif node == "glowtest:mwhitesapling"
+		glowtest_mwhitetree(pos)
+		elseif node == "glowtest:lwhitesapling"
+		glowtest_lwhitetree(pos)
+		elseif node == "glowtest:sredsapling"
+		glowtest_sredtree(pos)
+		elseif node == "glowtest:mredsapling"
+		glowtest_mredtree(pos)
+		elseif node == "glowtest:lredsapling"
+		glowtest_lredtree(pos)
+		elseif node == "glowtest:sblacksapling"
+		glowtest_sblacktree(pos)
+		elseif node == "glowtest:mblacksapling"
+		glowtest_mblacktree(pos)
+		elseif node == "glowtest:lblacksapling"
+		glowtest_lblacktree(pos)
+		end
     end,
 })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lgreensapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lgreentree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:mgreensapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_mgreentree(pos)
+    -- end,
+-- })
+
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lgreensapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lgreentree(pos)
+    -- end,
+-- })
 
 --Blue Sapling
 
-minetest.register_abm({
-    nodenames = {"glowtest:sbluesapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_sbluetree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:sbluesapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_sbluetree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:mbluesapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_mbluetree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:mbluesapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_mbluetree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lbluesapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lbluetree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lbluesapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lbluetree(pos)
+    -- end,
+-- })
 
 --Pink Sapling
 
-minetest.register_abm({
-    nodenames = {"glowtest:spinksapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_spinktree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:spinksapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_spinktree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:mpinksapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_mpinktree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:mpinksapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_mpinktree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lpinksapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lpinktree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lpinksapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lpinktree(pos)
+    -- end,
+-- })
 
 --Yellow Sapling
 
-minetest.register_abm({
-    nodenames = {"glowtest:syellowsapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_syellowtree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:syellowsapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_syellowtree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:myellowsapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_myellowtree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:myellowsapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_myellowtree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lyellowsapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lyellowtree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lyellowsapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lyellowtree(pos)
+    -- end,
+-- })
 
 --White Sapling
 
-minetest.register_abm({
-    nodenames = {"glowtest:swhitesapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_swhitetree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:swhitesapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_swhitetree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:mwhitesapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_mwhitetree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:mwhitesapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_mwhitetree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lwhitesapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lwhitetree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lwhitesapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lwhitetree(pos)
+    -- end,
+-- })
 
 --Red Sapling
 
-minetest.register_abm({
-    nodenames = {"glowtest:sredsapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_sredtree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:sredsapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_sredtree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:mredsapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_mredtree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:mredsapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_mredtree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lredsapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lredtree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lredsapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lredtree(pos)
+    -- end,
+-- })
 
 --Black Sapling
 
-minetest.register_abm({
-    nodenames = {"glowtest:sblacksapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_sblacktree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:sblacksapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_sblacktree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:mblacksapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_mblacktree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:mblacksapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_mblacktree(pos)
+    -- end,
+-- })
 
-minetest.register_abm({
-    nodenames = {"glowtest:lblacksapling"},
-    interval = 2000,
-    chance = 120,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-		glowtest_lblacktree(pos)
-    end,
-})
+-- minetest.register_abm({
+    -- nodenames = {"glowtest:lblacksapling"},
+    -- interval = 2000,
+    -- chance = 120,
+    -- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- glowtest_lblacktree(pos)
+    -- end,
+-- })

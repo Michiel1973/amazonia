@@ -99,9 +99,9 @@ local date_regrow_abm_spec = {
 		end
 	end
 }
-if moretrees.dates_regrow_pollinated or moretrees.dates_regrow_unpollinated_percent > 0 then
-	minetest.register_abm(date_regrow_abm_spec)
-end
+-- if moretrees.dates_regrow_pollinated or moretrees.dates_regrow_unpollinated_percent > 0 then
+	-- minetest.register_abm(date_regrow_abm_spec)
+-- end
 
 -- Choose male or female palm, and spawn initial dates
 -- (Instead of dates, a dates fruit trunk is generated with the tree. This
@@ -109,7 +109,7 @@ end
 --  hanging dates)
 minetest.register_abm({
 	nodenames = { "moretrees:date_palm_fruit_trunk" },
-	interval = 2300,
+	interval = 2137,
 	chance = 100,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local type
@@ -739,12 +739,12 @@ if moretrees.dates_regrow_pollinated or moretrees.dates_regrow_unpollinated_perc
 			end
 		end,
 	}
-	if minetest.register_lbm then
+	-- if minetest.register_lbm then
 		minetest.register_lbm(spec)
-	else
-		spec.interval = 3557
-		spec.chance = 10
-		minetest.register_abm(spec)
-	end
+	-- else
+		-- spec.interval = 3557
+		-- spec.chance = 10
+		-- minetest.register_abm(spec)
+	-- end
 end
 

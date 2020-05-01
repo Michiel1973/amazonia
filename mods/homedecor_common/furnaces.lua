@@ -181,7 +181,7 @@ function homedecor.register_furnace(name, furnacedef)
 	minetest.register_abm({
 		nodenames = {nname, name_active, nname.."_locked", name_active.."_locked"},
 		label = "furnaces",
-		interval = 1.0,
+		interval = 1,
 		chance = 1,
 		action = function(pos, node, active_object_count, active_object_count_wider)
 			local meta = minetest.get_meta(pos)

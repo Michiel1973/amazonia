@@ -120,7 +120,7 @@ minetest.register_node("df_underworld_items:slade_seal", slade_seal_def)
 minetest.register_abm{
 	label = "slade seal scratching",
 	nodenames = {"df_underworld_items:slade_seal"},
-	interval = 33,
+	interval = 41,
 	chance = 40,
 	catch_up = false,
 	action = function(pos)

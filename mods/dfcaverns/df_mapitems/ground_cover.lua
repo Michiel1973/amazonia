@@ -32,7 +32,7 @@ minetest.register_abm{
 	label = "df_mapitems:cave_moss_spread",
 	nodenames = {"default:dirt"},
 	neighbors = {"df_mapitems:dirt_with_cave_moss"},
-	interval = 120,
+	interval = 1319,
 	chance = 15,
 	catch_up = true,
 	action = function(pos)
@@ -97,7 +97,7 @@ minetest.register_abm{
 	label = "df_mapitems:floor_fungus_spread",
 	nodenames = {"default:cobble"},
 	neighbors = {"df_mapitems:cobble_with_floor_fungus"},
-	interval = 120,
+	interval = 1321,
 	chance = 10,
 	catch_up = true,
 	action = function(pos)
@@ -107,7 +107,7 @@ minetest.register_abm{
 minetest.register_abm{
 	label = "df_mapitems:floor_fungus_thickening",
 	nodenames = {"default:cobble_with_floor_fungus_fine"},
-	interval = 124,
+	interval = 1327,
 	chance = 10,
 	catch_up = true,
 	action = function(pos)

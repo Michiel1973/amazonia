@@ -301,7 +301,7 @@ minetest.register_node("church_candles:honey_bottled", {
 --particle ABM adapted from Bees Mod by bas080
   minetest.register_abm({ --particles
     nodenames = {"church_candles:hive", "church_candles:hive_empty"},
-    interval  = 1600,
+    interval  = 1601,
     chance    = 8000,
     action = function(pos)
     if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
@@ -319,40 +319,40 @@ minetest.register_node("church_candles:honey_bottled", {
     end,
   })
 --bee spawning adapted from glow mod by bdjnk
-minetest.register_abm({
-	nodenames = { "air" },
-	neighbors = {"group:flower"},
-	interval = 1200,
-	chance = 10000,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
-			if minetest.find_node_near(pos, 4, "church_candles:busybees") == nil then
-				minetest.set_node(pos, {name = "church_candles:busybees"})
-				--minetest.sound_play("church_candles_bee", {gain = 0.1, max_hear_distance = 0.2})
-			end
-		end
-	end,
-})
+-- minetest.register_abm({
+	-- nodenames = { "air" },
+	-- neighbors = {"group:flower"},
+	-- interval = 1200,
+	-- chance = 10000,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+-- if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
+			-- if minetest.find_node_near(pos, 4, "church_candles:busybees") == nil then
+				-- minetest.set_node(pos, {name = "church_candles:busybees"})
+				-- --minetest.sound_play("church_candles_bee", {gain = 0.1, max_hear_distance = 0.2})
+			-- end
+		-- end
+	-- end,
+-- })
 
-minetest.register_abm({
-	nodenames = { "air" },
-	neighbors = {"church_candles:hive_wild"},
-	interval = 1200,
-	chance = 5000,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
-			if minetest.find_node_near(pos, 4, "church_candles:busybees") == nil then
-				minetest.set_node(pos, {name = "church_candles:busybees"})
-				--minetest.sound_play("church_candles_bee", {gain = 0.1, max_hear_distance = 0.2})
-			end
-		end
-	end,
-})
+-- minetest.register_abm({
+	-- nodenames = { "air" },
+	-- neighbors = {"church_candles:hive_wild"},
+	-- interval = 1200,
+	-- chance = 5000,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+-- if minetest.env:get_timeofday() >= 0.25 and minetest.env:get_timeofday() < 0.75 then
+			-- if minetest.find_node_near(pos, 4, "church_candles:busybees") == nil then
+				-- minetest.set_node(pos, {name = "church_candles:busybees"})
+				-- --minetest.sound_play("church_candles_bee", {gain = 0.1, max_hear_distance = 0.2})
+			-- end
+		-- end
+	-- end,
+-- })
 
 minetest.register_abm({
 	nodenames = {"church_candles:busybees"},
-	interval = 3000,
-	chance = 300,
+	interval = 151,
+	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.remove_node(pos)
 	end,
@@ -361,7 +361,7 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = "default:apple",
 	neighbors = "default:leaves",
-	interval = 6000,
+	interval = 6011,
 	chance = 12000,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local abv = minetest.env:get_node({x=pos.x,y=pos.y+1,z=pos.z})

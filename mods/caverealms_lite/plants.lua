@@ -134,7 +134,7 @@ end
 minetest.register_abm({
 	label = "Caverealms grow sapling",
 	nodenames = {"ethereal:mushroom_sapling", "caverealms:mushroom_sapling"},
-	interval = 60,
+	interval = 89,
 	chance = 1800,
 	catch_up = false,
 	action = function(pos, node)
@@ -173,7 +173,7 @@ minetest.register_abm({
 		"caverealms:stone_with_algae",
 	},
 	neighbors = {"air"},
-	interval = 160,
+	interval = 1009,
 	chance = 300,
 	catch_up = false,
 	action = function(pos, node)

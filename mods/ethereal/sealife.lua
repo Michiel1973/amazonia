@@ -160,7 +160,7 @@ minetest.register_abm({
 	label = "Grow coral/seaweed",
 	nodenames = {"ethereal:sandy"},
 	neighbors = {"group:water"},
-	interval = 300,
+	interval = 1259,
 	chance = 90,
 	catch_up = false,
 	action = function(pos, node)

@@ -191,7 +191,7 @@ end
 
 minetest.register_abm({
 nodenames = {"seawrecks:woodship"},
-interval = 600,
+interval = 401,
 chance = 40,
 action = function(pos, node, active_object_count, active_object_count_wider)
 local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
@@ -367,7 +367,7 @@ end
 
 minetest.register_abm({
 nodenames = {"seawrecks:uboot"},
-interval = 600,
+interval = 409,
 chance = 90,
 action = function(pos, node, active_object_count, active_object_count_wider)
 local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
