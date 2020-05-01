@@ -479,7 +479,7 @@ end
   -- },
   -- "abstract_trunks.grow_moss_on_trunk"
 -- )
--- end
+end
 
 -----------------------------------------------------------------------------------------------
 -- RooTS
@@ -542,4 +542,4 @@ end
   -- "abstract_trunks.grow_roots"
 -- )
 
--- end
+end
