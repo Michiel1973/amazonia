@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+May 1    - MINOR - several mods were updated from their masters, with 3d armors being the highlight, new textures
 May 1    - MINOR - tuned ABMs and removed mapgen bottlenecks to improve server performance
 April 28 - MINOR - new mod added: hazmat suit
 April 27 - MINOR - mod removed: bridger (until recipes can be added)
