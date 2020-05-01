@@ -5,9 +5,9 @@
 -- Author: Sokomine
 local S = travelnet.S;
 
-minetest.register_node("travelnet:travelnet", {
+minetest.register_node("travelnet:travelnetadvanced", {
 
-	description = S("Travelnet-Box"),
+	description = S("Advanced Travelnet-Box"),
 
 	drawtype = "mesh",
 	mesh = "travelnet.obj",
@@ -81,14 +81,7 @@ minetest.register_node("travelnet:travelnet", {
           minetest.chat_send_player( placer:get_player_name(), S('Not enough vertical space to place the travelnet box!'))
           return;
 		end
-		if pos.y < -5000 then
-			minetest.chat_send_player( placer:get_player_name(), S('You are too deep to use travelnet boxes!'))
-         return;
-       end
-	   		if pos.y > 6000 then
-			minetest.chat_send_player( placer:get_player_name(), S('You are too high to use travelnet boxes!'))
-         return;
-       end
+		
        return minetest.item_place(itemstack, placer, pointed_thing);
     end,
 
