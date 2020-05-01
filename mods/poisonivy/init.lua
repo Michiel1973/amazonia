@@ -70,35 +70,35 @@ minetest.register_node('poisonivy:climbing', {
 	buildable_to = true,
 })
 
-biome_lib:spawn_on_surfaces({
-	spawn_delay = SPAWN_DELAY,
-	spawn_plants = {"poisonivy:seedling"},
-	avoid_radius = 10,
-	spawn_chance = SPAWN_CHANCE/10,
-	spawn_surfaces = {"default:dirt_with_grass"},
-	avoid_nodes = {"group:poisonivy", "group:flower", "group:flora"},
-	seed_diff = poisonivy_seed_diff,
-	light_min = 7,
-	alt_wallnode = "poisonivy:climbing",
-	verticals_list = walls_list
-})
+-- biome_lib:spawn_on_surfaces({
+	-- spawn_delay = SPAWN_DELAY,
+	-- spawn_plants = {"poisonivy:seedling"},
+	-- avoid_radius = 10,
+	-- spawn_chance = SPAWN_CHANCE/10,
+	-- spawn_surfaces = {"default:dirt_with_grass"},
+	-- avoid_nodes = {"group:poisonivy", "group:flower", "group:flora"},
+	-- seed_diff = poisonivy_seed_diff,
+	-- light_min = 7,
+	-- alt_wallnode = "poisonivy:climbing",
+	-- verticals_list = walls_list
+-- })
 
-biome_lib:grow_plants({
-	grow_delay = SPAWN_DELAY,
-	grow_chance = GROW_CHANCE,
-	grow_plant = "poisonivy:seedling",
-	grow_result = "poisonivy:sproutling",
-	grow_nodes = {"default:dirt_with_grass"}
-})
+-- biome_lib:grow_plants({
+	-- grow_delay = SPAWN_DELAY,
+	-- grow_chance = GROW_CHANCE,
+	-- grow_plant = "poisonivy:seedling",
+	-- grow_result = "poisonivy:sproutling",
+	-- grow_nodes = {"default:dirt_with_grass"}
+-- })
 
-biome_lib:grow_plants({
-	grow_delay = GROW_DELAY,
-	grow_chance = GROW_CHANCE*2,
-	grow_plant = "poisonivy:climbing",
-	need_wall = true,
-	grow_vertically = true,
-	verticals_list = walls_list,
-	ground_nodes = {"default:dirt_with_grass"}
-})
+-- biome_lib:grow_plants({
+	-- grow_delay = GROW_DELAY,
+	-- grow_chance = GROW_CHANCE*2,
+	-- grow_plant = "poisonivy:climbing",
+	-- need_wall = true,
+	-- grow_vertically = true,
+	-- verticals_list = walls_list,
+	-- ground_nodes = {"default:dirt_with_grass"}
+-- })
 
 print("[Poison Ivy] Loaded.")

@@ -40,24 +40,24 @@ vines.register_vine = function( name, defs, biome )
 	local vine_image_middle = "vines_" .. name .. "_middle.png"
 	local drop_node = vine_name_end
 
-	biome.spawn_plants = {vine_name_end}
+	--biome.spawn_plants = {vine_name_end}
 
 	local vine_group = 'group:' .. name .. '_vines'
 
-	biome.spawn_surfaces[#biome.spawn_surfaces + 1] = vine_group
+	--biome.spawn_surfaces[#biome.spawn_surfaces + 1] = vine_group
 
 	local selection_box = {type = "wallmounted",}
 	local drawtype = 'signlike'
 
 	-- different properties for bottom and side vines.
-	if not biome.spawn_on_side then
+	-- if not biome.spawn_on_side then
 
-		selection_box = {
-			type = "fixed", fixed = { -0.4, -1/2, -0.4, 0.4, 1/2, 0.4 }
-		}
+		-- selection_box = {
+			-- type = "fixed", fixed = { -0.4, -1/2, -0.4, 0.4, 1/2, 0.4 }
+		-- }
 
-		drawtype = 'plantlike'
-	end
+		-- drawtype = 'plantlike'
+	-- end
 
 	minetest.register_node(vine_name_end, {
 		description = defs.description,
@@ -133,7 +133,7 @@ vines.register_vine = function( name, defs, biome )
 		end,
 	})
 
-	biome_lib:spawn_on_surfaces(biome)
+	--biome_lib:spawn_on_surfaces(biome)
 end
 
 -- ALIASES
