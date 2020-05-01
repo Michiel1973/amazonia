@@ -6,7 +6,7 @@ local use_cmi = minetest.global_exists("cmi")
 
 mobs = {
 	mod = "redo",
-	version = "20200429",
+	version = "20200501",
 	intllib = S,
 	invis = minetest.global_exists("invisibility") and invisibility or {}
 }
@@ -594,8 +594,7 @@ function mob_class:do_stay_near()
 	local r = self.view_range
 	local nearby_nodes = minetest.find_nodes_in_area(
 		{x = pos.x - r, y = pos.y - 1, z = pos.z - r},
-		{x = pos.x + r, y = pos.y + 1, z = pos.z + r},
-		searchnodes)
+		{x = pos.x + r, y = pos.y + 1, z = pos.z + r}, searchnodes)
 
 	if #nearby_nodes < 1 then
 		return false
@@ -622,20 +621,22 @@ end
 
 
 -- custom particle effects
-local effect = function(pos, amount, texture, min_size, max_size, radius, gravity, glow)
+local effect = function(
+		pos, amount, texture, min_size, max_size, radius, gravity, glow, fall)
 
 	radius = radius or 2
 	min_size = min_size or 0.5
 	max_size = max_size or 1
 	gravity = gravity or -10
 	glow = glow or 0
+	fall = fall and 0 or -radius
 
 	minetest.add_particlespawner({
 		amount = amount,
 		time = 0.25,
 		minpos = pos,
 		maxpos = pos,
-		minvel = {x = -radius, y = -radius, z = -radius},
+		minvel = {x = -radius, y = fall, z = -radius},
 		maxvel = {x = radius, y = radius, z = radius},
 		minacc = {x = 0, y = gravity, z = 0},
 		maxacc = {x = 0, y = gravity, z = 0},
@@ -1014,19 +1015,20 @@ function mob_class:do_env_damage()
 		if self:check_for_death({type = "environment",
 				pos = pos, node = self.standing_in}) then return true end
 	end
---[[
+
 	--- suffocation inside solid node
-	if self.suffocation ~= 0
-	and nodef.walkable == true
-	and nodef.groups.disable_suffocation ~= 1
-	and nodef.drawtype == "normal" then
+	if (self.suffocation ~= 0)
+	and (nodef.walkable == nil or nodef.walkable == true)
+	and (nodef.collision_box == nil or nodef.collision_box.type == "regular")
+	and (nodef.node_box == nil or nodef.node_box.type == "regular")
+	and (nodef.groups.disable_suffocation ~= 1) then
 
 		self.health = self.health - self.suffocation
 
-		if self:check_for_death({type = "environment",
+		if self:check_for_death({type = "suffocation",
 				pos = pos, node = self.standing_in}) then return true end
 	end
-]]
+
 	return self:check_for_death({type = "unknown"})
 end
 
@@ -1086,20 +1088,16 @@ function mob_class:do_jump()
 		z = pos.z + dir_z
 	})
 
-	-- is there space to jump up?
-	if minetest.registered_nodes[nodt.name].walkable == true then
-		return false
-	end
-
-	-- thin blocks that do not need to be jumped
-	if nod.name == node_snow then
-		return false
-	end
+	local blocked = minetest.registered_nodes[nodt.name].walkable
 
 --print ("in front:", nod.name, pos.y + 0.5)
+--print ("in front above:", nodt.name, pos.y + 1.5)
 
-	if self.walk_chance == 0
-	or minetest.registered_items[nod.name].walkable then
+	-- jump if standing on solid node (not snow) and not blocked above
+	if (self.walk_chance == 0
+	or minetest.registered_items[nod.name].walkable)
+	and not blocked
+	and nod.name ~= node_snow then
 
 		if not nod.name:find("fence")
 		and not nod.name:find("gate")
@@ -1129,27 +1127,28 @@ function mob_class:do_jump()
 			if self:get_velocity() > 0 then
 				self:mob_sound(self.sounds.jump)
 			end
+
+			return true
 		else
 			self.facing_fence = true
 		end
+	end
 
-		-- if we jumped against a block/wall 4 times then turn
-		if self.object:get_velocity().x ~= 0
-		or self.object:get_velocity().z ~= 0 then
+	-- if blocked against a block/wall for 5 counts then turn
+	if not self.following
+	and (self.facing_fence or blocked) then
 
-			self.jump_count = (self.jump_count or 0) + 1
+		self.jump_count = (self.jump_count or 0) + 1
 --print ("----", self.jump_count)
-			if self.jump_count == 4 then
+		if self.jump_count > 4 then
 
-				local yaw = self.object:get_yaw() or 0
+			local yaw = self.object:get_yaw() or 0
+			local turn = random(0, 2) + 1.35
 
-				yaw = self:set_yaw(yaw + 1.35, 8)
---print ("---- turn")
-				self.jump_count = 0
-			end
+			yaw = self:set_yaw(yaw + turn, 12)
+--print ("---- turn", turn)
+			self.jump_count = 0
 		end
-
-		return true
 	end
 
 	return false
@@ -2767,7 +2766,8 @@ function mob_class:on_punch(hitter, tflp, tool_capabilities, dir)
 --	print ("Mob Damage is", damage)
 
 	if use_cmi
-	and cmi.notify_punch(self.object, hitter, tflp, tool_capabilities, dir, damage) then
+	and cmi.notify_punch(
+			self.object, hitter, tflp, tool_capabilities, dir, damage) then
 		return
 	end
 
@@ -2819,18 +2819,23 @@ function mob_class:on_punch(hitter, tflp, tool_capabilities, dir)
 		if not disable_blood and self.blood_amount > 0 then
 
 			local pos = self.object:get_pos()
+			local blood = self.blood_texture
+			local amount = self.blood_amount
 
 			pos.y = pos.y + (-self.collisionbox[2] + self.collisionbox[5]) * .5
 
+			-- lots of damage = more blood :)
+			if damage > 10 then
+				amount = self.blood_amount * 2
+			end
+
 			-- do we have a single blood texture or multiple?
 			if type(self.blood_texture) == "table" then
-
-				local blood = self.blood_texture[random(1, #self.blood_texture)]
-
-				effect(pos, self.blood_amount, blood, nil, nil, 1, nil)
-			else
-				effect(pos, self.blood_amount, self.blood_texture, nil, nil, 1, nil)
+				blood = self.blood_texture[random(1, #self.blood_texture)]
 			end
+
+			effect(pos, amount, blood, 1, 2, 1.75, nil, nil, true)
+
 		end
 
 		-- do damage
@@ -2931,7 +2936,8 @@ function mob_class:on_punch(hitter, tflp, tool_capabilities, dir)
 		self:do_attack(hitter)
 
 		-- alert others to the attack
-		local objs = minetest.get_objects_inside_radius(hitter:get_pos(), self.view_range)
+		local objs = minetest.get_objects_inside_radius(
+				hitter:get_pos(), self.view_range)
 		local obj = nil
 
 		for n = 1, #objs do
@@ -3641,6 +3647,13 @@ function mobs:spawn_specific(name, nodes, neighbors, min_light, max_light,
 				return
 			end
 
+			-- mobs cannot spawn in protected areas when enabled
+			if not spawn_protected
+			and minetest.is_protected(pos, "") then
+--print ("--- inside protected area", name)
+				return
+			end
+
 			-- only spawn away from player
 			local objs = minetest.get_objects_inside_radius(pos, 8)
 
@@ -3652,31 +3665,66 @@ function mobs:spawn_specific(name, nodes, neighbors, min_light, max_light,
 				end
 			end
 
-			-- do we have enough height clearance to spawn mob?
+			-- do we have enough space to spawn mob? (thanks wuzzy)
 			local ent = minetest.registered_entities[name]
-			local height = max(1, math.ceil(
-				(ent.collisionbox[5] or 0.25) -
-				(ent.collisionbox[2] or -0.25) - 1))
+			local width_x = max(1,
+					math.ceil(ent.collisionbox[4] - ent.collisionbox[1]))
+			local min_x, max_x
 
-			for n = 0, height do
+			if width_x % 2 == 0 then
+				max_x = math.floor(width_x / 2)
+				min_x = -(max_x - 1)
+			else
+				max_x = math.floor(width_x / 2)
+				min_x = -max_x
+			end
 
-				local pos2 = {x = pos.x, y = pos.y + n, z = pos.z}
+			local width_z = max(1,
+					math.ceil(ent.collisionbox[6] - ent.collisionbox[3]))
+			local min_z, max_z
 
-				if minetest.registered_nodes[node_ok(pos2).name].walkable == true then
---print ("--- inside block", name, node_ok(pos2).name)
+			if width_z % 2 == 0 then
+				max_z = math.floor(width_z / 2)
+				min_z = -(max_z - 1)
+			else
+				max_z = math.floor(width_z / 2)
+				min_z = -max_z
+			end
+
+			local max_y = max(0,
+					math.ceil(ent.collisionbox[5] - ent.collisionbox[2]) - 1)
+
+			for y = 0, max_y do
+			for x = min_x, max_x do
+			for z = min_z, max_z do
+
+				local pos2 = {
+					x = pos.x + x,
+					y = pos.y + y,
+					z = pos.z + z}
+
+				if minetest.registered_nodes[
+						node_ok(pos2).name].walkable == true then
+
+--print ("--- not enough space to spawn", name)
+
 					return
 				end
 			end
-
-			-- mobs cannot spawn in protected areas when enabled
-			if not spawn_protected
-			and minetest.is_protected(pos, "") then
---print ("--- inside protected area", name)
-				return
+			end
 			end
 
-			-- spawn mob half block higher than ground
+			-- spawn mob 1/2 node above ground
 			pos.y = pos.y + 0.5
+
+			-- tweak X/Z spawn pos
+			if width_x % 2 == 0 then
+				pos.x = pos.x + 0.5
+			end
+
+			if width_z % 2 == 0 then
+				pos.z = pos.z + 0.5
+			end
 
 			local mob = minetest.add_entity(pos, name)
 --[[
@@ -3760,8 +3808,7 @@ function mobs:register_arrow(name, def)
 			local pos = self.object:get_pos()
 
 			if self.switch == 0
-			or self.timer > 150
-			or within_limits(pos, 0) then
+			or self.timer > 150 then
 
 				self.object:remove() ; -- print ("removed arrow")
 
