@@ -100,7 +100,7 @@ mobs:register_mob("mobs_monster:creeper", {
 		-- chance = 200, -- 0.5%
 		-- min = 1,
 		-- max = 1,},
-	-- },
+	},
 	animation = {
 		speed_normal = 24,
 		speed_run = 48,
