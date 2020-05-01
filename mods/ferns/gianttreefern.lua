@@ -282,7 +282,7 @@ minetest.register_node("ferns:sapling_giant_tree_fern", {
 -- abm
 minetest.register_abm({
 	nodenames = "ferns:sapling_giant_tree_fern",
-	interval = 1000,
+	interval = 421,
 	chance = 40,
 	action = function(pos, node, _, _)
 		abstract_ferns.grow_giant_tree_fern({x = pos.x, y = pos.y-1, z = pos.z})

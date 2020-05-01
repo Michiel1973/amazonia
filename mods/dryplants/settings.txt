@@ -48,5 +48,5 @@ HAY_DRYING_TIME 					= 	3600 	-- seconds
 REED_WILL_DRY 						= 	false	-- wet reed nodes will become dry reed nodes
 REED_DRYING_TIME 					= 	3600 	-- seconds
 
-AUTO_ROOF_CORNER 					= 	true
+AUTO_ROOF_CORNER 					= 	false
 	

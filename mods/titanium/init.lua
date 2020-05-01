@@ -78,21 +78,21 @@ minetest.register_node( "titanium:titanium_tv_2", {
 	light_source = 8,
 })
 
-minetest.register_abm({
-	nodenames = {"titanium:titanium_tv_1", "titanium:titanium_tv_2"}, 
-	interval = 12,
-	chance = 1,
-	catch_up = false,
-	action = function(pos)
-		local i = math.random(1,2)
-		if i == 1 then
-			minetest.add_node(pos,{name="titanium:titanium_tv_1"})
-		end
-		if i == 2 then
-			minetest.add_node(pos,{name="titanium:titanium_tv_2"})
-		end
-	end 
-})
+-- minetest.register_abm({
+	-- nodenames = {"titanium:titanium_tv_1", "titanium:titanium_tv_2"}, 
+	-- interval = 12,
+	-- chance = 1,
+	-- catch_up = false,
+	-- action = function(pos)
+		-- local i = math.random(1,2)
+		-- if i == 1 then
+			-- minetest.add_node(pos,{name="titanium:titanium_tv_1"})
+		-- end
+		-- if i == 2 then
+			-- minetest.add_node(pos,{name="titanium:titanium_tv_2"})
+		-- end
+	-- end 
+-- })
 
 ---
 ---tools

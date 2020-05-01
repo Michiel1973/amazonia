@@ -102,38 +102,38 @@ minetest.register_node("cottages:window_shutter_closed", {
 })
 
 
--- open shutters in the morning
-minetest.register_abm({
-   nodenames = {"cottages:window_shutter_closed"},
-   interval = 600, -- change this to 600 if your machine is too slow
-   chance = 3, -- not all people wake up at the same time!
-   action = function(pos)
+-- -- open shutters in the morning
+-- minetest.register_abm({
+   -- nodenames = {"cottages:window_shutter_closed"},
+   -- interval = 600, -- change this to 600 if your machine is too slow
+   -- chance = 3, -- not all people wake up at the same time!
+   -- action = function(pos)
 
-        -- at this time, sleeping in a bed is not possible
-        if( not(minetest.get_timeofday() < 0.2 or minetest.get_timeofday() > 0.805)) then
-           local old_node = minetest.get_node( pos );
-           minetest.swap_node(pos, {name = "cottages:window_shutter_open", param2 = old_node.param2})
-           cottages_window_sutter_operate( pos, "cottages:window_shutter_closed", "cottages:window_shutter_open" );
-       end
-   end
-})
+        -- -- at this time, sleeping in a bed is not possible
+        -- if( not(minetest.get_timeofday() < 0.2 or minetest.get_timeofday() > 0.805)) then
+           -- local old_node = minetest.get_node( pos );
+           -- minetest.swap_node(pos, {name = "cottages:window_shutter_open", param2 = old_node.param2})
+           -- cottages_window_sutter_operate( pos, "cottages:window_shutter_closed", "cottages:window_shutter_open" );
+       -- end
+   -- end
+-- })
 
 
--- close them at night
-minetest.register_abm({
-   nodenames = {"cottages:window_shutter_open"},
-   interval = 600, -- change this to 600 if your machine is too slow
-   chance = 2,
-   action = function(pos)
+-- -- close them at night
+-- minetest.register_abm({
+   -- nodenames = {"cottages:window_shutter_open"},
+   -- interval = 600, -- change this to 600 if your machine is too slow
+   -- chance = 2,
+   -- action = function(pos)
 
-        -- same time at which sleeping is allowed in beds
-        if( minetest.get_timeofday() < 0.2 or minetest.get_timeofday() > 0.805) then
-           local old_node = minetest.get_node( pos );
-           minetest.swap_node(pos, {name = "cottages:window_shutter_closed", param2 = old_node.param2})
-           cottages_window_sutter_operate( pos, "cottages:window_shutter_open", "cottages:window_shutter_closed" );
-        end
-   end
-})
+        -- -- same time at which sleeping is allowed in beds
+        -- if( minetest.get_timeofday() < 0.2 or minetest.get_timeofday() > 0.805) then
+           -- local old_node = minetest.get_node( pos );
+           -- minetest.swap_node(pos, {name = "cottages:window_shutter_closed", param2 = old_node.param2})
+           -- cottages_window_sutter_operate( pos, "cottages:window_shutter_open", "cottages:window_shutter_closed" );
+        -- end
+   -- end
+-- })
 
 
 ------------------------------------------------------------------------------------------------------------------------------

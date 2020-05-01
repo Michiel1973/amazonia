@@ -61,9 +61,9 @@ local coconut_regrow_abm_spec = {
 		end
 	end
 }
-if moretrees.coconuts_regrow then
-	minetest.register_abm(coconut_regrow_abm_spec)
-end
+-- if moretrees.coconuts_regrow then
+	-- minetest.register_abm(coconut_regrow_abm_spec)
+-- end
 
 -- Spawn initial coconuts
 
@@ -72,7 +72,7 @@ end
 --  ABM converts the trunk to a regular fruit trunk, and spawns some coconuts)
 minetest.register_abm({
 	nodenames = { "moretrees:palm_fruit_trunk_gen" },
-	interval = 2000,
+	interval = 1109,
 	chance = 50,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.swap_node(pos, {name="moretrees:palm_fruit_trunk"})
@@ -245,13 +245,13 @@ if moretrees.coconuts_convert_existing_palms then
 			end
 		end,
 	}
-	if minetest.register_lbm then
+	-- if minetest.register_lbm then
 		minetest.register_lbm(spec)
-	else
-		spec.interval = 3691
-		spec.chance = 10
-		minetest.register_abm(spec)
-	end
+	-- else
+		-- spec.interval = 3691
+		-- spec.chance = 10
+		-- minetest.register_abm(spec)
+	-- end
 end
 
 -- If regrowing was previously disabled, but is enabled now, make sure timers are started for existing coconuts
@@ -272,12 +272,12 @@ if moretrees.coconuts_regrow then
 			end
 		end,
 	}
-	if minetest.register_lbm then
+	-- if minetest.register_lbm then
 		minetest.register_lbm(spec)
-	else
-		spec.interval = 3659
-		spec.chance = 10
-		minetest.register_abm(spec)
-	end
+	-- else
+		-- spec.interval = 3659
+		-- spec.chance = 10
+		-- minetest.register_abm(spec)
+	-- end
 end
 

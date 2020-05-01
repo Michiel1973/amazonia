@@ -206,46 +206,46 @@ minetest.register_node("goblins:molten_gold_flowing", {
 
 
 --[[ too bad we can't keep track of what physics are set too by other mods...]]
-minetest.register_abm({
-	nodenames = {"goblins:mossycobble_trap"},
-	interval = 2,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 0.95)) do -- IDKWTF this is but it works
-				if object:is_player() then
-					object:set_physics_override({speed = 0.1})
-					minetest.after(1, function() -- this effect is temporary
-						object:set_physics_override({speed = 1})  -- we'll just set it to 1 and be done.
-					end)
-				end
-		end
-	end})
+-- minetest.register_abm({
+	-- nodenames = {"goblins:mossycobble_trap"},
+	-- interval = 2,
+	-- chance = 1,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- for _,object in ipairs(minetest.get_objects_inside_radius(pos, 0.95)) do -- IDKWTF this is but it works
+				-- if object:is_player() then
+					-- object:set_physics_override({speed = 0.1})
+					-- minetest.after(1, function() -- this effect is temporary
+						-- object:set_physics_override({speed = 1})  -- we'll just set it to 1 and be done.
+					-- end)
+				-- end
+		-- end
+	-- end})
 
-minetest.register_abm({
-	nodenames = {"goblins:stone_with_coal_trap"},
-	interval = 2,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
-			if object:is_player() then
-				minetest.set_node(pos, {name="fire:basic_flame"})
-				if object:get_hp() > 0 then
-					object:set_hp(object:get_hp()-1)
-					minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.5, max_hear_distance = 10})
-					minetest.after(6, function() --this hell ends after a few seconds
-						minetest.set_node(pos, {name = "air"})
-					end)	
-				end
-			end
-		end
-	end})
+-- minetest.register_abm({
+	-- nodenames = {"goblins:stone_with_coal_trap"},
+	-- interval = 2,
+	-- chance = 1,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
+			-- if object:is_player() then
+				-- minetest.set_node(pos, {name="fire:basic_flame"})
+				-- if object:get_hp() > 0 then
+					-- object:set_hp(object:get_hp()-1)
+					-- minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.5, max_hear_distance = 10})
+					-- minetest.after(6, function() --this hell ends after a few seconds
+						-- minetest.set_node(pos, {name = "air"})
+					-- end)	
+				-- end
+			-- end
+		-- end
+	-- end})
 
 
 -- summon a metallic goblin?
 -- pit of iron razors?
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_iron_trap"},
-	interval = 2,
+	interval = 3,
 	chance = 4, --this may be a dud
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do
@@ -279,7 +279,7 @@ end
 --[[ based on dwarves cactus]]
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_copper_trap"},
-	interval = 2,
+	interval = 5,
 	chance = 2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 3)) do
@@ -296,7 +296,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"goblins:stone_with_gold_trap"},
-	interval = 2,
+	interval = 3,
 	chance = 2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		for _,object in ipairs(minetest.get_objects_inside_radius(pos, 2)) do

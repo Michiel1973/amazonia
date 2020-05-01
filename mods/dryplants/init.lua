@@ -144,7 +144,7 @@ minetest.register_node("dryplants:grass", {
 -----------------------------------------------------------------------------------------------
 minetest.register_abm({
 	nodenames = {"dryplants:grass"},
-	interval = 2000, -- 20 minutes: a minetest-day/night-cycle
+	interval = 1459, -- 20 minutes: a minetest-day/night-cycle
 	chance = 400,
 	action = function(pos)
 		minetest.swap_node(pos, {name="dryplants:hay"})
@@ -189,7 +189,7 @@ minetest.register_node("dryplants:grass_short", {
 -----------------------------------------------------------------------------------------------
 minetest.register_abm({
 	nodenames = {"dryplants:grass_short"},
-	interval = 2000, -- 20 minutes: a minetest-day/night-cycle
+	interval = 1231, -- 20 minutes: a minetest-day/night-cycle
 	chance = 400,
 	action = function(pos)
 		-- Only become dirt with grass if no cut grass or hay lies on top

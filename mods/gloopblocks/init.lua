@@ -371,25 +371,25 @@ end
 
 -- Stairs/slabs defs, conversion of normal -> mossy items
 
-if minetest.setting_getbool("gloopblocks_mossy_conversion") ~= false then
+-- if minetest.setting_getbool("gloopblocks_mossy_conversion") ~= false then
 
-	function gloopblocks_register_mossy_conversion(mossyobjects)
-		for i in ipairs(mossyobjects) do
-			minetest.register_abm({
-				nodenames = { mossyobjects[i][1] },
-				neighbors = {"default:water_source", "default:water_flowing"},
-				interval = 1200,
-				chance = 50,
-				action = function(pos, node)
-					if minetest.find_node_near(pos, 2, "air") then
-						local fdir = node.param2
-						minetest.add_node(pos, {name = mossyobjects[i][2], param2 = fdir})
-					end
-				end,
-			})
-		end
-	end
-end
+	-- function gloopblocks_register_mossy_conversion(mossyobjects)
+		-- for i in ipairs(mossyobjects) do
+			-- minetest.register_abm({
+				-- nodenames = { mossyobjects[i][1] },
+				-- neighbors = {"default:water_source", "default:water_flowing"},
+				-- interval = 1200,
+				-- chance = 50,
+				-- action = function(pos, node)
+					-- if minetest.find_node_near(pos, 2, "air") then
+						-- local fdir = node.param2
+						-- minetest.add_node(pos, {name = mossyobjects[i][2], param2 = fdir})
+					-- end
+				-- end,
+			-- })
+		-- end
+	-- end
+-- end
 
 if minetest.get_modpath("moreblocks") then
 

@@ -551,11 +551,11 @@ function biome_lib:spawn_on_surfaces(sd,sp,sr,sc,ss,sa)
 		biome = sd
 	end
 
-	if biome.spawn_delay*time_scale >= 1 then
-		biome.interval = biome.spawn_delay*time_scale
-	else
-		biome.interval = 1
-	end
+	-- if biome.spawn_delay*time_scale >= 1 then
+		-- biome.interval = biome.spawn_delay*time_scale
+	-- else
+		biome.interval = 31
+	-- end
 
 	biome_lib:set_defaults(biome)
 	biome.spawn_plants_count = #(biome.spawn_plants)

@@ -34,11 +34,11 @@ function biome_lib:grow_plants(opts)
 
 	options.label = options.label or "biome_lib grow_plants(): "..n
 
-	if options.grow_delay*time_scale >= 1 then
-		options.interval = options.grow_delay*time_scale
-	else
-		options.interval = 1
-	end
+	-- if options.grow_delay*time_scale >= 1 then
+		-- options.interval = options.grow_delay*time_scale
+	-- else
+		options.interval = 31
+	-- end
 
 	minetest.register_abm({
 		nodenames = { options.grow_plant },

@@ -190,7 +190,7 @@ minetest.register_node("glowtest:sgreensapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
      selection_box = {
 		type = "fixed",
@@ -208,7 +208,7 @@ minetest.register_node("glowtest:mgreensapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -222,7 +222,7 @@ minetest.register_node("glowtest:lgreensapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -236,7 +236,7 @@ minetest.register_node("glowtest:sbluesapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
      selection_box = {
 		type = "fixed",
@@ -254,7 +254,7 @@ minetest.register_node("glowtest:mbluesapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -268,7 +268,7 @@ minetest.register_node("glowtest:lbluesapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -282,7 +282,7 @@ minetest.register_node("glowtest:spinksapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
      selection_box = {
 		type = "fixed",
@@ -300,7 +300,7 @@ minetest.register_node("glowtest:mpinksapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -314,7 +314,7 @@ minetest.register_node("glowtest:lpinksapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -328,7 +328,7 @@ minetest.register_node("glowtest:syellowsapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
      selection_box = {
 		type = "fixed",
@@ -346,7 +346,7 @@ minetest.register_node("glowtest:myellowsapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -360,7 +360,7 @@ minetest.register_node("glowtest:lyellowsapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -374,7 +374,7 @@ minetest.register_node("glowtest:sredsapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
      selection_box = {
 		type = "fixed",
@@ -392,7 +392,7 @@ minetest.register_node("glowtest:mredsapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -406,7 +406,7 @@ minetest.register_node("glowtest:lredsapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -420,7 +420,7 @@ minetest.register_node("glowtest:swhitesapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
      selection_box = {
 		type = "fixed",
@@ -438,7 +438,7 @@ minetest.register_node("glowtest:mwhitesapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -452,7 +452,7 @@ minetest.register_node("glowtest:lwhitesapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -466,7 +466,7 @@ minetest.register_node("glowtest:sblacksapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -480,7 +480,7 @@ minetest.register_node("glowtest:mblacksapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })
 
@@ -494,6 +494,6 @@ minetest.register_node("glowtest:lblacksapling", {
 	paramtype = "light",
 	walkable = false,
     light_source = 8,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
+	groups = {snappy=2,dig_immediate=3,flammable=2,glowsapling=1},
 	sounds = default.node_sound_defaults(),
 })

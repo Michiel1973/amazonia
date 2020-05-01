@@ -236,7 +236,7 @@ end
 
 minetest.register_abm({
 	nodenames = {"clams:sandalgaeused"},
-	interval = 400,
+	interval = 401,
 	chance = 70,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local y = {x = pos.x, y = pos.y + 1, z = pos.z }
@@ -250,25 +250,25 @@ minetest.register_abm({
 	end,
 })
 
-minetest.register_abm({
-	nodenames = {"clams:dirtalgaeused"},
-	interval = 400,
-	chance = 80,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local y = {x = pos.x, y = pos.y + 1, z = pos.z }
-		local yy = {x = pos.x, y = pos.y + 2, z = pos.z }
-		if minetest.get_node(y).name == "default:water_source" then 
-			if minetest.get_node(yy).name == "default:water_source" then
-				minetest.add_node(pos, {name = "clams:dirtalgae"}) else
-				return
-			end
-		end
-	end,
-})
+-- minetest.register_abm({
+	-- nodenames = {"clams:dirtalgaeused"},
+	-- interval = 409,
+	-- chance = 80,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+		-- local y = {x = pos.x, y = pos.y + 1, z = pos.z }
+		-- local yy = {x = pos.x, y = pos.y + 2, z = pos.z }
+		-- if minetest.get_node(y).name == "default:water_source" then 
+			-- if minetest.get_node(yy).name == "default:water_source" then
+				-- minetest.add_node(pos, {name = "clams:dirtalgae"}) else
+				-- return
+			-- end
+		-- end
+	-- end,
+-- })
 
 minetest.register_abm({
 	nodenames = {"clams:sandalgae"},
-	interval = 400,
+	interval = 419,
 	chance = 80,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local y = {x = pos.x, y = pos.y + 1, z = pos.z }
@@ -284,23 +284,23 @@ minetest.register_abm({
 	end,
 })
 
-minetest.register_abm({
-	nodenames = {"clams:dirtalgae"},
-	interval = 400,
-	chance = 80,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-	local y = {x = pos.x, y = pos.y + 1, z = pos.z }
-	local yy = {x = pos.x, y = pos.y + 2, z = pos.z }
-		if (active_object_count_wider + active_object_count_wider) > 20 then
-		return
-			elseif (minetest.get_node(y).name == "default:water_source") then 
-			if (minetest.get_node(yy).name == "default:water_source") then
-				pos.y=pos.y + 1
-				minetest.add_entity(pos, "clams:whiteshell")
-			end
-		end
-	end,
-})
+-- minetest.register_abm({
+	-- nodenames = {"clams:dirtalgae"},
+	-- interval = 400,
+	-- chance = 80,
+	-- action = function(pos, node, active_object_count, active_object_count_wider)
+	-- local y = {x = pos.x, y = pos.y + 1, z = pos.z }
+	-- local yy = {x = pos.x, y = pos.y + 2, z = pos.z }
+		-- if (active_object_count_wider + active_object_count_wider) > 20 then
+		-- return
+			-- elseif (minetest.get_node(y).name == "default:water_source") then 
+			-- if (minetest.get_node(yy).name == "default:water_source") then
+				-- pos.y=pos.y + 1
+				-- minetest.add_entity(pos, "clams:whiteshell")
+			-- end
+		-- end
+	-- end,
+-- })
 
 
 -- ALIASES

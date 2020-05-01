@@ -334,7 +334,7 @@ end
 
 minetest.register_abm({
 	nodenames = {"locks:shared_locked_furnace","locks:shared_locked_furnace_active"},
-	interval = 1.0,
+	interval = 2,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local meta = minetest.get_meta(pos)

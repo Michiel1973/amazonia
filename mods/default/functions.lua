@@ -237,7 +237,7 @@ minetest.register_abm({
 	label = "Grow cactus",
 	nodenames = {"default:cactus"},
 	neighbors = {"group:sand"},
-	interval = 12,
+	interval = 19,
 	chance = 83,
 	action = function(...)
 		default.grow_cactus(...)
@@ -248,7 +248,7 @@ minetest.register_abm({
 	label = "Grow papyrus",
 	nodenames = {"default:papyrus"},
 	neighbors = {"default:dirt", "default:dirt_with_grass"},
-	interval = 14,
+	interval = 23,
 	chance = 71,
 	action = function(...)
 		default.grow_papyrus(...)
@@ -494,7 +494,7 @@ minetest.register_abm({
 		"group:grass",
 		"default:snow",
 	},
-	interval = 60,
+	interval = 127,
 	chance = 500,
 	catch_up = false,
 	action = function(pos, node)
@@ -532,7 +532,7 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "Grass covered",
 	nodenames = {"group:spreading_dirt_type", "default:dry_dirt_with_dry_grass"},
-	interval = 80,
+	interval = 131,
 	chance = 500,
 	catch_up = false,
 	action = function(pos, node)
@@ -570,7 +570,7 @@ minetest.register_abm({
 		"stairs:stair_inner_cobble", "stairs:stair_outer_cobble",
 		"walls:cobble"},
 	neighbors = {"group:water"},
-	interval = 160,
+	interval = 163,
 	chance = 2000,
 	catch_up = false,
 	action = function(pos, node)

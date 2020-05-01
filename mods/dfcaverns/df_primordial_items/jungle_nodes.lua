@@ -257,7 +257,7 @@ minetest.register_abm{
 	label = "df_primordial_items:jungle_grass_spread",
 	nodenames = {"default:dirt"},
 	neighbors = {"df_mapitems:dirt_with_jungle_grass"},
-	interval = 120,
+	interval = 1373,
 	chance = 80,
 	catch_up = true,
 	action = function(pos)
