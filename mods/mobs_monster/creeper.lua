@@ -89,7 +89,7 @@ mobs:register_mob("mobs_monster:creeper", {
 	-- end,
 	maxdrops = 2,
 	drops = {
-		{name = tnt:gunpowder,
+		{name = "tnt:gunpowder",
 		chance = 1,
 		min = 0,
 		max = 3,},
