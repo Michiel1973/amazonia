@@ -49,7 +49,7 @@ dofile(path .. "/zombie.lua")                    -- underworld -18000 to -19073?
 dofile(path .. "/slime.lua")                     -- DF L1 and caverealms
 dofile(path .. "/skeleton.lua")                  -- skeletons for nether
 --  dofile(path .. "/banshee.lua")               -- banshee (WIP)
-
+dofile(path .. "/mothman.lua")                   -- DF L3
 
 -- put the monsters into the world
 
