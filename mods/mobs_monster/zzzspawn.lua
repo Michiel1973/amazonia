@@ -37,6 +37,9 @@ mobs:spawn_specific ("mobs_monster:slime_big", {"df_mapitems:dirt_with_cave_moss
 
 mobs:spawn_specific("mobs_monster:mothman", "df_trees:black_cap", "air", 0, 12, 30, 300, 2, -15072, -14032)
 
+mobs:spawn_specific("mobs_monster:creeper", "df_mapitems:cobble_with_floor_fungus", "air", 0, 12, 90, 300, 1, -15072, -14032)
+
+
 -- Sunless Sea -15072 to -16000 - break point (no monsters)
 
 -- Lava Sea -17000 to -18000
