@@ -300,7 +300,7 @@ if armor.materials.mithril then
 		description = S("Mithril Boots"),
 		inventory_image = "3d_armor_inv_boots_mithril.png",
 		groups = {armor_feet=1, armor_heal=12, armor_use=100, physics_speed=0.5,
-				physics_jump=0.5, },
+				physics_jump=0.5},
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
