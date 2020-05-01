@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+May 1    - MINOR - tuned ABMs and removed mapgen bottlenecks to improve server performance
 April 28 - MINOR - new mod added: hazmat suit
 April 27 - MINOR - mod removed: bridger (until recipes can be added)
 April 26 - MAJOR - The Deep Realms are now available - venture below 10k to find extreme riches... and dangers
