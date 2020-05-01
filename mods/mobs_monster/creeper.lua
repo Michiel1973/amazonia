@@ -133,4 +133,4 @@ mobs:register_mob("mobs_monster:creeper", {
 mobs:alias_mob("mobs:creeper", "mobs_monster:creeper")
 
 -- spawn eggs
-mobs:register_egg("mobs_monster:creeper", S("Creeper"), "mobs_monster_spawn_icon_creeper.png", 0)
+mobs:register_egg("mobs_monster:creeper", ("Creeper"), "mobs_monster_spawn_icon_creeper.png", 0)
