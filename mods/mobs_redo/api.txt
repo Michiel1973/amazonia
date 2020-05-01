@@ -68,7 +68,8 @@ functions needed for the mob to work properly which contains the following:
                    level is between the min and max values below
    'light_damage_min' minimum light value when mob is affected (default: 14)
    'light_damage_max' maximum light value when mob is affected (default: 15)
-   'suffocation'   when true causes mobs to suffocate inside solid blocks.
+   'suffocation'   when > 0 mobs will suffocate inside solid blocks and will be
+                   hurt by the value given every second (0 to disable).
    'floats'        when set to 1 mob will float in water, 0 has them sink.
    'follow'        mobs follow player when holding any of the items which appear
                    on this table, the same items can be fed to a mob to tame or
