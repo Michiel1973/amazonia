@@ -46,8 +46,8 @@ function aqua_farming.register_abm(nodename, newnodename, delay, percent)
         minetest.register_abm({
             nodenames = {nodename},
             neighbors = {"default:water_source", "default:river_water_source"},
-            interval = 180
-            chance = 900
+            interval = 180,
+            chance = 900,
             action = function(pos, node, active_object_count, active_object_count_wider)
                 local nodepos = pos
                 if(aqua_farming.check_water(nodepos)) then
