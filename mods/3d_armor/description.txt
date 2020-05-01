@@ -1,1 +1,1 @@
-Visible player armor & wielded items.
+Adds craftable armor that is visible to other players.
