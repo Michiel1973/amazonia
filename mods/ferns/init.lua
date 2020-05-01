@@ -35,7 +35,7 @@ dofile(minetest.get_modpath("ferns").."/crafting.lua")
 -----------------------------------------------------------------------------
 -- TESTS
 -----------------------------------------------------------------------------
-local run_tests = true	-- set to false to skip
+local run_tests = false	-- set to false to skip
 
 if run_tests then
 

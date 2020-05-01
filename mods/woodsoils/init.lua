@@ -10,7 +10,7 @@ abstract_woodsoils = {}
 local S = minetest.get_translator("woodsoils")
 
 dofile(minetest.get_modpath("woodsoils").."/nodes.lua")
-dofile(minetest.get_modpath("woodsoils").."/generating.lua")
+--dofile(minetest.get_modpath("woodsoils").."/generating.lua")
 
 -- felt like playing a bit :D
 --[[print("  _____                              __")

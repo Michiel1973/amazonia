@@ -26,8 +26,8 @@ abstract_ferns.config.enable_giant_treefern		= true
 --  Lady-Fern
 abstract_ferns.config.lady_ferns_near_tree = true
 abstract_ferns.config.lady_ferns_near_rock = true
-abstract_ferns.config.lady_ferns_near_ores = true				-- if there's a bunch of ferns there's ores nearby, this one causes a huge fps drop
-abstract_ferns.config.lady_ferns_in_groups = false				-- this one is meant as a replacement of Ferns_near_Ores: ferns tend to generate in groups, less fps drop, no hint for nearby ores
+abstract_ferns.config.lady_ferns_near_ores = false				-- if there's a bunch of ferns there's ores nearby, this one causes a huge fps drop
+abstract_ferns.config.lady_ferns_in_groups = true				-- this one is meant as a replacement of Ferns_near_Ores: ferns tend to generate in groups, less fps drop, no hint for nearby ores
 --
 --	Horsetails
 abstract_ferns.config.enable_horsetails_spawning	= false		-- horsetails will grow in already explored areas, over time, near water or gravel

@@ -3,4 +3,4 @@
 nature.distance_from_water = 20
 
 -- Minimum light level needed to grow. Default is 8, which means daylight.
-nature.minimum_growth_light = 8
+nature.minimum_growth_light = 12
