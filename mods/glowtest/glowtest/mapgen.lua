@@ -17,8 +17,8 @@ local GREINT = 45
 local GRECHA = 13
 
 local ONGEN = true
-local REMOVE_TREES = true
-local DEBUG = true
+local REMOVE_TREES = false
+local DEBUG = false
 
 local colchamin = MINSPA ^ 2
 local factor = (MAXSPA ^ 2 - colchamin) * 4
