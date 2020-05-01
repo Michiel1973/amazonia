@@ -30,11 +30,9 @@ mobs.intllib = S
 -- Nether      -25000 to -30000
 
 -- throwing
-
 dofile(path .. "/zzzthrowing.lua")
 
--- Monsters
-
+-- bring on the monsters
 dofile(path .. "/dirt_monster.lua")              -- 
 dofile(path .. "/dungeon_master.lua")            -- caverealms -8000 to -9999
 dofile(path .. "/oerkki.lua")                    -- nether -25000 to -30000
@@ -50,13 +48,14 @@ dofile(path .. "/slime.lua")                     -- DF L1 and caverealms
 dofile(path .. "/skeleton.lua")                  -- skeletons for nether
 --  dofile(path .. "/banshee.lua")               -- banshee (WIP)
 dofile(path .. "/mothman.lua")                   -- DF L3
+dofile(path .. "/creeper.lua")                   -- DF L3
+
+
 
 -- put the monsters into the world
-
 dofile(path .. "/zzzspawn.lua")
 
 -- other stuff
-
 dofile(path .. "/lucky_block.lua")
 
 print ("[MOD] Mobs Redo Monsters loaded")
