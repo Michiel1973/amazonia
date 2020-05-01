@@ -207,6 +207,7 @@ biome_lib:register_generate_plant({
     max_count = 10,  --10,15
     rarity = 101 - 4,  --3,4
     min_elevation = 1, -- above sea level
+	max_elevation = 40,
 	plantlife_limit = -0.9,
   },
   abstract_bushes.grow_bush
@@ -252,6 +253,7 @@ biome_lib:register_generate_plant({
     max_count = 10,  --10,15
     rarity = 101 - 4,  --3,4
     min_elevation = 1, -- above sea level
+	max_elevation = 40,
 	plantlife_limit = -0.9,
   },
   abstract_bushes.grow_youngtree2
