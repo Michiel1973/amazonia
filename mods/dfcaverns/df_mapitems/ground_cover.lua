@@ -69,7 +69,6 @@ minetest.register_node("df_mapitems:cobble_with_floor_fungus", {
 	drops = "default:cobble",
 	is_ground_content = false,
 	paramtype = "light",
-	light_source = 3,
 	groups = {cracky = 3, stone = 2, slippery = 1, light_sensitive_fungus = 8},
 	_dfcaverns_dead_node = "default:cobble",
 	sounds = default.node_sound_stone_defaults({
@@ -85,7 +84,6 @@ minetest.register_node("df_mapitems:cobble_with_floor_fungus_fine", {
 	drops = "default:cobble",
 	is_ground_content = false,
 	paramtype = "light",
-	light_source = 3,
 	groups = {cracky = 3, stone = 2, slippery = 1, light_sensitive_fungus = 8},
 	_dfcaverns_dead_node = "default:cobble",
 	sounds = default.node_sound_stone_defaults({
