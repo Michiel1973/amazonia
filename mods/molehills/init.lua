@@ -62,18 +62,18 @@ abstract_molehills.place_molehill = function(pos)
 	end
 end
 
-biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass"},
-    max_count = Molehills_Max_Count,
-    rarity = Molehills_Rarity,
-    min_elevation = 1,
-	max_elevation = 40,
-	avoid_nodes = {"group:tree","group:liquid","group:stone","group:falling_node"--[[,"air"]]},
-	avoid_radius = 4,
-    plantlife_limit = -0.3,
-  },
-  abstract_molehills.place_molehill
-)
+-- biome_lib:register_generate_plant({
+    -- surface = {"default:dirt_with_grass"},
+    -- max_count = Molehills_Max_Count,
+    -- rarity = Molehills_Rarity,
+    -- min_elevation = 1,
+	-- max_elevation = 40,
+	-- avoid_nodes = {"group:tree","group:liquid","group:stone","group:falling_node"--[[,"air"]]},
+	-- avoid_radius = 4,
+    -- plantlife_limit = -0.3,
+  -- },
+  -- abstract_molehills.place_molehill
+-- )
 
 -----------------------------------------------------------------------------------------------
 print("[Mod] "..title.." ["..version.."] ["..mname.."]".."Loaded...")
