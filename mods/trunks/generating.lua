@@ -152,39 +152,39 @@ abstract_trunks.place_twig = function(pos)
 	end
 end
 
-if Twigs_on_ground == true then
-biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass"},
-    max_count = Twigs_on_ground_Max_Count,
-    rarity = Twigs_on_ground_Rarity,
-    min_elevation = 1,
-	max_elevation = 40,
-	near_nodes = {"group:tree","ferns:fern_03","ferns:fern_02","ferns:fern_01"},
-	near_nodes_size = 3,
-	near_nodes_vertical = 1,
-	near_nodes_count = 1,
-    plantlife_limit = -0.9,
-  },
-  abstract_trunks.place_twig
-)
-end
+-- if Twigs_on_ground == true then
+-- biome_lib:register_generate_plant({
+    -- surface = {"default:dirt_with_grass"},
+    -- max_count = Twigs_on_ground_Max_Count,
+    -- rarity = Twigs_on_ground_Rarity,
+    -- min_elevation = 1,
+	-- max_elevation = 40,
+	-- near_nodes = {"group:tree","ferns:fern_03","ferns:fern_02","ferns:fern_01"},
+	-- near_nodes_size = 3,
+	-- near_nodes_vertical = 1,
+	-- near_nodes_count = 1,
+    -- plantlife_limit = -0.9,
+  -- },
+  -- abstract_trunks.place_twig
+-- )
+-- end
 
-if Twigs_on_water == true then
-biome_lib:register_generate_plant({
-    surface = {"default:water_source"},
-    max_count = Twigs_on_water_Max_Count,
-    rarity = Twigs_on_water_Rarity,
-    min_elevation = 1,
-	max_elevation = 40,
-	near_nodes = {"group:tree"},
-	near_nodes_size = 3,
-	near_nodes_vertical = 1,
-	near_nodes_count = 1,
-    plantlife_limit = -0.9,
-  },
-  abstract_trunks.place_twig
-)
-end
+-- if Twigs_on_water == true then
+-- biome_lib:register_generate_plant({
+    -- surface = {"default:water_source"},
+    -- max_count = Twigs_on_water_Max_Count,
+    -- rarity = Twigs_on_water_Rarity,
+    -- min_elevation = 1,
+	-- max_elevation = 40,
+	-- near_nodes = {"group:tree"},
+	-- near_nodes_size = 3,
+	-- near_nodes_vertical = 1,
+	-- near_nodes_count = 1,
+    -- plantlife_limit = -0.9,
+  -- },
+  -- abstract_trunks.place_twig
+-- )
+-- end
 
 -----------------------------------------------------------------------------------------------
 -- TRuNKS
@@ -365,26 +365,26 @@ abstract_trunks.grow_moss_on_ground = function(pos)
 
 end
 
-biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass"},
-    max_count = Moss_on_ground_Max_Count,
-    rarity = Moss_on_ground_Rarity,
-    min_elevation = 1,
-	max_elevation = 40,
-	near_nodes = {
-		"group:tree",
-		"ferns:fern_03",
-		"ferns:fern_02",
-		"ferns:fern_01"
-	},
-	near_nodes_size = 2,
-	near_nodes_vertical = 1,
-	near_nodes_count = 1,
-    plantlife_limit = -0.9,
-  },
-  abstract_trunks.grow_moss_on_ground
-)
-end
+-- biome_lib:register_generate_plant({
+    -- surface = {"default:dirt_with_grass"},
+    -- max_count = Moss_on_ground_Max_Count,
+    -- rarity = Moss_on_ground_Rarity,
+    -- min_elevation = 1,
+	-- max_elevation = 40,
+	-- near_nodes = {
+		-- "group:tree",
+		-- "ferns:fern_03",
+		-- "ferns:fern_02",
+		-- "ferns:fern_01"
+	-- },
+	-- near_nodes_size = 2,
+	-- near_nodes_vertical = 1,
+	-- near_nodes_count = 1,
+    -- plantlife_limit = -0.9,
+  -- },
+  -- abstract_trunks.grow_moss_on_ground
+-- )
+-- end
 
 -----------------------------------------------------------------------------------------------
 -- MoSS & FuNGuS -- on trunks
@@ -449,37 +449,37 @@ abstract_trunks.grow_moss_on_trunk = function(pos)
 	--end
 end
 
-biome_lib:register_generate_plant({
-    surface = {
-		"default:tree",
-		"default:jungletree",
-		"default:pine_tree",
-		"trees:tree_conifer",
-		"trees:tree_mangrove",
-		--"trees:tree_palm",
-		"moretrees:apple_tree_trunk",
-		"moretrees:beech_trunk",
-		"moretrees:birch_trunk",
-		"moretrees:fir_trunk",
-		"moretrees:oak_trunk",
-		--"moretrees:palm_trunk",
-		"moretrees:rubber_tree_trunk",
-		"moretrees:rubber_tree_trunk_empty",
-		"moretrees:sequoia_trunk",
-		"moretrees:spruce_trunk",
-		"moretrees:willow_trunk",
-		"default:mossycobble"
-	},
-    max_count = Moss_on_trunk_Max_Count,
-    rarity = Moss_on_trunk_Rarity,
-    min_elevation = 1,
-	max_elevation = 40,
-    plantlife_limit = -0.9,
-	check_air = false,
-  },
-  "abstract_trunks.grow_moss_on_trunk"
-)
-end
+-- biome_lib:register_generate_plant({
+    -- surface = {
+		-- "default:tree",
+		-- "default:jungletree",
+		-- "default:pine_tree",
+		-- "trees:tree_conifer",
+		-- "trees:tree_mangrove",
+		-- --"trees:tree_palm",
+		-- "moretrees:apple_tree_trunk",
+		-- "moretrees:beech_trunk",
+		-- "moretrees:birch_trunk",
+		-- "moretrees:fir_trunk",
+		-- "moretrees:oak_trunk",
+		-- --"moretrees:palm_trunk",
+		-- "moretrees:rubber_tree_trunk",
+		-- "moretrees:rubber_tree_trunk_empty",
+		-- "moretrees:sequoia_trunk",
+		-- "moretrees:spruce_trunk",
+		-- "moretrees:willow_trunk",
+		-- "default:mossycobble"
+	-- },
+    -- max_count = Moss_on_trunk_Max_Count,
+    -- rarity = Moss_on_trunk_Rarity,
+    -- min_elevation = 1,
+	-- max_elevation = 40,
+    -- plantlife_limit = -0.9,
+	-- check_air = false,
+  -- },
+  -- "abstract_trunks.grow_moss_on_trunk"
+-- )
+-- end
 
 -----------------------------------------------------------------------------------------------
 -- RooTS
@@ -526,20 +526,20 @@ abstract_trunks.grow_roots = function(pos)
 	end
 end
 
-biome_lib:register_generate_plant({
-    surface = {"group:tree"},
-    max_count = 1000,
-    rarity = 1,
-    min_elevation = 1,
-	max_elevation = 40,
-	near_nodes = {"default:dirt_with_grass"},
-	near_nodes_size = 1,
-	near_nodes_vertical = 1,
-	near_nodes_count = 1,
-    plantlife_limit = -1,
-    check_air = false,
-  },
-  "abstract_trunks.grow_roots"
-)
+-- biome_lib:register_generate_plant({
+    -- surface = {"group:tree"},
+    -- max_count = 1000,
+    -- rarity = 1,
+    -- min_elevation = 1,
+	-- max_elevation = 40,
+	-- near_nodes = {"default:dirt_with_grass"},
+	-- near_nodes_size = 1,
+	-- near_nodes_vertical = 1,
+	-- near_nodes_count = 1,
+    -- plantlife_limit = -1,
+    -- check_air = false,
+  -- },
+  -- "abstract_trunks.grow_roots"
+-- )
 
-end
+-- end
