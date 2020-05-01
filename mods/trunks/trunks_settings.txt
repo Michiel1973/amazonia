@@ -17,8 +17,8 @@ Trunks_Rarity			= 99 -- larger values make trunks more rare (100 means chance of
 
 
 
-Big_Twigs			= true -- twigs larger than one node
-Twigs_on_ground 		= true
+Big_Twigs			= false -- twigs larger than one node
+Twigs_on_ground 		= false 
 
 
 
@@ -30,7 +30,7 @@ Twigs_on_ground_Rarity		= 66 -- larger values make twigs more rare (100 means ch
 
 
 
-Twigs_on_water 			= true
+Twigs_on_water 			= false
 
 
 
@@ -43,7 +43,7 @@ Twigs_on_water_Rarity		= 33 -- larger values make twigs more rare (100 means cha
 
 
 
-Moss_on_ground			= true
+Moss_on_ground			= false 
 
 
 
@@ -55,7 +55,7 @@ Moss_on_ground_Rarity		= 79 -- larger values makes moss more rare (100 means cha
 
 
 
-Moss_on_trunk			= true
+Moss_on_trunk			= false 
 
 
 
@@ -67,4 +67,4 @@ Moss_on_trunk_Rarity		= 24 -- larger values makes moss more rare (100 means chan
 Auto_Roof_Corner 		= false -- behavior is similar (not the same!) to the one of minecraft stairs
 
 
-Roots					= true
+Roots					= false 
