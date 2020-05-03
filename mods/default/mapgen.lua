@@ -99,7 +99,7 @@ function default.register_mgv6_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 31000,
+		y_max           = 7300,
 		y_min           = -31,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -120,7 +120,7 @@ function default.register_mgv6_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 31000,
+		y_max           = 7300,
 		y_min           = -31000,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -144,7 +144,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 9,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -179,7 +179,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -214,7 +214,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -249,7 +249,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -296,7 +296,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 13 * 13 * 13,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -331,7 +331,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -366,7 +366,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -401,7 +401,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 36 * 36 * 36,
 		clust_num_ores = 3,
 		clust_size     = 2,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -454,7 +454,7 @@ function default.register_ores()
 			octaves = 1,
 		},
 		stratum_thickness = 4,
-		biomes = {"cold_desert"},
+		biomes = {"default_cold_desert"},
 	})
 
 	minetest.register_ore({
@@ -472,7 +472,7 @@ function default.register_ores()
 			octaves = 1,
 		},
 		stratum_thickness = 2,
-		biomes = {"cold_desert"},
+		biomes = {"default_cold_desert"},
 	})
 
 	-- Desert sandstone
@@ -492,7 +492,7 @@ function default.register_ores()
 			octaves = 1,
 		},
 		stratum_thickness = 4,
-		biomes = {"desert"},
+		biomes = {"default_desert"},
 	})
 
 	minetest.register_ore({
@@ -510,7 +510,7 @@ function default.register_ores()
 			octaves = 1,
 		},
 		stratum_thickness = 2,
-		biomes = {"desert"},
+		biomes = {"default_desert"},
 	})
 
 	-- Sandstone
@@ -530,7 +530,7 @@ function default.register_ores()
 			octaves = 1,
 		},
 		stratum_thickness = 2,
-		biomes = {"desert"},
+		biomes = {"default_desert"},
 	})
 
 	-- Blob ore.
@@ -565,7 +565,7 @@ function default.register_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 31000,
+		y_max           = 7300,
 		y_min           = -31000,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -586,7 +586,7 @@ function default.register_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 31000,
+		y_max           = 7300,
 		y_min           = -31,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -598,9 +598,9 @@ function default.register_ores()
 			persist = 0.0
 		},
 		-- Only where default:dirt is present as surface material
-		biomes = {"taiga", "snowy_grassland", "grassland", "coniferous_forest",
-				"deciduous_forest", "deciduous_forest_shore", "rainforest",
-				"rainforest_swamp"}
+		biomes = {"default_taiga", "default_snowy_grassland", "default_grassland", "default_coniferous_forest",
+				"default_deciduous_forest", "default_deciduous_forest_shore", "default_rainforest",
+				"default_rainforest_swamp"}
 	})
 
 	-- Gravel
@@ -611,7 +611,7 @@ function default.register_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 31000,
+		y_max           = 7300,
 		y_min           = -31000,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -635,7 +635,7 @@ function default.register_ores()
 		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 9,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -670,7 +670,7 @@ function default.register_ores()
 		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -705,7 +705,7 @@ function default.register_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -740,7 +740,7 @@ function default.register_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -775,7 +775,7 @@ function default.register_ores()
 		clust_scarcity = 13 * 13 * 13,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -810,7 +810,7 @@ function default.register_ores()
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -845,7 +845,7 @@ function default.register_ores()
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -880,7 +880,7 @@ function default.register_ores()
 		clust_scarcity = 36 * 36 * 36,
 		clust_num_ores = 3,
 		clust_size     = 2,
-		y_max          = 31000,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -919,7 +919,7 @@ function default.register_biomes()
 	-- Icesheet
 
 	minetest.register_biome({
-		name = "icesheet",
+		name = "default_icesheet",
 		node_dust = "default:snowblock",
 		node_top = "default:snowblock",
 		depth_top = 1,
@@ -942,7 +942,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "icesheet_ocean",
+		name = "default_icesheet_ocean",
 		node_dust = "default:snowblock",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -963,7 +963,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "icesheet_under",
+		name = "default_icesheet_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -979,7 +979,7 @@ function default.register_biomes()
 	-- Tundra
 
 	minetest.register_biome({
-		name = "tundra_highland",
+		name = "default_tundra_highland",
 		node_dust = "default:snow",
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
@@ -995,7 +995,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "tundra",
+		name = "default_tundra",
 		node_top = "default:permafrost_with_stones",
 		depth_top = 1,
 		node_filler = "default:permafrost",
@@ -1015,7 +1015,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "tundra_beach",
+		name = "default_tundra_beach",
 		node_top = "default:gravel",
 		depth_top = 1,
 		node_filler = "default:gravel",
@@ -1035,7 +1035,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "tundra_ocean",
+		name = "default_tundra_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1056,7 +1056,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "tundra_under",
+		name = "default_tundra_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1072,7 +1072,7 @@ function default.register_biomes()
 	-- Taiga
 
 	minetest.register_biome({
-		name = "taiga",
+		name = "default_taiga",
 		node_dust = "default:snow",
 		node_top = "default:dirt_with_snow",
 		depth_top = 1,
@@ -1092,7 +1092,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "taiga_ocean",
+		name = "default_taiga_ocean",
 		node_dust = "default:snow",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -1114,7 +1114,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "taiga_under",
+		name = "default_taiga_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1130,7 +1130,7 @@ function default.register_biomes()
 	-- Snowy grassland
 
 	minetest.register_biome({
-		name = "snowy_grassland",
+		name = "default_snowy_grassland",
 		node_dust = "default:snow",
 		node_top = "default:dirt_with_snow",
 		depth_top = 1,
@@ -1150,7 +1150,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "snowy_grassland_ocean",
+		name = "default_snowy_grassland_ocean",
 		node_dust = "default:snow",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -1172,7 +1172,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "snowy_grassland_under",
+		name = "default_snowy_grassland_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1188,7 +1188,7 @@ function default.register_biomes()
 	-- Grassland
 
 	minetest.register_biome({
-		name = "grassland",
+		name = "default_grassland",
 		node_top = "default:dirt_with_grass",
 		depth_top = 1,
 		node_filler = "default:dirt",
@@ -1207,7 +1207,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "grassland_dunes",
+		name = "default_grassland_dunes",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1225,7 +1225,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "grassland_ocean",
+		name = "default_grassland_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1245,7 +1245,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "grassland_under",
+		name = "default_grassland_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1261,7 +1261,7 @@ function default.register_biomes()
 	-- Coniferous forest
 
 	minetest.register_biome({
-		name = "coniferous_forest",
+		name = "default_coniferous_forest",
 		node_top = "default:dirt_with_coniferous_litter",
 		depth_top = 1,
 		node_filler = "default:dirt",
@@ -1280,7 +1280,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "coniferous_forest_dunes",
+		name = "default_coniferous_forest_dunes",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1298,7 +1298,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "coniferous_forest_ocean",
+		name = "default_coniferous_forest_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1318,7 +1318,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "coniferous_forest_under",
+		name = "default_coniferous_forest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1334,7 +1334,7 @@ function default.register_biomes()
 	-- Deciduous forest
 
 	minetest.register_biome({
-		name = "deciduous_forest",
+		name = "default_deciduous_forest",
 		node_top = "default:dirt_with_grass",
 		depth_top = 1,
 		node_filler = "default:dirt",
@@ -1353,7 +1353,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "deciduous_forest_shore",
+		name = "default_deciduous_forest_shore",
 		node_top = "default:dirt",
 		depth_top = 1,
 		node_filler = "default:dirt",
@@ -1370,7 +1370,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "deciduous_forest_ocean",
+		name = "default_deciduous_forest_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1391,7 +1391,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "deciduous_forest_under",
+		name = "default_deciduous_forest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1407,7 +1407,7 @@ function default.register_biomes()
 	-- Desert
 
 	minetest.register_biome({
-		name = "desert",
+		name = "default_desert",
 		node_top = "default:desert_sand",
 		depth_top = 1,
 		node_filler = "default:desert_sand",
@@ -1426,7 +1426,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "desert_ocean",
+		name = "default_desert_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1447,7 +1447,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "desert_under",
+		name = "default_desert_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1463,7 +1463,7 @@ function default.register_biomes()
 	-- Sandstone desert
 
 	minetest.register_biome({
-		name = "sandstone_desert",
+		name = "default_sandstone_desert",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1482,7 +1482,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "sandstone_desert_ocean",
+		name = "default_sandstone_desert_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1502,7 +1502,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "sandstone_desert_under",
+		name = "default_sandstone_desert_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1518,7 +1518,7 @@ function default.register_biomes()
 	-- Cold desert
 
 	minetest.register_biome({
-		name = "cold_desert",
+		name = "default_cold_desert",
 		node_top = "default:silver_sand",
 		depth_top = 1,
 		node_filler = "default:silver_sand",
@@ -1537,7 +1537,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "cold_desert_ocean",
+		name = "default_cold_desert_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1558,7 +1558,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "cold_desert_under",
+		name = "default_cold_desert_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1574,7 +1574,7 @@ function default.register_biomes()
 	-- Savanna
 
 	minetest.register_biome({
-		name = "savanna",
+		name = "default_savanna",
 		node_top = "default:dry_dirt_with_dry_grass",
 		depth_top = 1,
 		node_filler = "default:dry_dirt",
@@ -1593,7 +1593,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "savanna_shore",
+		name = "default_savanna_shore",
 		node_top = "default:dry_dirt",
 		depth_top = 1,
 		node_filler = "default:dry_dirt",
@@ -1610,7 +1610,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "savanna_ocean",
+		name = "default_savanna_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1631,7 +1631,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "savanna_under",
+		name = "default_savanna_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1647,7 +1647,7 @@ function default.register_biomes()
 	-- Rainforest
 
 	minetest.register_biome({
-		name = "rainforest",
+		name = "default_rainforest",
 		node_top = "default:dirt_with_rainforest_litter",
 		depth_top = 1,
 		node_filler = "default:dirt",
@@ -1666,7 +1666,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "rainforest_swamp",
+		name = "default_rainforest_swamp",
 		node_top = "default:dirt",
 		depth_top = 1,
 		node_filler = "default:dirt",
@@ -1683,7 +1683,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "rainforest_ocean",
+		name = "default_rainforest_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -1704,7 +1704,7 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
-		name = "rainforest_under",
+		name = "default_rainforest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1751,6 +1751,28 @@ function default.register_mgv6_decorations()
 		num_spawn_by = 1,
 	})
 
+	minetest.register_decoration({
+		name = "default:papyrus",
+		deco_type = "simple",
+		place_on = nil,
+		sidelen = 16,
+		noise_params = {
+			offset = -0.3,
+			scale = 0.7,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 354,
+			octaves = 3,
+			persist = 0.7
+		},
+		y_max = 6500,
+		y_min =7500,
+		decoration = "default:papyrus",
+		height = 2,
+		height_max = 4,
+		spawn_by = "default:water_source",
+		num_spawn_by = 1,
+	})
+
 	-- Cacti
 
 	minetest.register_decoration({
@@ -1768,6 +1790,26 @@ function default.register_mgv6_decorations()
 		},
 		y_max = 30,
 		y_min = 1,
+		decoration = "default:cactus",
+		height = 3,
+	        height_max = 4,
+	})
+
+	minetest.register_decoration({
+		name = "default:cactus",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.012,
+			scale = 0.024,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 230,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 6500,
+		y_min = 7500,
 		decoration = "default:cactus",
 		height = 3,
 	        height_max = 4,
@@ -1795,6 +1837,26 @@ function default.register_mgv6_decorations()
 		})
 	end
 
+	for length = 1, 5 do
+		minetest.register_decoration({
+			name = "default:grass_"..length,
+			deco_type = "simple",
+			place_on = {"default:dirt_with_rainforest_litter"},
+			sidelen = 16,
+			noise_params = {
+				offset = 0,
+				scale = 0.007,
+				spread = {x = 100, y = 100, z = 100},
+				seed = 329,
+				octaves = 3,
+				persist = 0.6
+			},
+			y_max = 6500,
+			y_min = 7500,
+			decoration = "default:grass_"..length,
+		})
+	end
+
 	-- Dry shrubs
 
 	minetest.register_decoration({
@@ -1812,6 +1874,25 @@ function default.register_mgv6_decorations()
 		},
 		y_max = 30,
 		y_min = 1,
+		decoration = "default:dry_shrub",
+		param2 = 4,
+	})
+	
+		minetest.register_decoration({
+		name = "default:dry_shrub",
+		deco_type = "simple",
+		place_on = {"default:desert_sand", "default:dirt_with_snow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.035,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 6500,
+		y_min = 7500,
 		decoration = "default:dry_shrub",
 		param2 = 4,
 	})
@@ -1834,8 +1915,8 @@ local function register_grass_decoration(offset, scale, length)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"grassland", "deciduous_forest"},
-		y_max = 31000,
+		biomes = {"default_grassland", "default_deciduous_forest"},
+		y_max = 7500,
 		y_min = 1,
 		decoration = "default:grass_" .. length,
 	})
@@ -1855,8 +1936,8 @@ local function register_dry_grass_decoration(offset, scale, length)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"savanna"},
-		y_max = 31000,
+		biomes = {"default_savanna"},
+		y_max = 7500,
 		y_min = 1,
 		decoration = "default:dry_grass_" .. length,
 	})
@@ -1876,8 +1957,8 @@ local function register_fern_decoration(seed, length)
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"coniferous_forest"},
-		y_max = 31000,
+		biomes = {"default_coniferous_forest"},
+		y_max = 7500,
 		y_min = 6,
 		decoration = "default:fern_" .. length,
 	})
@@ -1902,8 +1983,8 @@ function default.register_decorations()
 			octaves = 4,
 			persist = 1.0
 		},
-		biomes = {"savanna"},
-		y_max = 31000,
+		biomes = {"default_savanna"},
+		y_max = 7500,
 		y_min = 1,
 		decoration = "default:dry_dirt",
 		place_offset_y = -1,
@@ -1916,17 +1997,17 @@ function default.register_decorations()
 		name = "default:apple_tree",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_grass"},
-		sidelen = 16,
+		sidelen = 32,
 		noise_params = {
 			offset = 0.024,
-			scale = 0.015,
-			spread = {x = 250, y = 250, z = 250},
+			scale = 0.025,
+			spread = {x = 128, y = 128, z = 128},
 			seed = 2,
 			octaves = 3,
-			persist = 0.66
+			persist = 0.3
 		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
+		biomes = {"default_deciduous_forest"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/apple_tree.mts",
 		flags = "place_center_x, place_center_z",
@@ -1941,14 +2022,14 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0012,
-			scale = 0.0007,
+			scale = 0.0003,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
+		biomes = {"default_deciduous_forest"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/apple_log.mts",
 		flags = "place_center_x",
@@ -1969,13 +2050,13 @@ function default.register_decorations()
 			sidelen = 80,
 			noise_params = {
 				offset = 0.0,
-				scale = 0.0025,
+				scale = 0.033,
 				spread = {x = 250, y = 250, z = 250},
 				seed = 2685,
 				octaves = 3,
 				persist = 0.7
 			},
-			biomes = {"rainforest"},
+			biomes = nil,
 			y_max = 32,
 			y_min = 1,
 			schematic = minetest.get_modpath("default") ..
@@ -1993,9 +2074,9 @@ function default.register_decorations()
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_rainforest_litter"},
 		sidelen = 80,
-		fill_ratio = 0.1,
-		biomes = {"rainforest"},
-		y_max = 31000,
+		fill_ratio = 0.0317,
+		biomes = {"default_rainforest_swamp"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
 		flags = "place_center_x, place_center_z",
@@ -2012,13 +2093,13 @@ function default.register_decorations()
 		-- Noise tuned to place swamp trees where papyrus is absent
 		noise_params = {
 			offset = 0.0,
-			scale = -0.1,
+			scale = 0.0358,
 			spread = {x = 200, y = 200, z = 200},
 			seed = 354,
 			octaves = 1,
 			persist = 0.5
 		},
-		biomes = {"rainforest_swamp"},
+		biomes = {"default_rainforest_swamp"},
 		y_max = 0,
 		y_min = -1,
 		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
@@ -2033,8 +2114,8 @@ function default.register_decorations()
 		place_offset_y = 1,
 		sidelen = 80,
 		fill_ratio = 0.005,
-		biomes = {"rainforest"},
-		y_max = 31000,
+		biomes = {"default_rainforest"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/jungle_log.mts",
 		flags = "place_center_x",
@@ -2052,14 +2133,14 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = 0.010,
-			scale = 0.048,
+			scale = 0.067,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"taiga", "coniferous_forest"},
-		y_max = 31000,
+		biomes = nil,
+		y_max = 6800,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
 		flags = "place_center_x, place_center_z",
@@ -2072,14 +2153,14 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = 0.010,
-			scale = -0.048,
+			scale =  -0.047,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"taiga", "coniferous_forest"},
-		y_max = 31000,
+		biomes = nil,
+		y_max = 6800,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
 		flags = "place_center_x, place_center_z",
@@ -2091,9 +2172,9 @@ function default.register_decorations()
 		place_on = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
 		place_offset_y = 1,
 		sidelen = 80,
-		fill_ratio = 0.0018,
-		biomes = {"taiga", "coniferous_forest"},
-		y_max = 31000,
+		fill_ratio = 0.0005,
+		biomes = {"default_taiga", "default_coniferous_forest"},
+		y_max = 6800,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_log.mts",
 		flags = "place_center_x",
@@ -2111,14 +2192,14 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
-			scale = 0.002,
+			scale = 0.0025,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"savanna"},
-		y_max = 31000,
+		biomes = {"default_savanna"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/acacia_tree.mts",
 		flags = "place_center_x, place_center_z",
@@ -2139,8 +2220,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"savanna"},
-		y_max = 31000,
+		biomes = {"default_savanna"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/acacia_log.mts",
 		flags = "place_center_x",
@@ -2158,14 +2239,14 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0,
-			scale = -0.015,
+			scale = -0.0039,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
+		biomes = {"default_deciduous_forest"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/aspen_tree.mts",
 		flags = "place_center_x, place_center_z",
@@ -2185,8 +2266,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
+		biomes = {"default_deciduous_forest"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/aspen_log.mts",
 		flags = "place_center_x",
@@ -2210,8 +2291,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"desert"},
-		y_max = 31000,
+		biomes = {"default_desert"},
+		y_max = 7500,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/large_cactus.mts",
 		flags = "place_center_x, place_center_z",
@@ -2233,8 +2314,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"desert"},
-		y_max = 31000,
+		biomes = {"default_desert"},
+		y_max = 7500,
 		y_min = 4,
 		decoration = "default:cactus",
 		height = 2,
@@ -2258,11 +2339,12 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"rainforest_swamp"},
+		biomes = {"default_rainforest_swamp"},
 		y_max = 0,
 		y_min = 0,
 		schematic = minetest.get_modpath("default") .. "/schematics/papyrus_on_dirt.mts",
 	})
+
 
 	-- Dry dirt version for savanna shore
 
@@ -2279,13 +2361,35 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"savanna_shore"},
+		biomes = {"default_savanna_shore"},
 		y_max = 0,
 		y_min = 0,
 		schematic = minetest.get_modpath("default") ..
 			"/schematics/papyrus_on_dry_dirt.mts",
 	})
 
+
+	minetest.register_decoration({
+		name = "default:papyrus",
+		deco_type = "simple",
+		place_on = {"group:soil","group:sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.3,
+			scale = 0.7,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 354,
+			octaves = 3,
+			persist = 0.7
+		},
+		y_max = 6500,
+		y_min = 7500,
+		decoration = "default:papyrus",
+		height = 2,
+		height_max = 4,
+		spawn_by = "default:water_source",
+		num_spawn_by = 1,
+	})
 	-- Bush
 
 	minetest.register_decoration({
@@ -2301,8 +2405,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"grassland", "deciduous_forest"},
-		y_max = 31000,
+		biomes = {"default_grassland", "default_deciduous_forest"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2323,8 +2427,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"grassland", "snowy_grassland"},
-		y_max = 31000,
+		biomes = {"default_grassland", "default_snowy_grassland"},
+		y_max = 6800,
 		y_min = 1,
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
@@ -2346,8 +2450,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"savanna"},
-		y_max = 31000,
+		biomes = {"default_savanna"},
+		y_max = 6800,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2368,8 +2472,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"taiga", "snowy_grassland"},
-		y_max = 31000,
+		biomes = {"default_taiga", "default_snowy_grassland"},
+		y_max = 6800,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2405,8 +2509,8 @@ function default.register_decorations()
 		place_on = {"default:dirt_with_rainforest_litter"},
 		sidelen = 80,
 		fill_ratio = 0.1,
-		biomes = {"rainforest"},
-		y_max = 31000,
+		biomes = {"default_rainforest"},
+		y_max = 7500,
 		y_min = 1,
 		decoration = "default:junglegrass",
 	})
@@ -2427,8 +2531,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"desert", "sandstone_desert", "cold_desert"},
-		y_max = 31000,
+		biomes = {"default_desert", "sandstone_desert", "cold_desert"},
+		y_max = 7500,
 		y_min = 2,
 		decoration = "default:dry_shrub",
 		param2 = 4,
@@ -2450,7 +2554,7 @@ function default.register_decorations()
 			persist = 0.0,
 			flags = "absvalue, eased"
 		},
-		biomes = {"coniferous_forest_dunes", "grassland_dunes"},
+		biomes = {"default_coniferous_forest_dunes", "grassland_dunes"},
 		y_max = 6,
 		y_min = 4,
 		decoration = {
@@ -2460,6 +2564,30 @@ function default.register_decorations()
 		},
 	})
 
+	minetest.register_decoration({
+		name = "default:marram_grass",
+		deco_type = "simple",
+		place_on = {"default:sand"},
+		sidelen = 4,
+		noise_params = {
+			offset = -0.7,
+			scale = 4.0,
+			spread = {x = 16, y = 16, z = 16},
+			seed = 513337,
+			octaves = 1,
+			persist = 0.0,
+			flags = "absvalue, eased"
+		},
+		biomes = nil,
+		y_max = 7500,
+		y_min = 6500,
+		decoration = {
+			"default:marram_grass_1",
+			"default:marram_grass_2",
+			"default:marram_grass_3",
+		},
+	})
+	
 	-- Tundra moss
 
 	minetest.register_decoration({
@@ -2474,7 +2602,7 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 1.0
 		},
-		biomes = {"tundra"},
+		biomes = {"default_tundra"},
 		y_max = 50,
 		y_min = 2,
 		decoration = "default:permafrost_with_moss",
@@ -2501,7 +2629,7 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 1.0
 		},
-		biomes = {"tundra", "tundra_beach"},
+		biomes = {"default_tundra", "tundra_beach"},
 		y_max = 50,
 		y_min = 1,
 		decoration = "default:snow",

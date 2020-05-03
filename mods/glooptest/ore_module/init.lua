@@ -39,9 +39,9 @@ glooptest.ore_module.register_ore("glooptest", "kalite", "Kalite", {
 			generate_inside_of = "default:stone",
 			chunks_per_mapblock = 9*9*9,
 			chunk_size = 6,
-			max_blocks_per_chunk = 7,
+			max_blocks_per_chunk = 4,
 			miny = -31000,
-			maxy = 10
+			maxy = 7500
 		},
 	},
 })
@@ -107,8 +107,8 @@ glooptest.ore_module.register_ore("glooptest", "alatro", "Alatro", {
 			chunks_per_mapblock = 9*9*9,
 			chunk_size = 2,
 			max_blocks_per_chunk = 6,
-			miny = -10000,
-			maxy = 2560
+			miny = -8600,
+			maxy = 7600
 		},
 	},
 	lump = {
@@ -202,8 +202,8 @@ glooptest.ore_module.register_ore("glooptest", "talinite", "Talinite", {
 			chunks_per_mapblock = 12*12*12,
 			chunk_size = 2,
 			max_blocks_per_chunk = 4,
-			miny = -10000,
-			maxy = 2250
+			miny = -8000,
+			maxy = 7500
 		}
 	},
 	lump = {
@@ -242,8 +242,8 @@ glooptest.ore_module.register_ore("glooptest", "akalin", "Akalin", {
 			chunks_per_mapblock = 7*7*7,
 			chunk_size = 3,
 			max_blocks_per_chunk = 9,
-			miny = -10000,
-			maxy = 2560
+			miny = -8000,
+			maxy = 7500
 		}
 	},
 	lump = {
@@ -281,8 +281,8 @@ glooptest.ore_module.register_ore("glooptest", "arol", "Arol", {
 			chunks_per_mapblock = 10*10*10,
 			chunk_size = 2,
 			max_blocks_per_chunk = 2,
-			miny = -10000,
-			maxy = 2020
+			miny = -8000,
+			maxy = 7500
 		}
 	},
 	lump = {
@@ -408,7 +408,7 @@ glooptest.ore_module.register_ore("glooptest", "ruby", "Ruby", {
 			chunks_per_mapblock = 15*15*15,
 			chunk_size = 5,
 			max_blocks_per_chunk = 5,
-			miny = -3000,
+			miny = -2000,
 			maxy = -30
 		},
 	},
@@ -456,8 +456,8 @@ glooptest.ore_module.register_ore("glooptest", "sapphire", "Sapphire", {
 			chunks_per_mapblock = 15*15*15,
 			chunk_size = 5,
 			max_blocks_per_chunk = 5,
-			miny = -3000,
-			maxy = -30
+			miny = -4000,
+			maxy = -2000
 		},
 	},
 	block = {
@@ -505,7 +505,7 @@ glooptest.ore_module.register_ore("glooptest", "emerald", "Emerald", {
 			chunk_size = 4,
 			max_blocks_per_chunk = 4,
 			miny = -5000,
-			maxy = -70
+			maxy = -3000
 		},
 	},
 	block = {
@@ -552,8 +552,8 @@ glooptest.ore_module.register_ore("glooptest", "topaz", "Topaz", {
 			chunks_per_mapblock = 15*15*15,
 			chunk_size = 4,
 			max_blocks_per_chunk = 4,
-			miny = -5000,
-			maxy = -70
+			miny = -6000,
+			maxy = -4000
 		},
 	},
 	block = {
@@ -600,8 +600,8 @@ glooptest.ore_module.register_ore("glooptest", "amethyst", "Amethyst", {
 			chunks_per_mapblock = 15*15*15,
 			chunk_size = 3,
 			max_blocks_per_chunk = 3,
-			miny = -10000,
-			maxy = -128
+			miny = -7000,
+			maxy = -5000
 		},
 	},
 	block = {

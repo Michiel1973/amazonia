@@ -48,7 +48,7 @@ local highf_min = 70
 local alp_max = 160
 local alp_min = 125
 --high alpine
-local high_alp_max = 31000
+local high_alp_max = 6500
 local high_alp_min = 180
 
 
@@ -223,7 +223,7 @@ local alpine_peat_hum = 100
 
 --cold mantle
 minetest.register_biome({
-	name = "cold_mantle",
+	name = "aotearoa_cold_mantle",
 	--node_dust = "",
 	node_top = "aotearoa:volcanic_sand",
 	depth_top = 10,
@@ -243,7 +243,7 @@ minetest.register_biome({
 
 --wet mantle
 minetest.register_biome({
-	name = "wet_mantle",
+	name = "aotearoa_wet_mantle",
 	--node_dust = "",
 	node_top = "aotearoa:boiling_mud_source",
 	depth_top = 10,
@@ -254,7 +254,7 @@ minetest.register_biome({
 	--depth_water_top = ,
 	--node_water = "",
 	--node_river_water = "default:river_water_source",
-	y_min = -15000,
+	y_min = -8000,
 	y_max = basement_min + 3000,
 	heat_point = 60,
 	humidity_point = 60,
@@ -262,7 +262,7 @@ minetest.register_biome({
 
 --mantle
 minetest.register_biome({
-	name = "mantle",
+	name = "aotearoa_mantle",
 	--node_dust = "default:lava_source",
 	node_top = "default:lava_source",
 	depth_top = 10,
@@ -273,7 +273,7 @@ minetest.register_biome({
 	--depth_water_top = ,
 	--node_water = "",
 	--node_river_water = "default:river_water_source",
-	y_min = -15000,
+	y_min = -9000,
 	y_max = basement_min + 1500,
 	heat_point = 70,
 	humidity_point = 30,
@@ -284,7 +284,7 @@ minetest.register_biome({
 
 --greywacke_basement
 minetest.register_biome({
-	name = "greywacke_basement",
+	name = "aotearoa_greywacke_basement",
 	--node_dust = "",
 	node_top = "aotearoa:greywacke",
 	depth_top = 5,
@@ -304,7 +304,7 @@ minetest.register_biome({
 
 --schist_basement
 minetest.register_biome({
-	name = "schist_basement",
+	name = "aotearoa_schist_basement",
 	--node_dust = "",
 	node_top = "aotearoa:schist",
 	depth_top = 5,
@@ -324,7 +324,7 @@ minetest.register_biome({
 
 --gneiss_basement
 minetest.register_biome({
-	name = "gneiss_basement",
+	name = "aotearoa_gneiss_basement",
 	--node_dust = "",
 	node_top = "aotearoa:gneiss",
 	depth_top = 5,
@@ -345,7 +345,7 @@ minetest.register_biome({
 
 --granite_basement
 minetest.register_biome({
-	name = "granite_basement",
+	name = "aotearoa_granite_basement",
 	--node_dust = "",
 	node_top = "aotearoa:granite",
 	depth_top = 5,
@@ -372,7 +372,7 @@ minetest.register_biome({
 
 --kermadec_ocean
 minetest.register_biome({
-	name = "kermadec_ocean",
+	name = "aotearoa_kermadec_ocean",
 	--node_dust = "",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -391,7 +391,7 @@ minetest.register_biome({
 
 --north_eastern_ocean
 minetest.register_biome({
-	name = "north_eastern_ocean",
+	name = "aotearoa_north_eastern_ocean",
 	--node_dust = "",
 	node_top = "aotearoa:mud_sinking",
 	depth_top = 1,
@@ -411,7 +411,7 @@ minetest.register_biome({
 
 --west_coast_north_ocean
 minetest.register_biome({
-	name = "west_coast_north_ocean",
+	name = "aotearoa_west_coast_north_ocean",
 	--node_dust = "",
 	node_top = "aotearoa:iron_sand",
 	depth_top = 1,
@@ -431,7 +431,7 @@ minetest.register_biome({
 
 --east_coast_north ocean
 minetest.register_biome({
-	name = "east_coast_north ocean",
+	name = "aotearoa_east_coast_north ocean",
 	--node_dust = "",
 	node_top = "aotearoa:mud_sinking",
 	depth_top = 1,
@@ -451,7 +451,7 @@ minetest.register_biome({
 
 --north_cook_straight
 minetest.register_biome({
-	name = "north_cook_straight",
+	name = "aotearoa_north_cook_straight",
 	--node_dust = "",
 	node_top = "aotearoa:mud",
 	depth_top = 1,
@@ -471,7 +471,7 @@ minetest.register_biome({
 
 --south_cook_straight
 minetest.register_biome({
-	name = "south_cook_straight",
+	name = "aotearoa_south_cook_straight",
 	--node_dust = "",
 	node_top = "default:sand",
 	depth_top = 1,
@@ -492,7 +492,7 @@ minetest.register_biome({
 
 --west_coast_south_ocean
 minetest.register_biome({
-	name = "west_coast_south_ocean",
+	name = "aotearoa_west_coast_south_ocean",
 	--node_dust = "",
 	node_top = "aotearoa:mud",
 	depth_top = 1,
@@ -512,7 +512,7 @@ minetest.register_biome({
 
 --east_coast_south_ocean
 minetest.register_biome({
-	name = "east_coast_south_ocean",
+	name = "aotearoa_east_coast_south_ocean",
 	--node_dust = "",
 	node_top = "aotearoa:mud_sinking",
 	depth_top = 1,
@@ -532,7 +532,7 @@ minetest.register_biome({
 
 --fiordland_ocean
 minetest.register_biome({
-	name = "fiordland_ocean",
+	name = "aotearoa_fiordland_ocean",
 	--node_dust = "",
 	node_top = "aotearoa:mud",
 	depth_top = 1,
@@ -553,7 +553,7 @@ minetest.register_biome({
 
 --southern_ocean
 minetest.register_biome({
-	name = "southern_ocean",
+	name = "aotearoa_southern_ocean",
 	--node_dust = "",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -574,7 +574,7 @@ minetest.register_biome({
 
 --subantarctic_ocean
 minetest.register_biome({
-	name = "subantarctic_ocean",
+	name = "aotearoa_subantarctic_ocean",
 	--node_dust = "",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -598,7 +598,7 @@ minetest.register_biome({
 
 --Sandy Beach.
 minetest.register_biome({
-	name = "sandy_beach",
+	name = "aotearoa_sandy_beach",
 	--node_dust = "",
 	node_top = "default:sand",
 	depth_top = 1,
@@ -619,7 +619,7 @@ minetest.register_biome({
 
 --Shelly Beach.
 minetest.register_biome({
-	name = "shelly_beach",
+	name = "aotearoa_shelly_beach",
 	--node_dust = "",
 	node_top = "aotearoa:seashells",
 	depth_top = 1,
@@ -640,7 +640,7 @@ minetest.register_biome({
 
 --Gravel Beach
 minetest.register_biome({
-	name = "gravel_beach",
+	name = "aotearoa_gravel_beach",
 	--node_dust = "",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -661,7 +661,7 @@ minetest.register_biome({
 
 --subantarctic_shore
 minetest.register_biome({
-	name = "subantarctic_shore",
+	name = "aotearoa_subantarctic_shore",
 	--node_dust = "default:snow",
 	--node_top = "",
 	--depth_top = 1,
@@ -682,7 +682,7 @@ minetest.register_biome({
 
 --volcanic_isle_shore
 minetest.register_biome({
-	name = "volcanic_isle_shore",
+	name = "aotearoa_volcanic_isle_shore",
 	--node_dust = "default:gravel",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -704,7 +704,7 @@ minetest.register_biome({
 
 --volcanic_field
 minetest.register_biome({
-	name = "volcanic_field",
+	name = "aotearoa_volcanic_field",
 	--node_dust = "default:gravel",
 	node_top = "aotearoa:scoria",
 	depth_top = 1,
@@ -727,7 +727,7 @@ minetest.register_biome({
 
 --Iron sand
 minetest.register_biome({
-	name = "iron_sand_beach",
+	name = "aotearoa_iron_sand_beach",
 	--node_dust = "",
 	node_top = "aotearoa:iron_sand",
 	depth_top = 3,
@@ -749,7 +749,7 @@ minetest.register_biome({
 
 --Northern Estuary
 minetest.register_biome({
-	name = "northern_estuary",
+	name = "aotearoa_northern_estuary",
 	--node_dust = "",
 	node_top = "aotearoa:mud_sinking",
 	depth_top = 1,
@@ -770,7 +770,7 @@ minetest.register_biome({
 
 --Southern Estuary
 minetest.register_biome({
-	name = "southern_estuary",
+	name = "aotearoa_southern_estuary",
 	--node_dust = "",
 	node_top = "aotearoa:mud",
 	depth_top = 1,
@@ -797,7 +797,7 @@ minetest.register_biome({
 
 --Pohutukawa Dunes
 minetest.register_biome({
-	name = "pohutukawa_dunes",
+	name = "aotearoa_pohutukawa_dunes",
 	--node_dust = "",
 	node_top = "default:sand",
 	depth_top = 1,
@@ -821,7 +821,7 @@ minetest.register_biome({
 
 --Sand dunes
 minetest.register_biome({
-	name = "sand_dunes",
+	name = "aotearoa_sand_dunes",
 	--node_dust = "",
 	node_top = "default:sand",
 	depth_top = 1,
@@ -845,7 +845,7 @@ minetest.register_biome({
 
 --Iron Sand dunes
 minetest.register_biome({
-	name = "iron_sand_dunes",
+	name = "aotearoa_iron_sand_dunes",
 	--node_dust = "",
 	node_top = "aotearoa:iron_sand",
 	depth_top = 3,
@@ -869,7 +869,7 @@ minetest.register_biome({
 
 --Salt Marsh
 minetest.register_biome({
-	name = "salt_marsh",
+	name = "aotearoa_salt_marsh",
 	--node_dust = "",
 	node_top = "aotearoa:mud",
 	depth_top = 1,
@@ -892,7 +892,7 @@ minetest.register_biome({
 
 --Gravel dunes
 minetest.register_biome({
-	name = "gravel_dunes",
+	name = "aotearoa_gravel_dunes",
 	--node_dust = "",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -916,7 +916,7 @@ minetest.register_biome({
 
 --subantarctic_coast
 minetest.register_biome({
-	name = "subantarctic_coast",
+	name = "aotearoa_subantarctic_coast",
 	node_dust = "default:snow",
 	node_top = "aotearoa:dirt_with_moss",
 	depth_top = 1,
@@ -940,7 +940,7 @@ minetest.register_biome({
 
 --white_island (volcanic dunes)
 minetest.register_biome({
-	name = "white_island",
+	name = "aotearoa_white_island",
 	--node_dust = "",
 	node_top = "aotearoa:volcanic_sand",
 	depth_top = 1,
@@ -966,7 +966,7 @@ minetest.register_biome({
 
 --Pohutukawa Forest
 minetest.register_biome({
-	name = "pohutukawa_forest",
+	name = "aotearoa_pohutukawa_forest",
 	--node_dust = "",
 	node_top = "default:dirt_with_rainforest_litter",
 	depth_top = 1,
@@ -990,7 +990,7 @@ minetest.register_biome({
 
 -- Coastal Scrub
 minetest.register_biome({
-	name = "coastal_scrub",
+	name = "aotearoa_coastal_scrub",
 	--node_dust = "",
 	node_top = "default:dirt_with_grass",
 	depth_top = 1,
@@ -1016,7 +1016,7 @@ vertical_blend = 3,
 
 --Muttonbird Scrub
 minetest.register_biome({
-	name = "muttonbird_scrub",
+	name = "aotearoa_muttonbird_scrub",
 	--node_dust = "",
 	node_top = "default:dirt_with_rainforest_litter",
 	depth_top = 1,
@@ -1039,7 +1039,7 @@ minetest.register_biome({
 
 --Coastal Tussock land
 minetest.register_biome({
-	name = "coastal_tussock",
+	name = "aotearoa_coastal_tussock",
 	--node_dust = "",
 	node_top = "default:dirt_with_dry_grass",
 	depth_top = 1,
@@ -1067,7 +1067,7 @@ minetest.register_biome({
 
 --kahikatea_swamp
 minetest.register_biome({
-	name = "kahikatea_swamp",
+	name = "aotearoa_kahikatea_swamp",
 	--node_dust = "",
 	node_top = "aotearoa:forest_peat",
 	depth_top = 1,
@@ -1091,7 +1091,7 @@ minetest.register_biome({
 
 --raupo_swamp
 minetest.register_biome({
-	name = "raupo_swamp",
+	name = "aotearoa_raupo_swamp",
 	--node_dust = "",
 	node_top = "aotearoa:mud_sinking",
 	depth_top = 1,
@@ -1116,7 +1116,7 @@ minetest.register_biome({
 
 --gumland
 minetest.register_biome({
-	name = "gumland",
+	name = "aotearoa_gumland",
 	--node_dust = "",
 	node_top = "aotearoa:gumland_soil",
 	depth_top = 1,
@@ -1139,7 +1139,7 @@ minetest.register_biome({
 
 --Fen
 minetest.register_biome({
-	name = "fen",
+	name = "aotearoa_fen",
 	--node_dust = "",
 	node_top = "aotearoa:restiad_peat",
 	depth_top = 1,
@@ -1162,7 +1162,7 @@ minetest.register_biome({
 
 --Peat bog
 minetest.register_biome({
-	name = "peat_bog",
+	name = "aotearoa_peat_bog",
 	--node_dust = "",
 	node_top = "aotearoa:restiad_peat",
 	depth_top = 1,
@@ -1189,7 +1189,7 @@ minetest.register_biome({
 
 --kauri_forest
 minetest.register_biome({
-	name = "kauri_forest",
+	name = "aotearoa_kauri_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_dry_litter",
 	depth_top = 1,
@@ -1214,7 +1214,7 @@ minetest.register_biome({
 --------------------------
 --northern_podocarp
 minetest.register_biome({
-	name = "northern_podocarp_forest",
+	name = "aotearoa_northern_podocarp_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_dark_litter",
 	depth_top = 1,
@@ -1238,7 +1238,7 @@ minetest.register_biome({
 
 --tawa_forest
 minetest.register_biome({
-	name = "tawa_forest",
+	name = "aotearoa_tawa_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_dark_litter",
 	depth_top = 1,
@@ -1261,7 +1261,7 @@ minetest.register_biome({
 
 --maire_forest
 minetest.register_biome({
-	name = "maire_forest",
+	name = "aotearoa_maire_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_dry_litter",
 	depth_top = 1,
@@ -1286,7 +1286,7 @@ minetest.register_biome({
 -----------------
 --southern_podocarp (lowland, mid-cold,)
 minetest.register_biome({
-	name = "southern_podocarp_forest",
+	name = "aotearoa_southern_podocarp_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_dark_litter",
 	depth_top = 1,
@@ -1309,7 +1309,7 @@ minetest.register_biome({
 
 --hinau (lowland, mid-cold,)
 minetest.register_biome({
-	name = "hinau_forest",
+	name = "aotearoa_hinau_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_dry_litter",
 	depth_top = 1,
@@ -1332,7 +1332,7 @@ minetest.register_biome({
 
 --beech forest (lowland, mid-cold,)
 minetest.register_biome({
-	name = "beech_forest",
+	name = "aotearoa_beech_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_beech_litter",
 	depth_top = 1,
@@ -1357,7 +1357,7 @@ minetest.register_biome({
 -------------------
 --Fiordland Forest
 minetest.register_biome({
-	name = "fiordland_forest",
+	name = "aotearoa_fiordland_forest",
 	node_dust = "default:snow",
 	node_top = "aotearoa:dirt_with_beech_litter",
 	depth_top = 1,
@@ -1383,7 +1383,7 @@ minetest.register_biome({
 
 --kamahi forest.
 minetest.register_biome({
-	name = "kamahi_forest",
+	name = "aotearoa_kamahi_forest",
 	--node_dust = "",
 	node_top = "aotearoa:dirt_with_moss",
 	depth_top = 1,
@@ -1416,7 +1416,7 @@ minetest.register_biome({
 
 --broadleaf_scrub
 minetest.register_biome({
-	name = "broadleaf_scrub",
+	name = "aotearoa_broadleaf_scrub",
 	--node_dust = "",
 	node_top = "default:dirt_with_rainforest_litter",
 	depth_top = 1,
@@ -1439,7 +1439,7 @@ minetest.register_biome({
 
 --geothermal_scrub
 minetest.register_biome({
-	name = "geothermal_scrub",
+	name = "aotearoa_geothermal_scrub",
 	--node_dust = "",
 	node_top = "default:dirt_with_rainforest_litter",
 	depth_top = 1,
@@ -1462,7 +1462,7 @@ minetest.register_biome({
 
 --manuka_scrub
 minetest.register_biome({
-	name = "manuka_scrub",
+	name = "aotearoa_manuka_scrub",
 	--node_dust = "",
 	node_top = "default:dirt_with_rainforest_litter",
 	depth_top = 1,
@@ -1486,7 +1486,7 @@ minetest.register_biome({
 
 --Matagouri scrub
 minetest.register_biome({
-	name = "matagouri_scrub",
+	name = "aotearoa_matagouri_scrub",
 	--node_dust = "",
 	node_top = "default:dirt_with_dry_grass",
 	depth_top = 1,
@@ -1515,7 +1515,7 @@ minetest.register_biome({
 
 --pahautea_forest
 minetest.register_biome({
-	name = "pahautea_forest",
+	name = "aotearoa_pahautea_forest",
 	node_dust = "default:snow",
 	node_top = "aotearoa:dirt_with_moss",
 	depth_top = 1,
@@ -1539,7 +1539,7 @@ minetest.register_biome({
 
 --rangipo_desert
 minetest.register_biome({
-	name = "rangipo_desert",
+	name = "aotearoa_rangipo_desert",
 	--node_dust = "default:snow",
 	node_top = "aotearoa:volcanic_sand",
 	depth_top = 6,
@@ -1563,7 +1563,7 @@ minetest.register_biome({
 
 --mountain beech (alpine)
 minetest.register_biome({
-	name = "mountain_beech_forest",
+	name = "aotearoa_mountain_beech_forest",
 	node_dust = "default:snow",
 	node_top = "aotearoa:dirt_with_moss",
 	depth_top = 1,
@@ -1588,7 +1588,7 @@ minetest.register_biome({
 
 --Mountain tussock
 minetest.register_biome({
-	name = "mountain_tussock",
+	name = "aotearoa_mountain_tussock",
 	node_dust = "default:snow",
 	node_top = "default:dirt_with_dry_grass",
 	depth_top = 1,
@@ -1612,7 +1612,7 @@ minetest.register_biome({
 
 --peat bog
 minetest.register_biome({
-	name = "alpine_peat_bog",
+	name = "aotearoa_alpine_peat_bog",
 	--node_dust = "",
 	node_top = "aotearoa:restiad_peat",
 	depth_top = 1,
@@ -1635,7 +1635,7 @@ minetest.register_biome({
 
 --scree
 minetest.register_biome({
-	name = "scree",
+	name = "aotearoa_scree",
 	--node_dust = "",
 	node_top = "default:gravel",
 	depth_top = 1,
@@ -1665,7 +1665,7 @@ minetest.register_biome({
 
 --fellfield
 minetest.register_biome({
-	name = "fellfield",
+	name = "aotearoa_fellfield",
 	node_dust = "default:snow",
 	--node_top = "",
 	--depth_top = 1,
@@ -1696,7 +1696,7 @@ minetest.register_biome({
 
 --snow (..and ice...)
 minetest.register_biome({
-	name = "alpine_snow",
+	name = "aotearoa_alpine_snow",
 	node_dust = "default:snow",
 	node_top = "default:snowblock",
 	depth_top = 5,
@@ -1719,7 +1719,7 @@ minetest.register_biome({
 
 --glacier
 minetest.register_biome({
-	name = "glacier",
+	name = "aotearoa_glacier",
 	node_dust = "default:snow",
 	node_top = "default:ice",
 	depth_top = 10,
@@ -1743,7 +1743,7 @@ minetest.register_biome({
 
 --volcano
 minetest.register_biome({
-	name = "volcano",
+	name = "aotearoa_volcano",
 	node_dust = "default:snow",
 	node_top = "aotearoa:volcanic_sand",
 	depth_top = 2,
