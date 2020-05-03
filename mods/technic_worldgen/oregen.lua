@@ -66,6 +66,19 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type = "scatter",
+	ore = "technic:mineral_uranium",
+	wherein = "default:stone",
+	clust_scarcity = 16*16*16,
+	clust_num_ores = 7,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	noise_params = uranium_params,
+	noise_threshold = uranium_threshold,
+})
+
+minetest.register_ore({
+	ore_type = "scatter",
 	ore = "technic:mineral_chromium",
 	wherein = "default:stone",
 	clust_scarcity = 8*8*8,
@@ -93,6 +106,23 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type = "scatter",
+	ore = "technic:mineral_chromium",
+	wherein = "default:stone",
+	clust_scarcity = 6*6*6,
+	clust_num_ores = 4,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	flags = "absheight",
+	noise_params = chromium_params,
+	noise_threshold = chromium_threshold,
+})
+
+
+
+
+minetest.register_ore({
+	ore_type = "scatter",
 	ore = "technic:mineral_zinc",
 	wherein = "default:stone",
 	clust_scarcity = 8*8*8,
@@ -112,12 +142,28 @@ minetest.register_ore({
 	clust_num_ores = 6,
 	clust_size = 3,
 	y_min = -31000,
-	y_max = -32,
+	y_max = -9000,
 	flags = "absheight",
 	noise_params = zinc_params,
 	noise_threshold = zinc_threshold,
 })
 
+	
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "technic:mineral_zinc",
+	wherein = "default:stone",
+	clust_scarcity = 6*6*6,
+	clust_num_ores = 6,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	flags = "absheight",
+	noise_params = zinc_params,
+	noise_threshold = zinc_threshold,
+})
+
+	
 minetest.register_ore({
 	ore_type = "scatter",
 	ore = "technic:mineral_lead",
@@ -158,6 +204,21 @@ minetest.register_ore({
 	noise_threshold = lead_threshold,
 })
 
+	
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "technic:mineral_lead",
+	wherein = "default:stone",
+	clust_scarcity = 6*6*6,
+	clust_num_ores = 6,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	flags = "absheight",
+	noise_params = lead_params,
+	noise_threshold = lead_threshold,
+})
+	
 -- Sulfur
 local sulfur_buf = {}
 local sulfur_noise
@@ -221,6 +282,25 @@ if technic.config:get_bool("enable_marble_generation") then
 	})
 end
 
+	
+if technic.config:get_bool("enable_marble_generation") then
+	minetest.register_ore({
+		ore_type = "sheet",
+		ore = "technic:marble",
+		wherein = "default:stone",
+		clust_scarcity = 1,
+		clust_num_ores = 1,
+		clust_size = 3,
+		y_min = 6900,
+		y_max = 7500,
+		noise_threshold = 0.4,
+		noise_params = {
+			offset = 0, scale = 15, spread = {x = 150, y = 150, z = 150},
+			seed = 23, octaves = 3, persist = 0.70
+		}
+	})
+end	
+	
 if technic.config:get_bool("enable_granite_generation") then
 	minetest.register_ore({
 		ore_type = "sheet",
@@ -231,6 +311,25 @@ if technic.config:get_bool("enable_granite_generation") then
 		clust_size = 4,
 		y_min = -31000,
 		y_max = -150,
+		noise_threshold = 0.4,
+		noise_params = {
+			offset = 0, scale = 15, spread = {x = 130, y = 130, z = 130},
+			seed = 24, octaves = 3, persist = 0.70
+		}
+	})
+end
+
+	
+if technic.config:get_bool("enable_granite_generation") then
+	minetest.register_ore({
+		ore_type = "sheet",
+		ore = "technic:granite",
+		wherein = "default:stone",
+		clust_scarcity = 1,
+		clust_num_ores = 1,
+		clust_size = 4,
+		y_min = 6900,
+		y_max = 7500,
 		noise_threshold = 0.4,
 		noise_params = {
 			offset = 0, scale = 15, spread = {x = 130, y = 130, z = 130},
