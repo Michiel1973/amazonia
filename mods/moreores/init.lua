@@ -170,7 +170,7 @@ local function add_ore(modname, description, mineral_name, oredef)
 	oredef.oredef.ore = modname .. ":mineral_" .. mineral_name
 	oredef.oredef.wherein = "default:stone"
 	oredef.oredef.y_min = -15000
-	oredef.oredef.y_max = 4310
+	oredef.oredef.y_max = 7500
 
 	minetest.register_ore(oredef.oredef)
 

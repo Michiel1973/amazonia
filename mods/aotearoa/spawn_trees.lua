@@ -7,17 +7,17 @@
 --DENSITIES.
 
 --canopy
-local can_fill = 0.0039
+local can_fill = 0.0012
 local can_dense_fill = can_fill * 2
 local can_x_dense_fill = can_fill * 3
-local can_sparse_fill = can_fill/2
+local can_sparse_fill = can_fill/3
 local can_rare_fill = can_fill/10
 
 --sub-canopy
-local scan_fill = 0.01
+local scan_fill = 0.001
 local scan_dense_fill = scan_fill * 2
-local scan_x_dense_fill = scan_fill * 10
-local scan_sparse_fill = scan_fill/4
+local scan_x_dense_fill = scan_fill * 5
+local scan_sparse_fill = scan_fill/5
 local scan_rare_fill = scan_fill/10
 
 
@@ -31,34 +31,37 @@ local cl_oct = 2
 --ALTITUDES
 --make sure matches mapgen file
 --basement
+--basement
 local basement_max = -400
-local basement_min = -15000
+local basement_min = -9000
 
 --ocean
 local ocean_max = -21
 local ocean_min = basement_max - 2
+
 ------------
 --beaches
 local beach_max = 3
-local beach_min = ocean_max -2
+local beach_min = -23
 --dunes
 local dune_max = 5
-local dune_min = beach_max -2
+local dune_min = 2
 --coastal forest etc
 local coastf_max = 14
-local coastf_min = dune_max -2
+local coastf_min = 5
 --lowland forest etc
-local lowf_max = 80
-local lowf_min = coastf_max -2
+local lowf_max = 40
+local lowf_min = 20
 --highland forest etc
-local highf_max = 120
-local highf_min = lowf_max -2
+local highf_max = 110
+local highf_min = 70
 --alpine
-local alp_max = 140
-local alp_min = highf_max -2
+local alp_max = 160
+local alp_min = 125
 --high alpine
-local high_alp_max = 31000
-local high_alp_min = alp_max -2
+local high_alp_max = 6500
+local high_alp_min = 180
+
 
 --------------------------------------
 --for forest/river edge spawn_by species
@@ -72,8 +75,8 @@ local edge_nodes = {"default:river_water_source",	"default:river_water_flowing",
 
 aotearoa.schem_deco_list = {
   --mudpools
-  {aotearoa.path .. "/schematics/mud_pool1.mts", {"default:dirt_with_rainforest_litter","aotearoa:volcanic_sand",},nil,{"geothermal_scrub","white_island",},lowf_max/3,dune_min +1,{offset = 0,scale = 0.005,spread = cl_spr, seed = 128774, octaves = cl_oct, persist = 0.8}},
-  {aotearoa.path .. "/schematics/mud_pool2.mts", {"default:dirt_with_rainforest_litter","aotearoa:volcanic_sand",},nil,{"geothermal_scrub","white_island",},lowf_max/3,dune_min +1,{offset = 0,scale = 0.005,spread = cl_spr, seed = 186674, octaves = cl_oct, persist = 0.8}},
+  {aotearoa.path .. "/schematics/mud_pool1.mts", {"default:dirt_with_rainforest_litter","aotearoa:volcanic_sand",},nil,{"geothermal_scrub","white_island",},lowf_max/3,dune_min +1,{offset = 0,scale = 0.002,spread = cl_spr, seed = 128774, octaves = cl_oct, persist = 0.8}},
+  {aotearoa.path .. "/schematics/mud_pool2.mts", {"default:dirt_with_rainforest_litter","aotearoa:volcanic_sand",},nil,{"geothermal_scrub","white_island",},lowf_max/3,dune_min +1,{offset = 0,scale = 0.002,spread = cl_spr, seed = 186674, octaves = cl_oct, persist = 0.8}},
 
   ---Emergents...
   --dense kahikatea
@@ -169,14 +172,14 @@ aotearoa.schem_deco_list = {
 
   --Shrubs and Palms etc...
   --tree common_tree_daisy clumps.
-  {aotearoa.path .. "/schematics/common_tree_daisy1.mts", {"default:dirt_with_rainforest_litter",},nil,{"muttonbird_scrub",},coastf_max,coastf_min,{offset = 0,scale = 0.07,spread = cl_spr, seed = 1641230, octaves = cl_oct, persist = 0.7}},
-  {aotearoa.path .. "/schematics/common_tree_daisy2.mts", {"default:dirt_with_rainforest_litter",},nil,{"muttonbird_scrub",},coastf_max,coastf_min,{offset = 0,scale = 0.07,spread = cl_spr, seed = 3022605, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.path .. "/schematics/common_tree_daisy1.mts", {"default:dirt_with_rainforest_litter",},nil,{"muttonbird_scrub",},coastf_max,coastf_min,{offset = 0,scale = 0.04,spread = cl_spr, seed = 1641230, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.path .. "/schematics/common_tree_daisy2.mts", {"default:dirt_with_rainforest_litter",},nil,{"muttonbird_scrub",},coastf_max,coastf_min,{offset = 0,scale = 0.04,spread = cl_spr, seed = 3022605, octaves = cl_oct, persist = 0.7}},
   --nikau palm clump
-  {aotearoa.nikau_palm1, {"aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter","default:dirt_with_grass","default:dirt_with_rainforest_litter",},nil,{"maire_forest","tawa_forest","kauri_forest","coastal_scrub","pohutukawa_forest",},lowf_max,coastf_min +2,{offset = 0,scale = 0.005,spread = cl_spr, seed = 603507, octaves = cl_oct, persist = 0.7}},
-  {aotearoa.nikau_palm2, {"aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter","default:dirt_with_grass","default:dirt_with_rainforest_litter",},nil,{"maire_forest","tawa_forest","kauri_forest","coastal_scrub","pohutukawa_forest",},lowf_max,coastf_min +2,{offset = 0,scale = 0.005,spread = cl_spr, seed = 542122, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.nikau_palm1, {"aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter","default:dirt_with_grass","default:dirt_with_rainforest_litter",},nil,{"maire_forest","tawa_forest","kauri_forest","coastal_scrub","pohutukawa_forest",},lowf_max,coastf_min +2,{offset = 0,scale = 0.002,spread = cl_spr, seed = 603507, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.nikau_palm2, {"aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter","default:dirt_with_grass","default:dirt_with_rainforest_litter",},nil,{"maire_forest","tawa_forest","kauri_forest","coastal_scrub","pohutukawa_forest",},lowf_max,coastf_min +2,{offset = 0,scale = 0.002,spread = cl_spr, seed = 542122, octaves = cl_oct, persist = 0.7}},
   --cabbage tree clump
-  {aotearoa.cabbage_tree1, {"aotearoa:forest_peat","default:dirt_with_grass","default:dirt_with_rainforest_litter","default:sand", "aotearoa:iron_sand",},nil,{"broadleaf_scrub","geothermal_scrub","kahikatea_swamp","coastal_scrub","pohutukawa_forest","pohutukawa_dunes","sand_dunes", "iron_sand_dunes",},lowf_max,beach_max,{offset = 0,scale = 0.005,spread = cl_spr, seed = 60715, octaves = cl_oct, persist = 0.7}},
-  {aotearoa.cabbage_tree2, {"aotearoa:forest_peat","default:dirt_with_grass","default:dirt_with_rainforest_litter","default:sand", "aotearoa:iron_sand",},nil,{"broadleaf_scrub", "geothermal_scrub","kahikatea_swamp","coastal_scrub","pohutukawa_forest","pohutukawa_dunes","sand_dunes", "iron_sand_dunes",},lowf_max,beach_max,{offset = 0,scale = 0.005,spread = cl_spr, seed = 238412, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.cabbage_tree1, {"aotearoa:forest_peat","default:dirt_with_grass","default:dirt_with_rainforest_litter","default:sand", "aotearoa:iron_sand",},nil,{"broadleaf_scrub","geothermal_scrub","kahikatea_swamp","coastal_scrub","pohutukawa_forest","pohutukawa_dunes","sand_dunes", "iron_sand_dunes",},lowf_max,beach_max,{offset = 0,scale = 0.002,spread = cl_spr, seed = 60715, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.cabbage_tree2, {"aotearoa:forest_peat","default:dirt_with_grass","default:dirt_with_rainforest_litter","default:sand", "aotearoa:iron_sand",},nil,{"broadleaf_scrub", "geothermal_scrub","kahikatea_swamp","coastal_scrub","pohutukawa_forest","pohutukawa_dunes","sand_dunes", "iron_sand_dunes",},lowf_max,beach_max,{offset = 0,scale = 0.002,spread = cl_spr, seed = 238412, octaves = cl_oct, persist = 0.7}},
   --rare nikau palm
   {aotearoa.nikau_palm1, {"aotearoa:dirt_with_dry_litter","aotearoa:dirt_with_dark_litter","default:dirt_with_dry_grass",},can_rare_fill,{"hinau_forest","southern_podocarp_forest","northern_podocarp_forest","coastal_tussock",},lowf_max,coastf_min +2,},
   {aotearoa.nikau_palm2, {"aotearoa:dirt_with_dry_litter","aotearoa:dirt_with_dark_litter","default:dirt_with_dry_grass",},can_rare_fill,{"hinau_forest","northern_podocarp_forest","southern_podocarp_forest","coastal_tussock",},lowf_max,coastf_min +2,},
@@ -186,14 +189,14 @@ aotearoa.schem_deco_list = {
 
 
   --mamaku clump
-  {aotearoa.mamaku1, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"broadleaf_scrub","geothermal_scrub","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.005,spread = cl_spr, seed = 4588017, octaves = cl_oct, persist = 0.7}},
-  {aotearoa.mamaku2, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"broadleaf_scrub","geothermal_scrub","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.005,spread = cl_spr, seed = 8945192, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.mamaku1, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"broadleaf_scrub","geothermal_scrub","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.002,spread = cl_spr, seed = 4588017, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.mamaku2, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"broadleaf_scrub","geothermal_scrub","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.002,spread = cl_spr, seed = 8945192, octaves = cl_oct, persist = 0.7}},
   --silver_fern clump
-  {aotearoa.silver_fern1, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.005,spread = cl_spr, seed = 456687, octaves = cl_oct, persist = 0.7}},
-  {aotearoa.silver_fern2, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.005,spread = cl_spr, seed = 8966892, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.silver_fern1, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.002,spread = cl_spr, seed = 456687, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.silver_fern2, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.002,spread = cl_spr, seed = 8966892, octaves = cl_oct, persist = 0.7}},
   --wheki clump
-  {aotearoa.wheki2, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_moss","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","kamahi_forest","fiordland_forest","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.005,spread = cl_spr, seed = 688807, octaves = cl_oct, persist = 0.7}},
-  {aotearoa.wheki1, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_moss","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","kamahi_forest","fiordland_forest","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.005,spread = cl_spr, seed = 564592, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.wheki2, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_moss","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","kamahi_forest","fiordland_forest","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.002,spread = cl_spr, seed = 688807, octaves = cl_oct, persist = 0.7}},
+  {aotearoa.wheki1, {"default:dirt_with_rainforest_litter","aotearoa:dirt_with_moss","aotearoa:dirt_with_beech_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter",},nil,{"manuka_scrub","broadleaf_scrub","geothermal_scrub","kamahi_forest","fiordland_forest","beech_forest","hinau_forest","southern_podocarp_forest","maire_forest","tawa_forest","northern_podocarp_forest","kauri_forest",},lowf_max,lowf_min,{offset = 0,scale = 0.002,spread = cl_spr, seed = 564592, octaves = cl_oct, persist = 0.7}},
   --dense wheki
   {aotearoa.wheki2, {"default:dirt_with_rainforest_litter",},scan_x_dense_fill,{"broadleaf_scrub",},lowf_max,lowf_min,},
   {aotearoa.wheki1, {"default:dirt_with_rainforest_litter",},scan_dense_fill,{"broadleaf_scrub",},lowf_max,lowf_min,},
@@ -242,8 +245,8 @@ aotearoa.schem_deco_list = {
   {aotearoa.path .. "/schematics/kawakawa1.mts", {"aotearoa:dirt_with_dark_litter","default:dirt_with_rainforest_litter",},scan_rare_fill,{"northern_podocarp_forest","pohutukawa_forest",},lowf_max,coastf_min+2,},
   {aotearoa.path .. "/schematics/kawakawa2.mts", {"aotearoa:dirt_with_dark_litter","default:dirt_with_rainforest_litter",},scan_rare_fill,{"northern_podocarp_forest","pohutukawa_forest",},lowf_max,coastf_min+2,},
   --mangrove
-  {aotearoa.path .. "/schematics/mangrove1.mts", {"aotearoa:mud_sinking", "aotearoa:mud"},nil,{"northern_estuary"},3,2,{offset = 0,scale = 0.078,spread = cl_spr, seed = 11712, octaves = cl_oct, persist = 0.35}},
-  {aotearoa.path .. "/schematics/mangrove2.mts", {"aotearoa:mud_sinking", "aotearoa:mud"}, nil, {"northern_estuary"},3,2,{offset = 0,scale = 0.078,spread = cl_spr,seed = 15874, octaves = cl_oct,persist = 0.35}},
+  {aotearoa.path .. "/schematics/mangrove1.mts", {"aotearoa:mud_sinking", "aotearoa:mud"},nil,{"northern_estuary"},3,2,{offset = 0,scale = 0.048,spread = cl_spr, seed = 11712, octaves = cl_oct, persist = 0.35}},
+  {aotearoa.path .. "/schematics/mangrove2.mts", {"aotearoa:mud_sinking", "aotearoa:mud"}, nil, {"northern_estuary"},3,2,{offset = 0,scale = 0.048,spread = cl_spr,seed = 15874, octaves = cl_oct,persist = 0.35}},
 
   --rare common_tree_daisy
   {aotearoa.path .. "/schematics/common_tree_daisy1.mts", {"aotearoa:dirt_with_moss",},scan_rare_fill,{"pahautea_forest",},highf_max,highf_min,},

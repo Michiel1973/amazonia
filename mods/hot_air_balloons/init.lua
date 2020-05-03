@@ -39,13 +39,15 @@ local add_heat = function(self, player)
 	local item_stack = player:get_wielded_item()
 	local item_name = item_stack:get_name()
 	local group_coal = get_item_group(item_name, "coal")
+	local playerpos = player:getpos()
+	acc_candidate = 0
 	if group_coal == 0
 	then
 		return false
 	end
 	local heat = self.heat
 	heat = heat + 1200 * group_coal --1 min until heat is back to original
-	if heat < 12000 --cap heat at 12000 (10 min)
+	if heat < 12000 and playerpos.y < 2000 --cap heat at 12000 (10 min), stop allowing heat increase when > 2000
 	then
 		self.heat = heat
 		--adding particle effect
@@ -56,7 +58,10 @@ local add_heat = function(self, player)
 			item_stack:take_item()
 			player:set_wielded_item(item_stack)
 		end
+	elseif playerpos.y > 2000 then
+		minetest.chat_send_player( player:get_player_name(), ('The air is too thin to increase balloon buoyancy!'))
 	end
+
 	return true
 end
 

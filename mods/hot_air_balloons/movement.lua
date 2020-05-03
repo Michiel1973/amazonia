@@ -21,7 +21,7 @@ local function get_vertical_acceleration(self)
 	local heat = self.heat
 	local vel_y = self.object:getvelocity().y
 	local acc_candidate = heat / 1000 - 0.5
-	
+
 	--enforce max speed
 	if vel_y > max_ballooning_vertical_speed
 		and acc_candidate * vel_y > 0
