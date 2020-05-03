@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+May 1    - MINOR - added torch bombs, torch grenades, torch crossbows and my favorite, torch bomb rockets
 May 1    - MINOR - several mods were updated from their masters, with 3d armors being the highlight, new textures
 May 1    - MINOR - tuned ABMs and removed mapgen bottlenecks to improve server performance
 April 28 - MINOR - new mod added: hazmat suit

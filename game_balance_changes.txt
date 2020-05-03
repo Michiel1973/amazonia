@@ -1,5 +1,8 @@
 GAME BALANCE CHANGES
 
+May 4th
+- many adjustments to mapgens, hopefully less trees everywhere.
+
 April 29
 - tuning of Deep Realm monsters
 
