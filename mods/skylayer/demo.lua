@@ -14,6 +14,7 @@ local gradient_plain_with_clouds_sky = function(player_name)
 	local sl = {}
 	sl.name = "gradient_plain_with_clouds_sky"
 	sl.sky_data = {
+		clouds = true,
 		gradient_colors = {
 			{ r = 68, g = 34, b = 153 },
 			{ r = 59, g = 12, b = 189 },
@@ -50,15 +51,24 @@ local gradient_plain_with_clouds_sky = function(player_name)
 		}
 	}
 	sl.clouds_data = {
-			density = 0.4,
-			color = "#fff0f0e5",
-			ambient =  "#000000",
-			height = 120,
-			thickness = 16,
-			speed = { x = 110, z = -2 },
+		gradient_colors = {
+			{ r = 34, g = 204, b = 170 },
+			{ r = 105, g = 208, b = 37 },
+			{ r = 170, g = 204, b = 34 },
+			{ r = 208, g = 195, b = 16 },
+			{ r = 204, g = 187, b = 51 },
+			{ r = 254, g = 174, b = 45 },
+			{ r = 255, g = 68, b = 34 },
+			{ r = 255, g = 102, b = 68 },
+			{ r = 255, g = 153, b = 51 },
+			{ r = 254, g = 174, b = 45 },
+			{ r = 59, g = 12, b = 189 }
+		},
+		speed = { x = 110, z = -400 }
 	}
 	sl.sun_data = {
-		visible = false
+		visible = false,
+		sunrise_visible = false
 	}
 	sl.moon_data = {
 		visible = false
@@ -183,7 +193,7 @@ table.insert(sky_definitions, {name = "gradient_plain_sky_colors_with_defaults_s
 
 -- register commands for demo for sky definitions from sky_definitions array
 local counter = 1
-for key, definition in pairs(sky_definitions) do
+for _, definition in pairs(sky_definitions) do
 	minetest.register_chatcommand("sl_demo" .. counter .. "_on", {
 		params = "<player_name>",
 		description = "Sets sky ".. definition.name .." for a player",
