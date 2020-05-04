@@ -160,6 +160,10 @@ core.convert_to_rgb = function(minval, maxval, current_val, colors)
 	local c1 = colors[math.max(index1, 1)]
 	local c2 = colors[index2]
 
+	if c2 == nil then -- TODO need dig this case more carefully and improve handling
+		c2 = colors[max_index]
+	end
+
 	return {
 		r = math.floor(c1.r + f * (c2.r - c1.r)),
 		g = math.floor(c1.g + f * (c2.g - c1.g)),
@@ -278,21 +282,19 @@ core.update_sky_details = function(player, sky_layer)
 		sky_type = "regular"
 	end
 
-	local visibleClouds = sky_layer.clouds_data or sky_data.clouds == true
-
 	if core.legacy then
 		player:set_sky(
 			bg_color,
 			sky_type,
 			sky_data.textures,
-			visibleClouds
+			sky_data.clouds
 		)
 	else
 		player:set_sky({
 			base_color = bg_color,
 			type = sky_type,
 			textures = sky_data.textures,
-			clouds = visibleClouds,
+			clouds = sky_data.clouds,
 			sky_color = core.resolve_sky_color(sky_data)
 		})
 	end
@@ -347,7 +349,7 @@ core.update_clouds_details = function(player, sky_layer)
 		clouds_data.gradient_max_value)
 
 	local ambient_color = core.calculate_color_hex_value(
-		clouds_data.gradient_ambient_color,
+		clouds_data.gradient_ambient_colors,
 		clouds_data.gradient_ambient_min_value,
 		clouds_data.gradient_ambient_max_value)
 
