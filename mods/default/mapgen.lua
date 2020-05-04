@@ -99,7 +99,7 @@ function default.register_mgv6_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 7300,
+		y_max           = 6500,
 		y_min           = -31,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -120,7 +120,7 @@ function default.register_mgv6_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 7300,
+		y_max           = 6500,
 		y_min           = -31000,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -144,7 +144,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 9,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -179,7 +179,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -214,7 +214,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -249,7 +249,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -296,7 +296,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 13 * 13 * 13,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -331,7 +331,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -366,7 +366,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -401,7 +401,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 36 * 36 * 36,
 		clust_num_ores = 3,
 		clust_size     = 2,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -635,7 +635,7 @@ function default.register_ores()
 		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 9,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -670,7 +670,7 @@ function default.register_ores()
 		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -705,7 +705,7 @@ function default.register_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -740,7 +740,7 @@ function default.register_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -775,7 +775,7 @@ function default.register_ores()
 		clust_scarcity = 13 * 13 * 13,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -810,7 +810,7 @@ function default.register_ores()
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -845,7 +845,7 @@ function default.register_ores()
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -880,7 +880,7 @@ function default.register_ores()
 		clust_scarcity = 36 * 36 * 36,
 		clust_num_ores = 3,
 		clust_size     = 2,
-		y_max          = 7300,
+		y_max          = 6500,
 		y_min          = 1025,
 	})
 
@@ -2434,6 +2434,28 @@ function default.register_decorations()
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
+	
+	minetest.register_decoration({
+		name = "default:blueberry_bush",
+		deco_type = "schematic",
+		place_on = {"group:soil"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.004,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 697,
+			octaves = 3,
+			persist = 0.7,
+		},
+		spawn_by = "default:water_source",
+		num_spawn_by = 1,
+		y_max = 7500,
+		y_min = 6500,
+		place_offset_y = 1,
+		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
+		flags = "place_center_x, place_center_z",
+	})
 
 	-- Acacia bush
 
@@ -2453,6 +2475,26 @@ function default.register_decorations()
 		biomes = {"default_savanna"},
 		y_max = 6800,
 		y_min = 1,
+		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
+		flags = "place_center_x, place_center_z",
+	})
+
+
+	minetest.register_decoration({
+		name = "default:acacia_bush",
+		deco_type = "schematic",
+		place_on = {"default:dry_dirt_with_dry_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.004,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 90155,
+			octaves = 3,
+			persist = 0.7,
+		},
+		y_max = 7500,
+		y_min = 6500,
 		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
@@ -2479,6 +2521,25 @@ function default.register_decorations()
 		flags = "place_center_x, place_center_z",
 	})
 
+
+	minetest.register_decoration({
+		name = "default:pine_bush",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_coniferous_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.004,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 137,
+			octaves = 3,
+			persist = 0.7,
+		},
+		y_max = 7500,
+		y_min = 6500,
+		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
+		flags = "place_center_x, place_center_z",
+	})
 	-- Grasses
 
 	register_grass_decoration(-0.03,  0.09,  5)
@@ -2510,7 +2571,7 @@ function default.register_decorations()
 		sidelen = 80,
 		fill_ratio = 0.1,
 		biomes = {"default_rainforest"},
-		y_max = 7500,
+		y_max = 6500,
 		y_min = 1,
 		decoration = "default:junglegrass",
 	})
@@ -2532,7 +2593,7 @@ function default.register_decorations()
 			persist = 0.6
 		},
 		biomes = {"default_desert", "sandstone_desert", "cold_desert"},
-		y_max = 7500,
+		y_max = 6500,
 		y_min = 2,
 		decoration = "default:dry_shrub",
 		param2 = 4,

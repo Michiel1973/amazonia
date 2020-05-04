@@ -1,6 +1,6 @@
 local location_underground = -50
 local location_cloudlands_low = 6900 
-local location_cloudlands_high = 7500
+local location_cloudlands_high = 15499
 local location_stars_low = 15500
 local location_stars_high = 31000
 
@@ -93,32 +93,53 @@ local skybox_cloudlands_sky = function(player_name)
 				{ r = 100,g = 56, b = 0},
 				{ r = 90, g = 46, b = 0}
 			},
-			-- dawn_sky = {
-				-- { r = 70, g = 0, b = 0},
-				-- { r = 70, g = 0, b = 0},
-				-- { r = 70, g = 0, b = 0}
-			-- },
-			-- dawn_horizon = { 
-				-- { r = 80, g = 36, b = 0},
-				-- { r = 80, g = 36, b = 0},
-				-- { r = 80, g = 36, b = 0},
-			-- },
+			dawn_sky = {
+				{ r = 70, g = 0, b = 0},
+				{ r = 70, g = 0, b = 0},
+				{ r = 70, g = 0, b = 0}
+			},
+			dawn_horizon = { 
+				{ r = 80, g = 36, b = 0},
+				{ r = 80, g = 36, b = 0},
+				{ r = 80, g = 36, b = 0},
+			},
 			night_sky = {
-				{ r = 80, g = 0, b = 0},
-				{ r = 0, g = 0, b = 0},
-				{ r = 80, g = 0, b = 0}
+				{ r = 255, g = 0, b = 0},
+				{ r = 255, g = 0, b = 0},
+				{ r = 255, g = 0, b = 0}
 			},
 			night_horizon = {
-				{ r = 80, g = 36, b = 0},
-				{ r = 0, g = 0, b = 0},
-				{ r = 80, g = 36, b = 0}
+				{ r = 255, g = 128, b = 0},
+				{ r = 255, g = 128, b = 0},
+				{ r = 255, g = 128, b = 0}
 			},
+			fog_sun_tint = {
+				{ r = 90, g = 0, b = 3},
+				{ r = 100,g = 0, b = 6},
+				{ r = 90, g = 0, b = 3}
+			},
+			fog_moon_tint = {
+				{ r = 90, g = 0, b = 3},
+				{ r = 100,g = 0, b = 6},
+				{ r = 90, g = 0, b = 3}
+			}
+
 		}
 	}
 	sl.clouds_data = {
 			density = 0.4,
-			-- color = "#fff0f0e5",
-			-- ambient = "#000000",
+			color = "#66660080",
+			ambient = "#666600",
+			gradient_colors = {
+			{ r = 66, g = 66, b = 0},
+			{ r = 66, g = 66, b = 0},
+			{ r = 66, g = 66, b = 0}
+			},
+			gradient_ambient_colors = {
+			{ r = 66, g = 66, b = 0},
+			{ r = 66, g = 66, b = 0},
+			{ r = 66, g = 66, b = 0}
+			},
 			height = 7200,
 			thickness = 2,
 			speed = { x = 0, z = -16 }
@@ -167,13 +188,6 @@ local skybox_stars = function(player_name)
 	skylayer.add_layer(player_name, sl)
 end
 
-local remove_layers = function(player_name)
-	skylayer.remove_layer(name, underground)
-	skylayer.remove_layer(name, default_sky)
-	skylayer.remove_layer(name, cloudlands_sky)
-	skylayer.remove_layer(name, stars)
-end
-
 local timer = 0
 local player_list = {} 
 
@@ -196,31 +210,23 @@ minetest.register_globalstep(function(dtime)
 		-- underground
 		if pos.y < location_underground and current ~= "underground" then
 			player_list[name] = "underground"
-			if not is_in_creative(name) then
-			remove_layers(name)
 			player:set_physics_override({gravity = 1})
-			--player:set_sky( {r=0, g=0, b=0}, "plain", nil, false)
+			if not is_in_creative(name) then
 			skybox_underground(name)
 			end
 		-- Earth
 		elseif pos.y > location_underground and pos.y < location_cloudlands_low and current ~= "earth" then
 			player_list[name] = "earth"
-			remove_layers(name)
-			player:set_sky( {r=0, g=0, b=0}, "plain", nil, true)
 			skybox_default_sky(name)
 		-- cloudlands
 		elseif pos.y > location_cloudlands_low and pos.y < location_cloudlands_high and current ~= "cloudlands" then
 			player_list[name] = "cloudlands"
-			remove_layers(name)
 			player:set_physics_override({gravity = 0.5})
-			player:set_sky( {r=0, g=0, b=0}, "plain", nil, true)
 			skybox_cloudlands_sky(name)
 		-- stars
 		elseif pos.y > location_cloudlands_high and pos.y < location_stars_high and current ~= "stars" then
 			player_list[name] = "stars"
-			remove_layers(name)
 			player:set_physics_override({gravity = 0.2})
-			--player:set_sky( {r=0, g=0, b=0}, "plain", nil, false)
 			skybox_stars(name)
 		end
 	end

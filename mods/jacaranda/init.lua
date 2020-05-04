@@ -46,6 +46,28 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	})
 end
 
+if mg_name ~= "v6" and mg_name ~= "singlenode" then
+	minetest.register_decoration({
+		deco_type = "schematic",
+		place_on = {"cloudlands:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.0005,
+			scale = 0.00005,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 2,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"rainforest"},
+		y_min = 6500,
+		y_max = 7500,
+		schematic = modpath.."/schematics/jacaranda.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+end
+
 --
 -- Nodes
 --

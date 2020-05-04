@@ -1,6 +1,7 @@
 default
 biome_lib
 vessels
+cloudlands
 doors?
 stairs?
 moreblocks?
