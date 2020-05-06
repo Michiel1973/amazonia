@@ -35,7 +35,7 @@ end
 local bell   = chat3.settings.get_bool("chat3.bell", true)
 local shout  = chat3.settings.get_bool("chat3.shout", true)
 local prefix = minetest.settings:get("chat3.shout_prefix") or "!"
-local near   = chat3.settings.get_int("chat3.near") or 12
+local near   = chat3.settings.get_int("chat3.near") or 0
 local ignore = chat3.settings.get_bool("chat3.ignore", false)
 local alt    = chat3.settings.get_bool("chat3.alt_support", false)
 
