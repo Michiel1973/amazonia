@@ -209,20 +209,20 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 end)
 
 -- update inventory
-minetest.register_globalstep(function(dtime)
-	for i,player in ipairs(minetest.get_connected_players()) do
-		if player:get_inventory() then
-			for i,stack in ipairs(player:get_inventory():get_list("main")) do
-				if i > 8 then
-					break
-				end
-				if string.sub(stack:get_name(), 0, 9) == "ccompass:" then
-					player:get_inventory():set_stack("main", i, get_compass_stack(player, stack))
-				end
-			end
-		end
-	end
-end)
+-- minetest.register_globalstep(function(dtime)
+	-- for i,player in ipairs(minetest.get_connected_players()) do
+		-- if player:get_inventory() then
+			-- for i,stack in ipairs(player:get_inventory():get_list("main")) do
+				-- if i > 8 then
+					-- break
+				-- end
+				-- if string.sub(stack:get_name(), 0, 9) == "ccompass:" then
+					-- player:get_inventory():set_stack("main", i, get_compass_stack(player, stack))
+				-- end
+			-- end
+		-- end
+	-- end
+-- end)
 
 -- register items
 for i = 0, 15 do
