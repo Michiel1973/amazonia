@@ -3,7 +3,7 @@ local players_income = {}
 local income_enabled = minetest.settings:get_bool("currency.income_enabled", true)
 local income_item = minetest.settings:get("currency.income_item") or "currency:minegeld_10"
 local income_count = tonumber(minetest.settings:get("currency.income_count")) or 1
-local income_period = tonumber(minetest.settings:get("currency.income_period")) or 720
+local income_period = tonumber(minetest.settings:get("currency.income_period")) or 1440
 
 if income_enabled then
 	local timer = 0

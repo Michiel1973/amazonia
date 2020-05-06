@@ -63,7 +63,7 @@ end)
 local hudbars_timer = 0
 minetest.register_globalstep(function(dtime)
     hudbars_timer = hudbars_timer + dtime
-    if hudbars_timer >= 1 then
+    if hudbars_timer >= 2 then
         hudbars_timer = 0
         for _,player in ipairs(minetest.get_connected_players()) do
             if player ~= nil then
