@@ -66,6 +66,8 @@ for i=1, 2 do
 		view_range = 4,
 		lung_capacity = 10, -- seconds
 		max_hp = 2,
+		min_height = 10,
+		max_height = 90,
 		--armor_groups = {fleshy=1},
 		attack={range=3, damage_groups={fleshy=3}},
 		animation = {

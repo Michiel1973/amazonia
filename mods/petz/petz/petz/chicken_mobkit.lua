@@ -49,6 +49,8 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 3,
 	lung_capacity = 6, -- seconds
 	max_hp = 8,
+	min_height = 1,
+	max_height = 45,
 	attack={range=2, damage_groups={fleshy=1}},
 	--armor_groups = {fleshy=1},
 	animation = {

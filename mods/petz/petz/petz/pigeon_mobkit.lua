@@ -46,6 +46,8 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 4,
 	lung_capacity = 10, -- seconds
 	max_hp = 8,
+	min_height = 4,
+	max_height = 100,
 	drops = {
 	{name = "mobs:meat_raw", chance = 1, min = 1, max = 1,},
 		},
