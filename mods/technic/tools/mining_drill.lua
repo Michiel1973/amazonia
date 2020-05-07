@@ -57,6 +57,7 @@ local function drill_dig_it0 (pos,player)
 	if node.name == "default:lava_flowing" then return end
 	if node.name == "default:water_source" then minetest.remove_node(pos) return end
 	if node.name == "default:water_flowing" then minetest.remove_node(pos) return end
+	if minetest.get_item_group(node.name, "drillproof") ~= 0  then return end
 	minetest.node_dig(pos,node,player)
 end
 
