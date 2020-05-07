@@ -152,6 +152,10 @@ minetest.register_globalstep(function(dtime)
         node = minetest.get_node({x=pos.x,y=pos.y-1,z=pos.z})
 
         if player:get_player_control().jump then
+			if pos.y > 15000 then
+			minetest.chat_send_player( player:get_player_name(), ('The air is too thin for the jetpack to function!'))
+			return
+			end
             -- fly up
             if node.name == 'air' then
                 if players[name].state ~= 1 then
