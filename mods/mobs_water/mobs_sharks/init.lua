@@ -97,7 +97,7 @@ if ENABLE_SHARK_LARGE then
 		interval = 60,
 		chance = 100,
 		max_height = -30,
-		min_height = -180,
+		min_height = -120,
 		active_object_count = 1,
 	})
 
@@ -196,7 +196,7 @@ if ENABLE_SHARK_SMALL then
 		neighbors = l_spawn_near,
 		interval = 60,
 		chance = 500,
-		max_height = -10,
+		max_height = -15,
 		min_height = -100,
 		active_object_count = 1,
 	})

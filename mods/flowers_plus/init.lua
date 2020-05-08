@@ -9,9 +9,9 @@ flowers_plus = {}
 local SPAWN_DELAY = 2000
 local SPAWN_CHANCE = 400
 local flowers_seed_diff = 329
-local lilies_max_count = 25
+local lilies_max_count = 20
 local lilies_rarity = 50
-local seaweed_max_count = 25
+local seaweed_max_count = 20
 local seaweed_rarity = 50
 local sunflowers_max_count = 5
 local sunflowers_rarity = 50
@@ -37,7 +37,7 @@ for i in ipairs(lilies_list) do
 	if lilies_list[i][1] ~= nil then
 		deg1 = "_"..lilies_list[i][1]
 		deg2 = "_"..lilies_list[i][2]
-		lily_groups = { snappy = 3,flammable=2,flower=1, not_in_creative_inventory=1 }
+		lily_groups = { snappy = 3,flammable=2, not_in_creative_inventory=1 }
 	end
 
 	minetest.register_node(":flowers:waterlily"..deg1, {
@@ -134,11 +134,11 @@ local algae_list = { {nil}, {2}, {3}, {4} }
 
 for i in ipairs(algae_list) do
 	local num = ""
-	local algae_groups = {snappy = 3,flammable=2,flower=1}
+	local algae_groups = {snappy = 3,flammable=2}
 
 	if algae_list[i][1] ~= nil then
 		num = "_"..algae_list[i][1]
-		algae_groups = { snappy = 3,flammable=2,flower=1, not_in_creative_inventory=1 }
+		algae_groups = { snappy = 3,flammable=2,not_in_creative_inventory=1 }
 	end
 
 	minetest.register_node(":flowers:seaweed"..num, {
