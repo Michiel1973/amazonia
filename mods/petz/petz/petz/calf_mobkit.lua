@@ -37,7 +37,7 @@ minetest.register_entity("petz:"..pet_name,{
     poop = true,
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.6,	--EVIL!
+	stepheight = 1.1,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
@@ -59,7 +59,7 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 4,
 	lung_capacity = 10, -- seconds
 	max_hp = 15,
-	min_height = 10,
+	min_height = 3,
 	max_height = 90,
 	makes_footstep_sound = true,
 	--armor_groups = {fleshy=2},

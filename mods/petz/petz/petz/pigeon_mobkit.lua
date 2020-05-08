@@ -29,7 +29,7 @@ minetest.register_entity("petz:"..pet_name,{
 	--automatic_face_movement_dir = 0.0,
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.6,	--EVIL!
+	stepheight = 1.1,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
@@ -47,7 +47,7 @@ minetest.register_entity("petz:"..pet_name,{
 	lung_capacity = 10, -- seconds
 	max_hp = 8,
 	min_height = 4,
-	max_height = 100,
+	max_height = 90,
 	drops = {
 	{name = "mobs:meat_raw", chance = 1, min = 1, max = 1,},
 		},

@@ -37,7 +37,7 @@ minetest.register_entity("petz:"..pet_name,{
 	static_save = true,
 	get_staticdata = mobkit.statfunc,
 	-- api props
-	springiness= 0,
+	springiness= 0.3,
 	buoyancy = 1.1, -- portion of hitbox submerged
 	max_speed = 1.0,
 	jump_height = 3.1,

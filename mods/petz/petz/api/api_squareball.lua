@@ -130,11 +130,16 @@ minetest.register_entity("petz:ent_square_ball", {
 		while thing do
 			if thing.type == "object" and thing.ref ~= self.object then
 				--minetest.chat_send_player("singleplayer", thing.type)
-				local thing_ent = thing.ref:get_luaentity()
-				if not(thing.ref:is_player()) and not(thing.ref:get_player_name() == self.shooter_name)
-					and (thing_ent.type == "puppy") and not(thing_ent.square_ball_attached) then
-						petz.attach_squareball(self, thing_ent, thing.ref, self.shooter_name)
-						return
+				if not(thing.ref:is_player()) and not(thing.ref:get_player_name() == self.shooter_name) then
+					local thing_ent = thing.ref:get_luaentity()
+					if thing_ent then
+						--minetest.chat_send_player("singleplayer", thing_ent.type)
+						if (thing_ent.type == "puppy") and not(thing.ref.square_ball_attached) then
+							--minetest.chat_send_player("singleplayer", "test")
+							petz.attach_squareball(self, thing_ent, thing.ref, self.shooter_name)
+							return
+						end
+					end
 				end
 			elseif thing.type == "node" then
 				local name = minetest.get_node(thing.under).name
