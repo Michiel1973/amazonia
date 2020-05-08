@@ -30,7 +30,7 @@ minetest.register_entity("petz:"..pet_name,{
 	--automatic_face_movement_dir = 0.0,
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.6,	--EVIL!
+	stepheight = 1.1,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,

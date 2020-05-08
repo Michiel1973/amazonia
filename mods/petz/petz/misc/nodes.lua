@@ -51,7 +51,7 @@ end
 
 minetest.register_craftitem("petz:kennel", {
     description = S("Kennel"),
-    wield_image = {"petz_kennel.png"},
+    wield_image = "petz_kennel.png",
     inventory_image = "petz_kennel.png",
     groups = {},
     on_use = function (itemstack, user, pointed_thing)

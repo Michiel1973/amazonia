@@ -67,4 +67,4 @@ Moss_on_trunk_Rarity		= 24 -- larger values makes moss more rare (100 means chan
 Auto_Roof_Corner 		= false -- behavior is similar (not the same!) to the one of minecraft stairs
 
 
-Roots					= false 
+Roots					= true

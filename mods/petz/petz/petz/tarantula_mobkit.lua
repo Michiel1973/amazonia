@@ -46,7 +46,7 @@ minetest.register_entity("petz:"..pet_name, {
 	buoyancy = 0.5, -- portion of hitbox submerged
 	max_speed = 2,
 	jump_height = 2.1,
-	view_range = 7,
+	view_range = 6,
 	lung_capacity = 10, -- seconds
 	max_hp = 30,
 	min_height = 5,
