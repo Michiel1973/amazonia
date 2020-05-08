@@ -61,6 +61,6 @@ if mobs.mod and mobs.mod == "redo" then
 	mobs:spawn_specific("mobs_squid:squid",
 		{"default:water_source"},
 		{"default:water_flowing","default:water_source"},
-		5, 20, 60, 5000, 1, -100, -5)
+		5, 20, 60, 5000, 1, -100, -6)
 		
 end
