@@ -50,15 +50,19 @@ petz.drop_dreamcatcher = function(self)
 end
 
 petz.dreamcatcher_save_metadata = function(self)
-	if self.tag == "" then
+	if self.tag == "" or not(self.owner) then
 		return
 	end
-	for i = 1, #petz.tamed_by_owner[self.owner] do
-		if petz.tamed_by_owner[self.owner][i].pet == self then
-			petz.tamed_by_owner[self.owner][i]["metadata"].tag = self.tag
-			petz.tamed_by_owner[self.owner][i]["metadata"].type = self.type
-			petz.tamed_by_owner[self.owner][i]["metadata"].dreamcatcher = self.dreamcatcher
-			petz.tamed_by_owner[self.owner][i]["metadata"].last_pos = self.object:get_pos()
+	local item_list_table = petz.tamed_by_owner[self.owner]
+	if not(item_list_table) then
+		return
+	end
+	for i = 1, #item_list_table do
+		if item_list_table[i].pet == self then
+			item_list_table[i]["metadata"].tag = self.tag
+			item_list_table[i]["metadata"].type = self.type
+			item_list_table[i]["metadata"].dreamcatcher = self.dreamcatcher
+			item_list_table[i]["metadata"].last_pos = self.object:get_pos()
 			break
 		end
 	end

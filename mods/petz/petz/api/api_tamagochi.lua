@@ -107,16 +107,24 @@ petz.timer = function(self)
                 self.init_tamagochi_timer  = false -- no more timing
             --I the pet get bored of you
             elseif (self.has_affinity == true) and (self.affinity == 0) then
-                minetest.chat_send_player(self.owner, S("Your").." "..self.type.." "..S("has abandoned you!!!"))
-                petz.delete_nametag(self)
-				mokapi.remove_owner(self) --the pet abandon you
-				petz.remove_tamed_by_owner(self, true)
-                petz.drop_dreamcatcher(self)
-                self.init_tamagochi_timer  = false -- no more timing
+				local msg = S("Your").." "..self.type.." "..S("has abandoned you!!!")
+				petz.abandon_pet(self, msg)
             else  --else reinit the timer, to check again in the future
                 self.init_tamagochi_timer  = true
             end
         end
     end, self)
     self.init_tamagochi_timer = false --the timer is reinited in the minetest.after function
+end
+
+petz.abandon_pet = function(self, msg)
+	if msg then
+		minetest.chat_send_player(self.owner, msg)
+	end
+	petz.delete_nametag(self)
+	mokapi.remove_owner(self) --the pet abandon you
+	petz.remove_tamed_by_owner(self, true)
+	petz.drop_dreamcatcher(self)
+	self.init_tamagochi_timer = false -- no more timing
+	self.for_sale = false -- not for sale
 end

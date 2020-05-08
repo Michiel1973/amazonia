@@ -129,6 +129,15 @@ function petz.herbivore_brain(self)
 			petz.bh_breed(self, pos)
 		end
 
+		--Herding
+		if prty < 4.5 and petz.settings.herding then
+			if mobkit.timer(self, petz.settings.herding_timing) then
+				if petz.bh_herding(self, pos, player) then
+					return
+				end
+			end
+		end
+
 		--search for a petz:pet_bowl
 		if prty < 4 and self.tamed == true then
 			local view_range = self.view_range
@@ -156,7 +165,6 @@ function petz.herbivore_brain(self)
 				--local ent = obj:get_luaentity()
 				--if ent and ent.name == "__builtin:item" then
 					--minetest.chat_send_player("singleplayer", ent.itemstring)
-					--if ent.itemstring == "petz:square_ball" then
 						--local spos = self.object:get_pos()
 						--local tpos = obj:get_pos()
 						--if vector.distance(spos, tpos) > 2 then
@@ -469,7 +477,7 @@ function petz.aquatic_brain(self)
 		end
 
 		if prty < 8 then
-			if (self.can_jump) and not(self.status== "jump") and (pos.y < 2 and pos.y > 0) and (mobkit.is_in_deep(self)) then
+			if (self.can_jump) and not(self.status== "jump") and (mobkit.is_in_deep(self)) then
 				local random_number = math.random(1, 25)
 				if random_number == 1 then
 					--minetest.chat_send_player("singleplayer", "jump")
