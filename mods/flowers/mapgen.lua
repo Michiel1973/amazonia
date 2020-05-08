@@ -90,7 +90,7 @@ local function register_flower(seed, flower_name)
 	minetest.register_decoration({
 		name = "flowers:"..flower_name,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass", "ethereal:prairie_dirt", "ethereal:grove_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.02,
@@ -100,8 +100,9 @@ local function register_flower(seed, flower_name)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"grassland", "deciduous_forest"},
-		y_max = 31000,
+		--biomes = {"grassland", "deciduous_forest"},
+		groups = {"flower=1, snappy = 3,flammable=2"},
+		y_max = 85,
 		y_min = 1,
 		decoration = "flowers:"..flower_name,
 	})
@@ -111,7 +112,7 @@ local function register_mushroom(mushroom_name)
 	minetest.register_decoration({
 		name = "flowers:"..mushroom_name,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter"},
+		place_on = {"default:dirt_with_coniferous_litter", "caverealms:stone_with_lichen", "caverealms:stone_with_moss", "caverealms:stone_with_algae", "aotearoa:dirt_with_dark_litter", "aotearoa:dirt_with_moss", "aotearoa:forest_peat", "ethereal:mushroom_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -121,9 +122,10 @@ local function register_mushroom(mushroom_name)
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest", "coniferous_forest"},
-		y_max = 31000,
-		y_min = 1,
+		--biomes = {"deciduous_forest", "coniferous_forest"},
+		groups = {"flower=1, snappy = 3,flammable=2"},
+		y_max = 70,
+		y_min = -2000,
 		decoration = "flowers:"..mushroom_name,
 	})
 end
@@ -164,7 +166,9 @@ function flowers.register_decorations()
 
 	register_mushroom("mushroom_brown")
 	register_mushroom("mushroom_red")
-
+	register_mushroom("mushroom_grey")
+	register_mushroom("mushroom_purple")
+	
 	register_waterlily()
 end
 
