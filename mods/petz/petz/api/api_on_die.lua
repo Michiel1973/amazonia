@@ -13,7 +13,7 @@ petz.on_die = function(self)
 		if self.saddlebag then -- drop saddlebag
 			minetest.add_item(self.object:get_pos(), "petz:saddlebag")
 		end
-		--Drop the items from petz inventory
+		-- Drop the items from petz inventory
 		local inv = minetest.get_inventory({ type="detached", name="saddlebag_inventory" })
 		inv:set_list("saddlebag", {})
 		if self.saddlebag_inventory then
@@ -30,10 +30,6 @@ petz.on_die = function(self)
 		 --Drop horseshoes-->
 		if self.horseshoes and self.horseshoes > 0 then
 			mokapi.drop_item(self, "petz:horseshoe", self.horseshoes)
-		end
-		--If mounted, force unmount-->
-		if self.driver then
-			petz.force_detach(self.driver)
 		end
 	elseif self.type == "puppy" then
 		if self.square_ball_attached == true and self.attached_squared_ball then

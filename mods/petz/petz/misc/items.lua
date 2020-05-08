@@ -173,7 +173,7 @@ local function remove_fish(pos)
 		return
 	end
 	for _, obj in pairs(objs) do
-		if obj and obj:get_luaentity() and obj:get_luaentity().groups and obj:get_luaentity().groups.fishtank then
+		if obj and obj:get_luaentity() and obj:get_luaentity().groups.fishtank then
 			obj:remove()
 			break
 		end
@@ -269,8 +269,7 @@ minetest.register_craftitem("petz:glass_syringe", {
 minetest.register_craftitem("petz:glass_syringe_sperm", {
     description = S("Glass Syringe with seed"),
     inventory_image = "petz_glass_syringe_sperm.png",
-    wield_image = "petz_glass_syringe_sperm.png",
-    stack_max = 1
+    wield_image = "petz_glass_syringe_sperm.png"
 })
 
 minetest.register_craft({

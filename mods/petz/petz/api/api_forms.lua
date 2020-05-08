@@ -1,236 +1,161 @@
 local modpath, S = ...
 
-petz.create_form = function(player_name, context)
+petz.create_form = function(player_name)
     local pet = petz.pet[player_name]
     local form_size = {w = 4, h = 3}
-    local buttonexit_pos = {x = 1, y = 6}
     local hungrystuff_pos = {x= 0, y = 0}
+    local buttonexit_pos = {x = 1, y = 6}
     local form_title = ""
     local tamagochi_form_stuff = ''
     local affinity_stuff = ''
     local form_orders = ''
     local more_form_orders = ''
-    local tab_form = ''
     local final_form = ''
-    if not context then
-		context = {}
-		context.tab_id = 1
+    local pet_icon = "image[0.375,0.375;1,1;petz_spawnegg_"..pet.type..".png]"
+    if pet.affinity == nil then
+       pet.affinity = 0
     end
-    local pet_icon = "petz_spawnegg_"..pet.type..".png"
-	if context.tab_id == 1 and not(context.buy) then
-		local pet_image_icon = "image[0.375,0.375;1,1;"..pet_icon.."]"
-		if pet.affinity == nil then
-			pet.affinity = 0
-		end
-		if petz.settings.tamagochi_mode == true then
-			form_size.w= form_size.w + 1
-			if pet.has_affinity == true then
-				form_title = S("Orders")
-				hungrystuff_pos = {x= 3, y = 2}
-				affinity_stuff =
-					"image_button[3.5,3.5;1,1;petz_affinity_heart.png;btn_affinity;]"..
-					"label[4.5,4;".. tostring(pet.affinity).."%]"
-			else
-				form_size.w= form_size.w
-				form_size.h= form_size.h + 1
-				form_title = S("Status")
-				hungrystuff_pos = {x= 1, y = 3}
-			end
-			tamagochi_form_stuff =
-				pet_image_icon ..
-				"label[1.375,3;".. form_title .."]"..
-				"image_button[".. (hungrystuff_pos.x+0.5) ..",".. (hungrystuff_pos.y +0.5)..";1,1;petz_pet_bowl_inv.png;btn_bowl;]"..
-				affinity_stuff
-			local hungry_label = ""
-			local health_label = S("Health").." = "..tostring(pet.hp)
-			if pet.fed == false then
-				hungry_label = S("Hungry")
-			else
-				hungry_label = S("Satiated")
-			end
-			hungry_label = hungry_label.."\n"..health_label
-			tamagochi_form_stuff = tamagochi_form_stuff .. "label[".. hungrystuff_pos.x +1.5 ..",".. (hungrystuff_pos.y+0.75) ..";"..hungry_label.."]"
+    if petz.settings.tamagochi_mode == true then
+		form_size.w= form_size.w + 1
+		if pet.has_affinity == true then
+			form_title = S("Orders")
+			hungrystuff_pos = {x= 3, y = 2}
+			affinity_stuff =
+				"image_button[3.5,3.5;1,1;petz_affinity_heart.png;btn_affinity;]"..
+				"label[4.5,4;".. tostring(pet.affinity).."%]"
 		else
-			if pet.has_saddlebag == true and pet.saddlebag == true then
-				form_size.w= form_size.w + 1
-			end
-			tamagochi_form_stuff = pet_image_icon
-			if pet.has_affinity == true then
-				tamagochi_form_stuff = tamagochi_form_stuff .. "label[1,2;".. S("Orders") .."]"
-			end
+			form_size.w= form_size.w
+			form_size.h= form_size.h + 1
+			form_title = S("Status")
+			hungrystuff_pos = {x= 1, y = 3}
 		end
-		if pet.is_pet == true and pet.tamed == true then
-			if not(pet.tag) then
-				pet.tag = ""
-			end
-			if pet.dreamcatcher == true then
-				tamagochi_form_stuff = tamagochi_form_stuff..
-				"image_button_exit[4,0.375;1,1;petz_dreamcatcher.png;btn_dreamcatcher;]"
-			end
-			tamagochi_form_stuff = tamagochi_form_stuff..
-				"field[0.375,2;3,0.5;ipt_name;"..S("Name")..":"..";"..pet.tag.."]"..
-				"checkbox[3.5,1.75;btn_muted;"..S("Muted")..";"..petz.vartostring(pet.muted).."]"..
-				"checkbox[3.5,2.25;btn_show_tag;"..S("Show tag")..";"..petz.vartostring(pet.show_tag).."]"
-		end
-		if pet.breed == true then --Show the Gender
-			local gender = ''
-			if pet.is_male == true then
-				gender = S("Male")
-			else
-				gender = S("Female")
-			end
-			tamagochi_form_stuff = tamagochi_form_stuff..
-				"label[3,0.875;"..gender.."]"
-			local pregnant_icon_x
-			local pregnant_icon_y
-			local pregnant_text_x
-			local pregnant_text_y
-			local infertile_text_x
-			local infertile_text_y
-			if pet.is_mountable == true or pet.give_orders == true then
-				pregnant_icon_x = 3
-				pregnant_icon_y = 5
-				pregnant_text_x = 4
-				pregnant_text_y = 5
-				infertile_text_x = 3
-				infertile_text_y = 5
-			else
-				pregnant_icon_x = 3
-				pregnant_icon_y = 2
-				pregnant_text_x = 4
-				pregnant_text_y = 2
-				infertile_text_x = 3
-				infertile_text_y = 3
-			end
-			if pet.is_male == false and pet.is_pregnant == true then
-				local pregnant_remain_time = petz.round(petz.settings.pregnancy_time - pet.pregnant_time)
-				tamagochi_form_stuff = tamagochi_form_stuff..
-					"image["..(pregnant_icon_x+0.375)..","..(pregnant_icon_y+0.5)..";1,1;petz_"..pet.type.."_pregnant_icon.png]"..
-					"label["..(pregnant_text_x+0.375)..","..(pregnant_text_y+1)..";"..S("Pregnant").." ("..tostring(pregnant_remain_time).."s)]"
-			elseif pet.is_male == false and pet.pregnant_count and pet.pregnant_count <= 0 then
-				tamagochi_form_stuff = tamagochi_form_stuff..
-					"label["..(pregnant_icon_x+0.5)..","..(infertile_text_y+1)..";"..S("Infertile").."]"
-			end
-			if pet.is_baby == true then
-				local growth_remain_time = petz.round(petz.settings.growth_time - pet.growth_time)
-				tamagochi_form_stuff = tamagochi_form_stuff..
-					"label["..(pregnant_text_x-0.5)..","..(pregnant_text_y+1)..";"..S("To adult").." ("..tostring(growth_remain_time).."s)]"
-			end
-		end
-		if pet.type == "pony" then
-			local horseshoes = pet.horseshoes or 0
-			more_form_orders = more_form_orders..
-				"image_button_exit[5,0.375;1,1;petz_horseshoe.png;btn_horseshoes;"..tostring(horseshoes).."]"
-		end
-		if pet.type == "parrot" then
-			form_size.h = form_size.h + 1
-			buttonexit_pos.y = buttonexit_pos.y + 1
-			more_form_orders = more_form_orders..
-			"button_exit[0.375,6.5;1,1;btn_alight;"..S("Alight").."]"	..
-			"button_exit[1.375,6.5;1,1;btn_fly;"..S("Fly").."]"..
-			"button_exit[2.375,6.5;2,1;btn_perch_shoulder;"..S("Perch on shoulder").."]"
-		elseif pet.is_mountable == true then
-			more_form_orders = more_form_orders..
-				"image[3.5,4.5;1,1;petz_"..pet.type.."_velocity_icon.png]"..
-				"label[4.5,5;".. tostring(pet.max_speed_forward).."/"..tostring(pet.max_speed_reverse)..'/'..tostring(pet.accel).."]"
-			if pet.has_saddlebag == true and pet.saddlebag == true then
-				more_form_orders = more_form_orders..
-					"image_button[5,0.375;1,1;petz_saddlebag.png;btn_saddlebag;]"
-			end
-		end
-		if pet.give_orders == true then
-			form_size.h= form_size.h + 4
+		tamagochi_form_stuff =
+            pet_icon ..
+            "label[1.375,3;".. form_title .."]"..
+            "image_button[".. (hungrystuff_pos.x+0.5) ..",".. (hungrystuff_pos.y +0.5)..";1,1;petz_pet_bowl_inv.png;btn_bowl;]"..
+            affinity_stuff
+        local hungry_label = ""
+        local health_label = S("Health").." = "..tostring(pet.hp)
+        if pet.fed == false then
+            hungry_label = S("Hungry")
+        else
+            hungry_label = S("Satiated")
+        end
+        hungry_label = hungry_label.."\n"..health_label
+        tamagochi_form_stuff = tamagochi_form_stuff .. "label[".. hungrystuff_pos.x +1.5 ..",".. (hungrystuff_pos.y+0.75) ..";"..hungry_label.."]"
+    else
+		if pet.has_saddlebag == true and pet.saddlebag == true then
 			form_size.w= form_size.w + 1
-			form_orders =
-				"button_exit[0.375,3.5;3,1;btn_followme;"..S("Follow me").."]"..
-				"button_exit[0.375,4.5;3,1;btn_standhere;"..S("Stand here").."]"..
-				"button_exit[0.375,5.5;3,1;btn_ownthing;"..S("Do your own thing").."]"..
-				more_form_orders
-		else
-			if petz.settings.tamagochi_mode == true then
-				buttonexit_pos.y = buttonexit_pos.y - 2
-				form_size.h= form_size.h + 1
-			else
-				buttonexit_pos.y = buttonexit_pos.y - 4
-				form_size.w= form_size.w + 1
-			end
 		end
-		if pet.is_wild == true then
-			form_orders =	form_orders .. "button_exit[3.375,5.5;2,1;btn_guard;"..S("Guard").."]"
+        tamagochi_form_stuff = pet_icon
+        if pet.has_affinity == true then
+			tamagochi_form_stuff = tamagochi_form_stuff .. "label[1,2;".. S("Orders") .."]"
 		end
-		tab_form = tamagochi_form_stuff.. form_orders
-	elseif context.tab_id == 1 and context.buy then
-		form_size.w = form_size.w + 1
-		form_size.h = form_size.h + 2
-		buttonexit_pos.x = buttonexit_pos.x + 1
-		buttonexit_pos.y = buttonexit_pos.y - 2
-		local item_description = petz.settings.selling_exchange_items_list[pet.exchange_item_index].description or ""
-		local item_amount = pet.exchange_item_amount or 1
-		local item_inventory_image = petz.settings.selling_exchange_items_list[pet.exchange_item_index].inventory_image or ""
-		tab_form = tab_form ..
-			"label[0.375,1.85;"..S("Cost")..": ]"..
-			"label[2,1.85;"..item_description.."]"..
-			"image[2.5,0.375;1,1;"..item_inventory_image.."]"..
-			"label[0.375,2.5;"..S("Amount")..":]"..
-			"label[2,2.5;"..tostring(item_amount).."]"..
-			"style_type[button_exit;bgcolor=#333600;textcolor=white]"..
-			"button_exit[2,3.25;2,1;btn_buy;"..S("Buy").."]"
-	elseif context.tab_id == 2 and not(context.buy) then
-		form_size.w = form_size.w + 1
-		form_size.h = form_size.h + 2
-		buttonexit_pos.y = buttonexit_pos.y - 2
-		if pet.owner then
-			tab_form = "image_button[0.375,0.375;1,1;"..pet_icon.."^petz_abandon_icon.png;btn_abandon;]"
-			if pet.herd then
-				tab_form = tab_form .. "checkbox[0.375,1.75;btn_herding;"..S("Herding")..";"..petz.vartostring(pet.herding).."]"
-			end
+    end
+    if pet.is_pet == true and pet.tamed == true then
+		if not(pet.tag) then
+			pet.tag = ""
 		end
-	elseif context.tab_id == 3 and petz.settings.selling and not(context.buy) then
-		form_size.w = form_size.w + 1
-		form_size.h = form_size.h + 2
-		buttonexit_pos.y = buttonexit_pos.y - 2
-		local exchange_items = ''
-		local dropdown_index = 1
-		for i = 1, #petz.settings.selling_exchange_items_list do
-			description = petz.settings.selling_exchange_items_list[i].description
-			if description then
-				if i > 1 then
-					exchange_items = exchange_items .. ","
-				end
-				exchange_items = exchange_items .. description
-				if i == pet.exchange_item_index then
-					dropdown_index = i
-				end
-			end
+		if pet.dreamcatcher == true then
+			tamagochi_form_stuff = tamagochi_form_stuff..
+			"image_button_exit[4,0.375;1,1;petz_dreamcatcher.png;btn_dreamcatcher;]"
 		end
-		tab_form = tab_form ..
-		"checkbox[0.375,0.5;chk_for_sale;"..S("For Sale")..";"..petz.vartostring(pet.for_sale).."]"..
-		"label[0.375,1.0;"..S("Item").."]"..
-		"textlist[0.375,1.25;3,3;txtlst_exchange_items;"..exchange_items..";"..tostring(dropdown_index).."]"..
-		"label[4,1;"..S("Amount").."]"..
-		"field[4,1.25;1,0.45;fld_exchange_item_amount;;"..tostring(pet.exchange_item_amount).."]"
-		--"scrollbaroptions[min=1;max=99;arrows=show;smallstep=1;largestep=1]"..
-		--"scrollbar[4,1.0;0.45,0.45;vertical;scrbar_exchange_item_amount;10]"
+		tamagochi_form_stuff = tamagochi_form_stuff..
+		"field[0.375,2;3,0.5;ipt_name;"..S("Name")..":"..";"..pet.tag.."]"..
+		"checkbox[3.5,1.75;btn_muted;"..S("Muted")..";"..petz.vartostring(pet.muted).."]"..
+		"checkbox[3.5,2.25;btn_show_tag;"..S("Show tag")..";"..petz.vartostring(pet.show_tag).."]"
 	end
-	--Tab Header
-	local tab_main = S("Main")
-	local tab_other = S("Other")
-	local tab_shop = S("Shop")
-	local tab_header
-	if context.buy then
-		tab_header = tab_shop
+	if pet.breed == true then --Show the Gender
+		local gender = ''
+		if pet.is_male == true then
+			gender = S("Male")
+		else
+			gender = S("Female")
+		end
+		tamagochi_form_stuff = tamagochi_form_stuff..
+			"label[3,0.875;"..gender.."]"
+		local pregnant_icon_x
+		local pregnant_icon_y
+		local pregnant_text_x
+		local pregnant_text_y
+		local infertile_text_x
+		local infertile_text_y
+		if pet.is_mountable == true or pet.give_orders == true then
+			pregnant_icon_x = 3
+			pregnant_icon_y = 5
+			pregnant_text_x = 4
+			pregnant_text_y = 5
+			infertile_text_x = 3
+			infertile_text_y = 5
+		else
+			pregnant_icon_x = 3
+			pregnant_icon_y = 2
+			pregnant_text_x = 4
+			pregnant_text_y = 2
+			infertile_text_x = 3
+			infertile_text_y = 3
+		end
+		if pet.is_male == false and pet.is_pregnant == true then
+			local pregnant_remain_time = petz.round(petz.settings.pregnancy_time - pet.pregnant_time)
+			tamagochi_form_stuff = tamagochi_form_stuff..
+				"image["..(pregnant_icon_x+0.375)..","..(pregnant_icon_y+0.5)..";1,1;petz_"..pet.type.."_pregnant_icon.png]"..
+				"label["..(pregnant_text_x+0.375)..","..(pregnant_text_y+1)..";"..S("Pregnant").." ("..tostring(pregnant_remain_time).."s)]"
+		elseif pet.is_male == false and pet.pregnant_count and pet.pregnant_count <= 0 then
+			tamagochi_form_stuff = tamagochi_form_stuff..
+				"label["..(pregnant_icon_x+0.5)..","..(infertile_text_y+1)..";"..S("Infertile").."]"
+		end
+		if pet.is_baby == true then
+			local growth_remain_time = petz.round(petz.settings.growth_time - pet.growth_time)
+			tamagochi_form_stuff = tamagochi_form_stuff..
+				"label["..(pregnant_text_x-0.5)..","..(pregnant_text_y+1)..";"..S("To adult").." ("..tostring(growth_remain_time).."s)]"
+		end
+	end
+	if pet.type == "pony" then
+		local horseshoes = pet.horseshoes or 0
+		more_form_orders = more_form_orders..
+			"image_button_exit[5,0.375;1,1;petz_horseshoe.png;btn_horseshoes;"..tostring(horseshoes).."]"
+	end
+    if pet.type == "parrot" then
+		form_size.h = form_size.h + 1
+		buttonexit_pos.y = buttonexit_pos.y + 1
+		more_form_orders = more_form_orders..
+		"button_exit[0.375,6.5;1,1;btn_alight;"..S("Alight").."]"	..
+		"button_exit[1.375,6.5;1,1;btn_fly;"..S("Fly").."]"..
+		"button_exit[2.375,6.5;2,1;btn_perch_shoulder;"..S("Perch on shoulder").."]"
+	elseif pet.is_mountable == true then
+		more_form_orders = more_form_orders..
+			"image[3.5,4.5;1,1;petz_"..pet.type.."_velocity_icon.png]"..
+			"label[4.5,5;".. tostring(pet.max_speed_forward).."/"..tostring(pet.max_speed_reverse)..'/'..tostring(pet.accel).."]"
+		if pet.has_saddlebag == true and pet.saddlebag == true then
+			more_form_orders = more_form_orders..
+				"image_button[5,0.375;1,1;petz_saddlebag.png;btn_saddlebag;]"
+		end
+    end
+    if pet.give_orders == true then
+		form_size.h= form_size.h + 4
+		form_size.w= form_size.w + 1
+		form_orders =
+			"button_exit[0.375,3.5;3,1;btn_followme;"..S("Follow me").."]"..
+			"button_exit[0.375,4.5;3,1;btn_standhere;"..S("Stand here").."]"..
+			"button_exit[0.375,5.5;3,1;btn_ownthing;"..S("Do your own thing").."]"..
+			more_form_orders
 	else
-		tab_header =tab_main..","..tab_other
-		if not(minetest.is_singleplayer()) then
-			tab_header = tab_header..","..tab_shop
+		if petz.settings.tamagochi_mode == true then
+			buttonexit_pos.y = buttonexit_pos.y - 2
+			form_size.h= form_size.h + 1
+		else
+			buttonexit_pos.y = buttonexit_pos.y - 4
+			form_size.w= form_size.w + 1
 		end
-	end
-	--minetest.chat_send_player("singleplayer", tab_header)
-	final_form =
+    end
+    if pet.is_wild == true then
+		form_orders =	form_orders .. "button_exit[3.375,5.5;2,1;btn_guard;"..S("Guard").."]"
+    end
+    final_form =
 		"size["..(form_size.w+0.875)..","..(form_size.h+1)..";]"..
 		"real_coordinates[true]"..
-		"tabheader[0,0;tabheader;"..tab_header..";"..tostring(context.tab_id)..";true;false]"..
-		tab_form..
+		tamagochi_form_stuff..
+		form_orders..
 		"style_type[button_exit;bgcolor=#006699;textcolor=white]"..
 		"button_exit["..(buttonexit_pos.x+0.5)..","..(buttonexit_pos.y+0.75)..";1,1;btn_close;"..S("Close").."]"
 	return final_form
@@ -241,16 +166,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		return false
 	end
 	local player_name = player:get_player_name()
-	-- Was a tab selected?
-	if fields.tabheader then
-		local tab_id = tonumber(fields.tabheader)
-		if tab_id > 0 then
-			local context = {}
-			context.tab_id = tab_id
-			minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, context))
-		end
-		return
-	end
     local pet = petz.pet[player_name]
 	if pet and pet.object then
 		if fields.btn_followme then
@@ -312,21 +227,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 			minetest.show_formspec(player_name, "petz:affinity_form", petz.create_affinity_form(pet))
 		elseif fields.btn_horseshoes then
 			petz.horseshoes_reset(pet)
-		elseif fields.btn_abandon then
-			minetest.show_formspec(player_name, "petz:abandon_form", petz.get_abandon_confirmation())
-		elseif fields.btn_herding then
-			pet.herding = mobkit.remember(pet, "herding", minetest.is_yes(fields.btn_herding))
-		elseif fields.chk_for_sale then
-			pet.for_sale = mobkit.remember(pet, "for_sale", minetest.is_yes(fields.chk_for_sale))
-		elseif fields.fld_exchange_item_amount or fields.txtlst_exchange_items then
-			local event = minetest.explode_textlist_event(fields.txtlst_exchange_items)
-			if event.type == "CHG" then
-				--minetest.chat_send_all(event.index)
-				pet.exchange_item_index = mobkit.remember(pet, "exchange_item_index", event.index)
-			end
-			pet.exchange_item_amount = mobkit.remember(pet, "exchange_item_amount", mokapi.delimit_number( tonumber(fields.fld_exchange_item_amount), {min=1, max=99}) or 1)
-		elseif fields.btn_buy then
-			petz.buy(pet, player)
 		end
 		if fields.ipt_name then
 			pet.tag = minetest.formspec_escape(string.sub(fields.ipt_name, 1 , 12))
@@ -469,39 +369,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	local player_name = player:get_player_name()
 	local pet = petz.pet[player_name]
 	if pet and (mobkit.is_alive(pet)) then
-		minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, context))
-	end
-	return true
-end)
-
-function petz.get_abandon_confirmation()
-    local text = S("Do you want to ABANDON your pet?!")
-    local formspec = {
-        "size[6,2.476]",
-        "real_coordinates[true]",
-        "label[0.375,0.5;", minetest.formspec_escape(text), "]",
-        "style_type[button_exit;bgcolor=#006699;textcolor=white]",
-        "button_exit[1.2,1.3;1,0.8;btn_yes;"..S("Yes").."]"..
-        "button_exit[3.2,1.3;1.5,0.8;btn_cancel;"..S("Cancel").."]"
-    }
-    return table.concat(formspec, "")
-end
-
-minetest.register_on_player_receive_fields(function(player, formname, fields)
-	if formname ~= "petz:abandon_form" then
-		return false
-	end
-	local player_name = player:get_player_name()
-	if fields.btn_yes then
-		local pet = petz.pet[player_name]
-		if pet and (mobkit.is_alive(pet)) then
-			local msg = S("You've abandoned your").." "..pet.type
-			petz.abandon_pet(pet, msg)
-		end
-	else
-		local context = {}
-		context.tab_id = 2
-		minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, context))
+		minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name))
 	end
 	return true
 end)
