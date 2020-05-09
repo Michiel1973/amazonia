@@ -19,42 +19,42 @@ aquaz.corals = {
 	{
 	name = "aquaz:rhodophyta",
 	description= "Rhodophyta Coral",
-	tiles = "aquaz_rhodophyta_base.png",
+	tiles = "default_sand.png",
 	special_tiles = "aquaz_rhodophyta_top.png",
 	inventory_image = "aquaz_rhodophyta_inv.png",
 	},
 	{
 	name = "aquaz:psammocora",
 	description= "Psammocora Coral",
-	tiles = "aquaz_psammocora_base.png",
+	tiles = "default_sand.png",
 	special_tiles = "aquaz_psammocora_top.png",
 	inventory_image = "aquaz_psammocora_inv.png",
 	},
 	{
 	name = "aquaz:sarcophyton",
 	description= "Sarcophyton Coral",
-	tiles = "aquaz_sarcophyton_base.png",
+	tiles = "default_sand.png",
 	special_tiles = "aquaz_sarcophyton_top.png",
 	inventory_image = "aquaz_sarcophyton_inv.png",
 	},
 	{
 	name = "aquaz:carnation",
 	description= "Carnation Coral",
-	tiles = "aquaz_carnation_base.png",
+	tiles = "default_sand.png",
 	special_tiles = "aquaz_carnation_top.png",
 	inventory_image = "aquaz_carnation_inv.png",
 	},
 	{
 	name = "aquaz:fiery_red",
 	description= "Fiery Red Coral",
-	tiles = "aquaz_fiery_red_base.png",
+	tiles = "default_sand.png",
 	special_tiles = "aquaz_fiery_red_top.png",
 	inventory_image = "aquaz_fiery_red_inv.png",
 	},
 	{
 	name = "aquaz:acropora",
 	description= "Acropora Coral",
-	tiles = "aquaz_acropora_base.png",
+	tiles = "default_sand.png",
 	special_tiles = "aquaz_acropora_top.png",
 	inventory_image = "aquaz_acropora_inv.png",
 	},
@@ -82,6 +82,7 @@ for i = 1, #aquaz.corals do
 		after_place_node = default.after_place_leaves,
 	})
 end
+
 
 aquaz.algaes = {
 	{
@@ -191,9 +192,9 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		place_offset_y = -1,
 		noise_params = {
 			offset = 0.005,
-			scale = 0.008,
+			scale = 0.06,
 			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
+			seed = 34523,
 			octaves = 3,
 			persist = 0.66
 		},
@@ -220,12 +221,12 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		place_offset_y = -1,
 		sidelen = 16,
 		noise_params = {
-			offset = 0.005,
-			scale = 0.0004,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
+			offset = -0.04,
+			scale = 0.06,
+			spread = {x = 200, y = 200, z = 200},
+			seed = 81242,
 			octaves = 3,
-			persist = 0.66
+			persist = 0.7
 		},
 		-- biomes = {
 			-- "grassland_ocean",
@@ -361,4 +362,52 @@ minetest.register_decoration({
     schematic = modpath .. "/schematics/wrecked_pillar.mts",
     rotation = "random",
     flags = "force_placement, place_center_x, place_center_z",
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:green 2",
+	recipe = {"aquaz:acropora",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:brown 2",
+	recipe = {"aquaz:fiery_red",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:orange 2",
+	recipe = {"aquaz:carnation",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:grey 2",
+	recipe = {"aquaz:sarcophyton",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:dark_green 2",
+	recipe = {"aquaz:psammocora",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:pink 2",
+	recipe = {"aquaz:rhodophyta",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:magenta 3",
+	recipe = {"aquaz:calliarthon_kelp",},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:violet 3",
+	recipe = {"aquaz:sea_blade_coral",},
 })
