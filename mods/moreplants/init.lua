@@ -761,6 +761,7 @@ minetest.register_decoration({
 	sidelen = 16,
 	fill_ratio = 0.01,
 	spawn_by = {"default:water","default:water_source"},
+	num_spawn_by = 1,
 	--biomes = {"stone_grassland_ocean", "deciduous_forest_ocean"},
 	decoration = "moreplants:bulrush",
 	height = 1,
