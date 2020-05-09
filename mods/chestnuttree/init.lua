@@ -79,9 +79,9 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"grassland"},
-		y_min = 1,
-		y_max = 80,
+		--biomes = {"grassland"},
+		y_min = 7,
+		y_max = 45,
 		schematic = modpath.."/schematics/chestnuttree.mts",
 		flags = "place_center_x, place_center_z,  force_placement",
 		rotation = "random",

@@ -37,7 +37,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"coniferous_forest"},
+		--biomes = {"coniferous_forest"},
 		y_min = 1,
 		y_max = 32,
 		place_offset_y = 1,

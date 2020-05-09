@@ -53,7 +53,7 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"ethereal:grove_dirt","ethereal:prairie_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0005,
@@ -63,8 +63,8 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest"},
-		y_min = 1,
+		--biomes = {"deciduous_forest"},
+		y_min = 7,
 		y_max = 80,
 		schematic = modpath.."/schematics/lemontree.mts",
 		flags = "place_center_x, place_center_z, force_placement",

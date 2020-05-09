@@ -118,7 +118,7 @@ end
 
 minetest.register_decoration({
 	deco_type = "schematic",
-	place_on = {"default:dirt_with_grass"},
+	place_on = {"ethereal:bamboo_dirt"},
 	sidelen = 16,
 	noise_params = {
 		offset = 0.005,
@@ -128,7 +128,7 @@ minetest.register_decoration({
 		octaves = 3,
 		persist = 0.65
 	},
-	biomes = {"grassland"},
+	--biomes = {"grassland"},
 	y_min = 2,
 	y_max = 20,
 	schematic = bamboo.bambootree,

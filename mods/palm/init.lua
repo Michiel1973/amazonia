@@ -148,17 +148,17 @@ end
 
 minetest.register_decoration({
 	deco_type = "schematic",
-	place_on = {"default:sand"},
+	place_on = {"default:sand","default:desert_sand","default:silver_sand"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.001,
-			scale = 0.002,
+			scale = 0.0002,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2337,
 			octaves = 3,
 			persist = 0.66
 		},
-	biomes = {"sandstone_desert_ocean", "desert_ocean"},
+	--biomes = {"sandstone_desert_ocean", "desert_ocean"},
 	y_min = 1,
 	y_max = 2,
 	schematic = palm.palmtree,
