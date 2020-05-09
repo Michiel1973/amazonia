@@ -23,5 +23,5 @@ moreores.mithril_min_depth = -31000
 
 -- Maximal depths of ore generation (Y coordinate, 0 being sea level by default)
 moreores.tin_max_depth = 7500
-moreores.silver_max_depth =7500
+moreores.silver_max_depth = 7500
 moreores.mithril_max_depth = -9000

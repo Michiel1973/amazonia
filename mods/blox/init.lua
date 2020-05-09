@@ -614,6 +614,17 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "blox:glowore",
 	wherein        = "default:stone",
+	clust_scarcity = 14 * 14 * 14,
+	clust_num_ores = 7,
+	clust_size     = 3,
+	y_min          = 6500,
+	y_max          = 7300,
+})
+
+minetest.register_ore({
+	ore_type       = "scatter",
+	ore            = "blox:glowore",
+	wherein        = "default:stone",
 	clust_scarcity = 36 * 36 * 36,
 	clust_num_ores = 3,
 	clust_size     = 2,
