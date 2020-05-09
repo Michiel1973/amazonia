@@ -18,6 +18,7 @@ local skybox_underground = function(player_name)
 	}
 	sl.sun_data = {
 		visible = false,
+		sunrise_visible = false,
 		scale = 1.0
 	}
 	sl.moon_data = {
