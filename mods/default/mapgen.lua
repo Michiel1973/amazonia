@@ -1905,7 +1905,7 @@ local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		name = "default:grass_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass","ethereal:prairie_dirt", "ethereal:grove_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = offset,
@@ -1915,7 +1915,7 @@ local function register_grass_decoration(offset, scale, length)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"default_grassland", "default_deciduous_forest"},
+		--biomes = {"default_grassland", "default_deciduous_forest"},
 		y_max = 7500,
 		y_min = 1,
 		decoration = "default:grass_" .. length,
@@ -1936,7 +1936,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"default_savanna"},
+		--biomes = {"default_savanna"},
 		y_max = 7500,
 		y_min = 1,
 		decoration = "default:dry_grass_" .. length,
@@ -1947,7 +1947,7 @@ local function register_fern_decoration(seed, length)
 	minetest.register_decoration({
 		name = "default:fern_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_coniferous_litter"},
+		place_on = {"default:dirt_with_coniferous_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter","aotearoa:dirt_with_moss"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -1957,7 +1957,7 @@ local function register_fern_decoration(seed, length)
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"default_coniferous_forest"},
+		--biomes = {"default_coniferous_forest"},
 		y_max = 7500,
 		y_min = 6,
 		decoration = "default:fern_" .. length,
@@ -1983,7 +1983,7 @@ function default.register_decorations()
 			octaves = 4,
 			persist = 1.0
 		},
-		biomes = {"default_savanna"},
+		--biomes = {"default_savanna"},
 		y_max = 7500,
 		y_min = 1,
 		decoration = "default:dry_dirt",
@@ -2395,7 +2395,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass","ethereal:prairie_dirt","ethereal:jungle_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2405,8 +2405,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_grassland", "default_deciduous_forest"},
-		y_max = 6800,
+		--biomes = {"default_grassland", "default_deciduous_forest"},
+		y_max = 7500,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2417,7 +2417,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:blueberry_bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass", "default:dirt_with_snow"},
+		place_on = {"default:dirt_with_grass"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2427,8 +2427,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_grassland", "default_snowy_grassland"},
-		y_max = 6800,
+		--biomes = {"default_grassland", "default_snowy_grassland"},
+		y_max = 7500,
 		y_min = 1,
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
@@ -2450,8 +2450,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_savanna"},
-		y_max = 6800,
+		--biomes = {"default_savanna"},
+		y_max = 7500,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2462,7 +2462,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:pine_bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_snow"},
+		place_on = {"default:dirt_with_snow","default:dirt_with_coniferous_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2472,8 +2472,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_taiga", "default_snowy_grassland"},
-		y_max = 6800,
+		--biomes = {"default_taiga", "default_snowy_grassland"},
+		y_max = 7500,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2645,19 +2645,19 @@ function default.register_decorations()
 		sidelen = 4,
 		noise_params = {
 			offset = -4,
-			scale = 4,
+			scale = 3,
 			spread = {x = 50, y = 50, z = 50},
 			seed = 7013,
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {
-			"desert_ocean",
-			"savanna_ocean",
-			"rainforest_ocean",
-		},
+		-- biomes = {
+			-- "desert_ocean",
+			-- "savanna_ocean",
+			-- "rainforest_ocean",
+		-- },
 		y_max = -2,
-		y_min = -8,
+		y_min = -35,
 		flags = "force_placement",
 		decoration = {
 			"default:coral_green", "default:coral_pink",
@@ -2676,22 +2676,22 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = -0.04,
-			scale = 0.1,
+			scale = 0.07,
 			spread = {x = 200, y = 200, z = 200},
 			seed = 87112,
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {
-			"taiga_ocean",
-			"snowy_grassland_ocean",
-			"grassland_ocean",
-			"coniferous_forest_ocean",
-			"deciduous_forest_ocean",
-			"sandstone_desert_ocean",
-			"cold_desert_ocean"},
+		-- biomes = {
+			-- "taiga_ocean",
+			-- "snowy_grassland_ocean",
+			-- "grassland_ocean",
+			-- "coniferous_forest_ocean",
+			-- "deciduous_forest_ocean",
+			-- "sandstone_desert_ocean",
+			-- "cold_desert_ocean"},
 		y_max = -5,
-		y_min = -10,
+		y_min = -29,
 		flags = "force_placement",
 		decoration = "default:sand_with_kelp",
 		param2 = 48,

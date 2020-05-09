@@ -10,7 +10,7 @@ local function register_mgv6_flower(flower_name)
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
-			scale = 0.006,
+			scale = 0.003,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 436,
 			octaves = 3,
@@ -94,7 +94,7 @@ local function register_flower(seed, flower_name)
 		sidelen = 16,
 		noise_params = {
 			offset = -0.02,
-			scale = 0.04,
+			scale = 0.02,
 			spread = {x = 200, y = 200, z = 200},
 			seed = seed,
 			octaves = 3,
@@ -138,7 +138,7 @@ local function register_waterlily()
 		sidelen = 16,
 		noise_params = {
 			offset = -0.12,
-			scale = 0.3,
+			scale = 0.03,
 			spread = {x = 200, y = 200, z = 200},
 			seed = 33,
 			octaves = 3,
