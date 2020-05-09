@@ -13,8 +13,9 @@ if mobs.mod and mobs.mod == "redo" then
 		hp_min = 10,
 		hp_max = 10,
 		armor = 100,
+		run_velocity = 2.5,
+		walk_velocity = 0.7,
 		runaway_from = {"player","mobs_sharks:shark_lg","mobs_sharks:shark_md","mobs_sharks:shark_sm"},
-		-- FIXME: If the squid is near the floor, it turns black
 		collisionbox = {-0.4, 0.1, -0.4, 0.4, 0.9, 0.4},
 		visual = "mesh",
 		mesh = "mobs_mc_squid.b3d",
@@ -33,12 +34,12 @@ if mobs.mod and mobs.mod == "redo" then
 			run_start = 1,
 			run_end = 60,
 		},
-		-- drops = {
-			-- {name = mobs_squid.items.black_dye,
-			-- chance = 1,
-			-- min = 1,
-			-- max = 3,},
-		-- },
+		drops = {
+			{name = "dye:black",
+			chance = 1,
+			min = 1,
+			max = 3,},
+		},
 		visual_size = {x=1.75, y=1.75},
 		makes_footstep_sound = false,
 		stepheight = 0.1,
@@ -59,8 +60,7 @@ if mobs.mod and mobs.mod == "redo" then
 
 	--name, nodes, neighbours, minlight, maxlight, interval, chance, active_object_count, min_height, max_height
 	mobs:spawn_specific("mobs_squid:squid",
-		{"default:water_source"},
-		{"default:water_flowing","default:water_source"},
+		{"default:water_source"}, {"default:water_source"},
 		5, 20, 60, 5000, 1, -100, -6)
 		
 end
