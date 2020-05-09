@@ -76,17 +76,17 @@ mobs:register_mob("mobs_fish:clownfish", {
 	end
 })
 
-mobs:spawn({
-	name = "mobs_fish:clownfish",
-	nodes = l_spawn_in,
-	neighbors = l_spawn_near,
-	min_light = 5,
-	interval = 60,
-	chance = 1000,
-	max_height = -6,
-	min_height = -100,
-	active_object_count = 2,
-})
+-- mobs:spawn({
+	-- name = "mobs_fish:clownfish",
+	-- nodes = l_spawn_in,
+	-- neighbors = l_spawn_near,
+	-- min_light = 5,
+	-- interval = 60,
+	-- chance = 1000,
+	-- max_height = -6,
+	-- min_height = -100,
+	-- active_object_count = 2,
+-- })
 
 mobs:register_egg("mobs_fish:clownfish", "Clownfish",
 	"animal_clownfish_clownfish_item.png", 0)
@@ -120,17 +120,17 @@ mobs:register_mob("mobs_fish:tropical", {
 	end
 })
 
-mobs:spawn({
-	name = "mobs_fish:tropical",
-	nodes = l_spawn_in,
-	neighbors = l_spawn_near,
-	min_light = 5,
-	interval = 30,
-	chance = l_spawn_chance,
-	max_height = -3,
-	min_height = -100,
-	active_object_count = 2,
-})
+-- mobs:spawn({
+	-- name = "mobs_fish:tropical",
+	-- nodes = l_spawn_in,
+	-- neighbors = l_spawn_near,
+	-- min_light = 5,
+	-- interval = 30,
+	-- chance = l_spawn_chance,
+	-- max_height = -3,
+	-- min_height = -100,
+	-- active_object_count = 2,
+-- })
 
 mobs:register_egg("mobs_fish:tropical", "Tropical fish",
 	"animal_fish_blue_white_fish_blue_white_item.png", 0)
