@@ -70,8 +70,8 @@ mobs:register_mob("clams:whiteshell", {
 	visual = "sprite",
 	visual_size = {x=0.5, y=0.5},
 	textures = {"clams_whiteshell.png^[makealpha:128,128,0"},
-	spritediv = {x=1, y=3},
-	initial_sprite_basepos = {x=0, y=0},
+	-- spritediv = {x=1, y=3},
+	-- initial_sprite_basepos = {x=0, y=0},
 	drops = {
 		{name = "clams:crushedwhite", chance = 1, min = 1, max = 4},
 	},
