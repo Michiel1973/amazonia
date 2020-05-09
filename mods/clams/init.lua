@@ -85,31 +85,6 @@ mobs:register_mob("clams:whiteshell", {
 	fly = false,
 	walk_chance = 0,
 	floats = 0,
-	
-	phase = 0,
-	phasetimer = 0,
-
-	-- on_activate = function(self, staticdata)
-	-- 	minetest.log("whiteshell activated!")
-	-- end,
-
-	on_step = function(self, dtime)
-		self.phasetimer = self.phasetimer + dtime
-		if self.phasetimer > 2.0 then
-			self.phasetimer = self.phasetimer - 2.0
-			self.phase = self.phase + 1
-			if self.phase >= 3 then
-				self.phase = 0
-			end
-			self.object:setsprite({x=0, y=self.phase})
-			local phasearmor = {
-				[0]={fleshy=0},
-				[1]={fleshy=5},
-				[2]={fleshy=10}
-			}
-			self.object:set_armor_groups(phasearmor[self.phase])
-		end
-	end,
 
 	on_punch = function(self, hitter)
 			if self.object:get_hp() <= 0 then
