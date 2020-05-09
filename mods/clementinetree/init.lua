@@ -51,7 +51,7 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"aotearoa:dirt_with_dry_litter","aotearoa:dirt_with_beech_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0005,
@@ -61,7 +61,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest"},
+		--biomes = {"deciduous_forest"},
 		y_min = 1,
 		y_max = 80,
 		schematic = modpath.."/schematics/clementinetree.mts",

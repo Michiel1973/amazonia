@@ -38,9 +38,9 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"rainforest"},
+		--biomes = {"rainforest","ethereal:jungle_dirt"},
 		y_min = 1,
-		y_max = 80,
+		y_max = 40,
 		schematic = modpath.."/schematics/pineapple.mts",
 		flags = "place_center_x, place_center_z,  force_placement",
 		rotation = "random",

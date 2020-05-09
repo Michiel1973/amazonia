@@ -100,9 +100,9 @@ minetest.register_decoration({
 		octaves = 3,
 		persist = 0.67
 	},
-	biomes = {"grassland"},
+	--biomes = {"grassland"},
 	y_min = 10,
-	y_max = 80,
+	y_max = 60,
 	schematic = birch.birchtree,
 	flags = "place_center_x, place_center_z",
 })

@@ -51,7 +51,7 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:dry_dirt"},
+		place_on = {"default:dry_dirt","aotearoa:dirt_with_dry_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0005,
@@ -61,8 +61,8 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"savanna"},
-		y_min = 1,
+		--biomes = {"savanna"},
+		y_min = 6,
 		y_max = 80,
 		schematic = modpath.."/schematics/pomegranate.mts",
 		flags = "place_center_x, place_center_z,  force_placement",
