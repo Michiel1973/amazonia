@@ -27,7 +27,8 @@ local skybox_underground = function(player_name)
 		scale = 1.0
 	}
 	sl.stars_data = {
-		visible = false
+		visible = false,
+		count = 0
 	}
 	skylayer.add_layer(player_name, sl)
 end
