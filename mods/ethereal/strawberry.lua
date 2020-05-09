@@ -95,8 +95,8 @@ minetest.register_abm({
 		"ethereal:strawberry_7"
 	},
 	neighbors = {"farming:soil_wet"},
-	interval = 9,
-	chance = 20,
+	interval = 189,
+	chance = 40,
 	catch_up = false,
 	action = function(pos, node)
 
