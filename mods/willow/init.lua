@@ -32,7 +32,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		sidelen = 16,
 		noise_params = {
 			offset = 0.005,
-			scale = 0.0002,
+			scale = 0.0001,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
