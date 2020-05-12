@@ -1,5 +1,5 @@
 minetest.register_node("mobs_monster:dungeonmaster_heart", {
-		description = "Dungeon Master Heart"),
+		description = "Dungeon Master Heart",
 	tiles = {
 		{
 			name = "lavarock.png",
@@ -28,7 +28,7 @@ minetest.register_node("mobs_monster:dungeonmaster_heart", {
 })
 
 minetest.register_node("mobs_monster:oerkki_heart", {
-		description = "Oerkki Heart"),
+		description = "Oerkki Heart",
 	tiles = {
 		{
 			name = "lavarock_blue.png",
