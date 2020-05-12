@@ -263,21 +263,41 @@ minetest.register_node("seacoral:seacoraldirtredviolet", {
 -- CRAFTING
 
 
-register_seacoral_craft = function(output,recipe)
-    	minetest.register_craft({
-        type = 'shapeless',
-        output = output,
-        recipe = recipe,
+minetest.register_craft({
+type = "shapeless",
+output = "dye:cyan 1",
+recipe = {"seacoral:coralcyan"},
 })
 
+minetest.register_craft({
+type = "shapeless",
+output = "dye:magenta 1",
+recipe = {"seacoral:coralmagenta"},
+})
 
-register_seacoral_craft('dye:cyan 1', {'seacoral:coralcyan'})
-register_seacoral_craft('dye:magenta 1', {'seacoral:coralmagenta'})
-register_seacoral_craft('dye:lime 1', {'seacoral:corallime'})
-register_seacoral_craft('dye:aqua 1', {'seacoral:coralaqua'})
-register_seacoral_craft('dye:skyblue 1', {'seacoral:coralskyblue'})
-register_seacoral_craft('dye:redviolet 1', {'seacoral:coralredviolet'})
-end
+minetest.register_craft({
+type = "shapeless",
+output = "dye:lime 1",
+recipe = {"seacoral:corallime"},
+})
+
+minetest.register_craft({
+type = "shapeless",
+output = "dye:azure 1",
+recipe = {"seacoral:coralaqua"},
+})
+
+minetest.register_craft({
+type = "shapeless",
+output = "dye:cerulean 1",
+recipe = {"seacoral:coralskyblue"},
+})
+
+minetest.register_craft({
+type = "shapeless",
+output = "dye:indigo 1",
+recipe = {"seacoral:coralredviolet"},
+})
 
 -- SEACORAL SAND AND DIRT GENERATION
 
