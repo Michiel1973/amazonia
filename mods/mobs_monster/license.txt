@@ -30,3 +30,11 @@ mobs.fireball.png was originally made by Sapier and edited by Benrob:
 --
 -- (c) Sapier
 -- Contact sapier a t gmx net
+
+uses nodes and textures from Even More Blocks by davidthecreator
+https://forum.minetest.net/viewtopic.php?t=17892
+License: CC-BY-SA 3.0
+
+uses monsters from mobc_mc by maikerumine
+https://forum.minetest.net/viewtopic.php?t=17751
+License: GPL 3.0

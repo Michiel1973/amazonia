@@ -23,7 +23,10 @@ mobs:register_mob("mobs_monster:stone_monster", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "mobs_stonemonster",
+		random = {"mobs_stonemonster","mobs_stonemonster2","mobs_stonemonster3","mobs_stonemonster4",},
+		war_cry = {"mobs_stonemonster","mobs_stonemonster2","mobs_stonemonster3","mobs_stonemonster4",},
+		attack = {"mobs_stonemonster","mobs_stonemonster2","mobs_stonemonster3","mobs_stonemonster4",},
+		death = {"mobs_stonemonster","mobs_stonemonster2","mobs_stonemonster3","mobs_stonemonster4",},
 	},
 	walk_velocity = 1,
 	run_velocity = 2,
@@ -34,7 +37,9 @@ mobs:register_mob("mobs_monster:stone_monster", {
 	drops = {
 		{name = "default:cobble", chance = 1, min = 0, max = 2},
 		{name = "default:coal_lump", chance = 3, min = 0, max = 2},
-		{name = "default:iron_lump", chance = 5, min = 0, max = 2},
+		{name = "default:coalblock", chance = 3, min = 0, max = 3},
+		{name = "default:diamondblock", chance = 9, min = 0, max = 1},
+		{name = "default:iron_lump", chance = 5, min = 0, max = 4},
 	},
 	water_damage = 0,
 	lava_damage = 1,

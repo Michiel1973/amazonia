@@ -32,6 +32,9 @@ mobs.intllib = S
 -- throwing
 dofile(path .. "/zzzthrowing.lua")
 
+-- loot
+dofile(path .. "/treasure.lua")
+
 -- bring on the monsters
 dofile(path .. "/dirt_monster.lua")              -- 
 dofile(path .. "/dungeon_master.lua")            -- caverealms -8000 to -9999

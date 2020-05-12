@@ -34,6 +34,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 	drops = {
 		{name = "default:obsidian", chance = 3, min = 0, max = 2},
 		{name = "default:gold_lump", chance = 2, min = 0, max = 2},
+		{name = "mobs_monster:oerkki_heart", chance = 3, min = 0, max = 1},
 	},
 	water_damage = 2,
 	lava_damage = 0,
