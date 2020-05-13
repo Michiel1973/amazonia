@@ -209,14 +209,21 @@ petz.spawn_mob = function(spawn_pos, limit_max_mobs, abr, liquidflag)
 	end
 end
 
+
+local steptimer = 0
 minetest.register_globalstep(function(dtime)
-	local abr = tonumber(minetest.get_mapgen_setting('active_block_range')) or 3
-	local radius =  abr * 16 --recommended
-	local interval = petz.settings.spawn_interval
-	local spawn_pos, liquidflag, cave = mobkit.get_spawn_pos_abr(dtime, interval, radius, petz.settings.spawn_chance, 0.2)
-	if spawn_pos then
-		petz.spawn_mob(spawn_pos, true, abr, liquidflag)
+	steptimer = steptimer + dtime
+	if steptimer >= 5 then
+		local abr = tonumber(minetest.get_mapgen_setting('active_block_range')) or 2
+		local radius =  abr * 16 --recommended
+		local interval = petz.settings.spawn_interval
+		local spawn_pos, liquidflag, cave = mobkit.get_spawn_pos_abr(dtime, interval, radius, petz.settings.spawn_chance, 0.2)
+		if spawn_pos then
+			petz.spawn_mob(spawn_pos, true, abr, liquidflag)
+		end
+		steptimer = 0
 	end
+	if steptimer >= 5 then steptimer = 0 end
 end)
 
 -- Spawn some mobs when area loaded
