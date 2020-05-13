@@ -5,9 +5,9 @@
 -- Author: Sokomine
 local S = travelnet.S;
 
-minetest.register_node("travelnet:travelnetadvanced", {
+minetest.register_node("travelnet:travelnetmk2", {
 
-	description = S("Advanced Travelnet-Box"),
+	description = S("Travelnet-Box mk2"),
 
 	drawtype = "mesh",
 	mesh = "travelnet.obj",
@@ -39,9 +39,9 @@ minetest.register_node("travelnet:travelnetadvanced", {
 		},
 	},
 
-	tiles = travelnet.tiles_travelnet,
+	tiles = travelnet.tiles_travelnetmk2,
 
-	inventory_image = travelnet.travelnet_inventory_image,
+	inventory_image = travelnet.travelnetmk2_inventory_image,
 
 	groups = {}, --cracky=1,choppy=1,snappy=1},
 
@@ -59,7 +59,7 @@ minetest.register_node("travelnet:travelnetadvanced", {
     end,
 
     can_dig = function( pos, player )
-                          return travelnet.can_dig( pos, player, 'travelnet box' )
+                          return travelnet.can_dig( pos, player, 'travelnet box mk2' )
     end,
 
     after_dig_node = function(pos, oldnode, oldmetadata, digger)
@@ -81,7 +81,14 @@ minetest.register_node("travelnet:travelnetadvanced", {
           minetest.chat_send_player( placer:get_player_name(), S('Not enough vertical space to place the travelnet box!'))
           return;
 		end
-		
+		if pos.y < -10000 then
+			minetest.chat_send_player( placer:get_player_name(), S('You are too deep to use travelnet mk2 boxes!'))
+         return;
+       end
+	   		if pos.y > 8000 then
+			minetest.chat_send_player( placer:get_player_name(), S('You are too high to use travelnet mk2 boxes!'))
+         return;
+		end
        return minetest.item_place(itemstack, placer, pointed_thing);
     end,
 
@@ -89,6 +96,6 @@ minetest.register_node("travelnet:travelnetadvanced", {
 
 --[
 minetest.register_craft({
-        output = "travelnet:travelnet",
-        recipe = travelnet.travelnet_recipe,
+        output = "travelnet:travelnetmk2",
+        recipe = travelnet.travelnetmk2_recipe,
 })
