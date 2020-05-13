@@ -25,11 +25,17 @@ travelnet.travelnet_recipe = {
                 {"default:glass", "default:steel_ingot", "default:glass", }
 }
 
--- travelnet.travelnetadvanced_recipe = {
-                -- {"default:glass", "default:steel_ingot", "default:glass", },
-                -- {"default:glass", "default:mese",        "default:glass", },
-                -- {"default:glass", "default:steel_ingot", "default:glass", }
--- }
+travelnet.travelnetmk2_recipe = {
+                {"default:steel_ingot", "mobs_monster:dungeonmaster_heart", "default:steel_ingot", },
+                {"default:glass", "mobs_monster:dungeonmaster_heart",     "default:glass", },
+                {"default:steel_ingot", "mobs_monster:dungeonmaster_heart", "default:steel_ingot", }
+}
+
+travelnet.travelnetmk3_recipe = {
+                {"default:steel_ingot", "mobs_monster:oerkki_heart", "default:steel_ingot", },
+                {"default:glass", "mobs_monster:oerkki_heart",     "default:glass", },
+                {"default:steel_ingot", "mobs_monster:oerkki_heart", "default:steel_ingot", }
+}
 
 travelnet.elevator_recipe = {
 	    {"default:steel_ingot", "default:glass", "default:steel_ingot", },
@@ -43,6 +49,23 @@ travelnet.tiles_travelnet = {
 		"default_steel_block.png",  -- view from top
 		"default_clay.png",  -- view from bottom
 		}
+		
+travelnet.tiles_travelnetmk2 = {
+		"travelnet_travelnetmk2_front.png",  -- backward view
+		"travelnet_travelnetmk2_back.png", -- front view
+		"travelnet_travelnetmk2_side.png", -- sides :)
+		"default_steel_block.png",  -- view from top
+		"default_clay.png",  -- view from bottom
+		}
+		
+travelnet.tiles_travelnetmk3 = {
+		"travelnet_travelnetmk3_front.png",  -- backward view
+		"travelnet_travelnetmk3_back.png", -- front view
+		"travelnet_travelnetmk3_side.png", -- sides :)
+		"default_steel_block.png",  -- view from top
+		"default_clay.png",  -- view from bottom
+		}
+	
 travelnet.tiles_elevator = {
 		"travelnet_elevator_front.png",
 		"travelnet_elevator_inside_controls.png",
@@ -52,44 +75,10 @@ travelnet.tiles_elevator = {
 		"default_steel_block.png"
 		}
 travelnet.travelnet_inventory_image = "travelnet_inv.png"
+travelnet.travelnetmk2_inventory_image = "travelnetmk2_inv.png"
+travelnet.travelnetmk3_inventory_image = "travelnetmk3_inv.png"
 travelnet.elevator_inventory_image  = "travelnet_elevator_inv.png"
 
-if( minetest.registered_nodes["mcl_core:wood"]) then
-	local w_texture = "default_wood.png^[transformR90"; -- "mcl_doors_door_spruce_lower.png";
-	travelnet.travelnet_recipe = {
-                {"mcl_stairs:slab_wood", "mcl_stairs:slab_wood", "mcl_stairs:slab_wood",},
-		{"mesecons_torch:mesecon_torch_on", "mcl_chests:chest", "mesecons_torch:mesecon_torch_on"},
-		{"mesecons_torch:mesecon_torch_on", "mcl_chests:chest", "mesecons_torch:mesecon_torch_on"},
---		  {"core:glass", "mcl_core:iron_ingot",           "mcl_core:glass", },
---                {"mcl_core:glass", "mesecons_torch:redstoneblock", "mcl_core:glass", },
---                {"mcl_core:glass", "mcl_core:iron_ingot",           "mcl_core:glass", }
-	}
-	travelnet.elevator_recipe = {
-                {"mcl_stairs:slab_wood", "mcl_stairs:slab_wood", "mcl_stairs:slab_wood",},
-		{"mesecons_torch:mesecon_torch_on", "", "mesecons_torch:mesecon_torch_on"},
-		{"mesecons_torch:mesecon_torch_on", "", "mesecons_torch:mesecon_torch_on"},
---	        {"mcl_core:iron_ingot", "mcl_core:glass", "mcl_core:iron_ingot", },
---		{"mcl_core:iron_ingot", "",               "mcl_core:iron_ingot", },
---		{"mcl_core:iron_ingot", "mcl_core:glass", "mcl_core:iron_ingot", }
-	}
-	travelnet.tiles_travelnet = {
-		w_texture,  -- backward view
-		w_texture, -- front view
-		w_texture, -- sides :)
-		w_texture,  -- view from top
-		w_texture,  -- view from bottom
-	}
-	travelnet.tiles_elevator = {
-		"mcl_core_planks_big_oak.png^[transformR90", -- front
-		"mcl_core_planks_big_oak.png^[transformR90", -- inside
-		"mcl_core_planks_big_oak.png^[transformR90", -- sides outside
-		"mcl_core_planks_big_oak.png^[transformR90", -- inside ceiling
-		"mcl_core_planks_big_oak.png^[transformR90", -- inside floor
-		"mcl_core_planks_big_oak.png^[transformR90", -- top
-		}
-	travelnet.travelnet_inventory_image = nil
-	travelnet.elevator_inventory_image  = nil
-end
 
 -- if this function returns true, the player with the name player_name is
 -- allowed to add a box to the network named network_name, which is owned
