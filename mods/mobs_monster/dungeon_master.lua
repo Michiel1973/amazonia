@@ -18,8 +18,7 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	shoot_offset = 1,
 	hp_min = 60,
 	hp_max = 90,
-	armor = 120,
-	armor = 120,
+	armor = 850,
 	collisionbox = {-0.7, -1, -0.7, 0.7, 1.6, 0.7},
 	visual = "mesh",
 	mesh = "mobs_dungeon_master.b3d",
@@ -127,7 +126,7 @@ mobs:register_arrow("mobs_monster:fireball", {
 
 	-- node hit
 	hit_node = function(self, pos, node)
-		mobs:boom(self, pos, 1)
+		mobs:boom(self, pos, 3)
 	end
 })
 
