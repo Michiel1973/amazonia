@@ -25,7 +25,7 @@ mobs:spawn_specific ("mobs_monster:stone_monster", {"caverealms:stone_with_moss"
 mobs:spawn_specific ("mobs_monster:sand_monster", "default:desert_sand", "air", 0, 10, 30, 400, 1, -8000, -6500)
 
 -- caverealms dungeon master layer -8000  to -9999
-mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "caverealms:glow_obsidian"}, "air", 0, 15, 30, 100, 3, -9950, -8100)
+mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "caverealms:glow_obsidian"}, "air", 0, 15, 30, 400, 2, -9950, -8100)
 
 -- DF level 1 - 10033 to -12032
 -- you get a break here

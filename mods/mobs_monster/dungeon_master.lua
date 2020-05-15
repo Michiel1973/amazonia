@@ -18,7 +18,7 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	shoot_offset = 1,
 	hp_min = 60,
 	hp_max = 90,
-	armor = 850,
+	armor = 85,
 	collisionbox = {-0.7, -1, -0.7, 0.7, 1.6, 0.7},
 	visual = "mesh",
 	mesh = "mobs_dungeon_master.b3d",
