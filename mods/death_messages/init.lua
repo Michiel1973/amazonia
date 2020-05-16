@@ -245,7 +245,7 @@ minetest.register_on_punchplayer(function(player, hitter)
 	
 
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
-					if hitter:get_luaentity().name == ""
+					if hitter:get_luaentity().name == "" then
 					monstername = "a monster"
 					else
 						local monstername = hitter:get_luaentity().name
