@@ -245,11 +245,6 @@ minetest.register_on_punchplayer(function(player, hitter)
 	
 
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
-					minetest.chat_send_all(
-					string.char(0x1b).."(c@#00CED1)"..player:get_player_name()..
-					string.char(0x1b).."(c@#ff0000)".." was"..
-					string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
-					string.char(0x1b).."(c@#ff0000)".." by "..
 					local monstername = hitter:get_luaentity().name
 					if monstername == "mobs_monster:dungeon_master" then
 						monstername = "a Dungeon Master"
@@ -280,6 +275,12 @@ minetest.register_on_punchplayer(function(player, hitter)
 					else
 						monstername = "a monster"
 					end
+					minetest.chat_send_all(
+					string.char(0x1b).."(c@#00CED1)"..player:get_player_name()..
+					string.char(0x1b).."(c@#ff0000)".." was"..
+					string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
+					string.char(0x1b).."(c@#ff0000)".." by "..
+
 					string.char(0x1b).."(c@#FF8C00)"..monstername..  --too many mobs add to crash
 					string.char(0x1b).."(c@#00bbff)"..get_message("mobs"))  --TODO: make custom mob death messages
 					
