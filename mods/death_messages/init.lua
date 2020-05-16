@@ -195,9 +195,10 @@ minetest.register_on_dieplayer(function(player)
 		
 	-- Death by something else
 	else
-		--minetest.chat_send_all(
-		--string.char(0x1b).."(c@#ffffff)"..player_name .. 
-		--string.char(0x1b).."(c@#ff0000)"..get_message("other"))  --toospammy
+		local oclock = tostring(os.date("%H:%M:%S"))
+		minetest.chat_send_all(
+		string.char(0x1b).."(c@#ff0000)"..oclock.." [server]: "..player_name .. 
+		string.char(0x1b).."(c@#ff0000)"..get_message("other"))  --toospammy
 		--minetest.after(0.5, function(holding)
 			--player:setpos(death)  --gamebreaker?
 		--end)
@@ -252,10 +253,10 @@ minetest.register_on_punchplayer(function(player, hitter)
 
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
 					if not hitter:get_luaentity() then
-					return
+						return
 					end
 					if not hitter:get_luaentity().name then
-					return
+						return
 					end
 					local monstername = "a monster"
 					if hitter:get_luaentity().name == "" then
