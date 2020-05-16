@@ -126,7 +126,7 @@ local function update_formspecs(finished)
 		form_n = beds.formspec .. "label[2.7,9;" .. esc(S("Good morning.")) .. "]"
 	else
 		form_n = beds.formspec .. "label[2.2,9;" ..
-			esc(S("@1 of @2 players are in bed", player_in_bed, ges)) .. "]"
+			esc(S("your respawn location has been set to here!", player_in_bed, ges)) .. "]"
 		if is_majority and is_night_skip_enabled() then
 			form_n = form_n .. "button_exit[2,6;4,0.75;force;" ..
 				esc(S("Force night skip")) .. "]"
@@ -157,30 +157,39 @@ function beds.on_rightclick(pos, player)
 	local ppos = player:get_pos()
 	local tod = minetest.get_timeofday()
 
+	-- if tod > 0.2 and tod < 0.805 then
+		-- if beds.player[name] then
+			-- lay_down(player, nil, nil, false)
+		-- end
+		-- minetest.chat_send_player(name, S("You can only sleep at night."))
+		-- return
+	-- end
+
+	-- move to bed
 	if not beds.player[name] then
 		lay_down(player, ppos, pos)
 		beds.set_spawns() -- save respawn positions when entering bed
-		minetest.chat_send_player(name, S("Your spawn position is set to this location!"))
 	else
-		lay_down(player, nil, nil, false)
+		lay_down(player, ppos, pos)
+		beds.set_spawns() -- save respawn positions when entering bed
 	end
-	
+
 	if not is_sp then
 		update_formspecs(false)
 	end
 
 	-- skip the night and let all players stand up
-	-- if check_in_beds() then
-		-- minetest.after(2, function()
-			-- if not is_sp then
-				-- update_formspecs(is_night_skip_enabled())
-			-- end
-			-- if is_night_skip_enabled() then
-				-- beds.skip_night()
-				-- beds.kick_players()
-			-- end
-		-- end)
-	-- end
+	if check_in_beds() then
+		minetest.after(2, function()
+			if not is_sp then
+				update_formspecs(is_night_skip_enabled())
+			end
+			if is_night_skip_enabled() then
+				beds.skip_night()
+				beds.kick_players()
+			end
+		end)
+	end
 end
 
 function beds.can_dig(bed_pos)
