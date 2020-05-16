@@ -88,7 +88,17 @@ messages.fire = {
 	" got burned up.",
 	" stood in the fire.",
 	" was roasted.",
-	" cooked themselves."
+	" cooked themselves.",
+	" spontaneously combusted.",
+	" may need some ice for that burn.",
+	" walked on hot coals.",
+	" was fired.",
+	"'s goose was cooked.",
+	" found out they were highly flammable.",
+	" regrets skipping the swimming lessons.",
+	" forgot to wear a life jacket.",
+	" went to Davy Jones's locker."
+	
 }
 
 -- Other death messages
@@ -103,7 +113,16 @@ messages.other = {
 	" shed their mortal coil.",
 	" decided it was preferable to respawn.",
 	" decided to self-terminate.",
-	" did something dumb."
+	" did something dumb.",
+	" did not survive.",
+	" will be remembered...",
+	" cashed in their chips.",
+	" was too good for this world.",
+	" came to a sticky end.",
+	" is now dead as a dodo.",
+	" kicked the bucket.",
+	" is now a candidate for the Darwin Awards.",
+	
 }
 
 -- PVP Messages
