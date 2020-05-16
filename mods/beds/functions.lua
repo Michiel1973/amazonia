@@ -126,7 +126,7 @@ local function update_formspecs(finished)
 		form_n = beds.formspec .. "label[2.7,9;" .. esc(S("Good morning.")) .. "]"
 	else
 		form_n = beds.formspec .. "label[2.2,9;" ..
-			esc(S("Your respawn point has been set to this location!", player_in_bed, ges)) .. "]"
+			esc(S("@1 of @2 players are in bed", player_in_bed, ges)) .. "]"
 		if is_majority and is_night_skip_enabled() then
 			form_n = form_n .. "button_exit[2,6;4,0.75;force;" ..
 				esc(S("Force night skip")) .. "]"
