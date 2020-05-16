@@ -39,7 +39,8 @@ messages.radioactive = {
 	" thought standing next to uranium would turn them into the hulk.",
 	" is glowing a healthy radioactive green.",
 	" didn't know uranium was radioactive.",
-	" has hopefully learned what uranium nodes look like."
+	" has hopefully learned what uranium nodes look like.",
+	" wanted to glow in the dark.",
 }
 
 -- Toxic death messages
@@ -52,7 +53,7 @@ messages.toxic = {
 	" went into the toxic curtain.",
 	" thought it was a toxic-tub.",
 	" is radioactive.",
-	" didn't know toxic water was radioactive."
+	" didn't know toxic water was radioactive.",
 }
 
 -- Lava death messages
@@ -64,7 +65,16 @@ messages.lava = {
 	" didn't know lava was hot.",
 	" loved lava a little too much.",
 	" took a nice lava swim.",
-	" burned to a crisp in lava."
+	" may need some ice for that burn.",
+	" found out they were highly flammable.",
+	" spontaneously combusted.",
+	" burned to a crisp in lava.",
+	" didn't bring a potion of fire resistance...",
+	", lava was not meant to be swam in.",
+	" dove into a pool of lava and hit their head.",
+	" is toasty.",
+	" is extra-crispy.",
+
 }
 
 -- Drowning death messages
@@ -73,10 +83,15 @@ messages.water = {
 	" ran out of air.",
 	" failed at swimming lessons.",
 	" tried to impersonate an anchor.",
-	" forgot he wasn't a fish.",
+	" forgot they weren't a fish.",
 	" blew one too many bubbles.",
 	" became a permanent underwater exhibit.",
-	" sleeps with the fishes."
+	" sleeps with the fishes.",
+	" was never a sea creature.",
+	" didn't bring a potion of underwater breathing...",
+	" regrets skipping the swimming lessons.",
+	" forgot to wear a life jacket.",
+	" is now soggy.",
 }
 
 -- Burning death messages
@@ -97,8 +112,12 @@ messages.fire = {
 	" found out they were highly flammable.",
 	" regrets skipping the swimming lessons.",
 	" forgot to wear a life jacket.",
-	" went to Davy Jones's locker."
-	
+	" went to Davy Jones's locker.",
+	"'s fire eating performance took a turn for the worse.",
+	" is toasty.",
+	" is extra-crispy.",
+	" is served hot.",
+
 }
 
 -- Other death messages
@@ -122,6 +141,30 @@ messages.other = {
 	" is now dead as a dodo.",
 	" kicked the bucket.",
 	" is now a candidate for the Darwin Awards.",
+	" is pining for the fjords.",
+	" exited the stage",
+	" became an unperson.",
+	" stopped breathing.",
+	" ended their life.",
+	" found an early death.",
+	" stopped living.",
+	" passed on.",
+	" gave up the ghost,",
+	" is now in a better place.",
+	" bought the farm.",
+	" went six feet under.",
+	" is pushing up daisies.",
+	" kicked the oxygen habit.",
+	" got smoked.",
+	" checked out.",
+	" is done for.",
+	" went extinct.",
+	" has gone to a better place.",
+	" met their maker.",
+	" was snuffed out.",
+	" is riding the pale horse.",
+	" is taking a dirt nap",
+	" became worm food.",
 	
 }
 
@@ -136,11 +179,13 @@ messages.pvp = {
 	" served",
 	" killed",
 	" poked",
+	" maimed",
 	" busted up",
 	" schooled",
 	" chopped up",
 	" destroyed",
-	" mangled"
+	" mangled",
+	" ended",
 }
 
 -- Player Messages
@@ -210,7 +255,7 @@ minetest.register_on_dieplayer(function(player)
 		minetest.chat_send_all(
 		string.char(0x1b).."(c@#ff0000)"..oclock.." [server]: "..player_name .. 
 		string.char(0x1b).."(c@#ff0000)"..get_message("fire"))
-	elseif node.name == "groups:radioactive" then
+	elseif minetest.get_item_group(node.name, "groups:radioactive") > 0 then
 		minetest.chat_send_all(
 		string.char(0x1b).."(c@#ff0000)"..oclock.." [server]: "..player_name .. 
 		string.char(0x1b).."(c@#ff0000)"..get_message("radioactive"))
@@ -221,7 +266,8 @@ minetest.register_on_dieplayer(function(player)
 		string.char(0x1b).."(c@#ff0000)"..oclock.." [server]: "..player_name .. 
 		string.char(0x1b).."(c@#ff0000)"..get_message("other"))  --toospammy
 	end
-	
+	local LIMBO = "18, -24, 30"
+	minetest.get_player_by_name(player_name):setpos(minetest.string_to_pos(LIMBO))
 end)
 
 --bigfoot code
