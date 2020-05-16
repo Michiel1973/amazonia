@@ -51,6 +51,7 @@ messages.lava = {
 	" couldn't resist that warm glow of lava.",
 	" thought it was a hot tub.",
 	" didn't know lava was hot.",
+	" loved lava a little too much.",
 	" took a nice lava swim."
 }
 
@@ -62,6 +63,7 @@ messages.water = {
 	" tried to impersonate an anchor.",
 	" forgot he wasn't a fish.",
 	" blew one too many bubbles.",
+	" became a permanent underwater exhibit.",
 	" sleeps with the fishes."
 }
 
@@ -85,6 +87,8 @@ messages.other = {
 	" is somewhat dead now.",
 	" passed out permanently.",
 	" kinda screwed up.",
+	" bit the dust.",
+	" decided it was preferable to respawn.",
 	" decided to self-terminate.",
 	" did something dumb."
 }
@@ -95,14 +99,16 @@ messages.pvp = {
 	" rekt",
 	" hacked up",
 	" skewered",
-	" blasted",
 	" buried",
+	" exterminated",
 	" served",
+	" killed",
 	" poked",
 	" busted up",
 	" schooled",
 	" chopped up",
-	" destroyed"
+	" destroyed",
+	" mangled"
 }
 
 -- Player Messages
@@ -112,7 +118,9 @@ messages.player = {
 	" for spilling milk.",
 	" for not being good at PVP.",
 	" for reasons uncertain.",
-	" while texting."
+	" while texting.",
+	" like a snack.",
+	" because why not."
 }
 
 -- MOB After Messages
@@ -122,8 +130,11 @@ messages.mobs = {
 	" badly.",
 	" terribly.",
 	" horribly.",
+	" painfully.",
+	" quickly.",
 	" in a haphazard way.",
-	" with extreme prejudice."
+	" with extreme prejudice.",
+	" efficiently."
 }
 
 function get_message(mtype)
@@ -253,9 +264,23 @@ minetest.register_on_punchplayer(function(player, hitter)
 
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
 					if not hitter:get_luaentity() then
+						local oclock = tostring(os.date("%H:%M:%S"))
+						minetest.chat_send_all(
+						string.char(0x1b).."(c@#ff0000)"..oclock.." [server]: "..player:get_player_name()..
+						string.char(0x1b).."(c@#ff0000)".." was"..
+						string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
+						string.char(0x1b).."(c@#ff0000)".." by a monster"..
+						string.char(0x1b).."(c@#ff0000)"..get_message("mobs"))
 						return
 					end
 					if not hitter:get_luaentity().name then
+						local oclock = tostring(os.date("%H:%M:%S"))
+						minetest.chat_send_all(
+						string.char(0x1b).."(c@#ff0000)"..oclock.." [server]: "..player:get_player_name()..
+						string.char(0x1b).."(c@#ff0000)".." was"..
+						string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
+						string.char(0x1b).."(c@#ff0000)".." by a monster"..
+						string.char(0x1b).."(c@#ff0000)"..get_message("mobs"))
 						return
 					end
 					local monstername = "a monster"
