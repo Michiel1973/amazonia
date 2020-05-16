@@ -157,9 +157,14 @@ function beds.on_rightclick(pos, player)
 	local ppos = player:get_pos()
 	local tod = minetest.get_timeofday()
 
-		minetest.chat_send_player(name, S("Your spawn position is set to this location!"))
+	if not beds.player[name] then
+		lay_down(player, ppos, pos)
 		beds.set_spawns() -- save respawn positions when entering bed
-
+		minetest.chat_send_player(name, S("Your spawn position is set to this location!"))
+	else
+		lay_down(player, nil, nil, false)
+	end
+	
 	if not is_sp then
 		update_formspecs(false)
 	end
