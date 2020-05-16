@@ -245,42 +245,45 @@ minetest.register_on_punchplayer(function(player, hitter)
 	
 
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
-					local monstername = hitter:get_luaentity().name
-					if monstername == "mobs_monster:dungeon_master" then
-						monstername = "a Dungeon Master"
-					elseif monstername == "mobs_monster:creeper" then
-						monstername = "a creeper"
-					elseif monstername == "mobs_monster:mothman" then
-						monstername = "a mothman"
-					elseif monstername == "mobs_monster:oerkki" then
-						monstername = "an Oerkki"
-					elseif monstername == "mobs_monster:sand_monster" then
-						monstername = "a sand monster"
-					elseif monstername == "mobs_monster:slime_big" or "mobs_monster:slime_small" or "mobs_monster:slime_tiny" then
-						monstername = "a slime monster"
-					elseif monstername == "mobs_monster:magma_cube_big" or "mobs_monster:magma_cube_small" or "mobs_monster:magma_cube_tiny" then
-						monstername = "a magma monster"
-					elseif monstername == "mobs_monster:skeleton" then
-						monstername = "an ancient warrior skeleton"		
-					elseif monstername == "mobs_monster:stone_monster" then
-						monstername = "a stone monster"	
-					elseif monstername == "mobs_monster:lava_flan" then
-						monstername = "a lava flan"	
-					elseif monstername == "petz:lion" then
-						monstername = "a lion"
-					elseif monstername == "petz:grizzly" then
-						monstername = "a bear"
-					elseif monstername == "petz:tarantula" then
-						monstername = "a spider"
+					if hitter:get_luaentity().name == ""
+					monstername = "a monster"
 					else
-						monstername = "a monster"
+						local monstername = hitter:get_luaentity().name
+						if monstername == "mobs_monster:dungeon_master" then
+							monstername = "a Dungeon Master"
+						elseif monstername == "mobs_monster:creeper" then
+							monstername = "a creeper"
+						elseif monstername == "mobs_monster:mothman" then
+							monstername = "a mothman"
+						elseif monstername == "mobs_monster:oerkki" then
+							monstername = "an Oerkki"
+						elseif monstername == "mobs_monster:sand_monster" then
+							monstername = "a sand monster"
+						elseif monstername == "mobs_monster:slime_big" or "mobs_monster:slime_small" or "mobs_monster:slime_tiny" then
+							monstername = "a slime monster"
+						elseif monstername == "mobs_monster:magma_cube_big" or "mobs_monster:magma_cube_small" or "mobs_monster:magma_cube_tiny" then
+							monstername = "a magma monster"
+						elseif monstername == "mobs_monster:skeleton" then
+							monstername = "an ancient warrior skeleton"		
+						elseif monstername == "mobs_monster:stone_monster" then
+							monstername = "a stone monster"	
+						elseif monstername == "mobs_monster:lava_flan" then
+							monstername = "a lava flan"	
+						elseif monstername == "petz:lion" then
+							monstername = "a lion"
+						elseif monstername == "petz:grizzly" then
+							monstername = "a bear"
+						elseif monstername == "petz:tarantula" then
+							monstername = "a spider"
+						else
+							monstername = "a monster"
+						end
 					end
 					minetest.chat_send_all(
 					string.char(0x1b).."(c@#00CED1)"..player:get_player_name()..
 					string.char(0x1b).."(c@#ff0000)".." was"..
 					string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
 					string.char(0x1b).."(c@#ff0000)".." by "..
-
 					string.char(0x1b).."(c@#FF8C00)"..monstername..  --too many mobs add to crash
 					string.char(0x1b).."(c@#00bbff)"..get_message("mobs"))  --TODO: make custom mob death messages
 					
