@@ -234,13 +234,15 @@ if minetest.chatcommands["msg"] then
 						})
 					end
 				end
-
+				
+				local oclock = tostring(os.date("%H:%M:%S"))
+				
 				if ignore and chat3.ignore.is(name, sendto) then
-					return true, "Message sent.\n"..chat3.colorize(name, "red",
+					return true, "Message \"".. message.."\" sent.\n"..chat3.colorize(name, "red",
 							"Warning: "..sendto.." will not be able to respond to this"
 							.." message unless you remove them from your ignore list.")
 				else
-					return true, "Message sent."
+					return true, chat3.colorize(name, "yellow", oclock .. "sent to: ["..name.."]: "..message)
 				end
 			end
 		end,
