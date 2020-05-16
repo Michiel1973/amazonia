@@ -221,7 +221,6 @@ minetest.register_on_punchplayer(function(player, hitter)
    end
    minetest.after(0, function(holding)
       if player:get_hp() == 0 and hitter:get_player_name() ~= "" and holding == hitter:get_wielded_item() ~= "" then
-	  
 			local holding = hitter:get_wielded_item() 
 				if holding:to_string() ~= "" then  
 				local weap = holding:get_name(holding:get_name())
@@ -243,7 +242,6 @@ minetest.register_on_punchplayer(function(player, hitter)
 		if player=="" or hitter=="" then return end -- no killers/victims
         return true
 	
-
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
 					if not hitter:get_luaentity() then
 						local oclock = tostring(os.date("%H:%M:%S"))
