@@ -73,7 +73,8 @@ messages.fire = {
 	" just got roasted, hotdog style.",
 	" got burned up.",
 	" stood in the fire.",
-	" was roasted."
+	" was roasted.",
+	" cooked themselves."
 }
 
 -- Other death messages
@@ -100,7 +101,6 @@ messages.pvp = {
 	" poked",
 	" busted up",
 	" schooled",
-	" told",
 	" chopped up",
 	" destroyed"
 }
@@ -118,12 +118,12 @@ messages.player = {
 -- MOB After Messages
 messages.mobs = {
 	" and was eaten with a gurgling sound.",
-	" then was cooked for dinner.",
+	" and then was cooked for dinner.",
 	" badly.",
 	" terribly.",
 	" horribly.",
 	" in a haphazard way.",
-	" and grinned wryly."
+	" with extreme prejudice."
 }
 
 function get_message(mtype)
