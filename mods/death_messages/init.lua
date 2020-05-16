@@ -49,9 +49,9 @@ messages.lava = {
 	" thought lava was cool.",
 	" melted into a ball of fire.",
 	" couldn't resist that warm glow of lava.",
-	" went into the lava curtain.",
 	" thought it was a hot tub.",
-	" didn't know lava was hot."
+	" didn't know lava was hot.",
+	" took a nice lava swim."
 }
 
 -- Drowning death messages
@@ -71,7 +71,9 @@ messages.fire = {
 	" got a little too warm.",
 	" got too close to the camp fire.",
 	" just got roasted, hotdog style.",
-	" got burned up. More light that way."
+	" got burned up.",
+	" stood in the fire.",
+	" was roasted."
 }
 
 -- Other death messages
@@ -82,8 +84,8 @@ messages.other = {
 	" is somewhat dead now.",
 	" passed out permanently.",
 	" kinda screwed up.",
-	" couldn't fight very well.",
 	" decided to self-terminate.",
+	" did something dumb."
 }
 
 -- PVP Messages
@@ -100,7 +102,7 @@ messages.pvp = {
 	" schooled",
 	" told",
 	" chopped up",
-	" destroyed",
+	" destroyed"
 }
 
 -- Player Messages
