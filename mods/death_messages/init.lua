@@ -73,7 +73,7 @@ messages.fire = {
 	" just got roasted, hotdog style.",
 	" got burned up.",
 	" stood in the fire.",
-	" was roasted."
+	" was roasted.",
 	" cooked themselves."
 }
 
