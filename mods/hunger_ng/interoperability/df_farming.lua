@@ -1,11 +1,11 @@
 local add = hunger_ng.add_hunger_data
 
-add('df_farming:cave_bread', { satiates = 1.0 })
-add('df_farming:plump_helmet_1', { satiates = 1.0 })
-add('df_farming:plump_helmet_2', { satiates = 1.5 })
-add('df_farming:plump_helmet_3', { satiates = 2.0 })
-add('df_farming:plump_helmet_4', { satiates = 2.5 })
-add('df_farming:plump_helmet_4_picked', { satiates = 2.5 })
+add('df_farming:cave_bread', { satiates = 2.0 })
+add('df_farming:plump_helmet_1', { satiates = 0.5 })
+add('df_farming:plump_helmet_2', { satiates = 1.0 })
+add('df_farming:plump_helmet_3', { satiates = 1.5 })
+add('df_farming:plump_helmet_4', { satiates = 2.0 })
+add('df_farming:plump_helmet_4_picked', { satiates = 2.0 })
 
 
 add('df_farming:cave_flour_simple_meal', { satiates = 3.0, heals = 1.0 })
