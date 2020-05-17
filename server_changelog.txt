@@ -1,5 +1,9 @@
 SERVER CHANGELOG
 
+May 16   - MINOR - bed "sleep" functionality completely removed, now always set player respawn location
+May 13   - MINOR - travelnet boxes mk2 and mk3 implemented. Mk1: to -5000, Mk2: to -10000, Mk3: no limit
+May 6    - MINOR - replaced advchat with chat3, minegeld renamed to minecoin
+May 3    - MINOR - added skylayer mod (allows setting different skyboxes at different altitudes)
 May 1    - MINOR - added torch bombs, torch grenades, torch crossbows and my favorite, torch bomb rockets
 May 1    - MINOR - several mods were updated from their masters, with 3d armors being the highlight, new textures
 May 1    - MINOR - tuned ABMs and removed mapgen bottlenecks to improve server performance

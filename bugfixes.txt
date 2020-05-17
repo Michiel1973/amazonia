@@ -1,5 +1,14 @@
 BUGFIXES
 
+MAY 10
+- coals and seaweeds which previously displayed "underwater air node" behavior were fixed, recipes adjusted
+
+MAY 7
+- petz mod: all mobs restricted to min/max height (might not be working as intended yet)
+
+MAY 3
+- lakes mod removed (too many random "tree-lakes")
+
 APRIL 23
 - disabled butterflies from petz as it would cause some visual glitches
 
