@@ -35,6 +35,9 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	walk_velocity = 1,
 	run_velocity = 3,
 	jump = true,
+	stepheight = 1.1,
+	step_height = 1.1,
+	jump_height = 1.1,
 	view_range = 15,
 	drops = {
 		{name = "default:mese_crystal_fragment", chance = 1, min = 0, max = 2},
