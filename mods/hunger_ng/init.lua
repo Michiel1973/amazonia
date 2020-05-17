@@ -129,14 +129,18 @@ end
 
 -- Replace the global table used for easy variable access within the mod with
 -- an API-like global table for other mods to utilize.
-local add_hunger_data = hunger_ng.functions.add_hunger_data
-local alter_hunger = hunger_ng.functions.alter_hunger
-local get_hunger_information = hunger_ng.functions.get_hunger_information
-local configure_hunger = hunger_ng.functions.configure_hunger
-hunger_ng = nil
-hunger_ng = {
-    add_hunger_data = add_hunger_data,
-    alter_hunger = alter_hunger,
-    configure_hunger = configure_hunger,
-    get_hunger_information = get_hunger_information
+local api_functions = {
+    add_hunger_data = hunger_ng.functions.add_hunger_data,
+    alter_hunger = hunger_ng.functions.alter_hunger,
+    configure_hunger = hunger_ng.functions.configure_hunger,
+    get_hunger_information = hunger_ng.functions.get_hunger_information,
+    interoperability = {
+        settings = hunger_ng.settings,
+        attributes = hunger_ng.attributes,
+        translator = hunger_ng.configuration.translator,
+        get_data = hunger_ng.functions.get_data,
+        set_data = hunger_ng.functions.set_data
+    }
 }
+
+hunger_ng = api_functions

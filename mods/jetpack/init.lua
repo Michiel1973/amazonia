@@ -73,7 +73,7 @@ minetest.register_craft({
 technic.register_power_tool('jetpack:jetpack', CHARGE_MAX)
 
 -- register charge hudbar
-hb.register_hudbar(HB_NAME, 0xFFFFFF, 'Charge', { icon = 'jetpack_charge_icon.png', bgicon = 'jetpack_charge_bgicon.png',  bar = 'jetpack_charge_bar.png' }, 0, CHARGE_MAX, true)
+hb.register_hudbar(HB_NAME, 0xFFFFFF, 'Jetpack', { icon = 'jetpack_charge_icon.png', bgicon = 'jetpack_charge_bgicon.png',  bar = 'jetpack_charge_bar.png' }, 0, CHARGE_MAX, true)
 
 local function jetpack_off (player)
     local playerName = player:get_player_name()

@@ -1,4 +1,4 @@
-local add = hunger_ng.functions.add_hunger_data
+local add = hunger_ng.add_hunger_data
 
 add('sea_plants:kelpgreen', { satiates = 2.0 })
 add('sea_plants:seagrassgreen', { satiates = 2.0 })

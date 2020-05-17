@@ -184,7 +184,7 @@ hunger_ng.functions.alter_health = function (playername, change, reason)
     if new_health > hp_max then new_health = hp_max end
     if new_health < 0 then new_health = 0 end
 
-    player:set_hp(new_health)
+    player:set_hp(new_health, { hunger = reason })
     debug_log(playername, 'health', current_health, new_health, change, reason)
 end
 

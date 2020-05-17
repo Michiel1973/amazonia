@@ -1,4 +1,4 @@
-local add = hunger_ng.functions.add_hunger_data
+local add = hunger_ng.add_hunger_data
 
 -- Base items
 add('moretrees:acorn',       { satiates = 1, heals = -1 })

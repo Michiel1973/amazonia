@@ -17,7 +17,8 @@ local function set_hud(player)
 	item_names[player_name] = {
 		hud = player:hud_add({
 			hud_elem_type = "text",
-			position = {x=0.5, y=1},
+			--position = {x=0.5, y=1},
+			position = {x=0.365, y=0.965},
 			offset = off,
 			alignment = {x=0, y=0},
 			number = 0xFFFFFF,
