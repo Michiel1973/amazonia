@@ -49,7 +49,7 @@ mobs:register_mob("mobs_monster:sand_monster", {
 	textures = {
 		{"mobs_sand_monster.png"},
 	},
-	blood_amount = 60,
+	blood_amount = 15,
 	blood_texture = "mobs_blood_sand.png",
 	makes_footstep_sound = true,
 	sounds = {

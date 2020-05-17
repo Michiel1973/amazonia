@@ -35,7 +35,7 @@ mobs:register_mob("mobs_monster:creeper", {
 		explode = "tnt_explode",
 		distance = 12,
 	},
-	blood_amount = 30,
+	blood_amount = 8,
 	blood_texture = "mobs_blood_stone.png",
 	makes_footstep_sound = true,
 	walk_velocity = 1.05,

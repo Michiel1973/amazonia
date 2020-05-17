@@ -8,7 +8,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
-	pathfinding = true,
+	pathfinding = 1,
 	reach = 3,
 	--nametag = "oerkki test",
 	damage = 30,
@@ -23,7 +23,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 		{"mobs_oerkki.png"},
 		{"mobs_oerkki2.png"},
 	},
-	blood_amount = 60,
+	blood_amount = 30,
 	blood_texture = "mobs_blood_black.png",
 	makes_footstep_sound = false,
 	sounds = {
@@ -41,7 +41,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 	drops = {
 		{name = "default:obsidian", chance = 3, min = 0, max = 2},
 		{name = "default:gold_lump", chance = 2, min = 0, max = 2},
-		{name = "mobs_monster:oerkki_heart", chance = 3, min = 0, max = 1},
+		{name = "mobs_monster:oerkki_heart", chance = 5, min = 0, max = 1},
 	},
 	water_damage = 2,
 	lava_damage = 0,
