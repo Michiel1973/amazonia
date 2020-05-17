@@ -21,7 +21,7 @@ mobs:register_mob("mobs_monster:stone_monster", {
 		{"mobs_stone_monster.png"},
 		{"mobs_stone_monster2.png"}, -- by AMMOnym
 	},
-	blood_amount = 30,
+	blood_amount = 15,
 	blood_texture = "mobs_blood_stone.png",
 	makes_footstep_sound = true,
 	sounds = {

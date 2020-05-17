@@ -19,6 +19,8 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	hp_min = 60,
 	hp_max = 90,
 	armor = 85,
+	blood_amount = 8,
+	blood_texture = "mobs_blood_stone.png",
 	collisionbox = {-0.7, -1, -0.7, 0.7, 1.6, 0.7},
 	visual = "mesh",
 	mesh = "mobs_dungeon_master.b3d",

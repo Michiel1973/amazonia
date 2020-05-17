@@ -15,7 +15,7 @@ mobs:register_mob("mobs_monster:mothman", {
    textures = {
       {"mothman.png"},
    },
-   blood_amount = 60,
+   blood_amount = 15,
    blood_texture = "blood_effect.png",
    visual_size = {x=3, y=3},
    makes_footstep_sound = true,
