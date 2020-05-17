@@ -1,5 +1,7 @@
 SERVER CHANGELOG
 
+May 17   - MINOR - interface improvements: moved bars and infotext around, added armor bar
+May 17   - MINOR - added ehlphabet mod - make letter blocks
 May 16   - MINOR - bed "sleep" functionality completely removed, now always set player respawn location
 May 13   - MINOR - travelnet boxes mk2 and mk3 implemented. Mk1: to -5000, Mk2: to -10000, Mk3: no limit
 May 6    - MINOR - replaced advchat with chat3, minegeld renamed to minecoin

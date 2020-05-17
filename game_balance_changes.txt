@@ -2,6 +2,7 @@ GAME BALANCE CHANGES
 
 May 17th
 - monster mobs: behavior tuning, stats adjustment, drops adjustment
+- jetpack: had a very high armor rating, adjusted to none
 
 May 16th
 - chainsaw no longer removes leaves
