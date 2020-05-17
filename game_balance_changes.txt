@@ -1,7 +1,35 @@
 GAME BALANCE CHANGES
 
+May 17th
+- monster mobs: behavior tuning, stats adjustment, drops adjustment
+
+May 16th
+- chainsaw no longer removes leaves
+- aotearoa stone and dirt types added to technic mod radiation resistance tables
+
+May 12th
+- monster mobs: loot drop adjustments
+
+May 10th
+- additional tree/flora/flower biome restrictions lifted in favor of node spawning
+
+May 9th
+- many trees changes - trees which were previously restricted to biomes are now restricted by spawn_on node instead
+
+May 8th 
+- Jetpack won't function above 15k, balloons won't function above 2k
+
+May 6th
+- several mods which registered themselves on globalstep were tuned
+
 May 4th
 - many adjustments to mapgens, hopefully less trees everywhere.
+
+May 3rd
+- Ore levels adjustments for cloudlands (6900-7200)
+
+May 2nd
+- goblins pushed back to -1500 / -4000
 
 April 29
 - tuning of Deep Realm monsters
