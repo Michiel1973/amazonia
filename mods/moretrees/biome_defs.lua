@@ -125,12 +125,20 @@ moretrees.willow_biome = {
 }
 
 moretrees.rubber_tree_biome = {
-	surface = "default:dirt_with_grass",
+	surface = {
+		"default:dirt",
+		"default:dirt_with_grass",
+		"woodsoils:dirt_with_leaves_1",
+		"woodsoils:grass_with_leaves_1",
+		"woodsoils:grass_with_leaves_2",
+		"ethereal:grove_dirt",
+		"ethereal:prairie_dirt"
+	},
 	avoid_nodes = moretrees.avoidnodes,
 	avoid_radius = 10,
 	seed_diff = 338,
 	min_elevation = -5,
-	max_elevation = 5,
+	max_elevation = 25,
 	near_nodes = {"default:water_source"},
 	near_nodes_size = 15,
 	near_nodes_count = 10,

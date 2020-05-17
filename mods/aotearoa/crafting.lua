@@ -271,13 +271,6 @@ minetest.register_craft({
 	recipe = "aotearoa:bracken",
 })
 
-hunger_ng.add_hunger_data('aotearoa:cooked_bracken_root', {
-    satiates = 2,
-    heals = 1,
-    returns = '',
-    timeout = 0
-})
-
 ---------
 ---Raupo Root
 minetest.register_craftitem("aotearoa:cooked_raupo_root", {
@@ -291,14 +284,6 @@ minetest.register_craft({
 	output = "aotearoa:cooked_raupo_root",
 	recipe = "aotearoa:raupo",
 })
-
-hunger_ng.add_hunger_data('aotearoa:cooked_raupo_root', {
-    satiates = 2,
-    heals = 1,
-    returns = '',
-    timeout = 0
-})
-
 
 -------------
 --Raupo pollen cake
@@ -315,12 +300,7 @@ minetest.register_craft({
 })
 
 
-hunger_ng.add_hunger_data('aotearoa:pungapunga', {
-		satiates = 3,
-		heals = 1,
-		returns = '',
-		timeout = 0
-})
+
 --------
 --Tree Seeds.
 -- slight simplification...but...
@@ -340,12 +320,7 @@ minetest.register_craftitem("aotearoa:seed_cake", {
   on_use = minetest.item_eat(5),
 })
 
-	hunger_ng.add_hunger_data('aotearoa:seed_cake', {
-		satiates = 4,
-		heals = 2,
-		returns = '',
-		timeout = 0
-	})
+
 
 --craft seed meal
 --karaka
@@ -421,12 +396,6 @@ minetest.register_craft({
 	recipe = "aotearoa:mamaku_crown",
 })
 
-hunger_ng.add_hunger_data('aotearoa:cooked_fiddlehead', {
-	satiates = 2,
-	heals = 0,
-	returns = '',
-	timeout = 0
-})
 
 ------------
 --mamaku pith
@@ -434,13 +403,6 @@ minetest.register_craftitem("aotearoa:cooked_mamaku_pith", {
 	description = "Cooked Mamaku Pith",
 	inventory_image = "aotearoa_cooked_mamaku_pith.png",
   on_use = minetest.item_eat(1),
-})
-
-hunger_ng.add_hunger_data('aotearoa:cooked_mamaku_pith', {
-	satiates = 2,
-	heals = 1,
-	returns = '',
-	timeout = 0
 })
 
 minetest.register_craft({
@@ -463,12 +425,7 @@ minetest.register_craft({
 	recipe = "aotearoa:cabbage_tree_tree",
 })
 
-hunger_ng.add_hunger_data('aotearoa:cooked_cabbage_tree_root', {
-	satiates = 2,
-	heals = 1,
-	returns = '',
-	timeout = 0
-})
+
 --------------
 --Cabbage tree shoots
 minetest.register_craftitem("aotearoa:cooked_cabbage_tree_shoots", {
@@ -483,12 +440,6 @@ minetest.register_craft({
 	recipe = "aotearoa:cabbage_tree_crown",
 })
 
-hunger_ng.add_hunger_data('aotearoa:cooked_cabbage_tree_shoots', {
-	satiates = 2,
-	heals = 1,
-	returns = '',
-	timeout = 0
-})
 ------------
 --Nikau shoots
 minetest.register_craftitem("aotearoa:cooked_nikau_shoots", {
@@ -503,12 +454,7 @@ minetest.register_craft({
 	recipe = "aotearoa:nikau_palm_skirt",
 })
 
-hunger_ng.add_hunger_data('aotearoa:cooked_nikau_shoots', {
-	satiates = 2,
-	heals = 1,
-	returns = '',
-	timeout = 0
-})
+
 --------------------------------------------------
 --SOME TRADTIONAL USES.
 
