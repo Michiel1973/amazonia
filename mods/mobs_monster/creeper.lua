@@ -35,6 +35,8 @@ mobs:register_mob("mobs_monster:creeper", {
 		explode = "tnt_explode",
 		distance = 12,
 	},
+	blood_amount = 30,
+	blood_texture = "mobs_blood_stone.png",
 	makes_footstep_sound = true,
 	walk_velocity = 1.05,
 	run_velocity = 2.1,
@@ -44,6 +46,10 @@ mobs:register_mob("mobs_monster:creeper", {
 	reach = 4,
 	explosion_damage_radius = 7,
 	explosion_timer = 2,
+	jump = true,
+	jump_height = 2.1,
+	stepheight = 1.1,
+	step_height = 1.1,
 	allow_fuse_reset = false,
 	stop_to_explode = false,
 
@@ -122,7 +128,7 @@ mobs:register_mob("mobs_monster:creeper", {
 	water_damage = 1,
 	lava_damage = 4,
 	light_damage = 0,
-	view_range = 10,
+	view_range = 12,
 	blood_amount = 0,
 })
 

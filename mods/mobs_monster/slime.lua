@@ -9,6 +9,7 @@ local slime_big = {
 	type = "monster",
 	pathfinding = 1,
 	group_attack = true,
+	group_helper = {"slime_big","slime_small","slime_tiny"},
 	hp_min = 16,
 	hp_max = 32,
 	collisionbox = {-1.02, -0.01, -1.02, 1.02, 2.03, 1.02},
@@ -25,7 +26,7 @@ local slime_big = {
 		attack = "green_slime_attack",
 		distance = 16,
 	},
-	damage = 18,
+	damage = 25,
 	reach = 3,
 	armor = 90,
 	drops = {},
@@ -48,7 +49,7 @@ local slime_big = {
 	lava_damage = 4,
 	light_damage = 0,
 	fall_damage = 0,
-	view_range = 10,
+	view_range = 12,
 	attack_type = "dogfight",
 	passive = false,
 	jump = true,
@@ -78,7 +79,7 @@ slime_small.hp_min = 4
 slime_small.hp_max = 4
 slime_small.collisionbox = {-0.51, -0.01, -0.51, 0.51, 1.00, 0.51}
 slime_small.visual_size = {x=6.25, y=6.25}
-slime_small.damage = 3
+slime_small.damage = 12
 slime_small.reach = 2.75
 slime_small.walk_velocity = 1.3
 slime_small.run_velocity = 1.3
@@ -102,7 +103,7 @@ slime_tiny.hp_min = 1
 slime_tiny.hp_max = 1
 slime_tiny.collisionbox = {-0.2505, -0.01, -0.2505, 0.2505, 0.50, 0.2505}
 slime_tiny.visual_size = {x=3.125, y=3.125}
-slime_tiny.damage = 0
+slime_tiny.damage = 6
 slime_tiny.reach = 2.5
 slime_tiny.drops = {
 	-- -- slimeball
@@ -125,7 +126,7 @@ local smax = -10
 -- Magma cube
 local magma_cube_big = {
 	type = "monster",
-	hp_min = 16,
+	hp_min = 24,
 	hp_max = 32,
 	collisionbox = {-1.02, -0.01, -1.02, 1.02, 2.03, 1.02},
 	visual_size = {x=12.5, y=12.5},
@@ -141,13 +142,15 @@ local magma_cube_big = {
 		attack = "green_slime_attack",
 		distance = 16,
 	},
+	group_attack = true,
+	group_helper = {"magma_cube_big","magma_cube_small","magma_cube_tiny"},
 	walk_velocity = 4,
 	run_velocity = 4,
 	-- fly = true,
 	-- fly_in = {"default:lava_source", "default:lava_flowing"},
-	damage = 16,
+	damage = 24,
 	reach = 3,
-	armor = 40,
+	armor = 70,
 	drops = {
 		-- {name = mobs_monster.items.magma_cream,
 		-- chance = 4,
@@ -170,7 +173,7 @@ local magma_cube_big = {
 		death_end = 118,
 	},
 	water_damage = 2,
-	lava_damage = 0,
+	lava_damage = -1,
 	light_damage = 0,
 	fall_damage = 0,
 	view_range = 12,
@@ -201,14 +204,12 @@ magma_cube_small.hp_min = 8
 magma_cube_small.hp_max = 8
 magma_cube_small.collisionbox = {-0.51, -0.01, -0.51, 0.51, 1.00, 0.51}
 magma_cube_small.visual_size = {x=6.25, y=6.25}
-magma_cube_small.damage = 3
+magma_cube_small.damage = 12
 magma_cube_small.reach = 2.75
 magma_cube_small.walk_velocity = .8
 magma_cube_small.run_velocity = 2.6
 magma_cube_small.jump_height = 6
-magma_cube_small.damage = 4
-magma_cube_small.reach = 2.75
-magma_cube_small.armor = 70
+magma_cube_small.armor = 90
 magma_cube_small.on_die = function(self, pos)
 	local angle, posadd, dir
 	angle = math.random(0, math.pi*2)
@@ -231,17 +232,13 @@ magma_cube_tiny.visual_size = {x=3.125, y=3.125}
 magma_cube_tiny.walk_velocity = 1.02
 magma_cube_tiny.run_velocity = 1.02
 magma_cube_tiny.jump_height = 4
-magma_cube_tiny.damage = 3
+magma_cube_tiny.damage = 6
 magma_cube_tiny.reach = 2.5
-magma_cube_tiny.armor = 85
+magma_cube_tiny.armor = 100
 magma_cube_tiny.drops = {}
 magma_cube_tiny.on_die = nil
 
 mobs:register_mob("mobs_monster:magma_cube_tiny", magma_cube_tiny)
-
-
-local mmin = -100
-local mmax = -10
 
 
 -- Compability

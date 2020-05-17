@@ -9,11 +9,11 @@ mobs:register_mob("mobs_monster:stone_monster", {
 	passive = false,
 	attack_type = "dogfight",
 	pathfinding = true,
-	reach = 2,
-	damage = 15,
+	reach = 3,
+	damage = 20,
 	hp_min = 50,
-	hp_max = 80,
-	armor = 120,
+	hp_max = 70,
+	armor = 90,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.9, 0.4},
 	visual = "mesh",
 	mesh = "mobs_stone_monster.b3d",
@@ -21,6 +21,8 @@ mobs:register_mob("mobs_monster:stone_monster", {
 		{"mobs_stone_monster.png"},
 		{"mobs_stone_monster2.png"}, -- by AMMOnym
 	},
+	blood_amount = 30,
+	blood_texture = "mobs_blood_stone.png",
 	makes_footstep_sound = true,
 	sounds = {
 		random = {"mobs_stonemonster","mobs_stonemonster2","mobs_stonemonster3","mobs_stonemonster4",},
@@ -32,6 +34,7 @@ mobs:register_mob("mobs_monster:stone_monster", {
 	run_velocity = 2,
 	jump_height = 0,
 	stepheight = 1.1,
+	step_height = 1.1,
 	floats = 0,
 	view_range = 10,
 	drops = {
