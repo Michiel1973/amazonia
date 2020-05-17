@@ -28,6 +28,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 						{ 1, scale*2, scale*5, "minetool" }, -- 0..2
 						{ 6, 0, 5, "building_block" }, -- 0..5
 						{ 1, scale*2, scale*5, "melee_weapon" }, -- 0..5
+						{ 2, scale*2, scale*5, "currency" }, -- 0..5
 						{ 3, 0, 3, "food" }, -- 0..3
 						{ 2, scale*2, scale*5, "seed" }, -- 0..2
 					}
