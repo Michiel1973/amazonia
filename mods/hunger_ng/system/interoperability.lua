@@ -9,44 +9,20 @@ local S = hunger_ng.configuration.translator
 
 -- Localize Minetest
 local get_modpath = minetest.get_modpath
-
+local get_dir_list = minetest.get_dir_list
+local log = minetest.log
 
 -- Load needed data
-local path = minetest.get_modpath('hunger_ng')
-local inter_path = path..DIR_DELIM..'interoperability'..DIR_DELIM
-local config = Settings(path..DIR_DELIM..'mod.conf')
-local depends = config:get('depends')..', '..config:get('optional_depends')
+local mod_path = minetest.get_modpath('hunger_ng')
+local i14y_path = mod_path..DIR_DELIM..'interoperability'..DIR_DELIM
 
-
--- Check if the given file exists
---
--- This function tries to open a given file path. If the file exists then a
--- boolean true is returned, otherwise nothing will be returned.
---
--- This circumvents the removal of the built-in `file_exists` function of
--- Minetest that was removed with pull request 9451.
---
--- @see https://github.com/minetest/minetest/pull/9451
--- @param path   The file path to check for existence
--- @return mixed Either true or nil is returned (true = file exists)
-local file_exists = function (path)
-    local handle = io.open(path, 'r')
-    if handle ~= nil then
-        io.close(handle)
-        return true
-    end
-end
-
-
--- Check if interoperability file exists and load it
-for modname in depends:gmatch('[0-9a-z_-]+') do
-    if get_modpath(modname) then
-        local inter_file = inter_path..modname..'.lua'
-
-        if file_exists(inter_file) then
-            dofile(inter_file)
-            local message = 'Loaded built-in '..modname..' support'
-            minetest.log('action', c.log_prefix..message)
+-- Load interoperability file when the corresponding mod was loaded
+minetest.register_on_mods_loaded(function()
+    for _,i14y_file in pairs(get_dir_list(i14y_path)) do
+        local modname = i14y_file:gsub('%..*', '')
+        if get_modpath(modname) and i14y_file ~= 'README.md' then
+            dofile(i14y_path..i14y_file)
+            log('action', c.log_prefix..'Loaded built-in '..modname..' support')
         end
     end
-end
+end)

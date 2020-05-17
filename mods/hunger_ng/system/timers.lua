@@ -65,7 +65,7 @@ minetest.register_globalstep(function(dtime)
       if heal_amount ~= 0 and heal_timer == 0 then
         local hunger = get_data(playername, hunger_attribute)
         local health = player:get_hp()
-        local awash = player:get_breath() < 11
+        local awash = player:get_breath() < player:get_properties().breath_max
         local can_heal = hunger >= heal_above and not awash
         local needs_health = health < hp_max
         if can_heal and needs_health then

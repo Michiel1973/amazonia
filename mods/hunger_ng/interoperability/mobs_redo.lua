@@ -1,4 +1,4 @@
-local add = hunger_ng.functions.add_hunger_data
+local add = hunger_ng.add_hunger_data
 
 -- Mobs Redo Animals: https://forum.minetest.net/viewtopic.php?t=9917
 --

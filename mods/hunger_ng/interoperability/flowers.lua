@@ -1,4 +1,4 @@
-local add = hunger_ng.functions.add_hunger_data
+local add = hunger_ng.add_hunger_data
 
 -- Flowers (comes with Minetest)
 add('flowers:mushroom_brown', { satiates = 1 })

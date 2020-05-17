@@ -69,7 +69,10 @@ minetest.register_on_item_eat(function(hpc, rwi, itemstack, user, pt)
     return
   end
 
-  if current_hunger == s.hunger.maximum then
+  local heals = definition.heals or 0
+  local satiates = definition.satiates or 0
+
+  if current_hunger == s.hunger.maximum and heals <= 0 and satiates >= 0 then
     chat_send(player_name, S('You’re fully satiated already!'))
     return itemstack
   end
@@ -96,9 +99,6 @@ minetest.register_on_item_eat(function(hpc, rwi, itemstack, user, pt)
   else
     f.set_data(player_name, a.eating_timestamp, current_timestamp)
   end
-
-  local heals = definition.heals or 0
-  local satiates = definition.satiates or 0
 
   minetest.sound_play('hunger_ng_eat', { to_player = player_name })
   f.alter_hunger(player_name, satiates, 'eating')
