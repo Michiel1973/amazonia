@@ -115,14 +115,14 @@ if minetest.get_modpath("glooptest") then
 	})
 end
 
-minetest.register_craft({
-	output = "gloopblocks:scaffolding 12",
-		recipe = {
-		{"group:stick", "group:wood", "group:stick"},
-		{"", "group:stick", ""},
-		{"group:stick", "group:wood", "group:stick"},
-	}
-})
+-- minetest.register_craft({
+	-- output = "gloopblocks:scaffolding 12",
+		-- recipe = {
+		-- {"group:stick", "group:wood", "group:stick"},
+		-- {"", "group:stick", ""},
+		-- {"group:stick", "group:wood", "group:stick"},
+	-- }
+-- })
 
 minetest.register_craft({
 	output = "gloopblocks:pick_cement",
