@@ -15,7 +15,7 @@ hbarmor.player_active = {}
 
 -- Time difference in seconds between updates to the HUD armor bar.
 -- Increase this number for slow servers.
-hbarmor.tick = 0.1
+hbarmor.tick = 2
 
 -- If true, the armor bar is hidden when the player does not wear any armor
 hbarmor.autohide = true
@@ -78,7 +78,7 @@ function hbarmor.get_armor(player)
 end
 
 function hbarmor.set_armor(player_name, ges_state, items)
-	local max_items = 4
+	local max_items = 5
 	if items == 5 then
 		max_items = items
 	end
