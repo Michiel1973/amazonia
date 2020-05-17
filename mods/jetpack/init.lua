@@ -31,9 +31,9 @@ armor:register_armor("jetpack:jetpack", {
     description = "Jetpack",
     texture = "jetpack_jetpack.png",
     inventory_image = "jetpack_jetpack_inv.png",
-    groups = {armor_torso=1, armor_legs=1, armor_heal=0, armor_use=800, physics_speed=-0.04, physics_gravity=0.04},
-    armor_groups = {fleshy=15},
-    damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+    groups = {armor_torso=1, armor_heal=0, armor_use=800, physics_speed=-0.04, physics_gravity=0.04},
+    armor_groups = {fleshy=1},
+    damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=1},
 })
 
 minetest.register_craft({

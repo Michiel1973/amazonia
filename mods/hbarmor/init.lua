@@ -18,7 +18,7 @@ hbarmor.player_active = {}
 hbarmor.tick = 2
 
 -- If true, the armor bar is hidden when the player does not wear any armor
-hbarmor.autohide = true
+hbarmor.autohide = false
 
 --load custom settings
 local set = minetest.settings:get_bool("hbarmor_autohide")
