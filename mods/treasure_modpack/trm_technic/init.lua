@@ -13,6 +13,18 @@ treasurer.register_treasure("technic:prospector",0.01,5,nil,nil,"minetool")
 treasurer.register_treasure("technic:treetap",0.01,3,nil,nil,"minetool")
 treasurer.register_treasure("technic:vacuum",0.01,6,nil,nil,"minetool")
 
+treasurer.register_treasure("technic:green_energy_crystal",0.01,5,nil,nil,"crafting_component")
+treasurer.register_treasure("technic:blue_energy_crystal",0.001,8,nil,nil,"crafting_component")
+treasurer.register_treasure("technic:red_energy_crystal",0.0001,10,nil,nil,"crafting_component")
+
+treasurer.register_treasure("technic:copper_chest",0.01,5,nil,nil,"storage")
+treasurer.register_treasure("technic:iron_chest",0.01,5,nil,nil,"storage")
+treasurer.register_treasure("technic:silver_chest",0.001,8,nil,nil,"storage")
+treasurer.register_treasure("technic:gold_chest",0.0001,10,nil,nil,"storage")
+treasurer.register_treasure("technic:mithril_chest",0.0001,10,nil,nil,"storage")
+
+
+
 
 
 
