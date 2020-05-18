@@ -142,7 +142,7 @@ minetest.register_node("clementinetree:leaves", {
 	inventory_image = "clementinetree_leaves.png",
 	wield_image = "clementinetree_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {

@@ -123,7 +123,7 @@ minetest.register_node("ebony:leaves", {
 	inventory_image = "ebony_leaves.png",
 	wield_image = "ebony_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {
@@ -144,7 +144,7 @@ minetest.register_node("ebony:leaves", {
 minetest.register_node("ebony:creeper", {
 	description = S("Ebony Creeper"),
 	drawtype = "nodebox",
-	walkable = true,
+	walkable = false,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"ebony_creeper.png"},
@@ -163,7 +163,7 @@ minetest.register_node("ebony:creeper", {
 minetest.register_node("ebony:creeper_leaves", {
 	description = S("Ebony Creeper with Leaves"),
 	drawtype = "nodebox",
-	walkable = true,
+	walkable = false,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"ebony_creeper_leaves.png"},
@@ -182,7 +182,7 @@ minetest.register_node("ebony:creeper_leaves", {
 minetest.register_node("ebony:liana", {
 	description = S("Ebony Liana"),
 	drawtype = "nodebox",
-	walkable = true,
+	walkable = false,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"ebony_liana.png"},

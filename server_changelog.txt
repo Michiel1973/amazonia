@@ -1,5 +1,6 @@
 SERVER CHANGELOG
 
+May 17   - MINOR - treasure chests will now spawn in newly generated (unexplored) areas and dungeons with random content. The deeper you find a chest, the better chance for rare treasure.
 May 17   - MINOR - interface improvements: moved bars and infotext around, added armor bar
 May 17   - MINOR - added ehlphabet mod - make letter blocks
 May 16   - MINOR - bed "sleep" functionality completely removed, now always set player respawn location

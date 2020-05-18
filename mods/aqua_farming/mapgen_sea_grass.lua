@@ -9,7 +9,7 @@ minetest.register_decoration({
     sidelen = 16,
     noise_params = {
         offset = -0.04,
-        scale = 0.1,
+        scale = 0.08,
         spread = {x = 200, y = 200, z = 200},
         seed = 87112,
         octaves = 3,
@@ -38,7 +38,7 @@ minetest.register_decoration({
     sidelen = 16,
     noise_params = {
         offset = -0.04,
-        scale = 0.1,
+        scale = 0.08,
         spread = {x = 200, y = 200, z = 200},
         seed = 87112,
         octaves = 3,
@@ -67,7 +67,7 @@ minetest.register_decoration({
     sidelen = 16,
     noise_params = {
         offset = -0.04,
-        scale = 0.1,
+        scale = 0.08,
         spread = {x = 200, y = 200, z = 200},
         seed = 87112,
         octaves = 3,
@@ -96,7 +96,7 @@ minetest.register_decoration({
     sidelen = 16,
     noise_params = {
         offset = -0.04,
-        scale = 0.1,
+        scale = 0.08,
         spread = {x = 200, y = 200, z = 200},
         seed = 87112,
         octaves = 3,
