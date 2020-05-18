@@ -15,12 +15,18 @@ local def = {
                 min_light = light,
                 delay = del,
                 chance = chan,
-                drop = {items = {
-                                    {items = {name .. "_seed 2"}},
-                                    {items = {name .. "_item 4"}},
-                                    {items = {name .. "_seed 3", rarity = 15}},
-                                },
-                        },
+                drop = {max_items = 1,
+								items = {
+                                        {items = {name .. "_item 1"}},
+										{items = {name .. "_item 2"}, rarity = 4}},
+                                        {items = {name .. "_seed 1", rarity = 2}},
+										{items = {name .. "_seed 2", rarity = 4}},
+                                        {items = {name .. "_item 3", rarity = 8}},
+                                        {items = {name .. "_seed 3", rarity = 10}},
+
+                                }, -- items
+
+                        }, -- drop
             } -- def
 
 aqua_farming.register_plant(def)
