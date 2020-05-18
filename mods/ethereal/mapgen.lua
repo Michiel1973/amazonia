@@ -89,7 +89,7 @@ if ethereal.glacier == 1 then
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
 		y_min = -8,
-		y_max = 30,
+		y_max = 8,
         vertical_blend = 3,
         horizontal_blend = 4,
 		heat_point = 0,
@@ -139,7 +139,7 @@ add_biome("ethereal_mesa_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 25, 28, 3,4,ethereal.mesa)
 
 add_biome("ethereal_alpine", nil, "default:dirt_with_snow", 1, "default:dirt", 2,
-	nil, nil, nil, nil, nil, 110, 190, 10, 40, 3,4,ethereal.alpine)
+	nil, nil, nil, nil, nil, 106, 190, 10, 40, 3,4,ethereal.alpine)
 
 if minetest.registered_nodes["default:dirt_with_coniferous_litter"] then
 add_biome("ethereal_snowy", nil, "default:dirt_with_coniferous_litter", 1, "default:dirt",
@@ -150,7 +150,7 @@ add_biome("ethereal_snowy", nil, "ethereal:cold_dirt", 1, "default:dirt", 2,
 end
 
 add_biome("ethereal_frost", nil, "ethereal:crystal_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 1, 91,nil,nil, 0,0,ethereal.frost)
+	nil, nil, nil, nil, nil, 60, 91,10,40, 3,4,ethereal.frost)
 
 add_biome("ethereal_frost_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 10, 40, 3,4,ethereal.frost)
@@ -238,10 +238,10 @@ add_biome("ethereal_savannah_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 55, 25, 3,4,ethereal.savannah)
 
 add_biome("ethereal_fiery", nil, "ethereal:fiery_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 5, 50, 75, 10, 3,4,ethereal.fiery)
+	nil, nil, nil, nil, nil, 4, 50, 70, 10, 3,4,ethereal.fiery)
 
 add_biome("ethereal_fiery_ocean", nil, "default:sand", 1, "default:sand", 2,
-	nil, nil, nil, nil, nil, -192, 4, 75, 10, 3,4,ethereal.fiery)
+	nil, nil, nil, nil, nil, -192, 4, 70, 10, 3,4,ethereal.fiery)
 
 add_biome("ethereal_sandclay", nil, "default:sand", 3, "default:clay", 2,
 	nil, nil, nil, nil, nil, 1, 21, 65, 2, 3,4,ethereal.sandclay)
