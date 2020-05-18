@@ -134,4 +134,4 @@ mobs:register_arrow("mobs_monster:fireball", {
 	end
 })
 
---minetest.override_item("default:obsidian", {on_blast = function() end})
+minetest.override_item("default:obsidian", {on_blast = function() end})
