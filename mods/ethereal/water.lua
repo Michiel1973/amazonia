@@ -75,7 +75,7 @@ minetest.register_abm({
 	neighbors = {
 		"fire:basic_fire", "default:lava_source", "default:lava_flowing",
 		"default:furnace_active", "default:torch", "default:torch_wall",
-		"default:torch_ceiling"
+		"default:torch_ceiling", "glooptest:kalite_torch"
 	},
 	interval = 10,
 	chance = 4,
@@ -133,14 +133,10 @@ if ethereal.torchdrop == true then
 local torch_drop = "default:torch"
 local drop_sound = "fire_extinguish_flame"
 
-if minetest.get_modpath("real_torch") then
-	torch_drop = "real_torch:torch"
-	drop_sound = "real_torch_extinguish"
-end
 
 minetest.register_abm({
 	label = "Ethereal drop torch",
-	nodenames = {"default:torch", "default:torch_wall", "default:torch_ceiling",
+	nodenames = {"default:torch", "default:torch_wall", "default:torch_ceiling", "glooptest:kalite_torch",
 	"real_torch:torch", "real_torch:torch_wall", "real_torch:torch_ceiling"},
 	neighbors = {"group:water"},
 	interval = 10,
@@ -174,7 +170,7 @@ minetest.register_abm({
 			minetest.sound_play({name = drop_sound, gain = 0.2},
 				{pos = pos, max_hear_distance = 10})
 
-			minetest.add_item(pos, {name = torch_drop})
+			--minetest.add_item(pos, {name = torch_drop})
 		end
 	end,
 })

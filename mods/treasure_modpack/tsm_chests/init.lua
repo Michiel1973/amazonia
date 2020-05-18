@@ -47,8 +47,8 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	end	
 	local y_min = math.max(minp.y, height_min)
 	local y_max = math.min(maxp.y, height_max)
-	local bingo = math.random(5)
-	if bingo > 3 then
+	local bingo = math.random(10)
+	if bingo > 8 then
 		for i=1, chests_per_chunk do
 			local pos = {x=math.random(minp.x,maxp.x),z=math.random(minp.z,maxp.z), y=minp.y}
 			local env = minetest.env

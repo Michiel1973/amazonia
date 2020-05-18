@@ -234,7 +234,7 @@ minetest.register_entity(":xdecor:book_open", {
 minetest.register_craft({
 	output = "xdecor:enchantment_table",
 	recipe = {
-		{"", "default:book", ""},
+		{"mobs_monster:oerkki_heart", "default:book", "mobs_monster:oerkki_heart"},
 		{"default:diamond", "default:obsidian", "default:diamond"},
 		{"default:obsidian", "default:obsidian", "default:obsidian"}
 	}
