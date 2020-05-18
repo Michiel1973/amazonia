@@ -67,7 +67,7 @@ treasurer.register_treasure("default:stonebrick",0.002,4,{1,5},nil,"building_blo
 treasurer.register_treasure("default:desert_stonebrick",0.009,4,{1,10},nil,"building_block")
 treasurer.register_treasure("default:sandstone",0.009,3,{1,3},nil,"building_block")
 treasurer.register_treasure("default:sandstonebrick",0.0001,4,{1,10},nil,"building_block")
-treasurer.register_treasure("default:junglewood",0.005,2,{1,20},nil,"building_block")
+treasurer.register_treasure("default:junglewood",0.005,2,{1,10},nil,"building_block")
 treasurer.register_treasure("default:wood",0.01,2,{1,20},nil,"building_block")
 treasurer.register_treasure("default:cobble",0.05,1,{1,25},nil,"building_block")
 treasurer.register_treasure("default:mossycobble",0.005,1,{1,5},nil,"building_block")
