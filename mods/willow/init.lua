@@ -123,7 +123,7 @@ minetest.register_node("willow:leaves", {
 	inventory_image = "willow_leaves.png",
 	wield_image = "willow_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {

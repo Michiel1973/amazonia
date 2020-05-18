@@ -142,7 +142,7 @@ minetest.register_node("pomegranate:leaves", {
 	inventory_image = "pomegranate_leaves.png",
 	wield_image = "pomegranate_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {

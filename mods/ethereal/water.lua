@@ -130,7 +130,7 @@ minetest.register_abm({
 -- If torch touching water then drop as item (when enabled)
 if ethereal.torchdrop == true then
 
-local torch_drop = "default:torch"
+local torch_drop = "default:stick"
 local drop_sound = "fire_extinguish_flame"
 
 
@@ -139,7 +139,7 @@ minetest.register_abm({
 	nodenames = {"default:torch", "default:torch_wall", "default:torch_ceiling", "glooptest:kalite_torch",
 	"real_torch:torch", "real_torch:torch_wall", "real_torch:torch_ceiling"},
 	neighbors = {"group:water"},
-	interval = 10,
+	interval = 5,
 	chance = 1,
 	catch_up = false,
 	action = function(pos, node)
@@ -170,7 +170,7 @@ minetest.register_abm({
 			minetest.sound_play({name = drop_sound, gain = 0.2},
 				{pos = pos, max_hear_distance = 10})
 
-			--minetest.add_item(pos, {name = torch_drop})
+			minetest.add_item(pos, {name = torch_drop})
 		end
 	end,
 })

@@ -38,6 +38,7 @@ if moretrees.plantlike_leaves then
 	minetest.override_item("default:leaves", {
 		inventory_image = minetest.inventorycube("default_leaves.png"),
 		drawtype = "plantlike",
+		walkable = false,
 		visual_scale = math.sqrt(2)
 	})
 end
@@ -48,6 +49,7 @@ if moretrees.plantlike_leaves then
 	minetest.override_item("default:jungleleaves", {
 		inventory_image = minetest.inventorycube("default_jungleleaves.png"),
 		drawtype = "plantlike",
+		walkable = false,
 		visual_scale = math.sqrt(2)
 	})
 end
@@ -150,6 +152,7 @@ for i in ipairs(moretrees.treelist) do
 			tiles = { "moretrees_"..treename.."_leaves.png" },
 			inventory_image = moretrees_leaves_inventory_image,
 			paramtype = "light",
+			walkable = false,
 			is_ground_content = false,
 			groups = {snappy = 3, flammable = 2, leaves = 1, moretrees_leaves = 1, leafdecay = 1},
 			sounds = default.node_sound_leaves_defaults(),
@@ -446,6 +449,7 @@ minetest.register_node("moretrees:fir_leaves_bright", {
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, flammable = 2, leaves = 1, moretrees_leaves = 1, leafdecay = 3 },
+	walkable = false,
 	drop = {
 		max_items = 1,
 		items = {

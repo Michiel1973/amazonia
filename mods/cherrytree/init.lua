@@ -147,7 +147,7 @@ minetest.register_node("cherrytree:blossom_leaves", {
 	inventory_image = "cherrytree_blossom_leaves.png",
 	wield_image = "cherrytree_blossom_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {
@@ -170,7 +170,7 @@ minetest.register_node("cherrytree:leaves", {
 	inventory_image = "cherrytree_leaves.png",
 	wield_image = "cherrytree_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {
