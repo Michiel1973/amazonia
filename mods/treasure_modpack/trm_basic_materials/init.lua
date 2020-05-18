@@ -11,7 +11,7 @@ treasurer.register_treasure("basic_materials:padlock",0.08,4,{1,3},nil,"crafting
 
 treasurer.register_treasure("basic_materials:steel_strip",0.08,4,{1,5},nil,"crafting_component")
 treasurer.register_treasure("basic_materials:copper_strip",0.07,4,{1,5},nil,"crafting_component")
-treasurer.register_treasure("basic_materials:steel_bar",0.06,741,5},nil,"crafting_component")
+treasurer.register_treasure("basic_materials:steel_bar",0.06,741,{1,5},nil,"crafting_component")
 treasurer.register_treasure("basic_materials:chainlink_brass",0.05,6,{1,5},nil,"crafting_component")
 treasurer.register_treasure("basic_materials:chainlink_steel",0.05,6,{1,5},nil,"crafting_component")
 
