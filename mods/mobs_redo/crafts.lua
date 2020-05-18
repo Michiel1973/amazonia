@@ -91,13 +91,13 @@ minetest.register_tool("mobs:shears", {
 	groups = {flammable = 2}
 })
 
-minetest.register_craft({
-	output = "mobs:shears",
-	recipe = {
-		{"", "default:steel_ingot", ""},
-		{"", "group:stick", "default:steel_ingot"}
-	}
-})
+-- minetest.register_craft({
+	-- output = "mobs:shears",
+	-- recipe = {
+		-- {"", "default:steel_ingot", ""},
+		-- {"", "group:stick", "default:steel_ingot"}
+	-- }
+-- })
 
 -- protection rune
 minetest.register_craftitem("mobs:protector", {
@@ -106,14 +106,14 @@ minetest.register_craftitem("mobs:protector", {
 	groups = {flammable = 2}
 })
 
-minetest.register_craft({
-	output = "mobs:protector",
-	recipe = {
-		{"default:stone", "default:stone", "default:stone"},
-		{"default:stone", "default:goldblock", "default:stone"},
-		{"default:stone", "default:stone", "default:stone"}
-	}
-})
+-- minetest.register_craft({
+	-- output = "mobs:protector",
+	-- recipe = {
+		-- {"default:stone", "default:stone", "default:stone"},
+		-- {"default:stone", "default:goldblock", "default:stone"},
+		-- {"default:stone", "default:stone", "default:stone"}
+	-- }
+-- })
 
 -- saddle
 minetest.register_craftitem("mobs:saddle", {
@@ -122,14 +122,14 @@ minetest.register_craftitem("mobs:saddle", {
 	groups = {flammable = 2}
 })
 
-minetest.register_craft({
-	output = "mobs:saddle",
-	recipe = {
-		{"mobs:leather", "mobs:leather", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"}
-	}
-})
+-- minetest.register_craft({
+	-- output = "mobs:saddle",
+	-- recipe = {
+		-- {"mobs:leather", "mobs:leather", "mobs:leather"},
+		-- {"mobs:leather", "default:steel_ingot", "mobs:leather"},
+		-- {"mobs:leather", "default:steel_ingot", "mobs:leather"}
+	-- }
+-- })
 
 
 -- make sure we can register fences
@@ -209,11 +209,11 @@ minetest.register_craft({
 	burntime = 4
 })
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "mobs:saddle",
-	burntime = 7
-})
+-- minetest.register_craft({
+	-- type = "fuel",
+	-- recipe = "mobs:saddle",
+	-- burntime = 7
+-- })
 
 minetest.register_craft({
 	type = "fuel",
