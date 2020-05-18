@@ -1,5 +1,8 @@
 BUGFIXES
 
+MAY 18
+- kalite torches now behave like standard torches in terms of water / dropping
+
 MAY 10
 - coals and seaweeds which previously displayed "underwater air node" behavior were fixed, recipes adjusted
 
