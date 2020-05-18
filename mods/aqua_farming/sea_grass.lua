@@ -22,7 +22,7 @@ local def = {
 										{items = {name .. "_item 2", rarity = 8}},
 										{items = {name .. "_seed 2", rarity = 8}},
                                         {items = {name .. "_seed 1", rarity = 4}},
-										{items = {name .. "_item 1"}},
+										{items = {name .. "_item"}},
                                 }, -- items
 
                         }, -- drop
