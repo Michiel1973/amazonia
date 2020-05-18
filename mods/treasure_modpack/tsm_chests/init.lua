@@ -19,7 +19,7 @@
 
 local chests_per_chunk = 2	-- number of chests per chunk. 15 is a bit high, an actual mod might have a lower number
 local h_min = -31000		-- minimum chest spawning height, relative to water_level
-local h_max = -100	-- maximum chest spawning height, relative to water_level
+local h_max = 120	-- maximum chest spawning height, relative to water_level
 local t_min = 3			-- minimum amount of treasures found in a chest
 local t_max = 6			-- maximum amount of treasures found in a chest
 
