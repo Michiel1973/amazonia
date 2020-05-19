@@ -5,9 +5,10 @@ local S = awards.gettext
 awards.register_award("award_dflevel1",{
 		title = S("In the Deep Realms"),
 		description = S("Mine below 10k depth."),
-		icon = "awards_master_miner.png",
+		icon = "awards_master_miner.png^awards_level2.png",
 		background = "awards_bg_mining.png",
 		difficulty = 1,
+		secret = true,
 	})
 	awards.register_on_dig(function(player,data)
 		local pos = player:get_pos()
@@ -20,9 +21,10 @@ end)
 awards.register_award("award_underworld",{
 		title = S("The Underworld"),
 		description = S("Digging the Underworld"),
-		icon = "awards_master_miner.png",
+		icon = "awards_master_miner.png^awards_level3.png",
 		background = "awards_bg_mining.png",
 		difficulty = 2,
+		secret = true,
 	})
 	awards.register_on_dig(function(player,data)
 		local pos = player:get_pos()
@@ -35,9 +37,10 @@ end)
 awards.register_award("award_nether",{
 		title = S("The Nether"),
 		description = S("Found the Nether"),
-		icon = "awards_master_miner.png",
+		icon = "awards_master_miner.png^awards_level4.png",
 		background = "awards_bg_mining.png",
 		difficulty = 3,
+		secret = true,
 	})
 	awards.register_on_dig(function(player,data)
 		local pos = player:get_pos()
@@ -152,9 +155,21 @@ awards.register_award("award_you_suck", {
 	secret = true,
 })
 
-awards.register_award("award_you_suck", {
+awards.register_award("award_you_really_suck", {
 	title = S("You Really Suck!"),
 	description = S("Die 1000 times."),
+	secret = true,
+	trigger = {
+		type = "death",
+		target = 1000
+	},
+	secret = true,
+})
+
+awards.register_award("award_wow_really", {
+	title = S("Wow, really?"),
+	description = S("Die 10000 times."),
+	secret = true,
 	trigger = {
 		type = "death",
 		target = 1000
@@ -207,7 +222,7 @@ end)
 -- Die in space
 awards.register_award("award_no_screen", {
 	title = S("In space, no one can hear you scream"),
-	description = S("Die above 10000"),
+	description = S("Die above 15000"),
 	secret = true,
 })
 awards.register_on_death(function(player,data)
@@ -236,8 +251,21 @@ if minetest.get_modpath("default") then
 	awards.register_award("award_well_lit",{
 		title = S("Well Lit"),
 		icon = "awards_well_lit.png^awards_level2.png",
-		description = S("Place 1,000 torches."),
+		description = S("Place 1000 torches."),
 		difficulty = 0.01,
+		trigger = {
+			type = "place",
+			node = "default:torch",
+			target = 1000
+		}
+	})
+	
+	awards.register_award("award_lightbringer",{
+		title = S("Lightbringer"),
+		icon = "awards_well_lit.png^awards_level3.png",
+		description = S("Place 10000 torches."),
+		difficulty = 0.01,
+		secret = true,
 		trigger = {
 			type = "place",
 			node = "default:torch",
@@ -320,7 +348,7 @@ if minetest.get_modpath("default") then
 	awards.register_award("awards_bookshelf", {
 		title = S("Reader"),
 		description = S("Craft a bookshelf."),
-		icon = "awards_little_library.png",
+		icon = "awards_little_library.png^awards_level1.png",
 		difficulty = 0.2,
 		trigger = {
 			type = "craft",
@@ -331,13 +359,14 @@ if minetest.get_modpath("default") then
 	
 	awards.register_award("awards_manybookshelves", {
 		title = S("Librarian"),
-		description = S("Craft 10 bookshelves."),
-		icon = "awards_little_library.png",
+		description = S("Craft 100 bookshelves."),
+		icon = "awards_little_library.png^awards_level2.png",
 		difficulty = 0.2,
+		secret = true,
 		trigger = {
 			type = "craft",
 			item = "default:bookshelf",
-			target = 10
+			target = 100
 		}
 	})
 
@@ -367,6 +396,21 @@ if minetest.get_modpath("default") then
 			target = 5000
 		}
 	})
+	
+	awards.register_award("award_obsidian_everywhere",{
+		title = S("Obsidian Everywhere"),
+		description = S("Mine 10000 obsidian."),
+		icon = "awards_obsessed_with_obsidian.png^awards_level3.png",
+		background = "awards_bg_mining.png",
+		secret = true,
+		difficulty = 1.5,
+		trigger = {
+			type = "dig",
+			node = "default:obsidian",
+			target = 10000
+		}
+	})
+
 
 	-- Proof that player has found lava
 	awards.register_award("award_lavaminer",{
@@ -390,6 +434,7 @@ if minetest.get_modpath("default") then
 		title = S("On The Way"),
 		description = S("Place 1000 rails."),
 		icon = "awards_on_the_way.png",
+		secret = true,
 		difficulty = 0.1,
 		trigger = {
 			type = "place",
@@ -398,10 +443,11 @@ if minetest.get_modpath("default") then
 		}
 	})
 	
-		awards.register_award("railroading", {
+	awards.register_award("award_railroading", {
 		title = S("Railroadin'"),
 		description = S("Place 1000 mese rails."),
 		icon = "awards_on_the_way.png",
+		secret = true,
 		difficulty = 0.1,
 		trigger = {
 			type = "place",
@@ -410,6 +456,20 @@ if minetest.get_modpath("default") then
 		}
 	})
 
+	awards.register_award("award_railroad_magnate", {
+		title = S("Railroad Magnate"),
+		description = S("Place 10000 mese rails."),
+		icon = "awards_on_the_way.png",
+		secret = true,
+		difficulty = 0.1,
+		trigger = {
+			type = "place",
+			node = "carts:powerrail",
+			target = 10000
+		}
+	})
+	
+	
 	awards.register_award("award_lumberjack_firstday", {
 		title = S("A Day in the Woods"),
 		description = S("Dig 100 tree blocks."),
@@ -425,39 +485,39 @@ if minetest.get_modpath("default") then
 	-- Lumberjack
 	awards.register_award("award_lumberjack", {
 		title = S("Lumberjack"),
-		description = S("Dig 250 tree blocks."),
+		description = S("Dig 1000 tree blocks."),
 		icon = "awards_lumberjack.png^awards_level2.png",
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
 			node = "default:tree",
-			target = 250
+			target = 1000
 		}
 	})
 
 	-- Semi-pro Lumberjack
 	awards.register_award("award_lumberjack_semipro", {
 		title = S("Semi-pro Lumberjack"),
-		description = S("Dig 500 tree blocks."),
+		description = S("Dig 10000 tree blocks."),
 		icon = "awards_semi_pro_lumberjack.png^awards_level3.png",
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
 			node = "default:tree",
-			target = 600
+			target = 5000
 		}
 	})
 
 	-- Professional Lumberjack
 	awards.register_award("award_lumberjack_professional", {
 		title = S("Professional Lumberjack"),
-		description = S("Dig 1000 tree blocks."),
+		description = S("Dig 10000 tree blocks."),
 		icon = "awards_professional_lumberjack.png^awards_level4.png",
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
 			node = "default:tree",
-			target = 1000
+			target = 10000
 		}
 	})
 
@@ -477,7 +537,7 @@ if minetest.get_modpath("default") then
 	-- Jungleman
 	awards.register_award("award_jungleman", {
 		title = S("Jungleman"),
-		description = S("Dig 1,000 jungle tree blocks."),
+		description = S("Dig 1000 jungle tree blocks."),
 		icon = "awards_jungleman.png^awards_level2.png",
 		difficulty = 0.05,
 		trigger = {
@@ -491,7 +551,7 @@ if minetest.get_modpath("default") then
 	awards.register_award("award_mesefind", {
 		title = S("Mese Find"),
 		description = S("Mine mese ore."),
-		icon = "awards_first_mese_find.png",
+		icon = "awards_first_mese_find.png^awards_level1.png",
 		background = "awards_bg_mining.png",
 		difficulty = 1,
 		trigger = {
@@ -504,13 +564,28 @@ if minetest.get_modpath("default") then
 	awards.register_award("award_hundredmesefind", {
 		title = S("Mese Master"),
 		description = S("Mine 100 mese ore."),
-		icon = "awards_first_mese_find.png",
+		icon = "awards_first_mese_find.png^awards_level2.png",
 		background = "awards_bg_mining.png",
+		secret = true,
 		difficulty = 2,
 		trigger = {
 			type = "dig",
 			node = "default:stone_with_mese",
 			target = 100
+		}
+	})
+	
+	awards.register_award("award_thousandmesefind", {
+		title = S("Mese Magnate"),
+		description = S("Mine 1000 mese ore."),
+		icon = "awards_first_mese_find.png^awards_level3.png",
+		background = "awards_bg_mining.png",
+		secret = true,
+		difficulty = 2,
+		trigger = {
+			type = "dig",
+			node = "default:stone_with_mese",
+			target = 1000
 		}
 	})
 	
@@ -532,14 +607,83 @@ if minetest.get_modpath("default") then
 	-- You're a copper
 	awards.register_award("award_youre_a_copper", {
 		title = S("You’re a copper"),
-		description = S("Dig 1,000 copper ores."),
-		icon = "awards_youre_a_copper.png",
+		description = S("Dig 1000 copper ores."),
+		icon = "awards_youre_a_copper.png^awards_level1.png",
 		background = "awards_bg_mining.png",
 		difficulty = 0.2,
 		trigger = {
 			type = "dig",
 			node = "default:stone_with_copper",
 			target = 1000
+		}
+	})
+	
+	awards.register_award("award_youre_a_copper2", {
+		title = S("Detective"),
+		description = S("Dig 5000 copper ores."),
+		icon = "awards_youre_a_copper.png^awards_level2.png",
+		background = "awards_bg_mining.png",
+		secret = true,
+		difficulty = 0.2,
+		trigger = {
+			type = "dig",
+			node = "default:stone_with_copper",
+			target = 5000
+		}
+	})
+	
+	awards.register_award("award_youre_a_copper3", {
+		title = S("Detective"),
+		description = S("Dig 10000 copper ores."),
+		icon = "awards_youre_a_copper.png^awards_level3.png",
+		background = "awards_bg_mining.png",
+		secret = true,
+		difficulty = 0.2,
+		trigger = {
+			type = "dig",
+			node = "default:stone_with_copper",
+			target = 10000
+		}
+	})
+	
+	awards.register_award("award_mithril", {
+		title = S("My precious"),
+		description = S("Dig 100 mithril ores."),
+		icon = "awards_mithril_miner.png^awards_level1.png",
+		background = "awards_bg_mining.png",
+		difficulty = 0.2,
+		trigger = {
+			type = "dig",
+			node = "moreores:mithril",
+			target = 100
+		}
+	})
+	
+	awards.register_award("award_mithril2", {
+		title = S("Mithril Master"),
+		description = S("Dig 1000 mithril ores."),
+		icon = "awards_mithril_miner.png^awards_level2.png",
+		background = "awards_bg_mining.png",
+		secret = true,
+		difficulty = 0.2,
+		trigger = {
+			type = "dig",
+			node = "moreores:mithril",
+			target = 1000
+		}
+	})
+	
+	awards.register_award("award_mithril3", {
+		title = S("Mythic Mithril"),
+		description = S("Dig 10000 mithril ores."),
+		icon = "awards_mithril_miner.png^awards_level3.png",
+		background = "awards_bg_mining.png",
+		secret = true,
+		difficulty = 0.2,
+		trigger = {
+			type = "dig",
+			node = "moreores:mithril",
+			target = 10000
 		}
 	})
 
@@ -560,7 +704,7 @@ if minetest.get_modpath("default") then
 	-- Hardened Miner
 	awards.register_award("award_mine3", {
 		title = S("Hardened Miner"),
-		description = S("Dig 1,000 stone blocks."),
+		description = S("Dig 1000 stone blocks."),
 		icon = "awards_hardened_miner.png^awards_level2.png",
 		background = "awards_bg_mining.png",
 		difficulty = 0.02,
@@ -588,7 +732,7 @@ if minetest.get_modpath("default") then
 	-- Marchand de sable
 	awards.register_award("award_marchand_de_sable", {
 		title = S("Marchand De Sable"),
-		description = S("Dig 1,000 sand."),
+		description = S("Dig 1000 sand."),
 		icon = "awards_marchand_de_sable.png",
 		background = "awards_bg_mining.png",
 		difficulty = 0.05,
@@ -770,6 +914,19 @@ if minetest.get_modpath("default") then
 			target = 1
 		}
 	})
+	
+	awards.register_award("awards_mossycobble2", {
+		title = S("Dungeon Master"),
+		description = S("Mine 5000 mossy cobblestone."),
+		icon = "awards_in_the_dungeon.png^awards_level2.png",
+		secret = true,
+		difficulty = 0.9,
+		trigger = {
+			type = "dig",
+			node = "default:mossycobble",
+			target = 5000
+		}
+	})
 
 	awards.register_award("award_furnace", {
 		title = S("Smelter"),
@@ -872,6 +1029,7 @@ if minetest.get_modpath("default") then
 		description = S("Eat 80 apples."),
 		icon = "awards_yummy.png",
 		difficulty = 0.1,
+		secret = true,
 		trigger = {
 			type = "eat",
 			item = "default:apple",
@@ -895,7 +1053,7 @@ if minetest.get_modpath("default") then
 	end)
 
 	-- Die near diamond ore
-	awards.register_award("award_this_is_sad", {
+awards.register_award("award_this_is_sad", {
 		title = S("This is Sad"),
 		description = S("Die near diamond ore."),
 		secret = true,
@@ -1181,12 +1339,13 @@ end
 if minetest.get_modpath("pipeworks") then
 	awards.register_award("award_pipeworks_transporter", {
 		title = S("Item transporter"),
-		description = S("Place 10000 tubes."),
+		description = S("Place 1000 tubes."),
 		difficulty = 0.05,
+		secret = true,
 		trigger = {
 			type = "place",
 			node = "pipeworks:tube_1",
-			target = 10000,
+			target = 1000,
 		}
 	})
 
@@ -1194,6 +1353,7 @@ if minetest.get_modpath("pipeworks") then
 		title = S("Factory"),
 		description = S("Place 10 autocrafters."),
 		difficulty = 3,
+		secret = true,
 		trigger = {
 			type = "place",
 			node = "pipeworks:autocrafter",
