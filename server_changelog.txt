@@ -1,5 +1,7 @@
 SERVER CHANGELOG
 
+May 19   - MINOR - interface improvements - inactive buttons in unified inventory were removed
+May 19   - MINOR - added awards mod - various activities will now grant awards
 May 18   - MINOR - tree leaves no behave more uniformly (can be walked through), kalite torches behave more like normal torches
 May 17   - MINOR - treasure chests will now spawn in newly generated (unexplored) areas and dungeons with random content. The deeper you find a chest, the better chance for rare treasure.
 May 17   - MINOR - interface improvements: moved bars and infotext around, added armor bar
