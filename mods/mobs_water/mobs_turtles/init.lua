@@ -121,6 +121,12 @@ mobs:register_mob("mobs_turtles:seaturtle", {
 	lava_damage = 5,
 	light_damage = 0,
 	fall_damage = 0,
+	drops = {
+			{name = "dye:green",
+			chance = 1,
+			min = 1,
+			max = 3,},
+		},
 	animation = l_anims,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},

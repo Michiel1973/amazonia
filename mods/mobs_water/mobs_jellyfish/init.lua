@@ -26,6 +26,12 @@ mobs:register_mob("mobs_jellyfish:jellyfish", {
 	fall_speed = 0,
 	view_range = 10,
 	water_damage = 0,
+	drops = {
+			{name = "dye:white",
+			chance = 1,
+			min = 1,
+			max = 3,},
+		},
 	lava_damage = 5,
 	light_damage = 0,
 	on_rightclick = function(self, clicker)
