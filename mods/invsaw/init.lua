@@ -219,8 +219,8 @@ minetest.register_on_player_receive_fields(function(player,formname,fields)
 	end
 end)
 
-unified_inventory.register_button("saw", {
-		type = "image",
-		image = "invsaw_button.png",
-		tooltip = "Circular Saw"
-	})
+-- unified_inventory.register_button("saw", {
+		-- type = "image",
+		-- image = "invsaw_button.png",
+		-- tooltip = "Circular Saw"
+	-- })
