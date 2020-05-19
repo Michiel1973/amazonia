@@ -94,14 +94,11 @@ cannons.generate_and_register_ball_node("cannons:ball_mithril", {
 	sounds = cannons.sound_defaults(),
 	node_box = cannons.nodeboxes.ball,
 })
-
--- minetest.register_craft({
-	-- output = 'cannons:ball_mithril',
-	-- type = "shapeless",
-	-- recipe = {
-			-- {"moreores:mithril_ingot", "moreores:mithril_ingot"}
-	-- },
--- })
+minetest.register_craft({	
+	type = "shapeless",
+	output = "cannons:ball_mithril 4",
+	recipe = {"moreores:mithril_ingot", "moreores:mithril_ingot"}
+})
 
 
 --mithril ball
