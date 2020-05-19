@@ -185,6 +185,8 @@ functions needed for the mob to work properly which contains the following:
    'child_texture'     holds the texture table for when baby mobs are used.
    'gotten_texture'    holds the texture table for when self.gotten value is
                        true, used for milking cows or shearing sheep.
+   'texture_mods'      holds a string which overlays a texture on top of the
+                       mob texture e.g. "^saddle.png"
    'mesh'              holds the name of the external object used for mob model
                        e.g. "mobs_cow.b3d"
    'gotten_mesh"       holds the name of the external object used for when

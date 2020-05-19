@@ -94,6 +94,7 @@ local mob_class = {
 	physical = true,
 	collisionbox = {-0.25, -0.25, -0.25, 0.25, 0.25, 0.25},
 	visual_size = {x = 1, y = 1},
+	texture_mods = "",
 	makes_footstep_sound = false,
 	view_range = 5,
 	walk_velocity = 1,
@@ -2345,9 +2346,12 @@ function mob_class:do_states(dtime)
 					self.blinktimer = 0
 
 					if self.blinkstatus then
-						self.object:set_texture_mod("")
+--						self.object:set_texture_mod("")
+						self.object:set_texture_mod(self.texture_mods)
 					else
-						self.object:set_texture_mod("^[brighten")
+--						self.object:set_texture_mod("^[brighten")
+						self.object:set_texture_mod(self.texture_mods
+								.. "^[brighten")
 					end
 
 					self.blinkstatus = not self.blinkstatus
@@ -3164,6 +3168,9 @@ function mob_class:mob_activate(staticdata, def, dtime)
 	self:update_tag()
 	self:set_animation("stand")
 
+	-- apply any texture mods
+	self.object:set_texture_mod(self.texture_mods)
+
 	-- set 5.x flag to remove monsters when map area unloaded
 	if remove_far and self.type == "monster" then
 		self.static_save = false
@@ -3495,6 +3502,7 @@ minetest.register_entity(name, setmetatable({
 	on_replace = def.on_replace,
 	reach = def.reach,
 	texture_list = def.textures,
+	texture_mods = def.texture_mods or "",
 	child_texture = def.child_texture,
 	docile_by_day = def.docile_by_day,
 	fear_height = def.fear_height,
