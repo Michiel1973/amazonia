@@ -32,7 +32,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		sidelen = 16,
 		noise_params = {
 			offset = 0.005,
-			scale = 0.0001,
+			scale = 0.00005,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
@@ -41,7 +41,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		--biomes = {"savanna_shore"},
 		height = 2,
 		y_min = -1,
-		y_max = 32,
+		y_max = 22,
 		schematic = modpath.."/schematics/willow.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",

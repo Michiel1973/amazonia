@@ -1732,7 +1732,7 @@ function default.register_mgv6_decorations()
 	minetest.register_decoration({
 		name = "default:papyrus",
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass", "default:dirt_with_grass2"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.3,
@@ -1821,7 +1821,7 @@ function default.register_mgv6_decorations()
 		minetest.register_decoration({
 			name = "default:grass_"..length,
 			deco_type = "simple",
-			place_on = {"default:dirt_with_grass"},
+			place_on = {"default:dirt_with_grass","default:dirt_with_grass2"},
 			sidelen = 16,
 			noise_params = {
 				offset = 0,
@@ -1905,7 +1905,7 @@ local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		name = "default:grass_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass","ethereal:prairie_dirt", "ethereal:grove_dirt"},
+		place_on = {"default:dirt_with_grass","default:dirt_with_grass2","ethereal:prairie_dirt", "ethereal:grove_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = offset,
@@ -2395,7 +2395,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass","ethereal:prairie_dirt","ethereal:jungle_dirt"},
+		place_on = {"default:dirt_with_grass","default:dirt_with_grass2","ethereal:prairie_dirt","ethereal:jungle_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2417,7 +2417,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:blueberry_bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass","default:dirt_with_grass2"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,

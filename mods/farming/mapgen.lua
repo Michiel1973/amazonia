@@ -12,7 +12,7 @@ local function register_plant(name, min, max, spawnon, spawnby, num, rarety)
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = spawnon or {"default:dirt_with_grass"},
+		place_on = spawnon or {"default:dirt_with_grass","default:dirt_with_grass2"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -67,7 +67,7 @@ end
 if farming.hemp then
 minetest.register_decoration({
 	deco_type = "simple",
-	place_on = {"default:dirt_with_grass", "default:dirt_with_rainforest_litter"},
+	place_on = {"default:dirt_with_grass","default:dirt_with_grass2", "default:dirt_with_rainforest_litter"},
 	sidelen = 16,
 	noise_params = {
 		offset = 0,
@@ -88,7 +88,7 @@ end
 if farming.chili then
 minetest.register_decoration({
 	deco_type = "simple",
-	place_on = {"default:dirt_with_grass", "default:dirt_with_rainforest_litter"},
+	place_on = {"default:dirt_with_grass","default:dirt_with_grass2", "default:dirt_with_rainforest_litter"},
 	sidelen = 16,
 	noise_params = {
 		offset = 0,
