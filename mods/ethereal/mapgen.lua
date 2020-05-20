@@ -149,8 +149,8 @@ add_biome("ethereal_snowy", nil, "ethereal:cold_dirt", 1, "default:dirt", 2,
 	nil, nil, nil, nil, nil, 4, 35, 10, 40, 3,4,ethereal.snowy)
 end
 
-add_biome("ethereal_frost", nil, "ethereal:crystal_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 60, 91,10,40, 3,4,ethereal.frost)
+add_biome("ethereal_frost", nil, "ethereal:crystal_dirt", 1, "default:dirt", 3, 
+nil, nil, nil, nil, nil, 60, 140, 5,30, 3,4, ethereal.frost)
 
 add_biome("ethereal_frost_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 1, 10, 40, 3,4,ethereal.frost)
