@@ -37,7 +37,7 @@ for i=1, 2 do
 		type_of_egg = "node",
 		max_height = 5,
 		has_affinity = false,
-		is_wild = false,
+		is_wild = true,
 		give_orders = false,
 		can_be_brushed = false,
 		capture_item = "net",
@@ -68,6 +68,8 @@ for i=1, 2 do
 		max_hp = 2,
 		min_height = 10,
 		max_height = 60,
+		spawn_min_height = 10,
+		spawn_max_height = 60,
 		--armor_groups = {fleshy=1},
 		attack={range=3, damage_groups={fleshy=3}},
 		animation = {

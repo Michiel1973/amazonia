@@ -47,11 +47,7 @@ petz.lamb_wool_shave = function(self, clicker)
 	end
     mokapi.make_sound("object", self.object, "petz_lamb_moaning", petz.settings.max_hear_distance)
     local lamb_texture = "petz_lamb_shaved_"..self.skin_colors[self.texture_no]..".png"
-	if petz.settings.type_model == "mesh" then
-		petz.set_properties(self, {textures = {lamb_texture}})
-	else
-		petz.set_properties(self, {tiles = petz.lamb.tiles_shaved})
-	end
+	petz.set_properties(self, {textures = {lamb_texture}})
 	self.shaved = mobkit.remember(self, "shaved", true)
 	self.food_count_wool = mobkit.remember(self, "food_count_wool", 0)
 	petz.bh_afraid(self, clicker:get_pos())

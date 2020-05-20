@@ -28,6 +28,8 @@ petz.settings.igniter_damage = tonumber(settings:get("igniter_damage")) --lava &
 petz.settings.type_api = settings:get("type_api", "mobs_redo")
 --Capture Mobs
 petz.settings.rob_mobs = settings:get_bool("rob_mobs", false)
+--Look at
+petz.settings.look_at = settings:get_bool("look_at", false)
 --Selling
 petz.settings.selling = settings:get_bool("selling", false)
 petz.settings.selling_exchange_items = string.split(settings:get("selling_exchange_items", ""), ",")
@@ -64,6 +66,8 @@ petz.settings.blood = settings:get_bool("blood", false)
 petz.settings.poop = settings:get_bool("poop", true)
 petz.settings.poop_rate = tonumber(settings:get("poop_rate", "200"))
 petz.settings.poop_decay = tonumber(settings:get("poop_decay", "1200"))
+--Smoke particles when die
+petz.settings.death_effect = settings:get_bool("death_effect", true)
 --Cobweb
 petz.settings.cobweb_decay = tonumber(settings:get("cobweb_decay", "1200"))
 --Mount Pointable Driver
@@ -73,7 +77,7 @@ petz.settings.gallop_recover_time =  tonumber(settings:get("gallop_recover_time"
 --Sleeping
 petz.settings.sleeping = settings:get_bool("sleeping", true)
 --Herding
-petz.settings.herding = settings:get_bool("herding", true)
+petz.settings.herding = settings:get_bool("herding", false)
 petz.settings.herding_timing = tonumber(settings:get("herding_timing", "3"))
 petz.settings.herding_members_distance = tonumber(settings:get("herding_members_distance", "5"))
 petz.settings.herding_shepherd_distance = tonumber(settings:get("herding_shepherd_distance", "5"))
@@ -123,12 +127,6 @@ for i = 1, #petz.petz_list do --load the settings
 	end
 end
 
-if petz.settings.type_model == "mesh" then
-    petz.settings.visual = "mesh"
-    petz.settings.visual_size = {x=10, y=10}
-    petz.settings.rotate = 0
-else -- is 'cubic'
-    petz.settings.visual = "wielditem"
-    petz.settings.visual_size = {x=1.0, y=1.0}
-    petz.settings.rotate = 180
-end
+petz.settings.visual = "mesh"
+petz.settings.visual_size = {x=10, y=10}
+petz.settings.rotate = 0

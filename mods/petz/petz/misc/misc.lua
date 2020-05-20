@@ -1,8 +1,6 @@
 local modpath, S = ...
 
 assert(loadfile(modpath .. "/misc/mount.lua"))(modpath, S) --Load the mount engine
-assert(loadfile(modpath .. "/misc/brains.lua"))(modpath, S)
-assert(loadfile(modpath .. "/misc/behaviours.lua"))(modpath, S)
 assert(loadfile(modpath .. "/misc/nodes.lua"))(modpath, S) --Load the nodes
 assert(loadfile(modpath .. "/misc/items.lua"))(modpath, S) --Load the items
 assert(loadfile(modpath .. "/misc/chests.lua"))(modpath, S) --Load the chests

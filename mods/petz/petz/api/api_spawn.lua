@@ -191,7 +191,7 @@ petz.spawn_mob = function(spawn_pos, limit_max_mobs, abr, liquidflag)
 				end
 				if i > 1 then
 					local height, liquidflag = mobkit.get_terrain_height(spawn_pos, 32)
-					if height then
+					if height or (liquidflag and ent.can_swin) then
 						local node = petz.get_node_below(spawn_pos)
 						if not(mokapi.item_in_itemlist(node.name, petz.settings[random_mob.."_spawn_nodes"])) then
 							spawn = false

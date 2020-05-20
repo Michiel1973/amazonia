@@ -58,6 +58,8 @@ minetest.register_entity("petz:"..pet_name,{
 	jump_height = 2.1,
 	min_height = 50,
 	max_height = 130,
+	spawn_min_height = 50,
+	spawn_max_height = 130,
 	view_range = 4,
 	lung_capacity = 10, -- seconds
 	max_hp = 15,

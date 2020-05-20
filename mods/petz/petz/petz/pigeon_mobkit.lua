@@ -48,6 +48,8 @@ minetest.register_entity("petz:"..pet_name,{
 	max_hp = 8,
 	min_height = 4,
 	max_height = 90,
+	spawn_min_height = 4,
+	spawn_max_height = 90,
 	drops = {
 	{name = "mobs:meat_raw", chance = 1, min = 1, max = 1,},
 		},

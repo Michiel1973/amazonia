@@ -57,6 +57,8 @@ minetest.register_entity("petz:"..pet_name,{
 	max_hp = 10,
 	min_height = 2,
 	max_height = 44,
+	spawn_min_height = 2,
+	spawn_max_height = 44,
 	makes_footstep_sound = true,
 	--armor_groups = {fleshy=1},
 	attack={range=3, damage_groups={fleshy=1}},
