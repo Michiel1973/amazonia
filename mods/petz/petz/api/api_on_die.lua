@@ -5,13 +5,14 @@ local modpath, S = ...
 --
 
 petz.on_die = function(self)
+	local pos = self.object:get_pos()
 	--Specific of each mob-->
 	if self.is_mountable == true then
 		if self.saddle then -- drop saddle when petz is killed while riding
-			minetest.add_item(self.object:get_pos(), "petz:saddle")
+			minetest.add_item(pos, "petz:saddle")
 		end
 		if self.saddlebag then -- drop saddlebag
-			minetest.add_item(self.object:get_pos(), "petz:saddlebag")
+			minetest.add_item(pos, "petz:saddlebag")
 		end
 		--Drop the items from petz inventory
 		local inv = minetest.get_inventory({ type="detached", name="saddlebag_inventory" })
@@ -23,7 +24,7 @@ petz.on_die = function(self)
 			for i = 1, inv:get_size("saddlebag") do
 				local stack = inv:get_stack("saddlebag", i)
 				if stack:get_count() > 0 then
-					minetest.item_drop(stack, self.object, self.object:get_pos())
+					minetest.item_drop(stack, self.object, pos)
 				end
 			end
 		end
@@ -67,6 +68,26 @@ petz.on_die = function(self)
 	end
 	--Make Sound-->
 	mobkit.make_sound(self, 'die')
+	--Particles Effect
+	if petz.settings.death_effect then
+		minetest.add_particlespawner({
+			amount = 20,
+			time = 0.001,
+			minpos = pos,
+			maxpos = pos,
+			minvel = vector.new(-2,-2,-2),
+			maxvel = vector.new(2,2,2),
+			minacc = {x=0, y=0, z=0},
+			maxacc = {x=0, y=0, z=0},
+			minexptime = 1.1,
+			maxexptime = 1.5,
+			minsize = 1,
+			maxsize = 2,
+			collisiondetection = false,
+			vertical = false,
+			texture = "petz_smoke.png",
+		})
+	end
 	--To finish, the Mobkit Die Function-->
 	mobkit.hq_die(self)
 end

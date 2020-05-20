@@ -51,6 +51,8 @@ minetest.register_entity("petz:"..pet_name,{
 	max_hp = 8,
 	min_height = 1,
 	max_height = 45,
+	spawn_min_height = 1,
+	spawn_max_height = 45,
 	attack={range=2, damage_groups={fleshy=1}},
 	--armor_groups = {fleshy=1},
 	animation = {
@@ -64,7 +66,7 @@ minetest.register_entity("petz:"..pet_name,{
 		},
 	},
 	sounds = {
-		misc = "petz_chicken_cluck",
+		misc = {"petz_chicken_cluck", "petz_chicken_cluck_2", "petz_chicken_cluck_3"},
 	},
 
 	logic = petz.herbivore_brain,

@@ -45,6 +45,8 @@ minetest.register_entity("petz:"..pet_name,{
 	max_hp = 4,
 	max_height = -4,
 	min_height = -75,
+	spawn_min_height = -75,
+	spawn_max_height = -4,
 	--armor_groups = {fleshy=1},
 	animation = {
 		def={range={x=1, y=13}, speed=20, loop=true},

@@ -351,6 +351,9 @@ function petz.set_initial_properties(self, staticdata, dtime_s)
 		end
 	end
 	petz.calculate_sleep_times(self) --Sleep behaviour
+	--self.head_rotation = {x= -90, y= 90, z= 0}
+	--self.whead_position = self.object:get_bone_position("parent")
+	--self.head_position.y = self.head_position.y + 0.25
 	--ALL the mobs
 	if self.is_pet and self.tamed then
 		petz.update_nametag(self)

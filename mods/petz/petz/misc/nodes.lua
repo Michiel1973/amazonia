@@ -565,7 +565,6 @@ minetest.register_craft({
 --Cat Basket
 minetest.register_node("petz:cat_basket", {
     description = S("Cat Basket"),
-    groups = {snappy=1, bendy=2, cracky=1},
     sounds = default.node_sound_wood_defaults(),
 	tiles = {
 		"petz_cat_basket_top.png",
@@ -646,6 +645,35 @@ minetest.register_craft({
     }
 })
 
+minetest.register_node("petz:butterfly_showcase", {
+	description = S("Butterfly Showcase"),
+	drawtype = "nodebox",
+	walkable = true,
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"petz_butterfly_showcase.png"},
+	inventory_image = "petz_butterfly_showcase.png",
+	wield_image = "petz_butterfly_showcase.png",
+	node_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, 0.49, 0.5, 0.5, 0.5}
+	},
+	groups = {
+		snappy = 2, flammable = 3, oddly_breakable_by_hand = 3, choppy = 2, carpet = 1, leafdecay = 3, leaves = 1
+	},
+	sounds = default.node_sound_leaves_defaults(),
+})
+
+minetest.register_craft({
+	type = "shaped",
+	output = "petz:butterfly_showcase",
+	recipe = {
+		{"group:wood", "petz:butterfly_set", "group:wood"},
+		{"petz:butterfly_set", "xpanes:pane_flat", "petz:butterfly_set"},
+		{"group:wood", "petz:butterfly_set", "group:wood"},
+	}
+})
+
 minetest.register_node("petz:honey_block", {
 	description = S("Honey Block"),
 	drawtype = "nodebox",
@@ -666,5 +694,4 @@ minetest.register_node("petz:honey_block", {
 	use_texture_alpha = true,
 	light_source = default.LIGHT_MAX - 1,
 	sounds = default.node_sound_glass_defaults(),
-
 })

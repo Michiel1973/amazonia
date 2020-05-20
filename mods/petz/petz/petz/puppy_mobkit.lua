@@ -45,6 +45,8 @@ minetest.register_entity("petz:"..pet_name, {
 	max_hp = 8,
 	min_height = 3,
 	max_height = 80,
+	spawn_min_height = 3,
+	spawn_max_height = 80,
 	makes_footstep_sound = false,
 	--armor_groups = {fleshy=1},
 	attack={range=3, damage_groups={fleshy=3}},
@@ -60,7 +62,7 @@ minetest.register_entity("petz:"..pet_name, {
 		sleep = {range={x=94, y=113}, speed=10, loop=false},
 	},
 	sounds = {
-		misc = "petz_puppy_bark",
+		misc = {"petz_puppy_bark", "petz_puppy_bark_2", "petz_puppy_bark_3"},
 		moaning = "petz_puppy_moaning",
 	},
 

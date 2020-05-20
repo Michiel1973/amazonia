@@ -16,6 +16,7 @@ minetest.register_entity("petz:"..pet_name,{
 	can_fly = true,
 	max_height = 4,
 	has_affinity = false,
+	bottled = "petz:bottle_butterfly",
 	is_wild = false,
 	give_orders = false,
 	can_be_brushed = false,
@@ -43,6 +44,8 @@ minetest.register_entity("petz:"..pet_name,{
 	max_hp = 4,
 	min_height = 1,
 	max_height = 70,
+	spawn_min_height = 1,
+	spawn_max_height = 70,
 	--armor_groups = {fleshy=1},
 	attack={range=2, damage_groups={fleshy=1}},
 	animation = {
