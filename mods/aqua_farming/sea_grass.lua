@@ -17,11 +17,7 @@ local def = {
                 chance = chan,
                 drop = {max_items = 1,
 								items = {
-										{items = {name .. "_item 3"}, rarity = 16},
-										{items = {name .. "_seed 3"}, rarity = 16},
-										{items = {name .. "_item 2"}, rarity = 8},
-										{items = {name .. "_seed 2"}, rarity = 8},
-                                        {items = {name .. "_seed 1"}, rarity = 4},
+                                        {items = {name .. "_seed"}, rarity = 5},
 										{items = {name .. "_item"}},
                                 }, -- items
 
