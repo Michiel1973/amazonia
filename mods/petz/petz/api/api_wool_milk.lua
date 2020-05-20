@@ -76,7 +76,7 @@ petz.milk_milk = function(self, clicker)
 		inv:add_item("main", wielded_item)
 		mokapi.make_sound("object", self.object, "petz_"..self.type.."_moaning", petz.settings.max_hear_distance)
 	else
-		minetest.add_item(self:get_pos(), "petz:bucket_milk")
+		minetest.add_item(self.object:get_pos(), "petz:bucket_milk")
 	end
 	self.milked = mobkit.remember(self, "milked", true)
 end
