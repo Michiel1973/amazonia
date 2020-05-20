@@ -1,5 +1,8 @@
 BUGFIXES
 
+MAY 20
+- beds and jetpack converted to use player_monoids instead of direct physics overrides
+
 MAY 19 
 - mithril cannonballs recipe was altered to not interfere with mithril blocks, more balancing is needed for cannons mod
 
