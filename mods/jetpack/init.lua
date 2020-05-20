@@ -77,7 +77,9 @@ hb.register_hudbar(HB_NAME, 0xFFFFFF, 'Jetpack', { icon = 'jetpack_charge_icon.p
 
 local function jetpack_off (player)
     local playerName = player:get_player_name()
-    player:set_physics_override({gravity=1,speed=1})
+    --player:set_physics_override({gravity=1,speed=1})
+	player_monoids.gravity:add_change(player, 1, "jetpack_gravity")
+	player_monoids.speed:add_change(player, 1, "jetpack_speed")
     if players[playerName].sndHandle then
         minetest.sound_stop(players[playerName].sndHandle)
         players[playerName].sndHandle = nil
@@ -91,6 +93,9 @@ minetest.register_on_joinplayer(function(player)
     hb.init_hudbar(player, HB_NAME, 0)
     hb.hide_hudbar(player, HB_NAME)
 end)
+
+-- minetest.register_on_leaveplayer(function(player)
+-- end)
 
 -- set on equip
 armor:register_on_equip(function(player, index, stack)
@@ -161,7 +166,7 @@ minetest.register_globalstep(function(dtime)
                 if players[name].state ~= 1 then
                     if velocity.y <= 15 then
                         if not players[name].sndHandle then
-                            players[name].sndHandle = minetest.sound_play("jetpack_loop", {
+                            players[name].sndHandle = minetest.sound_play("jetpack", {
                                 max_hear_distance = 5,
                                 gain = 20.0,
                                 object = player,
@@ -169,13 +174,17 @@ minetest.register_globalstep(function(dtime)
                             })
                         end
                         players[name].engine = 1
-                        player:set_physics_override({gravity=-0.3,speed=2})
+						player_monoids.gravity:add_change(player, -0.3, "jetpack_gravity")
+						player_monoids.speed:add_change(player, 2, "jetpack_speed")
+                        --player:set_physics_override({gravity=-0.3,speed=2})
                         players[name].state = 1
                     end
                 end
                 -- check if we're going too fast
                 if players[name].state == 1 and velocity.y > 15 then
-                    player:set_physics_override({gravity=1})
+                    --player:set_physics_override({gravity=1})
+					player_monoids.gravity:add_change(player, 1, "jetpack_gravity")
+					player_monoids.speed:add_change(player, 1, "jetpack_speed")
                     players[name].state = 0
                 end
             end
@@ -183,11 +192,13 @@ minetest.register_globalstep(function(dtime)
             -- "hover" mode
             if players[name].engine == 1 then
                 if players[name].state == 0 or players[name].state == 1 then
-                    player:set_physics_override({gravity=0.3})
+                    --player:set_physics_override({gravity=0.3})
+					player_monoids.gravity:add_change(player, 0.3, "jetpack_gravity")
                     players[name].state = 2
                 end
                 if players[name].state == 2 and velocity.y < 1 then
-                    player:set_physics_override({gravity=0})
+                    --player:set_physics_override({gravity=0})
+					player_monoids.gravity:add_change(player, 0, "jetpack_gravity")
                     players[name].state = 3
                 end
             end
@@ -197,7 +208,8 @@ minetest.register_globalstep(function(dtime)
         if player:get_player_control().sneak then
             if players[name].engine == 1 then
                 if players[name].state ~= 5 and players[name].gravity ~= 4 then
-                    player:set_physics_override({gravity=0.3})
+                    --player:set_physics_override({gravity=0.3})
+					player_monoids.gravity:add_change(player, 0.3, "jetpack_gravity")
                     players[name].state = 4
                 end
             end
@@ -230,11 +242,13 @@ minetest.register_globalstep(function(dtime)
 
             -- slowdown if we're falling too fast
             if players[name].state == 4 and velocity.y < -10 then
-                player:set_physics_override({gravity=-1})
+                --player:set_physics_override({gravity=-1})
+				player_monoids.gravity:add_change(player, -1, "jetpack_gravity")
                 players[name].state = 5
             end
             if players[name].state == 5 and velocity.y >= -10 then
-                player:set_physics_override({gravity=1})
+                --player:set_physics_override({gravity=1})
+				player_monoids.gravity:add_change(player, 1, "jetpack_gravity")
                 players[name].state = 4
             end
         end
@@ -245,7 +259,9 @@ minetest.register_globalstep(function(dtime)
                 -- update charge
                 players[name].charge = players[name].charge - time * 250
                 if players[name].charge < HB_DELTA * 250 then
-                    player:set_physics_override({gravity=1,speed=1})
+                    --player:set_physics_override({gravity=1,speed=1})
+					player_monoids.gravity:add_change(player, 1, "jetpack_gravity")
+					player_monoids.speed:add_change(player, 1, "jetpack_speed")
                     if players[name].sndHandle then
                         minetest.sound_stop(players[name].sndHandle)
                         players[name].sndHandle = nil
