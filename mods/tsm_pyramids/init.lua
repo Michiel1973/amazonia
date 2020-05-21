@@ -311,6 +311,9 @@ end
 -- Attempt to generate a pyramid in the generated area.
 -- Up to one pyramid per mapchunk.
 minetest.register_on_generated(function(minp, maxp, seed)
+	if minp.y > 200 or maxp.y < -100 then
+			return
+	end
 	if maxp.y < PYRA_MIN_Y then return end
 
 	-- TODO: Use Minetests pseudo-random tools

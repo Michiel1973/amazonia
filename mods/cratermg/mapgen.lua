@@ -314,7 +314,8 @@ end
 minetest.register_on_generated(function (minp, maxp, blockseed)
 
 	-- default from 6k to 10k
-	if minp.y < 25000 or minp.y > 31000 then
+
+	if minp.y < 25000 or minp.y > 27500 then
 		return
 	end
 

@@ -175,6 +175,9 @@ local sulfur_buf = {}
 local sulfur_noise
 
 minetest.register_on_generated(function(minp, maxp)
+	if minp.y > 7300  or maxp.y < -31000 then
+		return
+	end
 	local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
 	local a = VoxelArea:new({MinEdge=emin, MaxEdge=emax})
 	local data = vm:get_data(sulfur_buf)

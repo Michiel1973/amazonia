@@ -84,6 +84,9 @@ minetest.register_abm({
 
 if technic.config:get_bool("enable_rubber_tree_generation") then
 	minetest.register_on_generated(function(minp, maxp, blockseed)
+		if minp.y > 7200 or maxp.y < -20 then
+			return
+		end
 		if math.random(1, 100) > 5 then
 			return
 		end

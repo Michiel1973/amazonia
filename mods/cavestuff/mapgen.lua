@@ -1,6 +1,9 @@
 --Map Generation Stuff
 
 minetest.register_on_generated(function(minp, maxp, seed)
+	if minp.y > 200 or maxp.y < -100 then
+			return
+		end
 	if maxp.y >= 2 and minp.y <= 0 then
 		-- Generate pebbles
 		local perlin1 = minetest.get_perlin(329, 3, 0.6, 100)

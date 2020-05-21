@@ -1,7 +1,7 @@
 -- Parameters
 
-local YMIN = 16000
-local YMAX = 20000
+local YMIN = 28000
+local YMAX = 31000
 local XMIN = -31000
 local XMAX = 31000
 local ZMIN = -31000
@@ -71,7 +71,7 @@ dofile(minetest.get_modpath("asteroid").."/nodes.lua")
 
 -- Constants
 
-local c_air = minetest.CONTENT_AIR
+local c_air = minetest.get_content_id("vacuum:vacuum")
 	
 local c_stone = minetest.get_content_id("asteroid:stone")
 local c_cobble = minetest.get_content_id("asteroid:cobble")

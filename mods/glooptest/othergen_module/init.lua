@@ -331,6 +331,9 @@ minetest.register_node("glooptest:treasure_chest_5", {
 })
 
 minetest.register_on_generated(function(minp, maxp)
+	if minp.y > 200 or maxp.y < -31000 then
+		return
+	end
 	coords = {}
 	coords.x = {}
 	coords.y = {}

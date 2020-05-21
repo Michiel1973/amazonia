@@ -4,6 +4,9 @@ local h_max = -20	-- Max. height. At this height and above, the preciousness is 
 
 minetest.set_gen_notify("dungeon")
 minetest.register_on_generated(function(minp, maxp, seed)
+	if minp.y > 200 or maxp.y < -31000 then
+			return
+	end
 	local g = minetest.get_mapgen_object("gennotify")
 	if g and g.dungeon and #g.dungeon > 3 then
 		minetest.after(3, function(d)

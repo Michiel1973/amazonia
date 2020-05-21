@@ -201,10 +201,12 @@ farming.registered_plants["farming:cocoa_beans"] = {
 
 -- add random cocoa pods to jungle tree's
 minetest.register_on_generated(function(minp, maxp)
-
-	if maxp.y < 0 then
-		return
-	end
+	if minp.y > 200 or maxp.y < 0 then
+			return
+		end
+	-- if maxp.y < 0 then
+		-- return
+	-- end
 
 	local pos, dir
 	local cocoa = minetest.find_nodes_in_area(minp, maxp, "default:jungletree")

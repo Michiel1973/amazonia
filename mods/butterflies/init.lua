@@ -120,6 +120,9 @@ minetest.set_gen_notify({decoration = true}, {butterflies})
 
 -- start nodetimers
 minetest.register_on_generated(function(minp, maxp, blockseed)
+	if minp.y > 80 or maxp.y < -10 then
+			return
+		end
 	local gennotify = minetest.get_mapgen_object("gennotify")
 	local poslist = {}
 

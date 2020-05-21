@@ -27,6 +27,9 @@ local nra = NOISEH - NOISEL
 
 if ONGEN then
 	minetest.register_on_generated(function(minp, maxp, seed)
+		if minp.y > 200 or maxp.y < -100 then
+			return
+		end
 		if minp.y == -32 then
 			local perlin = minetest.env:get_perlin(SEEDDIFF, OCTAVES, PERSISTENCE, SCALE)
 			local x0 = minp.x

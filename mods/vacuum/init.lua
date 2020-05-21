@@ -1,6 +1,6 @@
 
 vacuum = {
-	space_height = tonumber(minetest.settings:get("vacuum.space_height")) or 15500,
+	space_height = tonumber(minetest.settings:get("vacuum.space_height")) or 25000,
 	air_pump_range = tonumber(minetest.settings:get("vacuum.air_pump_range")) or 5,
 	profile_mapgen = minetest.settings:get("vacuum.profile_mapgen"),
 	flush_bottle_usage = 99,

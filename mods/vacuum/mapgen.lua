@@ -28,6 +28,9 @@ local check_corners_in_space = function(minp, maxp)
 end
 
 minetest.register_on_generated(function(minp, maxp, seed)
+	if minp.y > 31000 or maxp.y < 25000 then
+		return
+	end
 	local t0 = minetest.get_us_time()
 
 	if not check_corners_in_space(minp, maxp) then
