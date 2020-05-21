@@ -1,5 +1,9 @@
 BUGFIXES
 
+MAY 22 - kalite torches now behave like default torches
+
+MAY 21 - biome adjustments
+
 MAY 20
 - beds and jetpack converted to use player_monoids instead of direct physics overrides
 
