@@ -38,10 +38,10 @@ mobs:register_mob("mobs_monster:sand_monster", {
 	attack_type = "dogfight",
 	pathfinding = true,
 	--specific_attack = {"player", "mobs_npc:npc"},
-	reach = 2,
+	reach = 3,
 	damage = 20,
-	hp_min = 60,
-	hp_max = 70,
+	hp_min = 50,
+	hp_max = 60,
 	armor = 90,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.8, 0.4},
 	visual = "mesh",
@@ -49,7 +49,8 @@ mobs:register_mob("mobs_monster:sand_monster", {
 	textures = {
 		{"mobs_sand_monster.png"},
 	},
-	blood_texture = "default_desert_sand.png",
+	blood_amount = 15,
+	blood_texture = "mobs_blood_sand.png",
 	makes_footstep_sound = true,
 	sounds = {
 		random = "mobs_sandmonster",
@@ -58,9 +59,14 @@ mobs:register_mob("mobs_monster:sand_monster", {
 	run_velocity = 4,
 	view_range = 8, --15
 	jump = true,
+	stepheight = 1.1,
+	step_height = 1.1,
+	jump_height = 1.1,
 	floats = 0,
 	drops = {
 		{name = "default:desert_sand", chance = 1, min = 3, max = 5},
+		{name = "moreores:silver_lump", chance = 2, min = 1, max = 3},
+		{name = "default:gold_lump", chance = 3, min = 1, max = 3},
 	},
 	water_damage = 3,
 	lava_damage = 4,
@@ -80,10 +86,10 @@ mobs:register_mob("mobs_monster:sand_monster", {
 	},
 	immune_to = {
 		{"default:shovel_wood", 3}, -- shovels deal more damage to sand monster
-		{"default:shovel_stone", 3},
-		{"default:shovel_bronze", 4},
-		{"default:shovel_steel", 4},
-		{"default:shovel_mese", 5},
+		{"default:shovel_stone", 4},
+		{"default:shovel_bronze", 5},
+		{"default:shovel_steel", 5},
+		{"default:shovel_mese", 6},
 		{"default:shovel_diamond", 7},
 	},
 --[[

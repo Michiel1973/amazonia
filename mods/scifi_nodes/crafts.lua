@@ -329,27 +329,27 @@ minetest.register_craft({
 
 -- 1 laptop  from 2 black, 1 widescreen, 1 black detail, 1 microcontroller, 1
 -- mesecon button
-minetest.register_craft({
-    output = "scifi_nodes:laptop_closed",
-    recipe = {
-        {"scifi_nodes:black", "scifi_nodes:widescreen"},
-        {"mesecons_microcontroller:microcontroller0000", "scifi_nodes:black_detail"},
-        {"scifi_nodes:black", "mesecons_button:button_off"}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:laptop_closed",
+    -- recipe = {
+        -- {"scifi_nodes:black", "scifi_nodes:widescreen"},
+        -- {"mesecons_microcontroller:microcontroller0000", "scifi_nodes:black_detail"},
+        -- {"scifi_nodes:black", "mesecons_button:button_off"}
+    -- }
+-- })
 
 -- 1 keyboard and monitor  from 3 black, 1 widescreen, 1 black detail, 1 microcontroller
-minetest.register_craft({
-    output = "scifi_nodes:keysmonitor",
-    recipe = {
-        {"scifi_nodes:black", "scifi_nodes:widescreen", "scifi_nodes:black"},
-        {
-		"mesecons_microcontroller:microcontroller0000",
-		"scifi_nodes:black_detail",
-		"mesecons_microcontroller:microcontroller0000"
-	}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:keysmonitor",
+    -- recipe = {
+        -- {"scifi_nodes:black", "scifi_nodes:widescreen", "scifi_nodes:black"},
+        -- {
+		-- "mesecons_microcontroller:microcontroller0000",
+		-- "scifi_nodes:black_detail",
+		-- "mesecons_microcontroller:microcontroller0000"
+	-- }
+    -- }
+-- })
 
 -- 4 black tile from 4 black and 1 white dye
 minetest.register_craft({
@@ -529,22 +529,22 @@ minetest.register_craft({
 })
 
 -- 9 disc from 1 plastic and 1 blue dye
-minetest.register_craft({
-    output = "scifi_nodes:disc 9",
-    recipe = {
-        {"scifi_nodes:white2", "dye:blue"}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:disc 9",
+    -- recipe = {
+        -- {"scifi_nodes:white2", "dye:blue"}
+    -- }
+-- })
 
--- 6 disc shelves from 3 dented metal block and 6 disc
-minetest.register_craft({
-    output = "scifi_nodes:discs 6",
-    recipe = {
-        {"scifi_nodes:disc", "scifi_nodes:disc", "scifi_nodes:disc"},
-        {"scifi_nodes:dent", "scifi_nodes:dent", "scifi_nodes:dent"},
-        {"scifi_nodes:disc", "scifi_nodes:disc", "scifi_nodes:disc"}
-    }
-})
+-- -- 6 disc shelves from 3 dented metal block and 6 disc
+-- minetest.register_craft({
+    -- output = "scifi_nodes:discs 6",
+    -- recipe = {
+        -- {"scifi_nodes:disc", "scifi_nodes:disc", "scifi_nodes:disc"},
+        -- {"scifi_nodes:dent", "scifi_nodes:dent", "scifi_nodes:dent"},
+        -- {"scifi_nodes:disc", "scifi_nodes:disc", "scifi_nodes:disc"}
+    -- }
+-- })
 
 -- 6 bluelightbox from 6 metal block, 2 blue dye and 1 light bar
 minetest.register_craft({
@@ -1014,21 +1014,21 @@ minetest.register_craft({
 })
 
 -- 1 moonstone from 1 rough metal and 1 plastic
-minetest.register_craft({
-    output = "scifi_nodes:rock",
-    recipe = {
-        {"scifi_nodes:rough", "scifi_nodes:white2"}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:rock",
+    -- recipe = {
+        -- {"scifi_nodes:rough", "scifi_nodes:white2"}
+    -- }
+-- })
 
--- 1 moonstone2 from 1 rough metal and 1 plastic
-minetest.register_craft({
-    output = "scifi_nodes:rock2",
-    recipe = {
-        {"scifi_nodes:rough"},
-        {"scifi_nodes:white2"}
-    }
-})
+-- -- 1 moonstone2 from 1 rough metal and 1 plastic
+-- minetest.register_craft({
+    -- output = "scifi_nodes:rock2",
+    -- recipe = {
+        -- {"scifi_nodes:rough"},
+        -- {"scifi_nodes:white2"}
+    -- }
+-- })
 
 -- 6 glass screen from 1 plastic, 1 dark glass, 1 green dye
 minetest.register_craft({
@@ -1079,15 +1079,15 @@ minetest.register_craft({
     }
 })
 
--- 1 metal plant pot from 1 greybolts and 1 clean glass
-minetest.register_craft({
-    output = "scifi_nodes:pot",
-    recipe = {
-        {"moreblocks:clean_glass"},
-        {"default:dirt"},
-        {"scifi_nodes:greybolts"}
-    }
-})
+-- -- 1 metal plant pot from 1 greybolts and 1 clean glass
+-- minetest.register_craft({
+    -- output = "scifi_nodes:pot",
+    -- recipe = {
+        -- {"moreblocks:clean_glass"},
+        -- {"default:dirt"},
+        -- {"scifi_nodes:greybolts"}
+    -- }
+-- })
 
 -- 6 itemholder from 2 dented metal block and 1 plastic
 minetest.register_craft({
@@ -1328,193 +1328,193 @@ minetest.register_craft({
 })
 ]]--
 
-minetest.register_craft({
-    output = "scifi_nodes:flower1",
-    recipe = {
-        {"flowers:viola"},
-        {"default:dirt"},
-        {"scifi_nodes:greybolts"}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:flower1",
+    -- recipe = {
+        -- {"flowers:viola"},
+        -- {"default:dirt"},
+        -- {"scifi_nodes:greybolts"}
+    -- }
+-- })
 
-minetest.register_craft({
-    output = "scifi_nodes:flower2",
-    recipe = {
-        {"flowers:dandelion_white","flowers:rose"},
-        {"default:dirt",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:flower2",
+    -- recipe = {
+        -- {"flowers:dandelion_white","flowers:rose"},
+        -- {"default:dirt",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
 
-minetest.register_craft({
-    output = "scifi_nodes:flower3",
-    recipe = {
-        {"flowers:mushroom_brown"},
-        {"default:dirt"},
-        {"scifi_nodes:greybolts"}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:flower3",
+    -- recipe = {
+        -- {"flowers:mushroom_brown"},
+        -- {"default:dirt"},
+        -- {"scifi_nodes:greybolts"}
+    -- }
+-- })
 
-minetest.register_craft({
-    output = "scifi_nodes:flower4",
-    recipe = {
-        {"flowers:viola","default:junglegrass"},
-        {"default:dirt",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:flower4",
+    -- recipe = {
+        -- {"flowers:viola","default:junglegrass"},
+        -- {"default:dirt",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
 
-minetest.register_craft({
-    output = "scifi_nodes:plant1",
-    recipe = {
-        {"flowers:geranium"},
-        {"default:dirt"},
-        {"scifi_nodes:greybolts"}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant1",
+    -- recipe = {
+        -- {"flowers:geranium"},
+        -- {"default:dirt"},
+        -- {"scifi_nodes:greybolts"}
+    -- }
+-- })
 
-minetest.register_craft({
-    output = "scifi_nodes:plant2",
-    recipe = {
-        {"flowers:mushroom_red","default:grass_1"},
-        {"default:dirt",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
-
-
-minetest.register_craft({
-    output = "scifi_nodes:plant3",
-    recipe = {
-        {"flowers:geranium","default:grass_1","flowers:geranium"},
-        {"","default:dirt",""},
-        {"","scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant2",
+    -- recipe = {
+        -- {"flowers:mushroom_red","default:grass_1"},
+        -- {"default:dirt",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:plant4",
-    recipe = {
-        {"flowers:dandelion_white","default:grass_1","flowers:dandelion_white"},
-        {"","default:dirt",""},
-        {"","scifi_nodes:greybolts",""}
-    }
-})
-
-minetest.register_craft({
-    output = "scifi_nodes:plant5",
-    recipe = {
-        {"default:grass_1"},
-        {"default:dirt"},
-        {"scifi_nodes:greybolts"}
-    }
-})
-
-minetest.register_craft({
-    output = "scifi_nodes:plant6",
-    recipe = {
-        {"flowers:viola","default:grass_1"},
-        {"default:dirt",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
-
-minetest.register_craft({
-    output = "scifi_nodes:plant7",
-    recipe = {
-        {"flowers:mushroom_brown","default:grass_1","flowers:mushroom_brown"},
-        {"","default:dirt",""},
-        {"","scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant3",
+    -- recipe = {
+        -- {"flowers:geranium","default:grass_1","flowers:geranium"},
+        -- {"","default:dirt",""},
+        -- {"","scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:plant8",
-    recipe = {
-        {"flowers:viola","default:junglegrass"},
-        {"default:dirt",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant4",
+    -- recipe = {
+        -- {"flowers:dandelion_white","default:grass_1","flowers:dandelion_white"},
+        -- {"","default:dirt",""},
+        -- {"","scifi_nodes:greybolts",""}
+    -- }
+-- })
+
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant5",
+    -- recipe = {
+        -- {"default:grass_1"},
+        -- {"default:dirt"},
+        -- {"scifi_nodes:greybolts"}
+    -- }
+-- })
+
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant6",
+    -- recipe = {
+        -- {"flowers:viola","default:grass_1"},
+        -- {"default:dirt",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
+
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant7",
+    -- recipe = {
+        -- {"flowers:mushroom_brown","default:grass_1","flowers:mushroom_brown"},
+        -- {"","default:dirt",""},
+        -- {"","scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:plant9",
-    recipe = {
-        {"flowers:viola","default:grass_1","flowers:dandelion"},
-        {"","default:dirt",""},
-        {"","scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant8",
+    -- recipe = {
+        -- {"flowers:viola","default:junglegrass"},
+        -- {"default:dirt",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:plant10",
-    recipe = {
-        {"default:grass_1","flowers:dandelion","default:grass_1"},
-        {"","default:dirt",""},
-        {"","scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant9",
+    -- recipe = {
+        -- {"flowers:viola","default:grass_1","flowers:dandelion"},
+        -- {"","default:dirt",""},
+        -- {"","scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:grassblk",
-    recipe = {
-        {"default:grass_1","default:junglegrass","default:grass_1"},
-        {"","default:dirt",""},
-        {"","scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant10",
+    -- recipe = {
+        -- {"default:grass_1","flowers:dandelion","default:grass_1"},
+        -- {"","default:dirt",""},
+        -- {"","scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:grass",
-    recipe = {
-        {"default:grass_1","default:junglegrass"},
-        {"default:dirt",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:grassblk",
+    -- recipe = {
+        -- {"default:grass_1","default:junglegrass","default:grass_1"},
+        -- {"","default:dirt",""},
+        -- {"","scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:egg",
-    recipe = {
-        {"default:clay_lump","default:clay_lump","default:clay_lump"},
-        {"default:clay_lump","dye:blue","default:clay_lump"},
-        {"default:clay_lump","default:clay_lump","default:clay_lump"}
-    }
-})
-
-minetest.register_craft({
-    output = "scifi_nodes:eyetree",
-    recipe = {
-        {"scifi_nodes:egg"},
-        {"default:sapling"},
-        {"scifi_nodes:greybolts"}
-    }
-})
-
-minetest.register_craft({
-    output = "scifi_nodes:gloshroom",
-    recipe = {
-        {"default:grass_1","flowers:mushroom_red"},
-        {"default:tin_ingot",""},
-        {"scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:grass",
+    -- recipe = {
+        -- {"default:grass_1","default:junglegrass"},
+        -- {"default:dirt",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 
-minetest.register_craft({
-    output = "scifi_nodes:plant_trap",
-    recipe = {
-        {"vessels:drinking_glass","scifi_nodes:lightbars"},
-        {"scifi_nodes:greybolts",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = "scifi_nodes:egg",
+    -- recipe = {
+        -- {"default:clay_lump","default:clay_lump","default:clay_lump"},
+        -- {"default:clay_lump","dye:blue","default:clay_lump"},
+        -- {"default:clay_lump","default:clay_lump","default:clay_lump"}
+    -- }
+-- })
+
+-- minetest.register_craft({
+    -- output = "scifi_nodes:eyetree",
+    -- recipe = {
+        -- {"scifi_nodes:egg"},
+        -- {"default:sapling"},
+        -- {"scifi_nodes:greybolts"}
+    -- }
+-- })
+
+-- minetest.register_craft({
+    -- output = "scifi_nodes:gloshroom",
+    -- recipe = {
+        -- {"default:grass_1","flowers:mushroom_red"},
+        -- {"default:tin_ingot",""},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
+
+
+-- minetest.register_craft({
+    -- output = "scifi_nodes:plant_trap",
+    -- recipe = {
+        -- {"vessels:drinking_glass","scifi_nodes:lightbars"},
+        -- {"scifi_nodes:greybolts",""}
+    -- }
+-- })
 
 minetest.register_craft({
     output = "scifi_nodes:gblock 3",
@@ -1645,13 +1645,13 @@ minetest.register_craft({
     }
 })
 
-minetest.register_craft({
-    output = 'scifi_nodes:computer',
-    recipe = {
-        {"default:bookshelf","default:diamond","default:copper_ingot"},
-        {"","scifi_nodes:black_lights",""}
-    }
-})
+-- minetest.register_craft({
+    -- output = 'scifi_nodes:computer',
+    -- recipe = {
+        -- {"default:bookshelf","default:diamond","default:copper_ingot"},
+        -- {"","scifi_nodes:black_lights",""}
+    -- }
+-- })
 
 minetest.register_craft({
     output = 'scifi_nodes:cover',

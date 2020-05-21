@@ -16,17 +16,21 @@ petz.dyn_prop = {
 	dreamcatcher = {type= "boolean", default = false},
 	driver = {type= "player", default = nil},
 	eggs_count = {type= "int", default = 0},
+	exchange_item_index = {type= "int", default = 1},
+	exchange_item_amount = {type= "int", default = 1},
 	father_genes = {type= "table", default = {}},
 	father_veloc_stats = {type= "table", default = {}},
 	fed = {type= "boolean", default = true},
 	food_count = {type= "int", default = 0},
 	food_count_wool = {type= "int", default = 0},
+	for_sale = {type= "boolean", default = false},
 	gallop = {type= "boolean", default = false},
 	gallop_time = {type= "int", default = 0},
 	gallop_exhausted = {type= "boolean", default = false},
 	gallop_recover_time = {type= "int", default = petz.settings.gallop_recover_time},
 	genes = {type= "table", default = {}},
 	growth_time = {type= "int", default = 0},
+	herding = {type= "boolean", default = false},
 	horseshoes = {type= "int", default = 0},
 	is_baby = {type= "boolean", default = false},
 	is_male = {type= "boolean", default = false},
@@ -162,6 +166,9 @@ function petz.set_initial_properties(self, staticdata, dtime_s)
 		if self.type == "pony" then
 			self.horseshoes = mobkit.remember(self, "horseshoes", 0)
 		end
+		if self.herd then
+			self.herding = mobkit.remember(self, "herding", false)
+		end
 		--Mobs that can have babies
 		if self.breed == true then
 			if self.is_male == nil then
@@ -239,6 +246,9 @@ function petz.set_initial_properties(self, staticdata, dtime_s)
 		self.tamed = mobkit.remember(self, "tamed", false)
 		self.owner = mobkit.remember(self, "owner", nil)
 		self.fed = mobkit.remember(self, "fed", true)
+		self.for_sale = mobkit.remember(self, "for_sale", false)
+		self.exchange_item_index = mobkit.remember(self, "exchange_item_index", 1)
+		self.exchange_item_amount = mobkit.remember(self, "exchange_item_amount", 1)
 		self.brushed = mobkit.remember(self, "brushed", false)
 		self.food_count = mobkit.remember(self, "food_count", 0)
 		self.was_killed_by_player = mobkit.remember(self, "was_killed_by_player", false)
@@ -341,6 +351,9 @@ function petz.set_initial_properties(self, staticdata, dtime_s)
 		end
 	end
 	petz.calculate_sleep_times(self) --Sleep behaviour
+	--self.head_rotation = {x= -90, y= 90, z= 0}
+	--self.whead_position = self.object:get_bone_position("parent")
+	--self.head_position.y = self.head_position.y + 0.25
 	--ALL the mobs
 	if self.is_pet and self.tamed then
 		petz.update_nametag(self)

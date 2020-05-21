@@ -99,7 +99,7 @@ function default.register_mgv6_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 6500,
+		y_max           = 7300,
 		y_min           = -31,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -120,7 +120,7 @@ function default.register_mgv6_ores()
 		wherein         = {"default:stone"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
-		y_max           = 6500,
+		y_max           = 200,
 		y_min           = -31000,
 		noise_threshold = 0.0,
 		noise_params    = {
@@ -144,7 +144,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 9,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -164,7 +164,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
 		clust_scarcity = 24 * 24 * 24,
-		clust_num_ores = 27,
+		clust_num_ores = 10,
 		clust_size     = 6,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -179,7 +179,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -199,7 +199,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
 		clust_scarcity = 24 * 24 * 24,
-		clust_num_ores = 27,
+		clust_num_ores = 5,
 		clust_size     = 6,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -214,7 +214,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -234,7 +234,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_copper",
 		wherein        = "default:stone",
 		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 7,
+		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -249,7 +249,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -280,7 +280,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 10 * 10 * 10,
-		clust_num_ores = 8,
+		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -296,7 +296,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 13 * 13 * 13,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -316,7 +316,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 6,
+		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -331,7 +331,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -351,7 +351,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_mese",
 		wherein        = "default:stone",
 		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 6,
+		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -366,7 +366,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -386,7 +386,7 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 6,
+		clust_num_ores = 4,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -401,7 +401,7 @@ function default.register_mgv6_ores()
 		clust_scarcity = 36 * 36 * 36,
 		clust_num_ores = 3,
 		clust_size     = 2,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -421,7 +421,7 @@ function default.register_mgv6_ores()
 		ore            = "default:mese",
 		wherein        = "default:stone",
 		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 6,
+		clust_num_ores = 4,
 		clust_size     = 2,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -635,7 +635,7 @@ function default.register_ores()
 		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 9,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -655,7 +655,7 @@ function default.register_ores()
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
 		clust_scarcity = 12 * 12 * 12,
-		clust_num_ores = 30,
+		clust_num_ores = 10,
 		clust_size     = 5,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -670,7 +670,7 @@ function default.register_ores()
 		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -705,7 +705,7 @@ function default.register_ores()
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -738,9 +738,9 @@ function default.register_ores()
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
 		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 12,
+		clust_num_ores = 8,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -760,7 +760,7 @@ function default.register_ores()
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
 		clust_scarcity = 12 * 12 * 12,
-		clust_num_ores = 29,
+		clust_num_ores = 10,
 		clust_size     = 5,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -775,7 +775,7 @@ function default.register_ores()
 		clust_scarcity = 13 * 13 * 13,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -795,7 +795,7 @@ function default.register_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 5,
+		clust_num_ores = 7,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -810,7 +810,7 @@ function default.register_ores()
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -830,7 +830,7 @@ function default.register_ores()
 		ore            = "default:stone_with_mese",
 		wherein        = "default:stone",
 		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 7,
+		clust_num_ores = 6,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -845,7 +845,7 @@ function default.register_ores()
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -880,7 +880,7 @@ function default.register_ores()
 		clust_scarcity = 36 * 36 * 36,
 		clust_num_ores = 3,
 		clust_size     = 2,
-		y_max          = 6500,
+		y_max          = 7300,
 		y_min          = 1025,
 	})
 
@@ -900,7 +900,7 @@ function default.register_ores()
 		ore            = "default:mese",
 		wherein        = "default:stone",
 		clust_scarcity = 28 * 28 * 28,
-		clust_num_ores = 7,
+		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -9999,
 		y_min          = -31000,
@@ -1732,7 +1732,7 @@ function default.register_mgv6_decorations()
 	minetest.register_decoration({
 		name = "default:papyrus",
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass", "default:dirt_with_grass2"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.3,
@@ -1821,7 +1821,7 @@ function default.register_mgv6_decorations()
 		minetest.register_decoration({
 			name = "default:grass_"..length,
 			deco_type = "simple",
-			place_on = {"default:dirt_with_grass"},
+			place_on = {"default:dirt_with_grass","default:dirt_with_grass2"},
 			sidelen = 16,
 			noise_params = {
 				offset = 0,
@@ -1905,7 +1905,7 @@ local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		name = "default:grass_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass","default:dirt_with_grass2","ethereal:prairie_dirt", "ethereal:grove_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = offset,
@@ -1915,7 +1915,7 @@ local function register_grass_decoration(offset, scale, length)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"default_grassland", "default_deciduous_forest"},
+		--biomes = {"default_grassland", "default_deciduous_forest"},
 		y_max = 7500,
 		y_min = 1,
 		decoration = "default:grass_" .. length,
@@ -1936,7 +1936,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"default_savanna"},
+		--biomes = {"default_savanna"},
 		y_max = 7500,
 		y_min = 1,
 		decoration = "default:dry_grass_" .. length,
@@ -1947,7 +1947,7 @@ local function register_fern_decoration(seed, length)
 	minetest.register_decoration({
 		name = "default:fern_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_coniferous_litter"},
+		place_on = {"default:dirt_with_coniferous_litter","aotearoa:dirt_with_dark_litter","aotearoa:dirt_with_dry_litter","aotearoa:dirt_with_moss"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -1957,7 +1957,7 @@ local function register_fern_decoration(seed, length)
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"default_coniferous_forest"},
+		--biomes = {"default_coniferous_forest"},
 		y_max = 7500,
 		y_min = 6,
 		decoration = "default:fern_" .. length,
@@ -1983,7 +1983,7 @@ function default.register_decorations()
 			octaves = 4,
 			persist = 1.0
 		},
-		biomes = {"default_savanna"},
+		--biomes = {"default_savanna"},
 		y_max = 7500,
 		y_min = 1,
 		decoration = "default:dry_dirt",
@@ -2395,7 +2395,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_grass","default:dirt_with_grass2","ethereal:prairie_dirt","ethereal:jungle_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2405,8 +2405,8 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_grassland", "default_deciduous_forest"},
-		y_max = 6800,
+		--biomes = {"default_grassland", "default_deciduous_forest"},
+		y_max = 7500,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2417,7 +2417,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:blueberry_bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass", "default:dirt_with_snow"},
+		place_on = {"default:dirt_with_grass","default:dirt_with_grass2"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2427,31 +2427,9 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_grassland", "default_snowy_grassland"},
-		y_max = 6800,
-		y_min = 1,
-		place_offset_y = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-	
-	minetest.register_decoration({
-		name = "default:blueberry_bush",
-		deco_type = "schematic",
-		place_on = {"group:soil"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		spawn_by = "default:water_source",
-		num_spawn_by = 1,
+		--biomes = {"default_grassland", "default_snowy_grassland"},
 		y_max = 7500,
-		y_min = 6500,
+		y_min = 1,
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
 		flags = "place_center_x, place_center_z",
@@ -2472,29 +2450,9 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_savanna"},
-		y_max = 6800,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-
-	minetest.register_decoration({
-		name = "default:acacia_bush",
-		deco_type = "schematic",
-		place_on = {"default:dry_dirt_with_dry_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 90155,
-			octaves = 3,
-			persist = 0.7,
-		},
+		--biomes = {"default_savanna"},
 		y_max = 7500,
-		y_min = 6500,
+		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
@@ -2504,7 +2462,7 @@ function default.register_decorations()
 	minetest.register_decoration({
 		name = "default:pine_bush",
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_snow"},
+		place_on = {"default:dirt_with_snow","default:dirt_with_coniferous_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -2514,32 +2472,13 @@ function default.register_decorations()
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"default_taiga", "default_snowy_grassland"},
-		y_max = 6800,
+		--biomes = {"default_taiga", "default_snowy_grassland"},
+		y_max = 7500,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-
-	minetest.register_decoration({
-		name = "default:pine_bush",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_coniferous_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 137,
-			octaves = 3,
-			persist = 0.7,
-		},
-		y_max = 7500,
-		y_min = 6500,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
-		flags = "place_center_x, place_center_z",
-	})
 	-- Grasses
 
 	register_grass_decoration(-0.03,  0.09,  5)
@@ -2571,7 +2510,7 @@ function default.register_decorations()
 		sidelen = 80,
 		fill_ratio = 0.1,
 		biomes = {"default_rainforest"},
-		y_max = 6500,
+		y_max = 7500,
 		y_min = 1,
 		decoration = "default:junglegrass",
 	})
@@ -2593,7 +2532,7 @@ function default.register_decorations()
 			persist = 0.6
 		},
 		biomes = {"default_desert", "sandstone_desert", "cold_desert"},
-		y_max = 6500,
+		y_max = 7500,
 		y_min = 2,
 		decoration = "default:dry_shrub",
 		param2 = 4,
@@ -2706,19 +2645,19 @@ function default.register_decorations()
 		sidelen = 4,
 		noise_params = {
 			offset = -4,
-			scale = 4,
+			scale = 3,
 			spread = {x = 50, y = 50, z = 50},
 			seed = 7013,
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {
-			"desert_ocean",
-			"savanna_ocean",
-			"rainforest_ocean",
-		},
+		-- biomes = {
+			-- "desert_ocean",
+			-- "savanna_ocean",
+			-- "rainforest_ocean",
+		-- },
 		y_max = -2,
-		y_min = -8,
+		y_min = -35,
 		flags = "force_placement",
 		decoration = {
 			"default:coral_green", "default:coral_pink",
@@ -2737,22 +2676,22 @@ function default.register_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = -0.04,
-			scale = 0.1,
+			scale = 0.07,
 			spread = {x = 200, y = 200, z = 200},
 			seed = 87112,
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {
-			"taiga_ocean",
-			"snowy_grassland_ocean",
-			"grassland_ocean",
-			"coniferous_forest_ocean",
-			"deciduous_forest_ocean",
-			"sandstone_desert_ocean",
-			"cold_desert_ocean"},
+		-- biomes = {
+			-- "taiga_ocean",
+			-- "snowy_grassland_ocean",
+			-- "grassland_ocean",
+			-- "coniferous_forest_ocean",
+			-- "deciduous_forest_ocean",
+			-- "sandstone_desert_ocean",
+			-- "cold_desert_ocean"},
 		y_max = -5,
-		y_min = -10,
+		y_min = -29,
 		flags = "force_placement",
 		decoration = "default:sand_with_kelp",
 		param2 = 48,

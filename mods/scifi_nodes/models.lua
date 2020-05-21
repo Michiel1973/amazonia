@@ -149,8 +149,6 @@ node.types = {
 	{"pplwll4",      "Purple wall4", "", 0},
 	{"pplblk",      "Purple tile", "", 0},
 	{"purple",      "Purple node", "", 0},
-	{"rock",      "Moonstone", "", 0},
-	{"rock2",      "Moonstone2", "", 0},
 	{"blackvnt",      "Black vent", "", 0},
 	{"blackplate",      "Black plate", "", 0},
 }

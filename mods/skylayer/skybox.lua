@@ -18,6 +18,7 @@ local skybox_underground = function(player_name)
 	}
 	sl.sun_data = {
 		visible = false,
+		sunrise_visible = false,
 		scale = 1.0
 	}
 	sl.moon_data = {
@@ -26,7 +27,8 @@ local skybox_underground = function(player_name)
 		scale = 1.0
 	}
 	sl.stars_data = {
-		visible = false
+		visible = false,
+		count = 0
 	}
 	skylayer.add_layer(player_name, sl)
 end
@@ -213,8 +215,7 @@ minetest.register_globalstep(function(dtime)
 		-- underground
 		if pos.y < location_underground and current ~= "underground" then
 			player_list[name] = "underground"
-			--player:set_physics_override({gravity = 1})
-			player_monoids.gravity:add_change(player, 1, "skylayer:gravity")
+			player_monoids.gravity:add_change(player, 1.0, "skylayer:gravity")
 			if not is_in_creative(name) then
 			skybox_underground(name)
 			end
@@ -227,13 +228,10 @@ minetest.register_globalstep(function(dtime)
 		elseif pos.y > location_cloudlands_low and pos.y < location_cloudlands_high and current ~= "cloudlands" then
 			player_list[name] = "cloudlands"
 			player_monoids.gravity:add_change(player, 0.5, "skylayer:gravity")
-			--player:set_physics_override({gravity = 0.5})
 			skybox_cloudlands_sky(name)
 		-- stars
 		elseif pos.y > location_cloudlands_high and pos.y < location_stars_high and current ~= "stars" then
 			player_list[name] = "stars"
-			--player:set_physics_override({gravity = 0.2})
-            --player_monoids.jump:add_change(player, 0, "cozy:jump")
             player_monoids.gravity:add_change(player, 0.2, "skylayer:gravity")
 			skybox_stars(name)
 		end

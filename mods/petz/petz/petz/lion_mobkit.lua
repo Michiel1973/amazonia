@@ -47,6 +47,10 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 7,
 	lung_capacity = 10, -- seconds
 	max_hp = 30,
+	min_height = 1,
+	max_height = 67,
+	spawn_min_height = 1,
+	spawn_max_height = 67,
 	--armor_groups = {fleshy=5},
 	attack={range=3, damage_groups={fleshy=9}},
 	animation = {
@@ -62,6 +66,7 @@ minetest.register_entity("petz:"..pet_name,{
 	sounds = {
 		misc = "petz_lion_roar",
 		moaning = "petz_lion_moaning",
+		attack = "petz_lion_attack",
 	},
 
 	--punch_start = 83, stand4_end = 95,

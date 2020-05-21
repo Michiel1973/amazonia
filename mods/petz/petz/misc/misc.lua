@@ -1,14 +1,13 @@
 local modpath, S = ...
 
 assert(loadfile(modpath .. "/misc/mount.lua"))(modpath, S) --Load the mount engine
-assert(loadfile(modpath .. "/misc/brains.lua"))(modpath, S)
-assert(loadfile(modpath .. "/misc/behaviours.lua"))(modpath, S)
 assert(loadfile(modpath .. "/misc/nodes.lua"))(modpath, S) --Load the nodes
 assert(loadfile(modpath .. "/misc/items.lua"))(modpath, S) --Load the items
 assert(loadfile(modpath .. "/misc/chests.lua"))(modpath, S) --Load the chests
 assert(loadfile(modpath .. "/misc/food.lua"))(modpath, S) --Load the food items
 --assert(loadfile(modpath .. "/misc/hunger.lua"))(modpath, S) --Load the food items
-assert(loadfile(modpath .. "/misc/parchment.lua"))(modpath, S) --Load the food items
+assert(loadfile(modpath .. "/misc/tools.lua"))(modpath, S) --Load the food items
+--assert(loadfile(modpath .. "/misc/parchment.lua"))(modpath, S) --Load the food items
 if petz.settings["lycanthropy"] then
 	assert(loadfile(modpath .. "/misc/lycanthropy.lua"))(modpath, S) --Load the food items
 end

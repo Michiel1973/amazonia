@@ -121,6 +121,12 @@ mobs:register_mob("mobs_turtles:seaturtle", {
 	lava_damage = 5,
 	light_damage = 0,
 	fall_damage = 0,
+	drops = {
+			{name = "dye:green",
+			chance = 1,
+			min = 1,
+			max = 3,},
+		},
 	animation = l_anims,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
@@ -132,15 +138,12 @@ mobs:register_mob("mobs_turtles:seaturtle", {
 
 mobs:spawn({
 	name = "mobs_turtles:seaturtle",
-	nodes = {"default:water_flowing","default:water_source"},
-	neighbors = {
-		"default:water_flowing", "default:water_source", "group:seaplants",
-		 "seawrecks:woodship", "seawrecks:uboot"
-	},
+	nodes = {"default:water_source"},
+	neighbors = {"default:water_source"},
 	min_light = 5,
 	interval = 60,
 	chance = 1000,
-	max_height = -5,
+	max_height = -6,
 	min_height = -100,
 	active_object_count = 1,
 })

@@ -32,36 +32,16 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		sidelen = 16,
 		noise_params = {
 			offset = 0.005,
-			scale = 0.002,
+			scale = 0.0005,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"rainforest"},
+		--biomes = {"rainforest"},
 		height = 2,
 		y_min = 1,
 		y_max = 62,
-		schematic = modpath.."/schematics/ebony.mts",
-		flags = "place_center_x, place_center_z, force_placement",
-		rotation = "random",
-	})
-	
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"ethereal:grove_dirt"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.005,
-			scale = 0.002,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		height = 2,
-		y_min = 6500,
-		y_max = 7500,
 		schematic = modpath.."/schematics/ebony.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
@@ -143,7 +123,7 @@ minetest.register_node("ebony:leaves", {
 	inventory_image = "ebony_leaves.png",
 	wield_image = "ebony_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {
@@ -164,7 +144,7 @@ minetest.register_node("ebony:leaves", {
 minetest.register_node("ebony:creeper", {
 	description = S("Ebony Creeper"),
 	drawtype = "nodebox",
-	walkable = true,
+	walkable = false,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"ebony_creeper.png"},
@@ -183,7 +163,7 @@ minetest.register_node("ebony:creeper", {
 minetest.register_node("ebony:creeper_leaves", {
 	description = S("Ebony Creeper with Leaves"),
 	drawtype = "nodebox",
-	walkable = true,
+	walkable = false,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"ebony_creeper_leaves.png"},
@@ -202,7 +182,7 @@ minetest.register_node("ebony:creeper_leaves", {
 minetest.register_node("ebony:liana", {
 	description = S("Ebony Liana"),
 	drawtype = "nodebox",
-	walkable = true,
+	walkable = false,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"ebony_liana.png"},

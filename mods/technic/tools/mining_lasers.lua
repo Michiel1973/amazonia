@@ -55,7 +55,6 @@ local function can_keep_node(name)
 		return keep_node[name]
 	end
 	keep_node[name] = minetest.get_item_group(name, "hot") ~= 0
-	keep_node[name] = minetest.get_item_group(name, "laserproof") ~= 0
 	return keep_node[name]
 end
 

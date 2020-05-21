@@ -7,7 +7,7 @@ local S = minetest.get_translator("death_compass")
 local duration = 0
 local automatic = true
 
-local range_to_inactivate = 2
+local range_to_inactivate = 4
 
 local hud_position = {
 	x= 0,

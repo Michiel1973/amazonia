@@ -25,7 +25,7 @@ mobs:spawn_specific ("mobs_monster:stone_monster", {"caverealms:stone_with_moss"
 mobs:spawn_specific ("mobs_monster:sand_monster", "default:desert_sand", "air", 0, 10, 30, 400, 1, -8000, -6500)
 
 -- caverealms dungeon master layer -8000  to -9999
-mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "caverealms:glow_obsidian"}, "air", 0, 13, 60, 400, 2, -9950, -8100)
+mobs:spawn_specific ("mobs_monster:dungeon_master", {"caverealms:hot_cobble", "caverealms:glow_obsidian"}, "air", 0, 15, 30, 400, 2, -9950, -8100)
 
 -- DF level 1 - 10033 to -12032
 -- you get a break here
@@ -35,25 +35,25 @@ mobs:spawn_specific ("mobs_monster:slime_big", {"df_mapitems:dirt_with_cave_moss
 
 -- DF level 3  -14032 to 15072
 
-mobs:spawn_specific("mobs_monster:mothman", "df_trees:black_cap", "air", 0, 12, 30, 300, 2, -15072, -14032)
+mobs:spawn_specific("mobs_monster:mothman", "df_trees:black_cap", "air", 0, 12, 30, 300, 3, -15072, -14032)
 
-mobs:spawn_specific("mobs_monster:creeper", "df_mapitems:cobble_with_floor_fungus", "air", 0, 12, 90, 300, 1, -15072, -14032)
+mobs:spawn_specific("mobs_monster:creeper", "df_mapitems:cobble_with_floor_fungus", "air", 0, 12, 90, 300, 2, -15072, -14032)
 
 
 -- Sunless Sea -15072 to -16000 - break point (no monsters)
 
 -- Lava Sea -17000 to -18000
 
-mobs:spawn_specific ("mobs_monster:lava_flan", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 100, 2, -18000, -16900)
+mobs:spawn_specific ("mobs_monster:lava_flan", {"default:lava_source", "default:lava_flowing"}, "air", 0, 13, 60, 100, 4, -18000, -16900)
 
 -- Underworld -18000 to -19073
 
-mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", "air", 0, 7, 90, 1000, 1, -19073, -17500)
+mobs:spawn_specific("mobs_monster:skeleton", "df_underworld_items:slade", "air", 0, 7, 90, 1000, 2, -19073, -17500)
 
 -- Primordial  -19073 to -22032 - break point (no monsters)
 
 -- Nether
-mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 500, 2, -30900, -25100)
+mobs:spawn_specific ("mobs_monster:oerkki", "nether:rack", "air", 0, 14, 60, 500, 4, -30900, -25100)
 
 
 

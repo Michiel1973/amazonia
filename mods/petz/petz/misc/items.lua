@@ -1,21 +1,21 @@
 local modpath, S = ...
 
 --Pet Hairbrush
-    minetest.register_craftitem("petz:hairbrush", {
-        description = S("Hairbrush"),
-        inventory_image = "petz_hairbrush.png",
-        wield_image = "petz_hairbrush.png"
-    })
+minetest.register_craftitem("petz:hairbrush", {
+	description = S("Hairbrush"),
+	inventory_image = "petz_hairbrush.png",
+	wield_image = "petz_hairbrush.png"
+})
 
-    minetest.register_craft({
-        type = "shaped",
-        output = "petz:hairbrush",
-        recipe = {
-            {"", "", ""},
-            {"", "default:stick", "farming:string"},
-            {"default:stick", "", ""},
-        }
-    })
+minetest.register_craft({
+	type = "shaped",
+	output = "petz:hairbrush",
+	recipe = {
+		{"", "", ""},
+		{"", "default:stick", "farming:string"},
+		{"default:stick", "", ""},
+	}
+})
 
 --Pet Bowl
 minetest.register_node("petz:pet_bowl", {
@@ -103,7 +103,7 @@ minetest.register_craft({
 minetest.register_craftitem("petz:bucket_milk", {
     description = S("Milk Bucket"),
     stack_max = 1,
-    wield_image = {"petz_bucket_milk.png"},
+    wield_image = "petz_bucket_milk.png",
     inventory_image = "petz_bucket_milk.png",
     groups = {milk_bucket = 1, food = 3, food_milk = 1},
     on_use = function (itemstack, user, pointed_thing)
@@ -116,7 +116,7 @@ minetest.register_craftitem("petz:bucket_milk", {
 --Turtle Shell
 minetest.register_craftitem("petz:turtle_shell", {
     description = S("Turtle Shell"),
-    wield_image = {"petz_turtle_shell.png"},
+    wield_image = "petz_turtle_shell.png",
     inventory_image = "petz_turtle_shell.png",
     groups = {},
 })
@@ -173,7 +173,7 @@ local function remove_fish(pos)
 		return
 	end
 	for _, obj in pairs(objs) do
-		if obj and obj:get_luaentity() and obj:get_luaentity().groups.fishtank then
+		if obj and obj:get_luaentity() and obj:get_luaentity().groups and obj:get_luaentity().groups.fishtank then
 			obj:remove()
 			break
 		end
@@ -186,7 +186,7 @@ minetest.register_node("petz:fishtank", {
 	tiles = {"petz_fishtank_top.png", "petz_fishtank_bottom.png"},
 	special_tiles = {"petz_fishtank_bottom.png"},
 	inventory_image = "petz_fishtank_inv.png",
-	walkable = false,
+	walkable = true,
 	groups = {snappy = 2},
 	paramtype = "light",
 	paramtype2 = "glasslikeliquidlevel",
@@ -269,7 +269,8 @@ minetest.register_craftitem("petz:glass_syringe", {
 minetest.register_craftitem("petz:glass_syringe_sperm", {
     description = S("Glass Syringe with seed"),
     inventory_image = "petz_glass_syringe_sperm.png",
-    wield_image = "petz_glass_syringe_sperm.png"
+    wield_image = "petz_glass_syringe_sperm.png",
+    stack_max = 1
 })
 
 minetest.register_craft({
@@ -302,7 +303,7 @@ minetest.register_craft({
 minetest.register_tool("petz:lasso", {
 	description = S("Lasso"),
 	inventory_image = "petz_lasso.png",
-	groups = {flammable = 2},
+	groups = {flammable = 2, lasso = 1},
 })
 
 minetest.register_craft({
@@ -408,7 +409,10 @@ for i=1, 2 do
 			local texture_no = meta:get_int("petz:texture_no")
 			--minetest.chat_send_all("texture= "..tostring(meta:get_int("petz:texture_no")))
 			if texture_no then
-				ent_ref = ent:get_luaentity()
+				local ent_ref = ent:get_luaentity()
+				if texture_no == 0 then
+					texture_no = math.random(1, #ent_ref.textures)
+				end
 				local props = {}
 				props.textures = {ent_ref.textures[texture_no]}
 				ent:set_properties(props)
@@ -549,3 +553,24 @@ minetest.register_craftitem("petz:spider_eye", {
 	description = S("Spider Eye"),
 	inventory_image = "petz_spider_eye.png",
 })
+
+--minetest.register_node("petz:squirrel_cage", {
+	--description = S("Squirrel Cage"),
+	--drawtype = "glasslike_framed",
+	--tiles = {"petz_squirrel_cage.png", "petz_squirrel_cage.png"},
+	--special_tiles = {"petz_squirrel_cage.png"},
+	--inventory_image = "petz_squirrel_cage.png",
+	--walkable = true,
+	--groups = {snappy = 2},
+	--paramtype = "light",
+	--paramtype2 = "glasslikeliquidlevel",
+	--param2 = 50,
+	--sunlight_propagates = true,
+	--use_texture_alpha = true,
+	--light_source = default.LIGHT_MAX - 1,
+	--sounds = default.node_sound_glass_defaults(),
+	--selection_box = {
+		--type = "fixed",
+		--fixed = { -0.25, -0.5, -0.25, 0.25, 0.4, 0.25 },
+	--},
+--})

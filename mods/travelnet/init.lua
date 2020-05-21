@@ -695,6 +695,10 @@ travelnet.on_receive_fields = function(pos, formname, fields, player)
       local description = "station"
       if( node and node.name and node.name == "travelnet:travelnet") then
          description = "travelnet box"
+	  elseif ( node and node.name and node.name == "travelnet:travelnetmk2") then
+         description = "travelnet box mk2"
+	  elseif ( node and node.name and node.name == "travelnet:travelnetmk3") then
+         description = "travelnet box mk3"
       elseif( node and node.name and node.name == "travelnet:elevator") then
          description = "elevator"
       elseif( node and node.name and node.name == "locked_travelnet:travelnet") then
@@ -850,7 +854,7 @@ travelnet.on_receive_fields = function(pos, formname, fields, player)
 
    -- check if the box has at the other end has been removed.
    local node2 = minetest.get_node_or_nil(  target_pos );
-   if( node2 ~= nil and node2.name ~= 'ignore' and node2.name ~= 'travelnet:travelnet' and node2.name ~= 'travelnet:elevator' and node2.name ~= "locked_travelnet:travelnet" and node2.name ~= "travelnet:travelnet_private") then
+   if( node2 ~= nil and node2.name ~= 'ignore' and node2.name ~= 'travelnet:travelnet' and node2.name ~= 'travelnet:travelnetmk2'  and node2.name ~= 'travelnet:travelnetmk3' and node2.name ~= 'travelnet:elevator' and node2.name ~= "locked_travelnet:travelnet" and node2.name ~= "travelnet:travelnet_private") then
 
       -- provide information necessary to identify the removed box
       local oldmetadata = { fields = { owner           = owner_name,
@@ -1029,6 +1033,15 @@ end
 if( travelnet.travelnet_enabled ) then
    dofile(travelnet.path.."/travelnet.lua"); -- the travelnet node definition
 end
+
+if( travelnet.travelnet_enabled ) then
+   dofile(travelnet.path.."/travelnetmk2.lua"); -- the travelnet mk2 node definition
+end
+
+if( travelnet.travelnet_enabled ) then
+   dofile(travelnet.path.."/travelnetmk3.lua"); -- the travelnet mk3 node definition
+end
+
 if( travelnet.elevator_enabled ) then
    dofile(travelnet.path.."/elevator.lua");  -- allows up/down transfers only
 end

@@ -126,7 +126,7 @@ local function update_formspecs(finished)
 		form_n = beds.formspec .. "label[2.7,9;" .. esc(S("Good morning.")) .. "]"
 	else
 		form_n = beds.formspec .. "label[2.2,9;" ..
-			esc(S("@1 of @2 players are in bed", player_in_bed, ges)) .. "]"
+			esc(S("your respawn location has been set to here!")) .. "]"
 		if is_majority and is_night_skip_enabled() then
 			form_n = form_n .. "button_exit[2,6;4,0.75;force;" ..
 				esc(S("Force night skip")) .. "]"
@@ -157,20 +157,21 @@ function beds.on_rightclick(pos, player)
 	local ppos = player:get_pos()
 	local tod = minetest.get_timeofday()
 
-	if tod > 0.2 and tod < 0.805 then
-		if beds.player[name] then
-			lay_down(player, nil, nil, false)
-		end
-		minetest.chat_send_player(name, S("You can only sleep at night."))
-		return
-	end
+	-- if tod > 0.2 and tod < 0.805 then
+		-- if beds.player[name] then
+			-- lay_down(player, nil, nil, false)
+		-- end
+		-- minetest.chat_send_player(name, S("You can only sleep at night."))
+		-- return
+	-- end
 
 	-- move to bed
 	if not beds.player[name] then
 		lay_down(player, ppos, pos)
 		beds.set_spawns() -- save respawn positions when entering bed
 	else
-		lay_down(player, nil, nil, false)
+		lay_down(player, ppos, pos)
+		beds.set_spawns() -- save respawn positions when entering bed
 	end
 
 	if not is_sp then

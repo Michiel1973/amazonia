@@ -87,6 +87,10 @@ for i=1, 2 do
 		view_range = 7,
 		lung_capacity = 10, -- seconds
 		max_hp = 40,
+		min_height = 3,
+		max_height = 78,
+		spawn_min_height = 3,
+		spawn_max_height = 78,
 		makes_footstep_sound = true,
 		--armor_groups = {fleshy=10},
 		attack={range=3, damage_groups={fleshy=8}},

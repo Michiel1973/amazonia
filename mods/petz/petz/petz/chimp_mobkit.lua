@@ -42,6 +42,10 @@ minetest.register_entity("petz:"..pet_name,{
 	view_range = 4,
 	lung_capacity = 10, -- seconds
 	max_hp = 10,
+	min_height = 12,
+	max_height = 49,
+	spawn_min_height = 12,
+	spawn_max_height = 49,
 	{name = "mobs:meat_raw", chance = 1, min = 1, max = 2,},	
 	makes_footstep_sound = true,
 	--armor_groups = {fleshy=1},
@@ -59,7 +63,7 @@ minetest.register_entity("petz:"..pet_name,{
 		climb= {range={x=78, y=90}, speed=5, loop=true},
 	},
 	sounds = {
-		misc = "petz_chimp_hoo",
+		misc = {"petz_chimp_hoo", "petz_chimp_hoo_2"},
 		moaning = "petz_chimp_moaning",
 	},
 

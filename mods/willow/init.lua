@@ -32,16 +32,16 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 		sidelen = 16,
 		noise_params = {
 			offset = 0.005,
-			scale = 0.002,
+			scale = 0.00005,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"savanna_shore"},
+		--biomes = {"savanna_shore"},
 		height = 2,
 		y_min = -1,
-		y_max = 62,
+		y_max = 22,
 		schematic = modpath.."/schematics/willow.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
@@ -123,7 +123,7 @@ minetest.register_node("willow:leaves", {
 	inventory_image = "willow_leaves.png",
 	wield_image = "willow_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {

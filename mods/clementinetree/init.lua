@@ -51,7 +51,7 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"aotearoa:dirt_with_dry_litter","aotearoa:dirt_with_beech_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0005,
@@ -61,28 +61,9 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" then
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest"},
+		--biomes = {"deciduous_forest"},
 		y_min = 1,
 		y_max = 80,
-		schematic = modpath.."/schematics/clementinetree.mts",
-		flags = "place_center_x, place_center_z,  force_placement",
-		rotation = "random",
-	})
-	
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"ethereal:prairie_dirt"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.0005,
-			scale = 0.00004,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		y_min = 6500,
-		y_max = 7500,
 		schematic = modpath.."/schematics/clementinetree.mts",
 		flags = "place_center_x, place_center_z,  force_placement",
 		rotation = "random",
@@ -161,7 +142,7 @@ minetest.register_node("clementinetree:leaves", {
 	inventory_image = "clementinetree_leaves.png",
 	wield_image = "clementinetree_leaves.png",
 	paramtype = "light",
-	walkable = true,
+	walkable = false,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {

@@ -20,8 +20,6 @@ function mokapi.replace(self, sound_name, max_hear_distance)
 	end
 	pos.y = pos.y + y_offset
 	if #minetest.find_nodes_in_area(pos, pos, what) > 0 then
-		local oldnode = {name = what}
-		local newnode = {name = with}
 		minetest.set_node(pos, {name = with})
 		if sound_name then
 			mokapi.make_sound("object", self.object, sound_name, max_hear_distance or mokapi.consts.DEFAULT_MAX_HEAR_DISTANCE)

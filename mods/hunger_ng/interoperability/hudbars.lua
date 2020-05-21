@@ -1,8 +1,16 @@
+-- HUD bars
+--
+-- Author  Wuzzy
+-- Forums  https://forum.minetest.net/viewtopic.php?t=11153
+-- VCS     https://repo.or.cz/w/minetest_hudbars.git
+
+
 -- Localize and Prepare
-local a = hunger_ng.attributes
-local f = hunger_ng.functions
-local s = hunger_ng.settings
-local S = hunger_ng.configuration.translator
+local a = hunger_ng.interoperability.attributes
+local s = hunger_ng.interoperability.settings
+local S = hunger_ng.interoperability.translator
+local get_data = hunger_ng.interoperability.get_data
+local set_data = hunger_ng.interoperability.set_data
 local bar_id = 'hungernghudbar'
 local hudbar_image_filters = '^[noalpha^[colorize:#c17d11ff^[resize:2x16'
 local hudbar_image = s.hunger_bar.image..hudbar_image_filters
@@ -26,8 +34,8 @@ hb.register_hudbar(
 -- Remove normal hunger bar and add hudbar version of it
 minetest.register_on_joinplayer(function(player)
     local player_name = player:get_player_name()
-    local hud_id = tonumber(f.get_data(player_name, a.hunger_bar_id))
-    local current_hunger = f.get_data(player_name, a.hunger_value)
+    local hud_id = tonumber(get_data(player_name, a.hunger_bar_id))
+    local current_hunger = get_data(player_name, a.hunger_value)
     local hunger_ceiled = math.ceil(current_hunger)
 
     if s.hunger_bar.use then
@@ -68,7 +76,7 @@ minetest.register_globalstep(function(dtime)
         for _,player in ipairs(minetest.get_connected_players()) do
             if player ~= nil then
                 local playername = player:get_player_name()
-                local hunger = f.get_data(playername, a.hunger_value)
+                local hunger = get_data(playername, a.hunger_value)
                 local ceiled = math.ceil(hunger)
                 hb.change_hudbar(player, bar_id, ceiled, s.hunger.maximum)
             end

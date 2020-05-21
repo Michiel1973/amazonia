@@ -55,7 +55,7 @@ petz.mount = function(self, clicker, wielded_item, wielded_item_name)
 end
 
 petz.put_saddle = function(self, clicker, wielded_item, wielded_item_name)
-	local saddle_type = ""
+	local saddle_type
 	local another_saddle = ""
 	if wielded_item_name == "petz:saddle" then
 		saddle_type = "saddle"

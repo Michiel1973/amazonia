@@ -85,7 +85,7 @@ minetest.register_node("travelnet:travelnet", {
 			minetest.chat_send_player( placer:get_player_name(), S('You are too deep to use travelnet boxes!'))
          return;
        end
-	   		if pos.y > 6000 then
+	   		if pos.y > 8000 then
 			minetest.chat_send_player( placer:get_player_name(), S('You are too high to use travelnet boxes!'))
          return;
        end

@@ -1,5 +1,4 @@
-
-local creative_mode = minetest.setting_getbool("creative_mode")
+local creative_mode = minetest.settings:get_bool("creative_mode")
 
 local function cyan(str)
 	return minetest.colorize("#00FFFF",str)
@@ -9,21 +8,33 @@ local function red(str)
 	return minetest.colorize("#FF5555",str)
 end
 
-local radius_large = minetest.setting_get("areasprotector_radius_large")
-					or minetest.setting_get("areasprotector_radius")
+local radius_large = minetest.settings:get("areasprotector_radius_large")
+					or minetest.settings:get("areasprotector_radius")
 					or 16
+					
+radius_large = tonumber(radius_large) or 16
 
-local height_large = minetest.setting_get("areasprotector_height_large")
-					or minetest.setting_get("areasprotector_radius_large")
-					or minetest.setting_get("areasprotector_radius")
+local height_large = minetest.settings:get("areasprotector_height_large")
+					or minetest.settings:get("areasprotector_radius_large")
+					or minetest.settings:get("areasprotector_radius")
 					or 16
+					
+height_large = tonumber(height_large) or 16
 
-local radius_small = minetest.setting_get("areasprotector_radius_small")
+local radius_small = minetest.settings:get("areasprotector_radius_small")
 					or 7
+					
+radius_small = tonumber(radius_small) or 7
 
-local height_small = minetest.setting_get("areasprotector_height_small")
-					or minetest.setting_get("areasprotector_radius_small")
+local height_small = minetest.settings:get("areasprotector_height_small")
+					or minetest.settings:get("areasprotector_radius_small")
 					or 7
+					
+height_small = tonumber(height_small) or 7
+					
+local max_protectors = minetest.settings:get("areasprotector_max_protectors") or 16
+
+max_protectors = tonumber(max_protectors) or 16
 
 local function remove_display(pos)
 	local objs = minetest.get_objects_inside_radius(pos, 0.5)
@@ -42,6 +53,26 @@ local function on_place(itemstack, player, pointed, radius, height, sizeword)
 		minetest.chat_send_player(name,red("You are not allowed to protect that area: ")..err)
 		return itemstack
 	end
+	local conflicts = minetest.find_nodes_in_area(pos1,pos2,{"areasprotector:protector_small","areasprotector:protector_large",})
+	if conflicts and #conflicts > 0 and not minetest.check_player_privs(name,"areas") then
+		minetest.chat_send_player(name,red("Another protector block is too close: ").."another protector block was found at "..cyan(minetest.pos_to_string(conflicts[1]))..", and this size of protector block cannot be placed within "..cyan(tostring(radius).."m").." of others.")
+		return itemstack
+	end
+	local userareas = 0
+	for k,v in pairs(areas.areas) do
+		if v.owner == name and string.sub(v.name,1,28) == "Protected by Protector Block" then
+			userareas = userareas + 1
+		end
+	end
+	if userareas >= max_protectors and not minetest.check_player_privs(name,"areas") then
+		minetest.chat_send_player(name,red("You are using too many protector blocks:").." this server allows you to use up to "..cyan(tostring(max_protectors)).." protector blocks, and you already have "..cyan(tostring(userareas))..".")
+		if sizeword == "small" then
+			minetest.chat_send_player(name,"If you need to protect more, please consider using the larger protector blocks, using the chat commands instead, or at the very least taking the time to rename some of your areas to something more descriptive first.")
+		else
+			minetest.chat_send_player(name,"If you need to protect more, please consider using the chat commands instead, or at the very least take the time to rename some of your areas to something more descriptive first.")
+		end
+		return itemstack
+	end
 	local id = areas:add(name,"Protected by Protector Block at "..minetest.pos_to_string(pos, 0),pos1,pos2)
 	areas:save()
 	local msg = string.format("The area from %s to %s has been protected as #%s",cyan(minetest.pos_to_string(pos1)),cyan(minetest.pos_to_string(pos2)),cyan(id))
@@ -52,7 +83,7 @@ local function on_place(itemstack, player, pointed, radius, height, sizeword)
 	meta:set_string("infotext",infotext)
 	meta:set_int("area_id",id)
 	meta:set_string("owner",name)
-	if not minetest.setting_getbool("creative_mode") then
+	if not creative_mode then
 		itemstack:take_item()
 	end
 	return itemstack
@@ -75,8 +106,6 @@ local function after_dig(pos, oldnode, oldmetadata, digger, sizeword)
 						areas:remove(id)
 						areas:save()
 					end
-				else
-					inv:remove_item("main", "areasprotector:protector_"..sizeword.." 1")
 				end
 			else
 				areas:remove(id)
@@ -102,7 +131,7 @@ local function on_punch(pos, node, puncher, sizeword)
 end
 
 local function on_step(self, dtime, sizeword)
-	if minetest.get_node(self.object:getpos()).name ~= "areasprotector:protector_"..sizeword then
+	if minetest.get_node(self.object:get_pos()).name ~= "areasprotector:protector_"..sizeword then
 		self.object:remove()
 		return
 	end
@@ -144,7 +173,7 @@ minetest.register_node("areasprotector:protector_large", {
 	drawtype = "nodebox",
 	node_box = nbox,
 	on_place = function(itemstack, player, pointed_thing)
-		on_place(itemstack, player, pointed_thing, radius_large, height_large, "large")
+		return on_place(itemstack, player, pointed_thing, radius_large, height_large, "large")
 	end,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		after_dig(pos, oldnode, oldmetadata, digger, "large")
@@ -166,7 +195,7 @@ minetest.register_node("areasprotector:protector_small", {
 	drawtype = "nodebox",
 	node_box = nbox,
 	on_place = function(itemstack, player, pointed_thing)
-		on_place(itemstack, player, pointed_thing, radius_small, height_small, "small")
+		return on_place(itemstack, player, pointed_thing, radius_small, height_small, "small")
 	end,
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		after_dig(pos, oldnode, oldmetadata, digger, "small")

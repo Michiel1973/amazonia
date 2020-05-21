@@ -141,3 +141,23 @@ Mods that alter or replace food with own versions ignoring custom item attribute
 Mods using the `/hunger` or `/myhunger` chat commands will either break or be broken when used in combination with *Hunger NG*.
 
 Mods deleting or overwriting the global table `hunger_ng` break any mods that use the functions that are stored in the table.
+
+### Interoperability
+
+Hunger NG provides an interoperability system. This system allows adding support for mods (for example adding hunger information to the items of that mod).
+
+If you want to change this for your own server (you need to track changes on mod updates by yourself, though) simply add a file named after the mod you want to support in the `interoperability` directory.
+
+The interoperability system is seen as a temporary solution or a fallback solution. The preferred way is to contact the original mod’s author and ask them to add Hunger NG support and point them to this API documentation. If they’re not interested in supporting Hunger NG feel free to file an issue or create a merge request.
+
+#### Additional interoperability functions
+
+The API table provides additional function for interoperability reasons in the sub table `hunger_ng.interoperability`.
+
+`attributes` provides the attribute names for the various meta data that is stored in the player objects.
+
+`get_data` and `set_data` allow getting and setting a player’s meta data via the Hunger NG system. The functions both take the player name, the field to get/set and an optional `true` for getting the result as string instead of a number. It is advised not to use this functions in interoperability files to set or get hunger data. This is what `hunger_ng.alter_hunger` is for.
+
+`settings` is a table containing the Hunger NG configuration. For example: You can check via `hunger_ng.interoperability.settings.hunger_bar.use` if the hunger bar is to be used. There are also timer information and hunger information (maximum hunger, timeout, etc.) available. Changing values here does not change the configuration. The table is solely informational.
+
+`translator` is a preconfigured Minetest translation functionality instance. It can be used like the normal translation function but automatically uses the correct textdomain. Strings that can be translated are seen in the mod’s `locale` directory.

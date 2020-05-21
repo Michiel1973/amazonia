@@ -81,11 +81,11 @@ add_ore("ethereal:sandy", "default:sand", 10*10*10, 24, 4, -100, -10)
 minetest.register_ore({
 	ore_type = "scatter",
 	ore = "ethereal:etherium_ore",
-	wherein = "default:desert_stone",
+	wherein = "default:stone",
 	clust_scarcity = 10*10*10,
-	clust_num_ores = 1,
+	clust_num_ores = 5,
 	clust_size = 1,
-	y_min = 5,
-	y_max = 40,
-	biomes = {"caves"},
+	y_min = 6900,
+	y_max = 7200,
+	--biomes = {"caves"},
 })

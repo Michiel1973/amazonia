@@ -56,7 +56,7 @@ minetest.register_ore({
 	ore = "technic:mineral_uranium",
 	wherein = "default:stone",
 	clust_scarcity = 16*16*16,
-	clust_num_ores = 12,
+	clust_num_ores = 7,
 	clust_size = 3,
 	y_min = -15000,
 	y_max = -10000,
@@ -64,6 +64,18 @@ minetest.register_ore({
 	noise_threshold = uranium_threshold,
 })
 
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "technic:mineral_uranium",
+	wherein = "default:stone",
+	clust_scarcity = 16*16*16,
+	clust_num_ores = 7,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	noise_params = uranium_params,
+	noise_threshold = uranium_threshold,
+})
 
 minetest.register_ore({
 	ore_type = "scatter",
@@ -92,7 +104,19 @@ minetest.register_ore({
 	noise_threshold = chromium_threshold,
 })
 
-
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "technic:mineral_chromium",
+	wherein = "default:stone",
+	clust_scarcity = 6*6*6,
+	clust_num_ores = 4,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	flags = "absheight",
+	noise_params = chromium_params,
+	noise_threshold = chromium_threshold,
+})
 
 
 
@@ -115,7 +139,7 @@ minetest.register_ore({
 	ore = "technic:mineral_zinc",
 	wherein = "default:stone",
 	clust_scarcity = 6*6*6,
-	clust_num_ores = 6,
+	clust_num_ores = 5,
 	clust_size = 3,
 	y_min = -31000,
 	y_max = -9000,
@@ -124,7 +148,20 @@ minetest.register_ore({
 	noise_threshold = zinc_threshold,
 })
 
-
+	
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "technic:mineral_zinc",
+	wherein = "default:stone",
+	clust_scarcity = 6*6*6,
+	clust_num_ores = 6,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	flags = "absheight",
+	noise_params = zinc_params,
+	noise_threshold = zinc_threshold,
+})
 
 	
 minetest.register_ore({
@@ -158,7 +195,7 @@ minetest.register_ore({
 	ore = "technic:mineral_lead",
 	wherein = "default:stone",
 	clust_scarcity = 6*6*6,
-	clust_num_ores = 6,
+	clust_num_ores = 5,
 	clust_size = 3,
 	y_min = -31000,
 	y_max = -10000,
@@ -168,7 +205,19 @@ minetest.register_ore({
 })
 
 	
-
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "technic:mineral_lead",
+	wherein = "default:stone",
+	clust_scarcity = 6*6*6,
+	clust_num_ores = 6,
+	clust_size = 3,
+	y_min = 6900,
+	y_max = 7500,
+	flags = "absheight",
+	noise_params = lead_params,
+	noise_threshold = lead_threshold,
+})
 	
 -- Sulfur
 local sulfur_buf = {}

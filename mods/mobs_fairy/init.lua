@@ -97,7 +97,7 @@ if mobs.mod and mobs.mod == "redo" then
 	
 	--name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height
 	
-	mobs:spawn_specific("mobs_fairy:fairy", {"df_primordial_items:giant_fern_leaves","df_primordial_items:glow_plant_1"}, "air", 0, 15, 30, 10, 4, -21000, -19100)
+	mobs:spawn_specific("mobs_fairy:fairy", {"df_primordial_items:giant_fern_leaves","df_primordial_items:glow_plant_1"}, "air", 0, 15, 30, 100, 3, -21000, -19100)
 	
 	--mobs:register_spawn("mobs_fairy:fairy",	{"default:dirt_with_grass", "default:dirt_with_grass2", "default:dirt_with_grass3"}, 20, 10, 15000, 2, 31000, true)
 	--mobs:register_spawn("mobs_fairy:fairy",	{"hyrule_mapgen:healwater_src"}, 20, 10, 1500, 2, 31000, true)

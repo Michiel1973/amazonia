@@ -1,14 +1,14 @@
 
 --nodes
 
-minetest.register_node("scifi_nodes:grassblk", {
-	description = "Dirt With Alien Grass",
-	tiles = {"default_grass.png^[colorize:cyan:80", "default_dirt.png",
-		{name = "default_dirt.png^(default_grass_side.png^[colorize:cyan:80)",
-			tileable_vertical = false}},
-	light_source = 2,
-	groups = {crumbly=1, oddly_breakable_by_hand=1, soil=1}
-})
+-- minetest.register_node("scifi_nodes:grassblk", {
+	-- description = "Dirt With Alien Grass",
+	-- tiles = {"default_grass.png^[colorize:cyan:80", "default_dirt.png",
+		-- {name = "default_dirt.png^(default_grass_side.png^[colorize:cyan:80)",
+			-- tileable_vertical = false}},
+	-- light_source = 2,
+	-- groups = {crumbly=1, oddly_breakable_by_hand=1, soil=1}
+-- })
 
 minetest.register_node("scifi_nodes:light", {
 	description = "blue lightbox",
@@ -153,34 +153,34 @@ minetest.register_node("scifi_nodes:red_light", {
 	sounds = default.node_sound_glass_defaults()
 })
 
-minetest.register_node("scifi_nodes:discs", {
-	description = "disc shelves",
-	sunlight_propagates = false,
-	tiles = {
-		"scifi_nodes_box_top.png",
-		"scifi_nodes_box_top.png",
-		"scifi_nodes_discs.png",
-		"scifi_nodes_discs.png",
-		"scifi_nodes_discs.png",
-		"scifi_nodes_discs.png"
-	},
-	paramtype = "light",
-	groups = {cracky=1},
-	sounds = default.node_sound_glass_defaults()
-})
+-- minetest.register_node("scifi_nodes:discs", {
+	-- description = "disc shelves",
+	-- sunlight_propagates = false,
+	-- tiles = {
+		-- "scifi_nodes_box_top.png",
+		-- "scifi_nodes_box_top.png",
+		-- "scifi_nodes_discs.png",
+		-- "scifi_nodes_discs.png",
+		-- "scifi_nodes_discs.png",
+		-- "scifi_nodes_discs.png"
+	-- },
+	-- paramtype = "light",
+	-- groups = {cracky=1},
+	-- sounds = default.node_sound_glass_defaults()
+-- })
 
-minetest.register_node("scifi_nodes:disc", {
-	description = "disc",
-	drawtype = "torchlike",
-	sunlight_propagates = false,
-	tiles = {
-		"scifi_nodes_disc.png"
-	},
-	inventory_image = "scifi_nodes_disc.png",
-	wield_image = "scifi_nodes_disc.png",
-	paramtype = "light",
-	groups = {cracky=1}
-})
+-- minetest.register_node("scifi_nodes:disc", {
+	-- description = "disc",
+	-- drawtype = "torchlike",
+	-- sunlight_propagates = false,
+	-- tiles = {
+		-- "scifi_nodes_disc.png"
+	-- },
+	-- inventory_image = "scifi_nodes_disc.png",
+	-- wield_image = "scifi_nodes_disc.png",
+	-- paramtype = "light",
+	-- groups = {cracky=1}
+-- })
 
 
 minetest.register_node("scifi_nodes:blink", {
@@ -380,37 +380,37 @@ minetest.register_node("scifi_nodes:octppl", {
 	sounds = default.node_sound_glass_defaults(),
 })
 
-minetest.register_node("scifi_nodes:tower", {
-	description = "Wind tower",
-	sunlight_propagates = false,
-	drawtype = "plantlike",
-	tiles = {{
-		name = "scifi_nodes_tower_anim.png",
-		animation = {type = "vertical_frames", aspect_w = 32, aspect_h = 32, length = 1.00},
-	}},
-	visual_scale = 2,
-	inventory_image = "scifi_nodes_tower.png",
-	paramtype = "light",
-	groups = {cracky=2},
-	sounds = default.node_sound_metal_defaults()
-})
+-- minetest.register_node("scifi_nodes:tower", {
+	-- description = "Wind tower",
+	-- sunlight_propagates = false,
+	-- drawtype = "plantlike",
+	-- tiles = {{
+		-- name = "scifi_nodes_tower_anim.png",
+		-- animation = {type = "vertical_frames", aspect_w = 32, aspect_h = 32, length = 1.00},
+	-- }},
+	-- visual_scale = 2,
+	-- inventory_image = "scifi_nodes_tower.png",
+	-- paramtype = "light",
+	-- groups = {cracky=2},
+	-- sounds = default.node_sound_metal_defaults()
+-- })
 
-minetest.register_node("scifi_nodes:junk", {
-	description = "Junk",
-	sunlight_propagates = true,
-	paramtype = "light",
-	liquid_viscosity = 8,
-	liquidtype = "source",
-	liquid_alternative_flowing = "scifi_nodes:junk",
-	liquid_alternative_source = "scifi_nodes:junk",
-	liquid_renewable = false,
-	liquid_range = 0,
-	walkable = false,
-	tiles = {
-		"scifi_nodes_junk.png"
-	},
-	groups = {snappy=1, oddly_breakable_by_hand=1, liquid=3, dig_immediate=1}
-})
+-- minetest.register_node("scifi_nodes:junk", {
+	-- description = "Junk",
+	-- sunlight_propagates = true,
+	-- paramtype = "light",
+	-- liquid_viscosity = 8,
+	-- liquidtype = "source",
+	-- liquid_alternative_flowing = "scifi_nodes:junk",
+	-- liquid_alternative_source = "scifi_nodes:junk",
+	-- liquid_renewable = false,
+	-- liquid_range = 0,
+	-- walkable = false,
+	-- tiles = {
+		-- "scifi_nodes_junk.png"
+	-- },
+	-- groups = {snappy=1, oddly_breakable_by_hand=1, liquid=3, dig_immediate=1}
+-- })
 
 
 minetest.register_node("scifi_nodes:blumetlight", {
@@ -580,8 +580,6 @@ local nodetypes = {
 	{"pplwll4",      "Purple wall4", "", 0},
 	{"pplblk",      "Purple tile", "", 0},
 	{"purple",      "Purple node", "", 0},
-	{"rock",      "Moonstone", "", 0},
-	{"rock2",      "Moonstone2", "", 0},
 	{"blackvnt",      "Black vent", "", 0},
 	{"blackplate",      "Black plate", "", 0},
 }

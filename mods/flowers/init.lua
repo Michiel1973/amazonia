@@ -137,7 +137,7 @@ function flowers.flower_spread(pos, node)
 	end
 
 	local light = minetest.get_node_light(pos)
-	if not light or light < 13 then
+	if not light or light < 12 then
 		return
 	end
 
@@ -173,7 +173,7 @@ minetest.register_abm({
 	label = "Flower spread",
 	nodenames = {"group:flora"},
 	interval = 137,
-	chance = 300,
+	chance = 125,
 	action = function(...)
 		flowers.flower_spread(...)
 	end,
@@ -189,6 +189,25 @@ minetest.register_node("flowers:mushroom_red", {
 	tiles = {"flowers_mushroom_red.png"},
 	inventory_image = "flowers_mushroom_red.png",
 	wield_image = "flowers_mushroom_red.png",
+	drawtype = "plantlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {mushroom = 1, snappy = 3, attached_node = 1, flammable = 1, poison = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(-5),
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
+	}
+})
+
+minetest.register_node("flowers:mushroom_purple", {
+	description = S("Purple Mushroom"),
+	tiles = {"flowers_mushroom_purple.png"},
+	inventory_image = "flowers_mushroom_purple.png",
+	wield_image = "flowers_mushroom_purple.png",
 	drawtype = "plantlike",
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -222,6 +241,24 @@ minetest.register_node("flowers:mushroom_brown", {
 	}
 })
 
+minetest.register_node("flowers:mushroom_grey", {
+	description = S("Grey Mushroom"),
+	tiles = {"flowers_mushroom_grey.png"},
+	inventory_image = "flowers_mushroom_grey.png",
+	wield_image = "flowers_mushroom_grey.png",
+	drawtype = "plantlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {mushroom = 1, food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(1),
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
+	}
+})
 
 -- Mushroom spread and death
 
@@ -248,9 +285,9 @@ end
 
 minetest.register_abm({
 	label = "Mushroom spread",
-	nodenames = {"flowers:mushroom_brown", "flowers:mushroom_red"},
+	nodenames = {"flowers:mushroom_brown", "flowers:mushroom_red", "flowers:mushroom_purple", "flowers:mushroom_grey"},
 	interval = 139,
-	chance = 150,
+	chance = 95,
 	action = function(...)
 		flowers.mushroom_spread(...)
 	end,

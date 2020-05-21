@@ -2,3 +2,4 @@ default
 3d_armor
 technic
 hudbars
+player_monoids

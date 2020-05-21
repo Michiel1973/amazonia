@@ -26,7 +26,7 @@ minetest.register_entity("petz:"..pet_name, {
 	sleep_ratio = 0.3,
 	rotate = petz.settings.rotate,
 	physical = true,
-	stepheight = 0.6,	--EVIL!
+	stepheight = 1.1,	--EVIL!
 	collide_with_objects = true,
 	collisionbox = collisionbox,
 	visual = petz.settings.visual,
@@ -36,13 +36,17 @@ minetest.register_entity("petz:"..pet_name, {
 	static_save = true,
 	get_staticdata = mobkit.statfunc,
 	-- api props
-	springiness= 0,
+	springiness= 0.2,
 	buoyancy = 0.5, -- portion of hitbox submerged
 	max_speed = 2.3,
 	jump_height = 1.5,
 	view_range = 5,
 	lung_capacity = 10, -- seconds
 	max_hp = 8,
+	min_height = 3,
+	max_height = 80,
+	spawn_min_height = 3,
+	spawn_max_height = 80,
 	makes_footstep_sound = false,
 	--armor_groups = {fleshy=1},
 	attack={range=3, damage_groups={fleshy=3}},
@@ -58,7 +62,7 @@ minetest.register_entity("petz:"..pet_name, {
 		sleep = {range={x=94, y=113}, speed=10, loop=false},
 	},
 	sounds = {
-		misc = "petz_puppy_bark",
+		misc = {"petz_puppy_bark", "petz_puppy_bark_2", "petz_puppy_bark_3"},
 		moaning = "petz_puppy_moaning",
 	},
 

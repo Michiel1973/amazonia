@@ -1,4 +1,4 @@
-local add = hunger_ng.functions.add_hunger_data
+local add = hunger_ng.add_hunger_data
 
 add('wine:glass_wine', { satiates = 1.5 })
 add('wine:glass_rum', { satiates = 2.0, heals = -1 })

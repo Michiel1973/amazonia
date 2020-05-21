@@ -206,12 +206,7 @@ for i in ipairs(aotearoa.treelist) do
 			sounds = default.node_sound_defaults(),
 		})
 
-		hunger_ng.add_hunger_data("aotearoa:"..fruit, {
-			satiates = 1,
-			heals = 0,
-			returns = '',
-			timeout = 0
-		})
+		
 
 		default.register_leafdecay({
 		trunks = {"aotearoa:"..treename.."_tree"},
@@ -391,12 +386,6 @@ for i in ipairs(aotearoa.shrublist) do
 			sounds = default.node_sound_defaults(),
 		})
 		
-		hunger_ng.add_hunger_data("aotearoa:"..fruit, {
-			satiates = 1,
-			heals = 0,
-			returns = '',
-			timeout = 0
-		})
 		
 		default.register_leafdecay({
 		trunks = {"aotearoa:"..treename.."_tree"},
@@ -958,12 +947,7 @@ minetest.register_node("aotearoa:pipi", {
 	on_use = minetest.item_eat(1)	
 })
 
-		hunger_ng.add_hunger_data("aotearoa:pipi", {
-			satiates = 1,
-			heals = 0,
-			returns = '',
-			timeout = 0
-		})
+
 
 --pipi in sand
 minetest.register_node("aotearoa:sand_with_pipi", {
@@ -1025,12 +1009,6 @@ minetest.register_node("aotearoa:cockle", {
 	on_use = minetest.item_eat(1)	
 })
 
-		hunger_ng.add_hunger_data("aotearoa:cockle", {
-			satiates = 1,
-			heals = 0,
-			returns = '',
-			timeout = 0
-		})
 
 --cockle in mud
 minetest.register_node("aotearoa:mud_with_cockles", {

@@ -116,4 +116,4 @@ hudbars_vmargin (Vertical distance between HUD bars) int 24 0
 # The of seconds which need to pass before the server updates the default HUD bars
 # (health and breath). Increase this number if you have a slow server or a slow network
 # connection and experience performance problems.
-hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
+hudbars_tick (Default HUD bars update interval) float 0.5

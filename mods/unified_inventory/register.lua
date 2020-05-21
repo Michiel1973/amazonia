@@ -41,127 +41,127 @@ unified_inventory.register_button("craftguide", {
 	tooltip = S("Crafting Guide")
 })
 
-unified_inventory.register_button("home_gui_set", {
-	type = "image",
-	image = "ui_sethome_icon.png",
-	tooltip = S("Set home position"),
-	hide_lite=true,
-	action = function(player)
-		local player_name = player:get_player_name()
-		if minetest.check_player_privs(player_name, {home=true}) then
-			unified_inventory.set_home(player, player:get_pos())
-			local home = unified_inventory.home_pos[player_name]
-			if home ~= nil then
-				minetest.sound_play("dingdong",
-						{to_player=player_name, gain = 1.0})
-				minetest.chat_send_player(player_name,
-					S("Home position set to: @1", minetest.pos_to_string(home)))
-			end
-		else
-			minetest.chat_send_player(player_name,
-				S("You don't have the \"home\" privilege!"))
-			unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
-		end
-	end,
-	condition = function(player)
-		return minetest.check_player_privs(player:get_player_name(), {home=true})
-	end,
-})
+-- unified_inventory.register_button("home_gui_set", {
+	-- type = "image",
+	-- image = "ui_sethome_icon.png",
+	-- tooltip = S("Set home position"),
+	-- hide_lite=true,
+	-- action = function(player)
+		-- local player_name = player:get_player_name()
+		-- if minetest.check_player_privs(player_name, {home=true}) then
+			-- unified_inventory.set_home(player, player:get_pos())
+			-- local home = unified_inventory.home_pos[player_name]
+			-- if home ~= nil then
+				-- minetest.sound_play("dingdong",
+						-- {to_player=player_name, gain = 1.0})
+				-- minetest.chat_send_player(player_name,
+					-- S("Home position set to: @1", minetest.pos_to_string(home)))
+			-- end
+		-- else
+			-- minetest.chat_send_player(player_name,
+				-- S("You don't have the \"home\" privilege!"))
+			-- unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
+		-- end
+	-- end,
+	-- condition = function(player)
+		-- return minetest.check_player_privs(player:get_player_name(), {home=true})
+	-- end,
+-- })
 
-unified_inventory.register_button("home_gui_go", {
-	type = "image",
-	image = "ui_gohome_icon.png",
-	tooltip = S("Go home"),
-	hide_lite=true,
-	action = function(player)
-		local player_name = player:get_player_name()
-		if minetest.check_player_privs(player_name, {home=true}) then
-			minetest.sound_play("teleport",
-				{to_player=player:get_player_name(), gain = 1.0})
-			unified_inventory.go_home(player)
-		else
-			minetest.chat_send_player(player_name,
-				S("You don't have the \"home\" privilege!"))
-			unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
-		end
-	end,
-	condition = function(player)
-		return minetest.check_player_privs(player:get_player_name(), {home=true})
-	end,
-})
+-- unified_inventory.register_button("home_gui_go", {
+	-- type = "image",
+	-- image = "ui_gohome_icon.png",
+	-- tooltip = S("Go home"),
+	-- hide_lite=true,
+	-- action = function(player)
+		-- local player_name = player:get_player_name()
+		-- if minetest.check_player_privs(player_name, {home=true}) then
+			-- minetest.sound_play("teleport",
+				-- {to_player=player:get_player_name(), gain = 1.0})
+			-- unified_inventory.go_home(player)
+		-- else
+			-- minetest.chat_send_player(player_name,
+				-- S("You don't have the \"home\" privilege!"))
+			-- unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
+		-- end
+	-- end,
+	-- condition = function(player)
+		-- return minetest.check_player_privs(player:get_player_name(), {home=true})
+	-- end,
+-- })
 
-unified_inventory.register_button("misc_set_day", {
-	type = "image",
-	image = "ui_sun_icon.png",
-	tooltip = S("Set time to day"),
-	hide_lite=true,
-	action = function(player)
-		local player_name = player:get_player_name()
-		if minetest.check_player_privs(player_name, {settime=true}) then
-			minetest.sound_play("birds",
-					{to_player=player_name, gain = 1.0})
-			minetest.set_timeofday((6000 % 24000) / 24000)
-			minetest.chat_send_player(player_name,
-				S("Time of day set to 6am"))
-		else
-			minetest.chat_send_player(player_name,
-				S("You don't have the settime privilege!"))
-			unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
-		end
-	end,
-	condition = function(player)
-		return minetest.check_player_privs(player:get_player_name(), {settime=true})
-	end,
-})
+-- unified_inventory.register_button("misc_set_day", {
+	-- type = "image",
+	-- image = "ui_sun_icon.png",
+	-- tooltip = S("Set time to day"),
+	-- hide_lite=true,
+	-- action = function(player)
+		-- local player_name = player:get_player_name()
+		-- if minetest.check_player_privs(player_name, {settime=true}) then
+			-- minetest.sound_play("birds",
+					-- {to_player=player_name, gain = 1.0})
+			-- minetest.set_timeofday((6000 % 24000) / 24000)
+			-- minetest.chat_send_player(player_name,
+				-- S("Time of day set to 6am"))
+		-- else
+			-- minetest.chat_send_player(player_name,
+				-- S("You don't have the settime privilege!"))
+			-- unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
+		-- end
+	-- end,
+	-- condition = function(player)
+		-- return minetest.check_player_privs(player:get_player_name(), {settime=true})
+	-- end,
+-- })
 
-unified_inventory.register_button("misc_set_night", {
-	type = "image",
-	image = "ui_moon_icon.png",
-	tooltip = S("Set time to night"),
-	hide_lite=true,
-	action = function(player)
-		local player_name = player:get_player_name()
-		if minetest.check_player_privs(player_name, {settime=true}) then
-			minetest.sound_play("owl",
-					{to_player=player_name, gain = 1.0})
-			minetest.set_timeofday((21000 % 24000) / 24000)
-			minetest.chat_send_player(player_name,
-					S("Time of day set to 9pm"))
-		else
-			minetest.chat_send_player(player_name,
-					S("You don't have the settime privilege!"))
-			unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
-		end
-	end,
-	condition = function(player)
-		return minetest.check_player_privs(player:get_player_name(), {settime=true})
-	end,
-})
+-- unified_inventory.register_button("misc_set_night", {
+	-- type = "image",
+	-- image = "ui_moon_icon.png",
+	-- tooltip = S("Set time to night"),
+	-- hide_lite=true,
+	-- action = function(player)
+		-- local player_name = player:get_player_name()
+		-- if minetest.check_player_privs(player_name, {settime=true}) then
+			-- minetest.sound_play("owl",
+					-- {to_player=player_name, gain = 1.0})
+			-- minetest.set_timeofday((21000 % 24000) / 24000)
+			-- minetest.chat_send_player(player_name,
+					-- S("Time of day set to 9pm"))
+		-- else
+			-- minetest.chat_send_player(player_name,
+					-- S("You don't have the settime privilege!"))
+			-- unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
+		-- end
+	-- end,
+	-- condition = function(player)
+		-- return minetest.check_player_privs(player:get_player_name(), {settime=true})
+	-- end,
+-- })
 
-unified_inventory.register_button("clear_inv", {
-	type = "image",
-	image = "ui_trash_icon.png",
-	tooltip = S("Clear inventory"),
-	action = function(player)
-		local player_name = player:get_player_name()
-		if not unified_inventory.is_creative(player_name) then
-			minetest.chat_send_player(player_name,
-					S("This button has been disabled outside"
-					.." of creative mode to prevent"
-					.." accidental inventory trashing."
-					.."\nUse the trash slot instead."))
-			unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
-			return
-		end
-		player:get_inventory():set_list("main", {})
-		minetest.chat_send_player(player_name, S('Inventory cleared!'))
-		minetest.sound_play("trash_all",
-				{to_player=player_name, gain = 1.0})
-	end,
-	condition = function(player)
-		return unified_inventory.is_creative(player:get_player_name())
-	end,
-})
+-- unified_inventory.register_button("clear_inv", {
+	-- type = "image",
+	-- image = "ui_trash_icon.png",
+	-- tooltip = S("Clear inventory"),
+	-- action = function(player)
+		-- local player_name = player:get_player_name()
+		-- if not unified_inventory.is_creative(player_name) then
+			-- minetest.chat_send_player(player_name,
+					-- S("This button has been disabled outside"
+					-- .." of creative mode to prevent"
+					-- .." accidental inventory trashing."
+					-- .."\nUse the trash slot instead."))
+			-- unified_inventory.set_inventory_formspec(player, unified_inventory.current_page[player_name])
+			-- return
+		-- end
+		-- player:get_inventory():set_list("main", {})
+		-- minetest.chat_send_player(player_name, S('Inventory cleared!'))
+		-- minetest.sound_play("trash_all",
+				-- {to_player=player_name, gain = 1.0})
+	-- end,
+	-- condition = function(player)
+		-- return unified_inventory.is_creative(player:get_player_name())
+	-- end,
+-- })
 
 unified_inventory.register_page("craft", {
 	get_formspec = function(player, perplayer_formspec)
@@ -386,7 +386,7 @@ unified_inventory.register_page("craftguide", {
 		else
 			-- Error
 			fs[#fs + 1] = string.format("label[2,%f;%s]",
-				formspecy, F(S("This recipe is too\nlarge to be displayed.")))
+				formspecy, F(S("This recipe is too@nlarge to be displayed.")))
 		end
 
 		if craft_type.uses_crafting_grid and display_size.width <= 3 then

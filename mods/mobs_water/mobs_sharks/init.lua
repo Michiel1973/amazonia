@@ -36,11 +36,8 @@ local l_anims = {
 }
 local l_model = "mob_shark.b3d"
 local l_egg_texture = "mob_shark_shark_item.png"
-local l_spawn_in = {"default:water_flowing","default:water_source"}
-local l_spawn_near = {
-	"default:water_flowing", "default:water_source",
-	"seawrecks:woodship", "seawrecks:uboot"
-}
+local l_spawn_in = {"default:water_source"}
+local l_spawn_near = {"default:water_source"}
 local l_spawn_chance = 60000
 
 -- load settings
@@ -78,7 +75,7 @@ if ENABLE_SHARK_LARGE then
 		fly_in = "default:water_source",
 		fall_speed = 0,
 		rotate = 270,
-		view_range = 10,
+		view_range = 6,
 		water_damage = 0,
 		lava_damage = 10,
 		light_damage = 0,
@@ -97,7 +94,7 @@ if ENABLE_SHARK_LARGE then
 		interval = 60,
 		chance = 100,
 		max_height = -30,
-		min_height = -180,
+		min_height = -120,
 		active_object_count = 1,
 	})
 
@@ -128,7 +125,7 @@ if ENABLE_SHARK_MEDIUM then
 		fly_in = "default:water_source",
 		fall_speed = -1,
 		rotate = 270,
-		view_range = 10,
+		view_range = 6,
 		water_damage = 0,
 		lava_damage = 10,
 		light_damage = 0,
@@ -178,7 +175,7 @@ if ENABLE_SHARK_SMALL then
 		fly_in = "default:water_source",
 		fall_speed = -1,
 		rotate = 270,
-		view_range = 10,
+		view_range = 6,
 		water_damage = 0,
 		lava_damage = 10,
 		light_damage = 0,
@@ -196,7 +193,7 @@ if ENABLE_SHARK_SMALL then
 		neighbors = l_spawn_near,
 		interval = 60,
 		chance = 500,
-		max_height = -10,
+		max_height = -15,
 		min_height = -100,
 		active_object_count = 1,
 	})

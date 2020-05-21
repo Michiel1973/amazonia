@@ -18,7 +18,9 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	shoot_offset = 1,
 	hp_min = 60,
 	hp_max = 90,
-	armor = 120,
+	armor = 85,
+	blood_amount = 8,
+	blood_texture = "mobs_blood_stone.png",
 	collisionbox = {-0.7, -1, -0.7, 0.7, 1.6, 0.7},
 	visual = "mesh",
 	mesh = "mobs_dungeon_master.b3d",
@@ -35,13 +37,16 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	walk_velocity = 1,
 	run_velocity = 3,
 	jump = true,
+	stepheight = 1.1,
+	step_height = 1.1,
+	jump_height = 1.1,
 	view_range = 15,
 	drops = {
 		{name = "default:mese_crystal_fragment", chance = 1, min = 0, max = 2},
-		{name = "mobs:leather", chance = 2, min = 0, max = 2},
 		{name = "default:mese_crystal", chance = 3, min = 0, max = 2},
 		{name = "default:diamond", chance = 4, min = 0, max = 1},
 		{name = "default:diamondblock", chance = 30, min = 0, max = 1},
+		{name = "mobs_monster:dungeonmaster_heart", chance = 3, min = 0, max = 1},
 	},
 	water_damage = 3,
 	lava_damage = 0,
@@ -125,8 +130,8 @@ mobs:register_arrow("mobs_monster:fireball", {
 
 	-- node hit
 	hit_node = function(self, pos, node)
-		mobs:boom(self, pos, 1)
+		mobs:boom(self, pos, 3)
 	end
 })
 
---minetest.override_item("default:obsidian", {on_blast = function() end})
+minetest.override_item("default:obsidian", {on_blast = function() end})
