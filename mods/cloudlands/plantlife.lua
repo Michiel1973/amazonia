@@ -1,3 +1,78 @@
+minetest.register_node("cloudlands:bluegrass_1", {
+	description = ("Cloudlands Grass"),
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"bluegrass_1.png"},
+	-- Use texture of a taller grass stage in inventory
+	inventory_image = "bluegrass_3.png",
+	wield_image = "bluegrass_3.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {snappy = 3, flora = 1, attached_node = 1, grass = 1, flammable = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
+	},
+
+	on_place = function(itemstack, placer, pointed_thing)
+		-- place a random grass node
+		local stack = ItemStack("cloudlands:bluegrass_" .. math.random(1,5))
+		local ret = minetest.item_place(stack, placer, pointed_thing)
+		return ItemStack("cloudlands:bluegrass_1 " ..
+			itemstack:get_count() - (1 - ret:get_count()))
+	end,
+})
+
+for i = 2, 5 do
+	minetest.register_node("cloudlands:bluegrass_" .. i, {
+		description = ("Cloudlands Grass"),
+		drawtype = "plantlike",
+		waving = 1,
+		tiles = {"bluegrass_" .. i .. ".png"},
+		inventory_image = "bluegrass_" .. i .. ".png",
+		wield_image = "bluegrass_" .. i .. ".png",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		buildable_to = true,
+		drop = "cloudlands:bluegrass_1",
+		groups = {snappy = 3, flora = 1, attached_node = 1,
+			not_in_creative_inventory = 1, grass = 1, flammable = 1},
+		sounds = default.node_sound_leaves_defaults(),
+		selection_box = {
+			type = "fixed",
+			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
+		},
+	})
+end
+
+
+	-- Long grasses
+
+	for length = 1, 5 do
+		minetest.register_decoration({
+			name = "cloudlands:bluegrass_"..length,
+			deco_type = "simple",
+			place_on = {"cloudlands:dirt_with_grass"},
+			sidelen = 16,
+			noise_params = {
+				offset = 0,
+				scale = 0.027,
+				spread = {x = 100, y = 100, z = 100},
+				seed = 329,
+				octaves = 3,
+				persist = 0.6
+			},
+			y_max = 7300,
+			y_min = 6900,
+			decoration = "cloudlands:bluegrass_"..length,
+		})
+	end
+
+
 local add_schem = function(a, b, c, d, e, f, g, h)
 
 	if g ~= 1 then return end

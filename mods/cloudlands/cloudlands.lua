@@ -35,13 +35,13 @@ local PORTAL_RARITY          = 0.04     -- Chance of a viable island having some
 local BIOLUMINESCENCE        = false
 
 local ENABLE_PORTALS         = false     -- Whether to allow players to build portals to islands. Portals require the Nether mod.
-local EDDYFIELD_SIZE         = 0.7        -- size of the "eddy field-lines" that smaller islands follow
+local EDDYFIELD_SIZE         = 1        -- size of the "eddy field-lines" that smaller islands follow
 local ISLANDS_SEED           = 1000     -- You only need to change this if you want to try different island layouts without changing the map seed
 
 -- Some lists of known node aliases (any nodes which can't be found won't be used).
 local NODENAMES_STONE       = {"default:stone"}
-local NODENAMES_WATER       = {"default:water_source"}
-local NODENAMES_ICE         = {"default:water_source"}
+local NODENAMES_WATER       = {"etherium_stuff:crystal_water_source"}
+local NODENAMES_ICE         = {"etherium_stuff:crystal_water_source"}
 local NODENAMES_GRAVEL      = {"default:gravel"}
 local NODENAMES_GRASS       = {"cloudlands:dirt_with_grass"} -- currently only used with games that don't register biomes, e.g. Hades Revisted
 local NODENAMES_DIRT        = {"cloudlands:dirt"}            -- currently only used with games that don't register biomes, e.g. Hades Revisted
@@ -76,18 +76,6 @@ cloudlands = {} -- API functions can be accessed via this global:
                 -- cloudlands.get_height_at(x, z, [island-information-tables]) -- returns (y, isWater), or nil if no island here
 
 cloudlands.coreTypes = {
-  -- {
-    -- territorySize     = 200,
-    -- coresPerTerritory = 3,
-    -- radiusMax         = 96,
-    -- depthMax          = 50,
-    -- thicknessMax      = 8,
-    -- frequency         = 0.1,
-    -- pondWallBuffer    = 0.03,
-    -- requiresNexus     = true,
-    -- exclusive         = false
-  -- },
- 
    {
     territorySize     = 200,
     coresPerTerritory = 6,
@@ -176,7 +164,7 @@ local noiseparams_density = {
 local SURFACEMAP_OFFSET = 0.5
 local noiseparams_surfaceMap = {
 	offset      = SURFACEMAP_OFFSET,
-	scale       = .7,
+	scale       = .6,
 	spread      = {x = 40, y = 40, z= 40},
 	seed        = ISLANDS_SEED, --WARNING! minetest.get_perlin() will add the server map's seed to this value
 	octaves     = 4,

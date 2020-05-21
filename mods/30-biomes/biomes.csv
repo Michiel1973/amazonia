@@ -6,36 +6,36 @@
 ,,,,,,,,,,,
 #Main biomes,,,,,,,,,,,
 skyland_01,default:stone,default:gravel 2,default:gravel,,,,default:gravel 2,6950,7200,0,0
-skyland_02,default:desert_sandstone,default:gravel 3,default:sand,,,,default:clay,7100,7110,0,20
+skyland_02,default:stone,default:desert_sandstone 3,default:sand,,,,default:clay,7100,7110,0,20
 skyland_03,default:stone,cloudlands:dirt 2,ethereal:crystal_dirt,,,,default:clay,6950,7000,0,40
-skyland_04,default:stone,cloudlands:dirt 3,default:sand,,,,default:clay 2,7075,7090,0,60
-skyland_05,default:silver_sandstone,cloudlands:dirt,ethereal:cold_dirt,,,,default:clay,7130,7200,0,80
-skyland_06,default:stone,cloudlands:dirt 2,default:desert_stone,,,,default:clay 2,7050,7130,20,0
+skyland_04,default:stone,cloudlands:dirt 3,default:sand 2,,,,default:clay 2,7075,7090,0,60
+skyland_05,default:stone,default:silver_sandstone 3,ethereal:cold_dirt,,,,default:clay,7130,7200,0,80
+skyland_06,default:stone,cloudlands:dirt 2,default:dirt_with_rainforest_litter,,,,default:clay 2,7050,7130,20,0
 skyland_07,default:stone,default:ice 2,default:snowblock 3,,default:ice,default:ice,default:clay 2,7100,7180,20,20
-skyland_08,default:desert_sandstone,cloudlands:dirt 3,ethereal:prairie_dirt,,,,default:clay 3,7110,7200,20,40
+skyland_08,default:stone,default:desert_sandstone 3,ethereal:prairie_dirt,,,,default:clay 3,7110,7140,20,40
 skyland_09,default:stone,cloudlands:dirt,default:dirt_with_rainforest_litter,,,,default:clay,7080,7009,20,60
-skyland_10,default:silver_sandstone,cloudlands:dirt,ethereal:jungle_dirt,,,,default:clay,7120,7180,20,80
+skyland_10,default:stone,cloudlands:dirt 2,ethereal:jungle_dirt,,,,default:clay,7120,7180,20,80
 skyland_11,default:stone,cloudlands:dirt,ethereal:grove_dirt,,,,default:clay,7150,7200,30,20
-skyland_12,default:desert_stone,default:desert_sand 3,default:desert_sand,,,,default:sand 3,6950,7000,30,40
-skyland_13,default:sandstone,cloudlands:dirt 2,ethereal:mushroom_dirt,,,,default:clay 2,6950,7010,30,60
+skyland_12,default:stone,default:desert_stone 3,default:desert_sand,,,,default:sand 3,6950,7000,30,40
+skyland_13,default:stone,default:sandstone 2,ethereal:mushroom_dirt,,,,default:clay 2,6950,7010,30,60
 skyland_14,default:stone,cloudlands:dirt,default:dirt_with_dry_grass,,,,default:clay 2,7100,7180,30,80
-skyland_15,default:desert_stone,cloudlands:dirt,ethereal:dry_dirt,,,,default:clay 2,6995,7035,40,0
-skyland_16,default:desert_stone,cloudlands:dirt,default:dirt_with_dry_grass,,,,default:clay 2,6900,7025,40,20
-skyland_17,default:desert_stone,cloudlands:dirt 3,ethereal:fiery_dirt,,,,default:clay 3,7060,7080,40,40
-skyland_18,default:obsidian,cloudlands:dirt 4,cloudlands:dirt_with_grass,,,,default:clay 3,6980,7150,40,60
-skyland_19,default:sandstone,default:desert_sand,default:desert_sand,,,,default:sand 2,6990,7200,40,80
+skyland_15,default:stone,default:desert_stone 2,ethereal:dry_dirt,,,,default:clay 2,6995,7035,40,0
+skyland_16,default:stone,default:desert_stone 3,default:dirt_with_dry_grass,,,,default:clay 2,6900,7025,40,20
+skyland_17,default:stone,default:desert_stone 3,ethereal:fiery_dirt,,,,default:clay 3,7060,7080,40,40
+skyland_18,default:stone,cloudlands:dirt 4,cloudlands:dirt_with_grass,,,,default:clay 3,6980,7150,40,60
+skyland_19,default:stone,default:sandstone 3,default:desert_sand,,,,default:sand 2,6990,7200,40,80
 skyland_20,default:stone,cloudlands:dirt 2,default:dirt_with_coniferous_litter,,,,default:clay,7070,7145,50,0
 skyland_21,default:stone,cloudlands:dirt 2,ethereal:bamboo_dirt,,,,default:clay 3,6925,7035,50,20
 skyland_22,default:stone,cloudlands:dirt 4,default:dirt_with_coniferous_litter,,,,default:clay 3,7000,7020,50,40
-skyland_23,default:sandstone,default:gravel 3,default:gravel,,,,default:gravel 3,6950,7050,50,60
+skyland_23,default:stone,default:sandstone 3,default:gravel,,,,default:gravel 3,6950,7050,50,60
 skyland_24,default:stone,default:sand 3,default:sand,,,,default:sand 4,7990,7125,50,80
-skyland_25,default:desert_sandstone,cloudlands:dirt 4,cloudlands:dirt_with_grass,,,,default:clay 5,6975,7085,60,0
+skyland_25,default:stone,default:desert_sandstone 3,cloudlands:dirt_with_grass,,,,default:clay 5,6975,7085,60,0
 skyland_26,default:stone,default:sand 2,default:sand,,,,default:sand 3,7140,7200,60,20
-skyland_27,default:silver_sandstone,default:sand 3,default:sand,,,,default:sand 3,7025,7045,60,40
+skyland_27,default:stone,default:silver_sandstone 3,default:sand,,,,default:sand 3,7025,7045,60,40
 skyland_28,default:stone,default:gravel,default:sand 2,,,,default:gravel,7050,7100,60,60
 skyland_29,default:stone,cloudlands:dirt 2,ethereal:crystal_dirt,,,,default:clay,6950,7075,60,80
-skyland_30,default:clay,default:gravel 2,default:gravel,,,,default:gravel 2,7025,7145,70,0
-skyland_31,default:desert_stone,cloudlands:dirt 2,ethereal:grove_dirt,,,,default:clay,6950,7020,70,20
+skyland_30,default:stone,default:clay 2,default:gravel,,,,default:gravel 2,7025,7145,70,0
+skyland_31,default:stone,default:desert_stone 2,ethereal:grove_dirt,,,,default:clay,6950,7020,70,20
 skyland_32,default:stone,cloudlands:dirt 3,default:sand,,,,default:clay 2,7015,7100,70,40
-skyland_33,default:desert_sandstone,cloudlands:dirt,ethereal:cold_dirt,,,,default:clay,6950,7055,70,60
+skyland_33,default:stone,default:desert_sandstone 2,ethereal:cold_dirt,,,,default:clay,6950,7055,70,60
 skyland_34,default:stone,cloudlands:dirt 3,ethereal:fiery_dirt,,,,default:clay 3,7060,7080,70,80

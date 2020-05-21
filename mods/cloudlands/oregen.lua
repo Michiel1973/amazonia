@@ -31,7 +31,7 @@ local uranium_params = {
 	octaves = 3,
 	persist = 0.7
 }
-local uranium_threshold = 0.55
+local uranium_threshold = 0.45
 
 local chromium_params = {
 	offset = 0,
@@ -41,7 +41,7 @@ local chromium_params = {
 	octaves = 3,
 	persist = 0.7
 }
-local chromium_threshold = 0.55
+local chromium_threshold = 0.51
 
 local zinc_params = {
 	offset = 0,
@@ -71,64 +71,64 @@ local sulfur_params = {
 	octaves = 3,
 	persist = 0.7
 }
-local sulfur_threshold = 0.55
+local sulfur_threshold = 0.35
 
-	minetest.register_ore({
-		ore_type        = "blob",
-		ore             = "default:sand",
-		wherein         = {"group:cloudlandsstone"},
-		clust_scarcity  = 16 * 16 * 16,
-		clust_size      = 5,
-		y_max           = 7000,
-		y_min           = 7031,
-		noise_threshold = 0.0,
-		noise_params    = {
-			offset = 0.5,
-			scale = 0.2,
-			spread = {x = 5, y = 5, z = 5},
-			seed = 2316,
-			octaves = 1,
-			persist = 0.0
-		},
-	})
+	-- minetest.register_ore({
+		-- ore_type        = "blob",
+		-- ore             = "default:sand",
+		-- wherein         = {"group:cloudlandsstone"},
+		-- clust_scarcity  = 16 * 16 * 16,
+		-- clust_size      = 5,
+		-- y_max           = 7000,
+		-- y_min           = 7031,
+		-- noise_threshold = 0.0,
+		-- noise_params    = {
+			-- offset = 0.5,
+			-- scale = 0.2,
+			-- spread = {x = 5, y = 5, z = 5},
+			-- seed = 2316,
+			-- octaves = 1,
+			-- persist = 0.0
+		-- },
+	-- })
 	
-	minetest.register_ore({
-		ore_type        = "blob",
-		ore             = "default:dirt",
-		wherein         = {"group:cloudlandsstone"},
-		clust_scarcity  = 16 * 16 * 16,
-		clust_size      = 5,
-		y_max           = 7500,
-		y_min           = 6500,
-		noise_threshold = 0.0,
-		noise_params    = {
-			offset = 0.5,
-			scale = 0.2,
-			spread = {x = 5, y = 5, z = 5},
-			seed = 17676,
-			octaves = 1,
-			persist = 0.0
-		},
-	})
+	-- minetest.register_ore({
+		-- ore_type        = "blob",
+		-- ore             = "default:dirt",
+		-- wherein         = {"group:cloudlandsstone"},
+		-- clust_scarcity  = 16 * 16 * 16,
+		-- clust_size      = 5,
+		-- y_max           = 7500,
+		-- y_min           = 6500,
+		-- noise_threshold = 0.0,
+		-- noise_params    = {
+			-- offset = 0.5,
+			-- scale = 0.2,
+			-- spread = {x = 5, y = 5, z = 5},
+			-- seed = 17676,
+			-- octaves = 1,
+			-- persist = 0.0
+		-- },
+	-- })
 	
-	minetest.register_ore({
-		ore_type        = "blob",
-		ore             = "default:gravel",
-		wherein         = {"group:cloudlandsstone"},
-		clust_scarcity  = 16 * 16 * 16,
-		clust_size      = 5,
-		y_max           = 7500,
-		y_min           = 6500,
-		noise_threshold = 0.0,
-		noise_params    = {
-			offset = 0.5,
-			scale = 0.2,
-			spread = {x = 5, y = 5, z = 5},
-			seed = 766,
-			octaves = 1,
-			persist = 0.0
-		},
-	})
+	-- minetest.register_ore({
+		-- ore_type        = "blob",
+		-- ore             = "default:gravel",
+		-- wherein         = {"group:cloudlandsstone"},
+		-- clust_scarcity  = 16 * 16 * 16,
+		-- clust_size      = 5,
+		-- y_max           = 7500,
+		-- y_min           = 6500,
+		-- noise_threshold = 0.0,
+		-- noise_params    = {
+			-- offset = 0.5,
+			-- scale = 0.2,
+			-- spread = {x = 5, y = 5, z = 5},
+			-- seed = 766,
+			-- octaves = 1,
+			-- persist = 0.0
+		-- },
+	-- })
 	
 		minetest.register_ore({
 		ore_type       = "scatter",
