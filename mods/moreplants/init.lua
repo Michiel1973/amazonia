@@ -790,7 +790,8 @@ minetest.register_decoration({
 	sidelen = 16,
 	fill_ratio = 0.001,
 	decoration = "moreplants:stoneweed",
-	height = 1,
+	height_max = 1,
+	height = -9000,
 })
 minetest.register_decoration({
 	deco_type = "simple",
