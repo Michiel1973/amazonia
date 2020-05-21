@@ -14,15 +14,15 @@ local setup_hud = function(player)
 	local hud_data = {}
 	hud[playername] = hud_data
 
-	hud_data.overlay = player:hud_add({
-	    hud_elem_type = "image",
-	    position = { x = 0.5, y = 0.5 },
-	    scale = {
-	      x = -100,
-	      y = -100
-	    },
-	    text = "spacesuit_overlay.png"
-	})
+	-- hud_data.overlay = player:hud_add({
+	    -- hud_elem_type = "image",
+	    -- position = { x = 0.5, y = 0.5 },
+	    -- scale = {
+	      -- x = -100,
+	      -- y = -100
+	    -- },
+	    -- text = "spacesuit_overlay.png"
+	-- })
 
 	hud_data.o2_bg = player:hud_add({
 		hud_elem_type = "image",
@@ -78,7 +78,7 @@ local remove_hud = function(player)
 	local playername = player:get_player_name()
 	local hud_data = hud[playername]
 
-	player:hud_remove(hud_data.overlay)
+	--player:hud_remove(hud_data.overlay)
 	player:hud_remove(hud_data.o2_bg)
 	player:hud_remove(hud_data.o2_fg)
 	player:hud_remove(hud_data.o2_label)

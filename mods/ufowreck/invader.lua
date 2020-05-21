@@ -12,10 +12,10 @@ mobs:register_mob("ufowreck:floob", {
     shoot_interval = 2.5,
 	arrow = "ufowreck:rayray",
 	shoot_offset = 0.5,
-	damage = 10,
+	damage = 7,
 	hp_min = 40,
 	hp_max = 50,
-	armor = 95,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 2.2, 0.5},
     rotate = 180,
 	visual = "mesh",
@@ -65,14 +65,14 @@ mobs:register_arrow("ufowreck:rayray", {
 	hit_player = function(self, player)
 		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 15},
+			damage_groups = {fleshy = 12},
 		}, nil)
 	end,
 
 	hit_mob = function(self, player)
 		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 15},
+			damage_groups = {fleshy = 12},
 		}, nil)
 	end,
 
@@ -86,7 +86,7 @@ mobs:spawn({name = "ufowreck:floob",
        active_object_count = 2,
        chance = 1,
        interval = 45,
-	   min_height = 26500,
+	   min_height = 26950,
 	   max_height = 27500
 })
 
@@ -96,7 +96,7 @@ mobs:spawn({name = "ufowreck:floob",
        active_object_count = 1,
        chance = 1,
        interval = 60,
-	   min_height = 26500,
+	   min_height = 26950,
 	   max_height = 27500
 })
 

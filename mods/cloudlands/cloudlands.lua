@@ -34,7 +34,7 @@ local TREE_RARITY            = 0     -- Chance of a viable island having a giant
 local PORTAL_RARITY          = 0.04     -- Chance of a viable island having some ancient portalstone on it (If portals API available and ENABLE_PORTALS is true)
 local BIOLUMINESCENCE        = false
 
-local ENABLE_PORTALS         = false     -- Whether to allow players to build portals to islands. Portals require the Nether mod.
+local ENABLE_PORTALS         = true     -- Whether to allow players to build portals to islands. Portals require the Nether mod.
 local EDDYFIELD_SIZE         = 1        -- size of the "eddy field-lines" that smaller islands follow
 local ISLANDS_SEED           = 1000     -- You only need to change this if you want to try different island layouts without changing the map seed
 
@@ -131,7 +131,7 @@ VINE_COVERAGE        = fromSettings(MODNAME .. "_vine_coverage",      VINE_COVER
 LOWLAND_BIOMES       = false
 TREE_RARITY          = fromSettings(MODNAME .. "_giant_tree_rarety",  TREE_RARITY * 100) / 100
 BIOLUMINESCENCE      = false
-ENABLE_PORTALS       = false
+ENABLE_PORTALS       = true
 
 local noiseparams_eddyField = {
 	offset      = -1,

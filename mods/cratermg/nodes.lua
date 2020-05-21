@@ -50,7 +50,26 @@ minetest.register_node("cratermg:dusttrack", {
 	sounds = default.node_sound_sand_defaults(),
 })
 
+minetest.register_node("cratermg:dusttrack", {
+	description = planet_name.."dust",
+	tiles = {"default_sand.png^[colorize:#E308"},
+	groups = {crumbly = 3, falling_node = 1, sand = 1},
+	sounds = default.node_sound_sand_defaults(),
+})
 
+minetest.register_node("cratermg:dusttrack2", {
+	description = planet_name.."dust",
+	tiles = {"default_sand.png^[colorize:#D208"},
+	groups = {crumbly = 3, falling_node = 1, sand = 1},
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("cratermg:dusttrack3", {
+	description = planet_name.."dust",
+	tiles = {"default_sand.png^[colorize:#C108"},
+	groups = {crumbly = 3, falling_node = 1, sand = 1},
+	sounds = default.node_sound_sand_defaults(),
+})
 
 -- Ore nodes registration
 -------------------------

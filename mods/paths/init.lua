@@ -239,6 +239,14 @@ minetest.register_globalstep(function(dtime)
 			if n_ground.name == "cratermg:dust" then
 					minetest.env:add_node(p_ground,{type="node",name="cratermg:dusttrack"})
 			end
+			
+			if n_ground.name == "cratermg:dusttrack" then
+					minetest.env:add_node(p_ground,{type="node",name="cratermg:dusttrack2"})
+			end
+			
+			if n_ground.name == "cratermg:dusttrack2" then
+					minetest.env:add_node(p_ground,{type="node",name="cratermg:dusttrack3"})
+			end
 		
 		-- making position to previous position
 		player_pos_previous[player_name] =  player_pos[player_name]

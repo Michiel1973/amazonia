@@ -21,7 +21,7 @@ function facade.register_bannerstone(modname, subname, recipeitem, desc)
 		paramtype = "light",
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {cracky = 3, oddly_breakable_by_hand = 2, stone = 1},
+		groups = {cracky = 3, oddly_breakable_by_hand = 2, stone = 1, not_in_creative_inventory = 1},
 		sounds = default.node_sound_stone_defaults(),
 		node_box = {
 			type = "fixed",
