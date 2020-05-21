@@ -1,5 +1,7 @@
 SERVER CHANGELOG
 
+MAY 21   - MINOR - removed invsaw mod - circular saw not needed in inventory
+May 20   - MINOR - added scifi nodes mod - adds ~175 scifi themed nodes
 May 19   - MINOR - interface improvements - inactive buttons in unified inventory were removed
 May 19   - MINOR - added awards mod - various activities will now grant awards
 May 18   - MINOR - tree leaves no behave more uniformly (can be walked through), kalite torches behave more like normal torches
