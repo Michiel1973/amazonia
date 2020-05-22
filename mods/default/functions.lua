@@ -494,8 +494,8 @@ minetest.register_abm({
 		"group:grass",
 		"default:snow",
 	},
-	interval = 127,
-	chance = 500,
+	interval = 73,
+	chance = 50,
 	catch_up = false,
 	action = function(pos, node)
 		-- Check for darkness: night, shadow or under a light-blocking node
