@@ -9,12 +9,12 @@ flowers_plus = {}
 local SPAWN_DELAY = 2000
 local SPAWN_CHANCE = 400
 local flowers_seed_diff = 329
-local lilies_max_count = 20
-local lilies_rarity = 50
-local seaweed_max_count = 20
-local seaweed_rarity = 50
+local lilies_max_count = 5
+local lilies_rarity = 2500
+local seaweed_max_count = 5
+local seaweed_rarity = 2500
 local sunflowers_max_count = 5
-local sunflowers_rarity = 50
+local sunflowers_rarity = 2500
 
 -- register the various rotations of waterlilies
 

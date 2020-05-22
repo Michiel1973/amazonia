@@ -172,8 +172,8 @@ end
 minetest.register_abm({
 	label = "Flower spread",
 	nodenames = {"group:flora"},
-	interval = 137,
-	chance = 125,
+	interval = 23,
+	chance = 300,
 	action = function(...)
 		flowers.flower_spread(...)
 	end,
