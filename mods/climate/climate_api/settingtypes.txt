@@ -45,7 +45,7 @@ climate_api_hud_overlay (Display HUD overlays) bool false
 # This value will be added to all biome's base temperatures before applying random modifiers.
 # Every unit here will increase the global base heat by one degree Fahrenheit.
 # Negative values will cool down global base heat respectively.
-climate_api_heat_base (Global base temperature) float 10
+climate_api_heat_base (Global base temperature) float 20
 
 # This value will be added to all biome's base humidity before applying random modifiers.
 # Every unit here will increase the global base humidity by one percent.
