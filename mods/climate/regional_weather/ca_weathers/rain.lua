@@ -3,9 +3,10 @@ local name = "regional_weather:rain"
 local conditions = {
 	min_height		= regional_weather.settings.min_height,
 	max_height		= regional_weather.settings.max_height,
-	min_heat			= 35,
-	min_humidity	= 50,
-	max_humidity	= 65,
+	min_heat			= 5,
+	max_heat			= 35,
+	min_humidity		= 20,
+	max_humidity		= 40,
 	daylight			= 15
 }
 
