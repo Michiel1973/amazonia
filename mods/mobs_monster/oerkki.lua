@@ -14,7 +14,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 	damage = 30,
 	hp_min = 50,
 	hp_max = 70,
-	armor = 100,
+	armor = 95,
 	knock_back = false,
 	glow = 3,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.9, 0.4},
@@ -24,7 +24,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 		{"mobs_oerkki.png"},
 		{"mobs_oerkki2.png"},
 	},
-	blood_amount = 15,
+	blood_amount = 10,
 	blood_texture = "mobs_blood_black.png",
 	makes_footstep_sound = false,
 	sounds = {
@@ -42,10 +42,10 @@ mobs:register_mob("mobs_monster:oerkki", {
 	drops = {
 		{name = "default:obsidian", chance = 3, min = 0, max = 2},
 		{name = "default:gold_lump", chance = 2, min = 0, max = 2},
-		{name = "mobs_monster:oerkki_heart", chance = 5, min = 0, max = 1},
+		{name = "mobs_monster:oerkki_heart", chance = 4, min = 0, max = 1},
 	},
-	water_damage = 2,
-	lava_damage = 0,
+	water_damage = 0,
+	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 4,
 	animation = {
@@ -65,8 +65,9 @@ mobs:register_mob("mobs_monster:oerkki", {
 	replace_with = "air",
 	replace_offset = -1,
 	immune_to = {
-		{"default:sword_wood", 0}, -- no damage
+		{"default:default:sword_steel", 10}, -- no damage
 		{"default:sword_diamond", 0}, -- no damage
+		{"moreores:sword_mithril", 0}, -- no damage
 		{"default:gold_lump", -10}, -- heals by 10 points
 	},
 })
