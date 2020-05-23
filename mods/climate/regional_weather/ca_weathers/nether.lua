@@ -1,19 +1,19 @@
-local name = "regional_weather:snow"
+local name = "regional_weather:nether"
 
 local conditions = {
 	min_height = regional_weather.settings.min_height,
 	max_height = regional_weather.settings.max_height,
-	max_heat				= 0,
-	min_humidity		= 50,
-	max_humidity		= 65,
-	daylight				= 15
+	-- max_heat				= 35,
+	-- min_humidity		= 50,
+	-- max_humidity		= 65,
+	-- daylight				= 15
 }
 
 local effects = {}
 
 local textures = {}
 for i = 1,12,1 do
-	textures[i] = "weather_snowflake" .. i .. ".png"
+	textures[i] = "netherflake" .. i .. ".png"
 end
 
 effects["climate_api:particles"] = {

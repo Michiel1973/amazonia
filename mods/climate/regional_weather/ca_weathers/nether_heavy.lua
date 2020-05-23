@@ -1,11 +1,11 @@
-local name = "regional_weather:snow_heavy"
+local name = "regional_weather:nether_heavy"
 
 local conditions = {
-	min_height = regional_weather.settings.min_height,
-	max_height = regional_weather.settings.max_height,
-	max_heat				= 0,
-	min_humidity		= 65,
-	daylight				= 15
+	min_height = -25000,
+	max_height = -31000,
+	-- max_heat				= 99,
+	-- min_humidity		= 0,
+	-- daylight				= 0
 }
 
 local effects = {}
@@ -30,7 +30,7 @@ effects["climate_api:particles"] = {
 	size = 15,
 	amount = 6,
 	velocity = 0.75,
-	texture = "weather_snow.png",
+	texture = "weather_nether.png",
 	glow = 6
 }
 

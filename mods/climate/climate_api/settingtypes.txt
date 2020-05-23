@@ -45,17 +45,17 @@ climate_api_hud_overlay (Display HUD overlays) bool false
 # This value will be added to all biome's base temperatures before applying random modifiers.
 # Every unit here will increase the global base heat by one degree Fahrenheit.
 # Negative values will cool down global base heat respectively.
-climate_api_heat_base (Global base temperature) float 0
+climate_api_heat_base (Global base temperature) float 10
 
 # This value will be added to all biome's base humidity before applying random modifiers.
 # Every unit here will increase the global base humidity by one percent.
 # Negative values will dry up global base humidity respectively.
-climate_api_humidity_base (Global base humidity) float 0
+climate_api_humidity_base (Global base humidity) float -10
 
 # This value regulates how quickly environment factors like heat, humidity and wind are changing.
 # A value of 2 will double the speed at which weather presets change.
 # A value of 0.5 will half the speed respectively.
-climate_api_time_spread (Time rate of weather changes) float 1 0.1 10
+climate_api_time_spread (Time rate of weather changes) float 0.5
 
 
 [Preferences]
