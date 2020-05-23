@@ -501,7 +501,7 @@ minetest.register_abm({
 		-- Check for darkness: night, shadow or under a light-blocking node
 		-- Returns if ignore above
 		local above = {x = pos.x, y = pos.y + 1, z = pos.z}
-		if (minetest.get_node_light(above) or 0) < 13 then
+		if (minetest.get_node_light(above) or 0) < 12 then
 			return
 		end
 
