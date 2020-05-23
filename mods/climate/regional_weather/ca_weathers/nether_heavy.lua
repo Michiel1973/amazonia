@@ -1,8 +1,8 @@
 local name = "regional_weather:nether_heavy"
 
 local conditions = {
-	min_height = -25000,
-	max_height = -31000,
+	min_height = -31000,
+	max_height = -25000,
 	-- max_heat				= 99,
 	-- min_humidity		= 0,
 	-- daylight				= 0
