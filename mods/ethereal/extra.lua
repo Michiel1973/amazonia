@@ -312,6 +312,7 @@ minetest.register_tool("ethereal:light_staff", {
 	wield_image = "light_staff.png",
 	sound = {breaks = "default_tool_breaks"},
 	stack_max = 1,
+	nonrepair = 1,
 	on_use = function(itemstack, user, pointed_thing)
 
 		if pointed_thing.type ~= "node" then

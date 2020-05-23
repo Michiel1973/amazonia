@@ -57,7 +57,7 @@ local run = function(pos, node)
 		if itemdef and
 				(not itemdef.wear_represents or
 				itemdef.wear_represents == "mechanical_wear") and
-				srcstack:get_wear() ~= 0 then
+				srcstack:get_wear() ~= 0 and itemdef.nonrepair ~= 1 then
 			repairable = true
 		end
 	end
