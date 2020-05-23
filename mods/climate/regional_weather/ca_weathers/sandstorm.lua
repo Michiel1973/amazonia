@@ -4,15 +4,16 @@ local conditions = {
 	min_height = regional_weather.settings.min_height,
 	max_height = regional_weather.settings.max_height,
 	min_heat				= 50,
-	max_humidity		= 25,
-	min_windspeed		= 4.5,
+	max_humidity			= 25,
+	min_windspeed			= 4.5,
 	has_biome				= {
-		"cold_desert",
-		"cold_desert_ocean",
-		"desert",
-		"desert_ocean",
-		"sandstone_desert",
-		"sandstone_desert_ocean"
+		"default_cold_desert",
+		"default_cold_desert_ocean",
+		"default_desert",
+		"default_desert_ocean",
+		"default_sandstone_desert",
+		"default_sandstone_desert_ocean",
+		"default_savanna"
 	}
 }
 

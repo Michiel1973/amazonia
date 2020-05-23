@@ -5,8 +5,8 @@ local conditions = {
 	max_height			= regional_weather.settings.max_height,
 	--min_heat				= -5,
 	max_heat				= -5,
-	min_humidity		= 65,
-	min_windspeed		= 2.5,
+	min_humidity			= 65,
+	min_windspeed			= 2.5,
 	daylight				= 15
 }
 
