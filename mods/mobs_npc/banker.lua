@@ -46,7 +46,7 @@ mobs:register_mob("mobs_npc:banker", {
 	pathfinding = false,
 	hp_min = 150,
 	hp_max = 200,
-	armor = 200,
+	armor = 1,
 	collisionbox = {-0.35,-1.0,-0.35, 0.35,0.8,0.35},
 	visual = "mesh",
 	mesh = "mobs_character.b3d",
