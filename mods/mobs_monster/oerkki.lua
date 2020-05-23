@@ -65,9 +65,9 @@ mobs:register_mob("mobs_monster:oerkki", {
 	replace_with = "air",
 	replace_offset = -1,
 	immune_to = {
-		{"default:default:sword_steel", 20}, -- no damage
-		{"default:sword_diamond", 0}, -- no damage
-		{"moreores:sword_mithril", 0}, -- no damage
+		{"default:default:sword_steel", 20}, 
+		{"default:sword_diamond", 0},
+		{"moreores:sword_mithril", 0},
 		{"default:gold_lump", -10}, -- heals by 10 points
 	},
 })
