@@ -29,7 +29,7 @@ regional_weather.settings.ice						= get_setting_bool("ice", false)
 regional_weather.settings.pedology			= get_setting_bool("pedology", false)
 regional_weather.settings.lightning			= get_setting_number("lightning", 1)
 regional_weather.settings.max_height		= get_setting_number("max_height", 120)
-regional_weather.settings.min_height		= get_setting_number("min_height", -50)
+regional_weather.settings.min_height		= get_setting_number("min_height", -2)
 regional_weather.settings.cloud_height	= get_setting_number("cloud_height", 120)
 regional_weather.settings.cloud_scale		= get_setting_number("cloud_scale", 40)
 
@@ -53,6 +53,8 @@ dofile(modpath.."/ca_weathers/sandstorm.lua")
 dofile(modpath.."/ca_weathers/snow.lua")
 dofile(modpath.."/ca_weathers/snow_heavy.lua")
 dofile(modpath.."/ca_weathers/storm.lua")
+dofile(modpath.."/ca_weathers/nether.lua")
+dofile(modpath.."/ca_weathers/nether_heavy.lua")
 
 -- register environment effects
 dofile(modpath.."/ca_effects/lightning.lua")
