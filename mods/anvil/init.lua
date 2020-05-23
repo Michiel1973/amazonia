@@ -25,6 +25,7 @@ end
 anvil.make_unrepairable("technic:water_can")
 anvil.make_unrepairable("technic:lava_can")
 anvil.make_unrepairable("ethereal:light_staff")
+anvil.make_unrepairable("hangglider:hangglider")
 
 local S = minetest.get_translator(minetest.get_current_modname())
 

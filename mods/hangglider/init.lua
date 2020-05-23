@@ -323,6 +323,7 @@ minetest.register_tool("hangglider:hangglider", {
 	description = "Glider",
 	inventory_image = "glider_item.png",
 	stack_max=1,
+	nonrepair = 1,
 	on_use = function(itemstack, player, pointed_thing)
 		if not player then
 			return
