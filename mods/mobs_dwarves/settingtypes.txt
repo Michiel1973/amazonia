@@ -1,6 +1,6 @@
 # Display hovering nametags on dwarves
 # Mostrare targhette fluttuanti sui nani
-dwarves_use_nametags	(Dwarves use name tags)	bool	false
+dwarves_use_nametags	(Dwarves use name tags)	bool true
 
 # Dwarves will dig ores and place torces
 # I nani scaveranno i minerali e piazzeranno torce

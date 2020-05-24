@@ -38,7 +38,7 @@ end
 
 local show_nametags = minetest.settings:get_bool("dwarves_use_nametags")
 if (show_nametags == nil) then
-	show_nametags = false
+	show_nametags = true
 end
 
 local dig_ores = minetest.settings:get_bool("dwarves_dig_ores")
