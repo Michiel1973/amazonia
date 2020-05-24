@@ -54,7 +54,7 @@ dofile(modpath.."/ca_weathers/snow.lua")
 dofile(modpath.."/ca_weathers/snow_heavy.lua")
 dofile(modpath.."/ca_weathers/storm.lua")
 dofile(modpath.."/ca_weathers/nether.lua")
-dofile(modpath.."/ca_weathers/nether_heavy.lua")
+--dofile(modpath.."/ca_weathers/nether_heavy.lua")
 
 -- register environment effects
 dofile(modpath.."/ca_effects/lightning.lua")
