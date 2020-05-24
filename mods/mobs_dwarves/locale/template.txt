@@ -1,0 +1,13 @@
+# textdomain:mobs_dwarves
+
+# Hello<space>
+Saluton =
+
+# , my name is<space>
+, mia nomo estas =
+
+Dwarf Miner=
+Dwarf Soldier=
+Dwarf Marksman=
+Dwarf Paladine=
+Spawn Dwarf=

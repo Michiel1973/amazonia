@@ -1,0 +1,33 @@
+a = Alfa 
+e = Echo
+i = India
+o = Oscar
+u = bOOk
+
+y = Yes / Yogurt
+w = Word / Walk
+
+m = Mike
+n = November
+b = Bravo
+p = Papa
+d = Delta
+t = Tango
+g = Golf
+k = Kilo
+l = Lima
+r = Romeo
+s = Sierra / Stop
+z = Zulu / Zero
+h = Hotel / Hope
+
+ñ/Ñ = niÑo / coruÑa (Spanish) (nh)
+v = Victor
+f = Foxtrot
+ð/Ð = THe / THese (dh)
+þ = THing / THink (th)
+ɣ = GiorGHos (Greek) / (like "BaCH" but using a "g") (gh)
+ħ/Ħ = BaCH (German) loCH (Scottish) (ch)
+ɫ/Ɫ = SeviLLa / vaniLLa (Spanish) (lh)
+ʃ/Ʃ = SHow / SHopping (sh)
+ʒ = Jacques / bon Jour (French) (zh)
