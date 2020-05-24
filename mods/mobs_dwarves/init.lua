@@ -484,7 +484,7 @@ local function random_class(self)
 		})
 
 	else
-		self.nametag = S("Dwarf Paladine")
+		self.nametag = S("Dwarf Paladin")
 		self.hp_min = 35 * mob_difficulty
 		self.hp_max = 70 * mob_difficulty
 		self.armor = 70
@@ -1333,11 +1333,11 @@ mobs:register_arrow("mobs_dwarves:crossbow_bolt", {
 --
 
 -- Used to balance Dwarves Vs Goblins
-local i_SpawnerMultiplier = 1
+-- local i_SpawnerMultiplier = 1
 
-if (minetest.get_modpath("goblins") ~= nil) then
+-- if (minetest.get_modpath("goblins") ~= nil) then
 	i_SpawnerMultiplier = 6
-end
+-- end
 
 
 mobs:spawn({
@@ -1350,8 +1350,8 @@ mobs:spawn({
 	min_light = 0,
 	chance = 5000,
 	active_object_count = 4,
-	min_height = -19000,
-	max_height = -21500
+	min_height = -21500,
+	max_height = -19000
 })
 
 -- Spawn Egg
