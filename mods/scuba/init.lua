@@ -1,6 +1,7 @@
 minetest.register_tool("scuba:air_tank", {
     description = "Air tank for scuba diving",
     inventory_image = "underwater_air_tank.png",
+	norepair = 1,
     on_use = function (itemstack, user, pointed_thing) 
 	local playerpos = user:getpos()
 	if playerpos.y > 6000 then
