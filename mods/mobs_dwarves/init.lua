@@ -1278,7 +1278,10 @@ mobs:register_mob("mobs_dwarves:dwarf", {
 
 	on_replace = function(self, pos, oldnode, newnode)
 		local position = {x = pos.x, y = (pos.y +1), z = pos.z}
+		local bingo = math.random(10)
+		if bingo > 8 then
 		minetest.set_node(position, {name="default:torch", param2 = 1})
+		end
 	end,
 
 	do_punch = function(self)
