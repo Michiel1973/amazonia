@@ -4,10 +4,30 @@ local conditions = {
 	min_height			= regional_weather.settings.min_height,
 	max_height			= regional_weather.settings.max_height,
 	--min_heat				= -5,
-	max_heat				= -5,
-	min_humidity			= 65,
+	max_heat				= 20,
+	min_humidity			= 40,
 	min_windspeed			= 2.5,
-	daylight				= 15
+	daylight				= 15,
+	has_biome				= {
+		"default_icesheet",
+		"default_tundra_highland",
+		"default_tundra",
+		"default_tundra_beach",
+		"default_taiga",
+		"default_snowy_grassland",
+		"ethereal_mountain",
+		"ethereal_glacier",
+		"ethereal_alpine",
+		"ethereal_frost",
+		"default_tundra_highland",
+		"aotearoa_pahautea_forest",
+		"aotearoa_mountain_tussock",
+		"aotearoa_mountain_beech_forest",
+		"aotearoa_fellfield",
+		"aotearoa_alpine_snow",
+		"aotearoa_glacier",
+		"aotearoa_volcano"
+	}
 }
 
 local effects = {}
