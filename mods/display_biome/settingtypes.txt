@@ -1,0 +1,6 @@
+# This file contains settings of display_biome that can be changed in
+# minetest.conf
+
+#    Define default start-up state of display_biome.
+#    (default = false)
+display_biome_enabled (Default start-up state) bool false

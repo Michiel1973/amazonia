@@ -4,8 +4,8 @@ local conditions = {
 	min_height = -31000,
 	max_height = -25000,
 	-- max_heat				= 35,
-	min_humidity		= 15,
-	max_humidity		= 30,
+	min_humidity		= 30,
+	max_humidity		= 70,
 	-- daylight				= 15
 }
 

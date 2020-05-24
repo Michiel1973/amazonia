@@ -28,19 +28,19 @@ climate_mod.settings = {
 	damage					= get_setting_bool("damage", false),
 	raycast					= get_setting_bool("raycast", true),
 	particles				= get_setting_bool("particles", true),
-	skybox					= get_setting_bool("skybox", false),
+	skybox					= get_setting_bool("skybox", true),
 	sound						= get_setting_bool("sound", true),
 	hud_overlay			= get_setting_bool("hud_overlay", false),
 	wind						= get_setting_bool("wind", true),
 	seasons					= get_setting_bool("seasons", true),
 	fahrenheit			= get_setting_bool("fahrenheit", false),
 	block_updates		= get_setting_bool("block_updates", true),
-	heat						= get_setting_number("heat_base", 0),
+	heat						= get_setting_number("heat_base", 20),
 	humidity				= get_setting_number("humidity_base", 0),
-	time_spread			= get_setting_number("time_spread", 1),
-	particle_count	= get_setting_number("particle_count", 1),
+	time_spread			= get_setting_number("time_spread", 0.7),
+	particle_count	= get_setting_number("particle_count", 0.6),
 	tick_speed			= get_setting_number("tick_speed", 3),
-	volume					= get_setting_number("volume", 1)
+	volume					= get_setting_number("volume", 0.6)
 }
 
 -- initialize empty registers

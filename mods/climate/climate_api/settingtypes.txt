@@ -8,7 +8,7 @@ climate_api_tick_speed (Update speed of weather effects) float 3
 # This value regulates how many particles will be spawned.
 # A value of 1 will use the recommended amount of particles.
 # Lower values can possible increase performance.
-climate_api_particle_count (Multiplicator for used particles) float 1 0.1 2
+climate_api_particle_count (Multiplicator for used particles) float 0.6 0.1 2
 
 # If set to true, weather packs are allowed to register node update handlers.
 # These can be used to dynamically place snow layers, melt ice, or hydrate soil.
@@ -33,7 +33,7 @@ climate_api_particles (Show particle effects) bool true
 # If set to true, weather effects are allowed to modify a player's sky.
 # This includes skybox, sun, moon, and clouds (also used for fog effects).
 # Running this mod on Minetest 5.1.2 or earlier versions will automatically disable this feature.
-climate_api_skybox (Override the skybox) bool false
+climate_api_skybox (Override the skybox) bool true
 
 # If set to true, weather effects are allowed to render an image on top of the gameplay.
 # This is usually an optional effect used to increase immersion (like a frozen-over camera in a snow storm).
@@ -70,4 +70,4 @@ climate_api_sound (Play ambient sound loops) bool true
 
 # This value regulates overall sound volume.
 # A value of 2 will double the volume whereas a value of 0.5 will reduce the volume by half.
-climate_api_volume (Volume of sound effects) float 1 0 10
+climate_api_volume (Volume of sound effects) float 0.6 0 10
