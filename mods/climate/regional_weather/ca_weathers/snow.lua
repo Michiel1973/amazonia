@@ -3,10 +3,10 @@ local name = "regional_weather:snow"
 local conditions = {
 	min_height = regional_weather.settings.min_height,
 	max_height = regional_weather.settings.max_height,
-	max_heat				= 0,
-	min_humidity		= 50,
+	max_heat				= 20,
+	min_humidity		= 10,
 	max_humidity		= 65,
-	daylight				= 15
+	daylight				= 15,
 	has_biome				= {
 		"default_icesheet",
 		"default_tundra_highland",
