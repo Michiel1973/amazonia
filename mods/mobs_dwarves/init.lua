@@ -1167,7 +1167,7 @@ mobs:register_mob("mobs_dwarves:dwarf", {
 	run_velocity = 3.5,
 	walk_chance = 50,
 	stepheight = 1.1,
-	step_height = 1.1
+	step_height = 1.1,
 	jump = true,
 	jump_height = 2.1,
 	view_range = 8,
