@@ -57,8 +57,8 @@ local t_HIT_POINTS = 1 -- Hit points per healing step.
 -- Chat messages
 --
 
-local MESSAGE_1 = S("Greetings ")
-local MESSAGE_2 = S(", my name is ")
+local MESSAGE_1 = S("Greetings deep traveler ")
+local MESSAGE_2 = S(", I am ")
 
 
 --
@@ -1172,7 +1172,7 @@ mobs:register_mob("mobs_dwarves:dwarf", {
 	jump_height = 2.1,
 	view_range = 8,
 	damage = 1,
-	fear_height = 2,
+	fear_height = 3.1,
 	fall_damage = true,
 	lava_damage = 5,
 	water_damage = 0,
