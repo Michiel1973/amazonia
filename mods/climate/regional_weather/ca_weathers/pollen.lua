@@ -24,8 +24,8 @@ local conditions = {
 		"ethereal_grassytwo_ocean",
 		"ethereal_mushroom",
 		"ethereal_mushroom_ocean",
-		"plains",
-		"plains_ocean",
+		"ethereal_plains",
+		"ethereal_plains_ocean",
 		"ethereal_sakura",
 		"ethereal_sakura_ocean",
 		"ethereal_grove",
@@ -39,12 +39,6 @@ local conditions = {
 		"aotearoa_beech_forest",
 		"aotearoa_fiordland_forest",
 		"aotearoa_kamahi_forest",
-		"aotearoa_pohutukawa_forest",
-		"aotearoa_pohutukawa_forest",
-		"aotearoa_pohutukawa_forest",
-		"aotearoa_pohutukawa_forest",
-		"aotearoa_pohutukawa_forest",
-		"aotearoa_pohutukawa_forest",
 		"aotearoa_pohutukawa_forest",
 	}
 }
