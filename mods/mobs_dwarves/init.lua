@@ -271,6 +271,7 @@ local function random_class(self)
 					"technic:mineral_sulfur",
 					"glooptest:mineral_kalite",
 					"default:cobble",
+					"default:mossycobble",
 					"quartz:quartz_ore"
 				}
 			end
