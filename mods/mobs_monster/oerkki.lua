@@ -45,7 +45,7 @@ mobs:register_mob("mobs_monster:oerkki", {
 		{name = "mobs_monster:oerkki_heart", chance = 4, min = 0, max = 1},
 	},
 	water_damage = 0,
-	lava_damage = 4,
+	lava_damage = 0,
 	light_damage = 0,
 	fear_height = 4,
 	animation = {
