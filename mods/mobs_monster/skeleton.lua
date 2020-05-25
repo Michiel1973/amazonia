@@ -36,7 +36,7 @@ local skeleton = {
 	},
 	walk_velocity = 1.2,
 	run_velocity = 2.4,
-	damage = 22,
+	damage = 24,
 	glow = 1,
 	reach = 3,
 	-- drops = {
@@ -83,10 +83,11 @@ local skeleton = {
 	fear_height = 4,
 	attack_type = "dogshoot",
 	arrow = "mobs_monster:arrow_entity",
-	shoot_interval = 2.5,
+	shoot_interval = 1.8,
 	shoot_offset = 1,
 	dogshoot_switch = 1,
-	dogshoot_count_max =1.8,
+	dogshoot_count_max =10,
+	dogshoot_count2_max = 3,
 	blood_amount = 0,
 }
 
