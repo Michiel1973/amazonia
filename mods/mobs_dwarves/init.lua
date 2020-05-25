@@ -206,8 +206,8 @@ local function random_class(self)
 			end
 		end
 
-		self.water_damage = dps(self, 120)
-		self.light_damage = dps(self, 300)
+		self.water_damage = 0
+		self.light_damage = 0
 		self.runaway_from = {
 			"mobs:balrog"
 		}
@@ -261,18 +261,23 @@ local function random_class(self)
 				self.replace_what = {"default:stone_with_coal",
 					"default:stone",
 					"default:stone_with_iron",
-					"default:stone_with_copper", "default:stone_with_tin",
-					"default:stone_with_mese", "default:stone_with_gold",
+					"default:stone_with_copper", 
+					"default:stone_with_tin",
+					"default:stone_with_mese", 
+					"default:stone_with_gold",
 					"default:stone_with_diamond",
 					"technic:mineral_lead",
 					"technic:mineral_uranium",
 					"technic:mineral_chromium",
 					"technic:mineral_zinc",
 					"technic:mineral_sulfur",
+					"technic:granite",
 					"glooptest:mineral_kalite",
 					"default:cobble",
 					"default:mossycobble",
-					"quartz:quartz_ore"
+					"quartz:quartz_ore",
+					"default:gravel",
+					"default:silver_sand"
 				}
 			end
 
@@ -414,8 +419,8 @@ local function random_class(self)
 		end
 
 		self.fear_height = 3
-		self.water_damage = dps(self, 180)
-		self.light_damage = dps(self, 300)
+		self.water_damage = 0
+		self.light_damage = 0
 		self.attack_monsters = true
 		self.runaway_from = {
 			"mobs:balrog"
@@ -454,8 +459,8 @@ local function random_class(self)
 		self.damage = 2
 		self.fear_height = 3
 		self.class_and_tool = "c"
-		self.water_damage = dps(self, 180)
-		self.light_damage = dps(self, 300)
+		self.water_damage = 0
+		self.light_damage = 0
 		self.attack_monsters = true
 		self.attack_type = "dogshoot"
 		self.arrow = "mobs_dwarves:crossbow_bolt"
@@ -608,8 +613,8 @@ local function random_class(self)
 		end
 
 		self.fear_height = 5
-		self.water_damage = dps(self, 240)
-		self.light_damage = dps(self, 300)
+		self.water_damage = 0
+		self.light_damage = 0
 		self.attack_monsters = true
 		self.sounds = {
 			--war_cry = "mobs_dwarves_die_yell",
