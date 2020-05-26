@@ -96,7 +96,8 @@ local function random_class(self)
 		self.nametag = S("Dwarf Miner")
 		self.hp_min = 20 * mob_difficulty
 		self.hp_max = 35 * mob_difficulty
-
+		self.jump = true
+		self.jump_height = 2.1
 		local shovel_or_pick = math.random(0, 1)
 
 		if (shovel_or_pick == 0) then
@@ -292,6 +293,8 @@ local function random_class(self)
 			hp_max = self.hp_max,
 			damage = self.damage,
 			drops = self.drops,
+			jump = true,
+			jump_height = 2.1,
 			class_and_tool = self.class_and_tool,
 			water_damage = self.water_damage,
 			light_damage = self.light_damage,
@@ -309,7 +312,8 @@ local function random_class(self)
 		self.armor = 85
 		self.walk_chance = 33
 		self.view_range = 10
-
+		self.jump = true
+		self.jump_height = 2.1
 		local axe_or_sword = math.random(0, 1)
 
 		if (axe_or_sword == 0) then
@@ -436,6 +440,8 @@ local function random_class(self)
 			hp_min = self.hp_min,
 			hp_max = self.hp_max,
 			armor = self.armor,
+			jump = true,
+			jump_height = 2.1,
 			walk_chance = self.walk_chance,
 			view_range = self.view_range,
 			damage = self.damage,
@@ -484,6 +490,8 @@ local function random_class(self)
 			walk_chance = self.walk_chance,
 			view_range = self.view_range,
 			damage = self.damage,
+			jump = true,
+			jump_height = 2.1,
 			class_and_tool = self.class_and_tool,
 			fear_height = self.fear_height,
 			water_damage = self.water_damage,
@@ -627,6 +635,8 @@ local function random_class(self)
 			hp_min = self.hp_min,
 			hp_max = self.hp_max,
 			armor = self.armor,
+			jump = true,
+			jump_height = 2.1,
 			walk_chance = self.walk_chance,
 			view_range = self.view_range,
 			damage = self.damage,
