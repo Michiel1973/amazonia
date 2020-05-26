@@ -206,7 +206,7 @@ local function random_class(self)
 			end
 		end
 
-		self.water_damage = 0
+		self.water_damage = 2
 		self.light_damage = 0
 		self.runaway_from = {
 			"mobs:balrog"
@@ -419,7 +419,7 @@ local function random_class(self)
 		end
 
 		self.fear_height = 3
-		self.water_damage = 0
+		self.water_damage = 2
 		self.light_damage = 0
 		self.attack_monsters = true
 		self.runaway_from = {
@@ -443,7 +443,7 @@ local function random_class(self)
 			drops = self.drops,
 			class_and_tool = self.class_and_tool,
 			fear_height = self.fear_height,
-			water_damage = 0,
+			water_damage = 2,
 			light_damage = 0,
 			attack_monsters = self.attack_monsters,
 			runaway_from = self.runaway_from,
@@ -459,7 +459,7 @@ local function random_class(self)
 		self.damage = 2
 		self.fear_height = 3
 		self.class_and_tool = "c"
-		self.water_damage = 0
+		self.water_damage = 2
 		self.light_damage = 0
 		self.attack_monsters = true
 		self.attack_type = "dogshoot"
@@ -613,7 +613,7 @@ local function random_class(self)
 		end
 
 		self.fear_height = 5
-		self.water_damage = 0
+		self.water_damage = 2
 		self.light_damage = 0
 		self.attack_monsters = true
 		self.sounds = {
@@ -1189,7 +1189,7 @@ mobs:register_mob("mobs_dwarves:dwarf", {
 	fear_height = 3.1,
 	fall_damage = true,
 	lava_damage = 5,
-	water_damage = 0,
+	water_damage = 2,
 	light_damage = 0,
 	floats = 1,
 	suffocation = true,
