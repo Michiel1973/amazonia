@@ -65,13 +65,13 @@ pipeworks_enable_priority_tube (Enable High Priority Tube) bool true
 
 #Enable lua controlled tube.
 #It is comparable with mesecons luacontroller.
-pipeworks_enable_lua_tube (Enable Lua controlled Tube) bool true
+pipeworks_enable_lua_tube (Enable Lua controlled Tube) bool false
 
 #Enable cyclic mode.
 pipeworks_enable_cyclic_mode (Enable Cyclic Mode) bool true
 
 #Drop on routing fail.
-pipeworks_drop_on_routing_fail (Drop On Routing Fail) bool false
+pipeworks_drop_on_routing_fail (Drop On Routing Fail) bool true
 
 #Delete item on clearobject.
 pipeworks_delete_item_on_clearobject (Delete Item On Clearobject) bool true
