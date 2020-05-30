@@ -242,7 +242,7 @@ if minetest.chatcommands["msg"] then
 							"Warning: "..sendto.." will not be able to respond to this"
 							.." message unless you remove them from your ignore list.")
 				else
-					return true, chat3.colorize(name, "yellow", oclock .. "sent to: ["..name.."]: "..message)
+					return true, chat3.colorize(name, "yellow", oclock .. "sent to: ["..sendto.."]: "..message)
 				end
 			end
 		end,
