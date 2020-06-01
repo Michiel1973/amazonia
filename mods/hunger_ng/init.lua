@@ -74,7 +74,7 @@ hunger_ng = {
     },
     settings = {
         hunger_bar = {
-            image = get('hunger_bar_image', 'farming_bread.png'),
+            image = get('hunger_bar_image', 'hunger_icon.png'),
             use = minetest.is_yes(get('use_hunger_bar', true))
         },
         timers = {
