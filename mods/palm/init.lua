@@ -158,7 +158,7 @@ minetest.register_decoration({
 			octaves = 3,
 			persist = 0.66
 		},
-	--biomes = {"sandstone_desert_ocean", "desert_ocean"},
+	biomes = {"default_grassland_ocean", "default_grassland_dunes","aotearoa_pohutukawa_dunes","default_rainforest_ocean"},
 	y_min = 1,
 	y_max = 2,
 	schematic = palm.palmtree,
