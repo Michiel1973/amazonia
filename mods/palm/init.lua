@@ -174,9 +174,9 @@ minetest.register_node("palm:sapling", {
 	description = S("Palm Sapling"),
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"palm_sapling.png"},
-	inventory_image = "palm_sapling.png",
-	wield_image = "palm_sapling.png",
+	tiles = {"moretrees_palm_sapling.png"},
+	inventory_image = "moretrees_palm_sapling.png",
+	wield_image = "moretrees_palm_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -211,9 +211,9 @@ minetest.register_node("palm:sapling", {
 minetest.register_node("palm:trunk", {
 	description = S("Palm Trunk"),
 	tiles = {
-		"palm_trunk_top.png",
-		"palm_trunk_top.png",
-		"palm_trunk.png"
+		"moretrees_palm_trunk_top.png",
+		"moretrees_palm_trunk_top.png",
+		"moretrees_palm_trunk.png"
 	},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -225,7 +225,7 @@ minetest.register_node("palm:trunk", {
 -- palm wood
 minetest.register_node("palm:wood", {
 	description = S("Palm Wood"),
-	tiles = {"palm_wood.png"},
+	tiles = {"moretrees_palm_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
@@ -238,8 +238,8 @@ minetest.register_node("palm:leaves", {
 	drawtype = "allfaces_optional",
 	visual_scale = 1.2,
 	tiles = {"palm_leaves.png"},
-	inventory_image = "palm_leaves.png",
-	wield_image = "palm_leaves.png",
+	inventory_image = "moretrees_palm_leaves.png",
+	wield_image = "moretrees_palm_leaves.png",
 	paramtype = "light",
 	walkable = false,
 	waving = 1,
@@ -262,7 +262,7 @@ minetest.register_node("palm:coconut", {
 	walkable = false,
 	paramtype = "light",
 	sunlight_propagates = true,
-	tiles = {"palm_coconut_top.png", "palm_coconut_side.png"},
+	tiles = {"moretrees_coconut.png"},
 	--inventory_image = "palm_coconut_side.png",
 	--wield_image = "palm_coconut_side.png",
 	selection_box = {
