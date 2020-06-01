@@ -307,6 +307,7 @@ minetest.register_node("anvil:anvil", {
 			alignment = {x = 0, y = 0},
 			offset = {x = -320, y = 0},
 			size = {x=32, y=32},
+			z_index = 101,
 			})
 		end
 		minetest.after(2, function()

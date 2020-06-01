@@ -56,6 +56,7 @@ minetest.register_globalstep(function(dtime)
 				text = areaString,
 				scale = {x=200, y=60},
 				alignment = {x=1, y=-1},
+				z_index = -401,
 			})
 			hud.oldAreas = areaString
 			return
