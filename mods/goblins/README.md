@@ -12,6 +12,13 @@ This mod adds several Goblins to Minetest that should spawn near ore deposits or
 
 * Goblins dig caves, destroy torches, create lairs and some are aggressive.
 
+Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) by FreeLikeGNU
+http://creativecommons.org/licenses/by-sa/3.0/
+Special goblin-kudos to:
+* Super thanks to duane-r for his work on traps: https://github.com/duane-r/
+* BrandonReese for giving feral goblins a home in his challenging AdventureTest subgame!
+* Nathan Salapat for his Minetest Mod Review: Goblins
+
 License of Media Files:
 ---------------------------------------
 * goblins_goblin.b3d and goblins_goblin.blend 
